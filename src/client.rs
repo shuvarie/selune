@@ -15,6 +15,8 @@ pub enum ClientError {
     Status(u16),
     #[error("failed to decode response: {0}")]
     Decode(#[from] serde_json::Error),
+    #[error("io error: {0}")]
+    Io(#[from] std::io::Error),
 }
 
 /// A client for the catalog service, mirroring Catwalk's `Client`.
@@ -51,6 +53,19 @@ impl Client {
             return Err(ClientError::Status(response.status().as_u16()));
         }
         Ok(response.json()?)
+    }
+
+    /// Save the given providers to a local file as JSON.
+    pub fn save_to_local(&self, path: &str, providers: &[Provider]) -> Result<(), ClientError> {
+        let json = serde_json::to_string_pretty(providers)?;
+        std::fs::write(path, json)?;
+        Ok(())
+    }
+
+    /// Load providers from a local JSON file.
+    pub fn load_from_local(&self, path: &str) -> Result<Vec<Provider>, ClientError> {
+        let json = std::fs::read_to_string(path)?;
+        Ok(serde_json::from_str(&json)?)
     }
 }
 

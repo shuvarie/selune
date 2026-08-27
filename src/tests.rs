@@ -1,3 +1,4 @@
+use crate::client::Client;
 use crate::embedded;
 use crate::types::{InferenceProvider, ProviderType};
 
@@ -142,4 +143,18 @@ fn ollama_cloud_parses_with_zero_costs() {
         assert_eq!(model.cost_per_1m_in, 0.0);
         assert_eq!(model.cost_per_1m_out, 0.0);
     }
+}
+
+#[test]
+fn save_and_load_from_local_round_trip() {
+    let client = Client::new();
+    let providers = embedded::all();
+    let path = std::env::temp_dir().join("selune_test_catalog.json");
+    let path = path.to_str().unwrap();
+
+    client.save_to_local(path, &providers).unwrap();
+    let loaded = client.load_from_local(path).unwrap();
+    assert_eq!(loaded, providers);
+
+    std::fs::remove_file(path).unwrap();
 }
