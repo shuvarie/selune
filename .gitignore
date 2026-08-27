@@ -23,5 +23,6 @@ target
 #.idea/
 
 .wrangler/
+dist/
 
 catalog.json
