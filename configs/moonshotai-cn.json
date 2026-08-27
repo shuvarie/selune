@@ -1,8 +1,8 @@
 {
-  "name": "Moonshot",
-  "id": "moonshot",
+  "name": "Moonshot AI (China)",
+  "id": "moonshotai-cn",
   "api_key": "$MOONSHOT_API_KEY",
-  "api_endpoint": "https://api.moonshot.ai/v1",
+  "api_endpoint": "https://api.moonshot.cn/v1",
   "type": "openai-compat",
   "default_large_model_id": "kimi-k3",
   "default_small_model_id": "kimi-k2.7-code",

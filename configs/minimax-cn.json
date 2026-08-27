@@ -1,6 +1,6 @@
 {
-  "name": "MiniMax China",
-  "id": "minimax-china",
+  "name": "MiniMax (China)",
+  "id": "minimax-cn",
   "api_key": "$MINIMAX_API_KEY",
   "api_endpoint": "https://api.minimaxi.com/anthropic",
   "type": "anthropic",

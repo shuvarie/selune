@@ -1,5 +1,5 @@
 {
-  "name": "Zhipu Coding",
+  "name": "GLM Coding Plan (China)",
   "id": "zhipu-coding",
   "api_key": "$ZHIPU_API_KEY",
   "api_endpoint": "https://open.bigmodel.cn/api/coding/paas/v4",
