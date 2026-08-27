@@ -4,7 +4,7 @@ use thiserror::Error;
 
 /// Default URL for the catalog service. The user hosts the configs
 /// themselves; this is the default the client falls back to.
-pub const DEFAULT_URL: &str = "https://selune.shuvarie.org/v1/providers.json";
+pub const DEFAULT_URL: &str = "https://selune.shuvarie.org/providers.json";
 
 /// Error returned when the catalog service cannot be reached or parsed.
 #[derive(Debug, Error)]

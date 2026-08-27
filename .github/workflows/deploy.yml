@@ -20,8 +20,8 @@ jobs:
         with:
           python-version: '3.13' 
 
-      - run: mkdir -p ./dist/v1
-      - run: python3 ./python/generate.py --output ./dist/v1/providers.json
+      - run: mkdir ./dist/
+      - run: python3 ./python/generate.py --output ./dist/providers.json
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v4

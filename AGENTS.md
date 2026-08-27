@@ -15,7 +15,7 @@ JSON. This file orients AI agents (and humans) to the layout and conventions.
   names are snake_case and match the JSON exactly, so serde needs no per-field
   renames.
 - **Client** (`src/client.rs`) — a blocking HTTP client that fetches
-  `/v2/providers` from a base URL. The base URL is a **placeholder**
+  `/providers` from a base URL. The base URL is a **placeholder**
   (`DEFAULT_URL`); the user hosts the configs themselves and points the client
   at them via the `CATALOG_URL` env var or `Client::new_with_url`.
 - **Embedded catalog** (`src/embedded.rs`) — the sample provider configs in
