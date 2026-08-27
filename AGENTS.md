@@ -1,16 +1,19 @@
 # AGENTS.md
 
 `selune` is a Rust crate that models AI providers and models in the
-Catwalk format (https://github.com/charmbracelet/catwalk). It ships a small
-embedded catalog plus a client that fetches a hosted catalog JSON. This file
-orients AI agents (and humans) to the layout and conventions.
+Catwalk provider format (https://github.com/charmbracelet/catwalk) with
+model configs in OpenCode's schema (https://models.opencode.ai/api.json). It
+ships a small embedded catalog plus a client that fetches a hosted catalog
+JSON. This file orients AI agents (and humans) to the layout and conventions.
 
 ## What this crate is
 
-- **Types** (`src/types.rs`) — the wire contract, mirroring Catwalk's
-  `provider.go`: `Provider`, `Model`, `ModelOptions`, `ProviderType`, and the
-  `InferenceProvider` id wrapper. Field names are snake_case and match the JSON
-  exactly, so serde needs no per-field renames.
+- **Types** (`src/types.rs`) — the wire contract, mirroring OpenCode's model
+  schema (see https://models.opencode.ai/api.json) plus Catwalk's `Provider`
+  wrapper: `Provider`, `Model`, `ModelLimit`, `ModelCost`, `ReasoningOption`,
+  `ModelOptions`, `ProviderType`, and the `InferenceProvider` id wrapper. Field
+  names are snake_case and match the JSON exactly, so serde needs no per-field
+  renames.
 - **Client** (`src/client.rs`) — a blocking HTTP client that fetches
   `/v2/providers` from a base URL. The base URL is a **placeholder**
   (`DEFAULT_URL`); the user hosts the configs themselves and points the client
@@ -25,12 +28,12 @@ orients AI agents (and humans) to the layout and conventions.
 
 | Path | Role |
 |---|---|
-| `src/types.rs` | `Provider`/`Model`/`ModelOptions`/`ProviderType`/`InferenceProvider` + lookup helpers |
+| `src/types.rs` | `Provider`/`Model`/`ModelLimit`/`ModelCost`/`ReasoningOption`/`ModelOptions`/`ProviderType`/`InferenceProvider` + lookup helpers |
 | `src/client.rs` | `Client` (fetch providers), `ClientError`, `DEFAULT_URL` |
 | `src/embedded.rs` | `embedded::all()` — parses the embedded `configs/*.json` |
 | `src/lib.rs` | Barrel re-exports |
 | `src/tests.rs` | Unit tests (embedded parse, default-model validity, serde round-trip, lookup) |
-| `configs/*.json` | One provider config per file, in Catwalk format |
+| `configs/*.json` | One provider config per file, in OpenCode model format (Catwalk provider wrapper) |
 | `python/generate.py` | Static JSON generator → `catalog.json` |
 | `Cargo.toml` | Standalone crate (has its own `[workspace]`; not a member of the parent workspace) |
 
@@ -39,8 +42,9 @@ orients AI agents (and humans) to the layout and conventions.
 - **Standalone crate.** `Cargo.toml` declares an empty `[workspace]` table and
   explicit package metadata so it builds on its own and can be split into its
   own repo. Do not add it to the parent workspace's `members`.
-- **Catwalk parity.** Keep the JSON shape and field names identical to Catwalk
-  so configs are interchangeable. When Catwalk adds a field, mirror it here.
+- **OpenCode parity.** Keep the model JSON shape and field names identical to
+  OpenCode's model schema so configs are interchangeable. `Provider`-level
+  fields follow Catwalk. When OpenCode adds a model field, mirror it here.
 - **Serde cases.** Struct fields are snake_case and match JSON directly. The
   `ProviderType` enum uses `#[serde(rename_all = "kebab-case")]` with variants
   named so kebab-case yields the exact Catwalk strings (`Openai` → `openai`,
@@ -63,7 +67,8 @@ cargo fmt --check
 
 ## Adding a provider config
 
-1. Add `configs/<id>.json` in Catwalk format (see `configs/anthropic.json`).
+1. Add `configs/<id>.json` in OpenCode model format (Catwalk provider wrapper,
+   see `configs/anthropic.json`).
 2. Add it to `src/embedded.rs` (`include_str!` + the `all()` array) and to the
    `ORDER` list in `python/generate.py`.
 3. Add a test in `src/tests.rs` if it exercises new behavior.

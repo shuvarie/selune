@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Generate a static catalog.json from the provider configs in ../configs.
 
-Mirrors Catwalk's server output: a JSON array of providers. The generated
-artifact is what the user hosts; the Rust client fetches it from CATALOG_URL.
+Mirrors OpenCode's model catalog schema: a JSON array of providers. The
+generated artifact is what the user hosts; the Rust client fetches it from
+CATALOG_URL.
 """
 
 from __future__ import annotations
@@ -61,14 +62,10 @@ ORDER = [
 REQUIRED_MODEL_FIELDS = {
     "id",
     "name",
-    "cost_per_1m_in",
-    "cost_per_1m_out",
-    "cost_per_1m_in_cached",
-    "cost_per_1m_out_cached",
-    "context_window",
-    "default_max_tokens",
-    "can_reason",
-    "supports_attachments",
+    "reasoning",
+    "attachment",
+    "limit",
+    "cost",
 }
 
 

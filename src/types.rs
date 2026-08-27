@@ -61,23 +61,60 @@ pub struct ModelOptions {
     pub provider_options: Option<serde_json::Map<String, serde_json::Value>>,
 }
 
-/// An AI model configuration, mirroring Catwalk's `Model`.
+/// Context/output token limits for a model, mirroring OpenCode's `limit`.
+#[derive(Debug, Clone, Default, PartialEq, Serialize, Deserialize)]
+pub struct ModelLimit {
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub context: Option<i64>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub input: Option<i64>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub output: Option<i64>,
+}
+
+/// Per-million-token costs for a model, mirroring OpenCode's `cost`.
+#[derive(Debug, Clone, Default, PartialEq, Serialize, Deserialize)]
+pub struct ModelCost {
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub input: Option<f64>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub output: Option<f64>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub cache_read: Option<f64>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub cache_write: Option<f64>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub input_audio: Option<f64>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub output_audio: Option<f64>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub reasoning: Option<f64>,
+}
+
+/// A reasoning-effort/level option for a model, mirroring OpenCode's
+/// `reasoning_options` entries.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct ReasoningOption {
+    pub r#type: String,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub values: Vec<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub min: Option<i64>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub max: Option<i64>,
+}
+
+/// An AI model configuration, mirroring OpenCode's model schema.
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct Model {
     pub id: String,
     pub name: String,
-    pub cost_per_1m_in: f64,
-    pub cost_per_1m_out: f64,
-    pub cost_per_1m_in_cached: f64,
-    pub cost_per_1m_out_cached: f64,
-    pub context_window: i64,
-    pub default_max_tokens: i64,
-    pub can_reason: bool,
+    pub reasoning: bool,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
-    pub reasoning_levels: Vec<String>,
-    #[serde(default, skip_serializing_if = "Option::is_none")]
-    pub default_reasoning_effort: Option<String>,
-    pub supports_attachments: bool,
+    pub reasoning_options: Vec<ReasoningOption>,
+    pub attachment: bool,
+    pub limit: ModelLimit,
+    pub cost: ModelCost,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub options: Option<ModelOptions>,
 }

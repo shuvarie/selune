@@ -11,32 +11,44 @@
     {
       "id": "moonshotai/kimi-k2-instruct-0905",
       "name": "Kimi K2 0905",
-      "cost_per_1m_in": 1,
-      "cost_per_1m_out": 3,
-      "cost_per_1m_in_cached": 0.5,
-      "cost_per_1m_out_cached": 0.5,
-      "context_window": 131072,
-      "default_max_tokens": 10000,
-      "can_reason": true,
-      "reasoning_levels": [
-        "low",
-        "medium",
-        "high"
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
       ],
-      "default_reasoning_effort": "medium",
-      "supports_attachments": false
+      "attachment": false,
+      "limit": {
+        "context": 131072,
+        "output": 10000
+      },
+      "cost": {
+        "input": 1,
+        "output": 3,
+        "cache_read": 0.5,
+        "cache_write": 0.5
+      }
     },
     {
       "id": "qwen/qwen3-32b",
       "name": "Qwen3 32B",
-      "cost_per_1m_in": 0.29,
-      "cost_per_1m_out": 0.59,
-      "cost_per_1m_in_cached": 0,
-      "cost_per_1m_out_cached": 0,
-      "context_window": 131072,
-      "default_max_tokens": 10000,
-      "can_reason": false,
-      "supports_attachments": false
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 131072,
+        "output": 10000
+      },
+      "cost": {
+        "input": 0.29,
+        "output": 0.59,
+        "cache_read": 0,
+        "cache_write": 0
+      }
     }
   ]
 }

@@ -109,10 +109,10 @@ fn provider_lookup_and_defaults() {
         Some("claude-haiku-4-5-20251001")
     );
     let model = anthropic.model("claude-sonnet-4-6").unwrap();
-    assert_eq!(model.context_window, 200_000);
-    assert_eq!(model.cost_per_1m_in, 3.0);
-    assert!(model.can_reason);
-    assert!(model.supports_attachments);
+    assert_eq!(model.limit.context, Some(200_000));
+    assert_eq!(model.cost.input, Some(3.0));
+    assert!(model.reasoning);
+    assert!(model.attachment);
 }
 
 #[test]
