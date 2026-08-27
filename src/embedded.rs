@@ -38,6 +38,7 @@ pub fn all() -> Vec<Provider> {
         include_str!("../configs/qiniucloud.json"),
         include_str!("../configs/scaleway.json"),
         include_str!("../configs/synthetic.json"),
+        include_str!("../configs/togetherai.json"),
         include_str!("../configs/venice.json"),
         include_str!("../configs/vercel.json"),
         include_str!("../configs/vertexai.json"),

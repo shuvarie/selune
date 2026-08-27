@@ -44,6 +44,7 @@ fn embedded_providers_parse_and_are_ordered() {
             "qiniucloud",
             "scaleway",
             "synthetic",
+            "togetherai",
             "venice",
             "vercel",
             "vertexai",
