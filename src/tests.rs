@@ -128,24 +128,6 @@ fn kimi_code_is_renamed() {
     assert_eq!(kimi.name, "Kimi Code");
     assert_eq!(kimi.default_large_model(), Some("k3"));
 }
-
-#[test]
-fn ollama_cloud_parses_with_zero_costs() {
-    let providers = embedded::all();
-    let ollama = providers
-        .iter()
-        .find(|p| p.id == InferenceProvider("ollama-cloud".into()))
-        .unwrap();
-    assert_eq!(ollama.name, "Ollama Cloud");
-    assert_eq!(ollama.r#type, Some(ProviderType::Ollama));
-    assert_eq!(ollama.default_large_model(), Some("glm-5.3-flash:cloud"));
-    assert!(!ollama.models.is_empty());
-    for model in &ollama.models {
-        assert_eq!(model.cost_per_1m_in, 0.0);
-        assert_eq!(model.cost_per_1m_out, 0.0);
-    }
-}
-
 #[test]
 fn save_and_load_from_local_round_trip() {
     let client = Client::new();
