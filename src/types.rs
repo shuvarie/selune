@@ -33,6 +33,8 @@ pub struct Provider {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub r#type: Option<ProviderType>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub doc: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub default_large_model_id: Option<String>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub default_small_model_id: Option<String>,

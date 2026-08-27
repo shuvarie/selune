@@ -4,6 +4,7 @@
   "api_key": "$DEEPSEEK_API_KEY",
   "api_endpoint": "https://api.deepseek.com/v1",
   "type": "openai-compat",
+  "doc": "https://api-docs.deepseek.com/quick_start/pricing",
   "default_large_model_id": "deepseek-v4-pro",
   "default_small_model_id": "deepseek-v4-flash",
   "models": [

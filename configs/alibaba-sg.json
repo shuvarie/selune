@@ -4,6 +4,7 @@
   "api_key": "$ALIBABA_SINGAPORE_API_KEY",
   "api_endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
   "type": "openai-compat",
+  "doc": "https://www.alibabacloud.com/help/en/model-studio/models",
   "default_large_model_id": "qwen3.8-max",
   "default_small_model_id": "qwen3.8-flash",
   "models": [

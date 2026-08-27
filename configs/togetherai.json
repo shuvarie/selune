@@ -4,6 +4,7 @@
   "api_key": "$TOGETHER_API_KEY",
   "api_endpoint": "https://api.together.xyz/v1",
   "type": "openai-compat",
+  "doc": "https://docs.together.ai/docs/serverless-models",
   "default_large_model_id": "Qwen/Qwen3.7-Max",
   "default_small_model_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
   "models": [

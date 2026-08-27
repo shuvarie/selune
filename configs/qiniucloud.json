@@ -4,6 +4,7 @@
   "api_key": "$QINIUCLOUD_API_KEY",
   "api_endpoint": "https://api.qnaigc.com/v1",
   "type": "openai-compat",
+  "doc": "https://developer.qiniu.com/aitokenapi",
   "default_large_model_id": "minimax/minimax-m2.5",
   "default_small_model_id": "glm-4.5",
   "models": [

@@ -2,6 +2,7 @@
   "name": "Google Vertex AI",
   "id": "vertexai",
   "type": "google-vertex",
+  "doc": "https://cloud.google.com/vertex-ai/generative-ai/docs/models",
   "default_large_model_id": "gemini-3.1-pro-preview",
   "default_small_model_id": "gemini-3-flash-preview",
   "models": [

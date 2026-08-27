@@ -2,6 +2,7 @@
   "name": "Ollama Cloud",
   "id": "ollama-cloud",
   "type": "ollama",
+  "doc": "https://docs.ollama.com/cloud",
   "api_key": "$OLLAMA_API_KEY",
   "api_endpoint": "https://ollama.com",
   "default_large_model_id": "deepseek-v4-pro",

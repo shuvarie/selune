@@ -4,6 +4,7 @@
   "api_key": "$SCW_SECRET_KEY",
   "api_endpoint": "https://api.scaleway.ai/v1",
   "type": "openai-compat",
+  "doc": "https://www.scaleway.com/en/docs/generative-apis/",
   "default_large_model_id": "qwen3.6-35b-a3b",
   "default_small_model_id": "gemma-4-26b-a4b-it",
   "models": [

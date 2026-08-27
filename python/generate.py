@@ -80,6 +80,8 @@ def load_provider(path: Path) -> dict:
         raise ValueError(f"{path}: expected a JSON object")
     if "id" not in provider or "name" not in provider:
         raise ValueError(f"{path}: missing 'id' or 'name'")
+    if not provider.get("doc"):
+        raise ValueError(f"{path}: missing 'doc'")
 
     models = provider.get("models", [])
     if not isinstance(models, list):

@@ -4,6 +4,7 @@
   "api_key": "$AIHUBMIX_API_KEY",
   "api_endpoint": "https://aihubmix.com/v1",
   "type": "openai-compat",
+  "doc": "https://docs.aihubmix.com",
   "default_large_model_id": "gpt-5",
   "default_small_model_id": "gpt-5-nano",
   "models": [

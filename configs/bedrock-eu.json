@@ -2,6 +2,7 @@
   "name": "AWS Bedrock (Europe)",
   "id": "bedrock-eu",
   "type": "bedrock",
+  "doc": "https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html",
   "default_large_model_id": "eu.anthropic.claude-opus-5",
   "default_small_model_id": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
   "models": [

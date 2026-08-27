@@ -3,6 +3,7 @@
   "id": "copilot",
   "api_endpoint": "https://api.githubcopilot.com",
   "type": "openai-compat",
+  "doc": "https://docs.github.com/en/copilot",
   "default_large_model_id": "claude-sonnet-4.6",
   "default_small_model_id": "claude-haiku-4.5",
   "models": [

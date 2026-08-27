@@ -57,6 +57,17 @@ fn embedded_providers_parse_and_are_ordered() {
 }
 
 #[test]
+fn embedded_providers_have_doc() {
+    for provider in embedded::all() {
+        assert!(
+            provider.doc.as_deref().is_some_and(|d| !d.is_empty()),
+            "provider {} missing doc",
+            provider.name
+        );
+    }
+}
+
+#[test]
 fn embedded_providers_have_valid_default_models() {
     for provider in embedded::all() {
         let ids: Vec<&str> = provider.models.iter().map(|m| m.id.as_str()).collect();

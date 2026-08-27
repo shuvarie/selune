@@ -4,6 +4,7 @@
   "api_key": "$MINIMAX_API_KEY",
   "api_endpoint": "https://api.minimaxi.com/anthropic",
   "type": "anthropic",
+  "doc": "https://platform.minimaxi.com/docs/guides/quickstart",
   "default_large_model_id": "MiniMax-M2.7",
   "default_small_model_id": "MiniMax-M2.7",
   "models": [

@@ -4,6 +4,7 @@
   "api_key": "$HYPER_API_KEY",
   "api_endpoint": "https://hyper.charm.land/v1",
   "type": "openai-compat",
+  "doc": "https://hyper.charm.land",
   "models": [
     {
       "id": "kimi-k2.7-code",
