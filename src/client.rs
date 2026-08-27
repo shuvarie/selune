@@ -2,9 +2,9 @@ use crate::types::Provider;
 use reqwest::blocking::Client as HttpClient;
 use thiserror::Error;
 
-/// Placeholder base URL for the catalog service. The user hosts the configs
+/// Default URL for the catalog service. The user hosts the configs
 /// themselves; this is the default the client falls back to.
-pub const DEFAULT_URL: &str = "https://catalog.example.invalid";
+pub const DEFAULT_URL: &str = "https://selune.shuvarie.org/v1/providers.json";
 
 /// Error returned when the catalog service cannot be reached or parsed.
 #[derive(Debug, Error)]
@@ -19,7 +19,7 @@ pub enum ClientError {
 
 /// A client for the catalog service, mirroring Catwalk's `Client`.
 pub struct Client {
-    base_url: String,
+    url: String,
     http: HttpClient,
 }
 
@@ -31,18 +31,22 @@ impl Client {
         Self::new_with_url(&url)
     }
 
-    /// Create a client with a specific base URL.
+    /// Create a client with a specific catalog URL.
     pub fn new_with_url(url: &str) -> Self {
         Self {
-            base_url: url.trim_end_matches('/').to_string(),
+            url: url.trim_end_matches('/').to_string(),
             http: HttpClient::new(),
         }
     }
 
+    /// Set the catalog URL.
+    pub fn set_url(&mut self, url: &str) {
+        self.url = url.trim_end_matches('/').to_string();
+    }
+
     /// Retrieve all available providers from the service.
     pub fn get_providers(&self) -> Result<Vec<Provider>, ClientError> {
-        let url = format!("{}/v2/providers", self.base_url);
-        let response = self.http.get(&url).send()?;
+        let response = self.http.get(&self.url).send()?;
         if response.status() != 200 {
             return Err(ClientError::Status(response.status().as_u16()));
         }
