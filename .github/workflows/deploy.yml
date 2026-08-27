@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - 'configs/**'
+  workflow_dispatch:
 
 jobs:
   deploy:
