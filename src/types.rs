@@ -13,6 +13,7 @@ pub enum ProviderType {
     Azure,
     Bedrock,
     GoogleVertex,
+    Ollama,
 }
 
 /// The inference provider identifier, mirroring Catwalk's `InferenceProvider`.

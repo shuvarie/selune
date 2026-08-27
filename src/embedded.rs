@@ -1,15 +1,51 @@
 use crate::types::Provider;
 
-const ANTHROPIC: &str = include_str!("../configs/anthropic.json");
-const DEEPSEEK: &str = include_str!("../configs/deepseek.json");
-const GEMINI: &str = include_str!("../configs/gemini.json");
-const OPENAI: &str = include_str!("../configs/openai.json");
-const OPENROUTER: &str = include_str!("../configs/openrouter.json");
-
 /// All embedded provider configs, in a stable order.
 pub fn all() -> Vec<Provider> {
-    [ANTHROPIC, DEEPSEEK, GEMINI, OPENAI, OPENROUTER]
-        .into_iter()
-        .map(|json| serde_json::from_str(json).expect("embedded provider config must parse"))
-        .collect()
+    [
+        include_str!("../configs/aihubmix.json"),
+        include_str!("../configs/alibaba-singapore.json"),
+        include_str!("../configs/alibaba-us.json"),
+        include_str!("../configs/anthropic.json"),
+        include_str!("../configs/atlascloud.json"),
+        include_str!("../configs/avian.json"),
+        include_str!("../configs/azure.json"),
+        include_str!("../configs/baseten.json"),
+        include_str!("../configs/bedrock-europe.json"),
+        include_str!("../configs/bedrock.json"),
+        include_str!("../configs/cerebras.json"),
+        include_str!("../configs/chutes.json"),
+        include_str!("../configs/copilot.json"),
+        include_str!("../configs/cortecs.json"),
+        include_str!("../configs/deepseek.json"),
+        include_str!("../configs/fireworks.json"),
+        include_str!("../configs/gemini.json"),
+        include_str!("../configs/groq.json"),
+        include_str!("../configs/huggingface.json"),
+        include_str!("../configs/ionet.json"),
+        include_str!("../configs/kimi-code.json"),
+        include_str!("../configs/minimax-china.json"),
+        include_str!("../configs/minimax.json"),
+        include_str!("../configs/moonshot.json"),
+        include_str!("../configs/nebius.json"),
+        include_str!("../configs/neuralwatt.json"),
+        include_str!("../configs/ollama-cloud.json"),
+        include_str!("../configs/openai.json"),
+        include_str!("../configs/opencode-go.json"),
+        include_str!("../configs/opencode-zen.json"),
+        include_str!("../configs/openrouter.json"),
+        include_str!("../configs/qiniucloud.json"),
+        include_str!("../configs/scaleway.json"),
+        include_str!("../configs/synthetic.json"),
+        include_str!("../configs/venice.json"),
+        include_str!("../configs/vercel.json"),
+        include_str!("../configs/vertexai.json"),
+        include_str!("../configs/xai.json"),
+        include_str!("../configs/zai.json"),
+        include_str!("../configs/zhipu-coding.json"),
+        include_str!("../configs/zhipu.json"),
+    ]
+    .into_iter()
+    .map(|json| serde_json::from_str(json).expect("embedded provider config must parse"))
+    .collect()
 }
