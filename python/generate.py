@@ -33,6 +33,7 @@ ORDER = [
     "gemini",
     "groq",
     "huggingface",
+    "hyper",
     "ionet",
     "kimi-code",
     "minimax-china",

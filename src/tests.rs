@@ -28,6 +28,7 @@ fn embedded_providers_parse_and_are_ordered() {
             "gemini",
             "groq",
             "huggingface",
+            "hyper",
             "ionet",
             "kimi-code",
             "minimax-china",
