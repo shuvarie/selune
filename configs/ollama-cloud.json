@@ -4,8 +4,8 @@
   "type": "ollama",
   "api_key": "$OLLAMA_API_KEY",
   "api_endpoint": "https://ollama.com",
-  "default_large_model_id": "glm-5.3-flash:cloud",
-  "default_small_model_id": "kimi-k2.6",
+  "default_large_model_id": "deepseek-v4-pro",
+  "default_small_model_id": "glm-5.3-flash:cloud",
   "models": [
     {
       "id": "glm-5.3-flash:cloud",
