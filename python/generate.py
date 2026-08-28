@@ -13,51 +13,6 @@ import json
 import sys
 from pathlib import Path
 
-# Provider configs are read in this order so the output is stable.
-ORDER = [
-    "aihubmix",
-    "alibaba-singapore",
-    "alibaba-us",
-    "anthropic",
-    "atlascloud",
-    "avian",
-    "azure",
-    "baseten",
-    "bedrock-europe",
-    "bedrock",
-    "cerebras",
-    "chutes",
-    "copilot",
-    "cortecs",
-    "deepseek",
-    "fireworks",
-    "gemini",
-    "groq",
-    "huggingface",
-    "hyper",
-    "ionet",
-    "kimi-code",
-    "minimax-china",
-    "minimax",
-    "moonshot",
-    "nebius",
-    "neuralwatt",
-    "ollama-cloud",
-    "openai",
-    "opencode-go",
-    "opencode-zen",
-    "openrouter",
-    "qiniucloud",
-    "scaleway",
-    "synthetic",
-    "venice",
-    "vercel",
-    "vertexai",
-    "xai",
-    "zai",
-    "zhipu-coding",
-    "zhipu",
-]
 
 REQUIRED_MODEL_FIELDS = {
     "id",
@@ -120,11 +75,10 @@ def main() -> int:
     args = parser.parse_args()
 
     providers = []
-    for name in ORDER:
-        path = args.configs / f"{name}.json"
-        if not path.exists():
-            print(f"warning: missing config {path.name}, skipping", file=sys.stderr)
+    for path in sorted(args.configs.iterdir()):
+        if not path.is_file():
             continue
+
         providers.append(load_provider(path))
 
     args.output.write_text(json.dumps(providers, indent=2) + "\n")
