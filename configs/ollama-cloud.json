@@ -9,6 +9,32 @@
   "default_small_model_id": "glm-5.3-flash:cloud",
   "models": [
     {
+      "id": "glm-5.3",
+      "name": "GLM-5.3",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1310720,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
       "id": "glm-5.3-flash:cloud",
       "name": "GLM-5.3-Flash",
       "reasoning": true,
