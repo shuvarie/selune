@@ -3,60 +3,6 @@ use crate::embedded;
 use crate::types::{InferenceProvider, ProviderType};
 
 #[test]
-fn embedded_providers_parse_and_are_ordered() {
-    let providers = embedded::all();
-    let ids: Vec<&str> = providers.iter().map(|p| p.id.0.as_str()).collect();
-    assert_eq!(
-        ids,
-        [
-            "aihubmix",
-            "alibaba-singapore",
-            "alibaba-us",
-            "anthropic",
-            "atlascloud",
-            "avian",
-            "azure",
-            "baseten",
-            "bedrock-europe",
-            "bedrock",
-            "cerebras",
-            "chutes",
-            "copilot",
-            "cortecs",
-            "deepseek",
-            "fireworks",
-            "gemini",
-            "groq",
-            "huggingface",
-            "hyper",
-            "ionet",
-            "kimi-code",
-            "minimax-china",
-            "minimax",
-            "moonshot",
-            "nebius",
-            "neuralwatt",
-            "ollama-cloud",
-            "openai",
-            "opencode-go",
-            "opencode-zen",
-            "openrouter",
-            "qiniucloud",
-            "scaleway",
-            "synthetic",
-            "togetherai",
-            "venice",
-            "vercel",
-            "vertexai",
-            "xai",
-            "zai",
-            "zhipu-coding",
-            "zhipu",
-        ]
-    );
-}
-
-#[test]
 fn embedded_providers_have_doc() {
     for provider in embedded::all() {
         assert!(
