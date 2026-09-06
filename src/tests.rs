@@ -62,6 +62,29 @@ fn provider_lookup_and_defaults() {
 }
 
 #[test]
+fn openai_gpt_6_astra_is_default_large() {
+    let providers = embedded::all();
+    let openai = providers
+        .iter()
+        .find(|p| p.id == InferenceProvider("openai".into()))
+        .unwrap();
+    assert_eq!(openai.default_large_model(), Some("gpt-6-astra"));
+    let astra = openai.model("gpt-6-astra").unwrap();
+    assert_eq!(astra.name, "GPT-6 Astra");
+    assert_eq!(astra.limit.context, Some(1_050_000));
+    assert_eq!(astra.limit.output, Some(128_000));
+    assert_eq!(astra.cost.input, Some(10.0));
+    assert_eq!(astra.cost.output, Some(50.0));
+    assert_eq!(astra.cost.cache_read, Some(1.0));
+    assert_eq!(astra.cost.cache_write, Some(12.5));
+    assert!(astra.reasoning);
+    assert!(astra.attachment);
+    let efforts = &astra.reasoning_options[0];
+    assert_eq!(efforts.r#type, "effort");
+    assert_eq!(efforts.values, ["low", "medium", "high", "xhigh", "max"]);
+}
+
+#[test]
 fn openrouter_carries_default_headers() {
     let providers = embedded::all();
     let openrouter = providers
