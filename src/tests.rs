@@ -55,6 +55,68 @@ fn auth_backed_provider_types_round_trip() {
 }
 
 #[test]
+fn rig_transport_provider_types_round_trip() {
+    for (kind, expected) in [
+        ("cohere", ProviderType::Cohere),
+        ("deepseek", ProviderType::Deepseek),
+        ("doubleword", ProviderType::Doubleword),
+        ("groq", ProviderType::Groq),
+        ("huggingface", ProviderType::Huggingface),
+        ("hyperbolic", ProviderType::Hyperbolic),
+        ("llamafile", ProviderType::Llamafile),
+        ("minimax", ProviderType::Minimax),
+        ("mira", ProviderType::Mira),
+        ("mistral", ProviderType::Mistral),
+        ("moonshot", ProviderType::Moonshot),
+        ("perplexity", ProviderType::Perplexity),
+        ("together", ProviderType::Together),
+        ("venice", ProviderType::Venice),
+        ("voyageai", ProviderType::Voyageai),
+        ("xai", ProviderType::Xai),
+        ("xiaomimimo", ProviderType::Xiaomimimo),
+        ("zai", ProviderType::Zai),
+    ] {
+        let t: ProviderType = serde_json::from_str(&format!("\"{kind}\"")).unwrap();
+        assert_eq!(t, expected);
+        assert_eq!(serde_json::to_string(&t).unwrap(), format!("\"{kind}\""));
+    }
+}
+
+#[test]
+fn new_transport_catalog_configs_retyped() {
+    let providers = embedded::all();
+    for (id, expected) in [
+        ("deepseek", ProviderType::Deepseek),
+        ("groq", ProviderType::Groq),
+        ("togetherai", ProviderType::Together),
+        ("venice", ProviderType::Venice),
+        ("xai", ProviderType::Xai),
+        ("zai", ProviderType::Zai),
+        ("zai-coding", ProviderType::Zai),
+        ("moonshotai", ProviderType::Moonshot),
+        ("moonshotai-cn", ProviderType::Moonshot),
+        ("huggingface", ProviderType::Huggingface),
+        ("azure", ProviderType::Azure),
+        ("cohere", ProviderType::Cohere),
+        ("mistral", ProviderType::Mistral),
+        ("perplexity", ProviderType::Perplexity),
+        ("xiaomimimo", ProviderType::Xiaomimimo),
+        ("hyperbolic", ProviderType::Hyperbolic),
+        ("llamafile", ProviderType::Llamafile),
+        ("mira", ProviderType::Mira),
+        ("doubleword", ProviderType::Doubleword),
+        ("voyageai", ProviderType::Voyageai),
+        ("chatgpt", ProviderType::Chatgpt),
+    ] {
+        let p = providers
+            .iter()
+            .find(|p| p.id == InferenceProvider(id.into()))
+            .unwrap_or_else(|| panic!("missing catalog entry {id}"));
+        assert_eq!(p.r#type, Some(expected), "type mismatch for {id}");
+    }
+}
+
+#[test]
 fn provider_lookup_and_defaults() {
     let providers = embedded::all();
     let anthropic = providers

@@ -3,25 +3,44 @@
   "id": "moonshotai",
   "api_key": "$MOONSHOT_API_KEY",
   "api_endpoint": "https://api.moonshot.ai/v1",
-  "type": "openai-compat",
+  "type": "moonshot",
   "doc": "https://platform.moonshot.ai/docs/api/chat",
   "default_large_model_id": "kimi-k3",
   "default_small_model_id": "kimi-k2.7-code",
   "models": [
     {
-      "id": "kimi-k3",
-      "name": "Kimi K3",
+      "id": "kimi-k2.7-code-highspeed",
+      "name": "Kimi K2.7 Code HighSpeed",
       "reasoning": true,
       "attachment": true,
       "limit": {
-        "context": 1048576,
-        "output": 131072
+        "context": 262144,
+        "output": 262144
       },
       "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 0
+        "input": 1.9,
+        "output": 8,
+        "cache_read": 0.38
+      }
+    },
+    {
+      "id": "kimi-k2.6",
+      "name": "Kimi K2.6",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "cost": {
+        "input": 0.95,
+        "output": 4,
+        "cache_read": 0.16
       }
     },
     {
@@ -31,157 +50,40 @@
       "attachment": true,
       "limit": {
         "context": 262144,
-        "output": 32768
+        "output": 262144
       },
       "cost": {
         "input": 0.95,
         "output": 4,
-        "cache_read": 0.19,
-        "cache_write": 0
+        "cache_read": 0.19
       }
     },
     {
-      "id": "kimi-k2.7-code-highspeed",
-      "name": "Kimi K2.7 Code High Speed",
+      "id": "kimi-k3",
+      "name": "Kimi K3",
       "reasoning": true,
       "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "limit": {
-        "context": 262144,
-        "output": 32768
+        "context": 1048576,
+        "output": 131072
       },
       "cost": {
-        "input": 1.9,
-        "output": 8,
-        "cache_read": 0.38,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "kimi-k2.6",
-      "name": "Kimi K2.6",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "cost": {
-        "input": 0.95,
-        "output": 4,
-        "cache_read": 0.16,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "kimi-k2.5",
-      "name": "Kimi K2.5",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "cost": {
-        "input": 0.6,
-        "output": 3,
-        "cache_read": 0.1,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "moonshot-v1-8k",
-      "name": "Moonshot V1 8K",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 8192,
-        "output": 4096
-      },
-      "cost": {
-        "input": 0.2,
-        "output": 2,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "moonshot-v1-32k",
-      "name": "Moonshot V1 32K",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 32768,
-        "output": 8192
-      },
-      "cost": {
-        "input": 1,
-        "output": 3,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "moonshot-v1-128k",
-      "name": "Moonshot V1 128K",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 131072,
-        "output": 16384
-      },
-      "cost": {
-        "input": 2,
-        "output": 5,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "moonshot-v1-8k-vision-preview",
-      "name": "Moonshot V1 8K Vision Preview",
-      "reasoning": false,
-      "attachment": true,
-      "limit": {
-        "context": 8192,
-        "output": 4096
-      },
-      "cost": {
-        "input": 0.2,
-        "output": 2,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "moonshot-v1-32k-vision-preview",
-      "name": "Moonshot V1 32K Vision Preview",
-      "reasoning": false,
-      "attachment": true,
-      "limit": {
-        "context": 32768,
-        "output": 8192
-      },
-      "cost": {
-        "input": 1,
-        "output": 3,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "moonshot-v1-128k-vision-preview",
-      "name": "Moonshot V1 128K Vision Preview",
-      "reasoning": false,
-      "attachment": true,
-      "limit": {
-        "context": 131072,
-        "output": 16384
-      },
-      "cost": {
-        "input": 2,
-        "output": 5,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3
       }
     }
   ]

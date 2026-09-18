@@ -1,0 +1,54 @@
+{
+  "name": "Hyperbolic",
+  "id": "hyperbolic",
+  "type": "hyperbolic",
+  "api_key": "$HYPERBOLIC_API_KEY",
+  "api_endpoint": "https://api.hyperbolic.xyz/v1",
+  "models": [
+    {
+      "id": "meta-llama/Llama-3.3-70B-Instruct",
+      "name": "Llama 3.3 70B",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V2.5",
+      "name": "DeepSeek V2.5",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "Qwen/Qwen2.5-72B-Instruct",
+      "name": "Qwen 2.5 72B",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+      "name": "Llama 3.1 8B",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    }
+  ],
+  "doc": "https://docs.hyperbolic.xyz"
+}

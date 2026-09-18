@@ -1,0 +1,89 @@
+{
+  "name": "Mira",
+  "id": "mira",
+  "type": "mira",
+  "api_key": "$MIRA_API_KEY",
+  "api_endpoint": "https://api.mira.network/v1",
+  "models": [
+    {
+      "id": "claude-haiku-4.5",
+      "name": "claude-haiku-4.5",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "gpt-5.2",
+      "name": "gpt-5.2",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "gpt-4o-mini",
+      "name": "gpt-4o-mini",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "gpt-chat-latest",
+      "name": "gpt-chat-latest",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "gemini-3-flash",
+      "name": "gemini-3-flash",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "gemini-3.5-flash",
+      "name": "gemini-3.5-flash",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "deepseek-v3.2",
+      "name": "deepseek-v3.2",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    }
+  ],
+  "default_large_model_id": "claude-haiku-4.5",
+  "default_small_model_id": "deepseek-v3.2",
+  "doc": "https://mira.network"
+}

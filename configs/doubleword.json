@@ -1,0 +1,76 @@
+{
+  "name": "Doubleword",
+  "id": "doubleword",
+  "type": "doubleword",
+  "api_key": "$DOUBLEWORD_API_KEY",
+  "api_endpoint": "https://api.doubleword.ai/v1",
+  "models": [
+    {
+      "id": "Qwen/Qwen3.5-397B-A17B-FP8",
+      "name": "Qwen 3.5 397B A17B",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "Qwen/Qwen3.6-35B-A3B-FP8",
+      "name": "Qwen 3.6 35B A3B",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Pro",
+      "name": "DeepSeek V4 Pro",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash",
+      "name": "DeepSeek V4 Flash",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "openai/gpt-oss-20b",
+      "name": "GPT-OSS 20B",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {},
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    }
+  ],
+  "doc": "https://www.doubleword.ai"
+}

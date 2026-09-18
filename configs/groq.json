@@ -3,15 +3,180 @@
   "id": "groq",
   "api_key": "$GROQ_API_KEY",
   "api_endpoint": "https://api.groq.com/openai/v1",
-  "type": "openai-compat",
+  "type": "groq",
   "doc": "https://console.groq.com/docs/models",
-  "default_large_model_id": "moonshotai/kimi-k2-instruct-0905",
-  "default_small_model_id": "qwen/qwen3-32b",
+  "default_large_model_id": "whisper-large-v3",
+  "default_small_model_id": "canopylabs/orpheus-arabic-saudi",
   "models": [
     {
-      "id": "moonshotai/kimi-k2-instruct-0905",
-      "name": "Kimi K2 0905",
+      "id": "whisper-large-v3",
+      "name": "Whisper",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "cost": {}
+    },
+    {
+      "id": "whisper-large-v3-turbo",
+      "name": "Whisper Large V3 Turbo",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "cost": {}
+    },
+    {
+      "id": "llama-3.1-8b-instant",
+      "name": "Llama 3.1 8B",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.05,
+        "output": 0.08
+      }
+    },
+    {
+      "id": "allam-2-7b",
+      "name": "ALLaM-2-7b",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 4096,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "llama-3.3-70b-versatile",
+      "name": "Llama 3.3 70B",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.59,
+        "output": 0.79
+      }
+    },
+    {
+      "id": "qwen/qwen3.8-27b",
+      "name": "Qwen3.8 27B",
       "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "default",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 131042,
+        "output": 16384
+      },
+      "cost": {
+        "input": 0.8,
+        "output": 4
+      }
+    },
+    {
+      "id": "qwen/qwen3.6-27b",
+      "name": "Qwen3.6 27B",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "default"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "cost": {
+        "input": 0.6,
+        "output": 3,
+        "cache_read": 0.3
+      }
+    },
+    {
+      "id": "groq/compound",
+      "name": "Compound",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "cost": {}
+    },
+    {
+      "id": "groq/compound-mini",
+      "name": "Compound Mini",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "cost": {}
+    },
+    {
+      "id": "meta-llama/llama-prompt-guard-2-86m",
+      "name": "Prompt Guard 2 86M",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 512,
+        "output": 512
+      },
+      "cost": {
+        "input": 0.04,
+        "output": 0.04
+      }
+    },
+    {
+      "id": "meta-llama/llama-prompt-guard-2-22m",
+      "name": "Llama Prompt Guard 2 22M",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 512,
+        "output": 512
+      },
+      "cost": {
+        "input": 0.03,
+        "output": 0.03
+      }
+    },
+    {
+      "id": "openai/gpt-oss-20b",
+      "name": "GPT OSS 20B",
+      "reasoning": true,
+      "attachment": false,
       "reasoning_options": [
         {
           "type": "effort",
@@ -22,33 +187,86 @@
           ]
         }
       ],
-      "attachment": false,
       "limit": {
         "context": 131072,
-        "output": 10000
+        "output": 65536
       },
       "cost": {
-        "input": 1,
-        "output": 3,
-        "cache_read": 0.5,
-        "cache_write": 0.5
+        "input": 0.075,
+        "output": 0.3,
+        "cache_read": 0.0375
       }
     },
     {
-      "id": "qwen/qwen3-32b",
-      "name": "Qwen3 32B",
+      "id": "openai/gpt-oss-safeguard-20b",
+      "name": "Safety GPT OSS 20B",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.075,
+        "output": 0.3
+      }
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "name": "GPT OSS 120B",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.075
+      }
+    },
+    {
+      "id": "canopylabs/orpheus-v1-english",
+      "name": "Canopy Labs Orpheus V1 English",
       "reasoning": false,
       "attachment": false,
       "limit": {
-        "context": 131072,
-        "output": 10000
+        "context": 4000,
+        "output": 50000
       },
-      "cost": {
-        "input": 0.29,
-        "output": 0.59,
-        "cache_read": 0,
-        "cache_write": 0
-      }
+      "cost": {}
+    },
+    {
+      "id": "canopylabs/orpheus-arabic-saudi",
+      "name": "Canopy Labs Orpheus Arabic Saudi",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 4000,
+        "output": 50000
+      },
+      "cost": {}
     }
   ]
 }

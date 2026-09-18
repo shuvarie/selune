@@ -3,16 +3,20 @@
   "id": "deepseek",
   "api_key": "$DEEPSEEK_API_KEY",
   "api_endpoint": "https://api.deepseek.com/v1",
-  "type": "openai-compat",
+  "type": "deepseek",
   "doc": "https://api-docs.deepseek.com/quick_start/pricing",
   "default_large_model_id": "deepseek-v4-pro",
   "default_small_model_id": "deepseek-v4-flash",
   "models": [
     {
-      "id": "deepseek-v4-flash",
-      "name": "DeepSeek-V4-Flash",
+      "id": "deepseek-v4-flash-vision-exp",
+      "name": "DeepSeek V4 Flash Vision Exp",
       "reasoning": true,
+      "attachment": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -22,23 +26,25 @@
           ]
         }
       ],
-      "attachment": false,
       "limit": {
         "context": 1000000,
         "output": 384000
       },
       "cost": {
-        "input": 0.14,
-        "output": 0.28,
-        "cache_read": 0.0028,
-        "cache_write": 0
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.003
       }
     },
     {
-      "id": "deepseek-v4-pro",
-      "name": "DeepSeek-V4-Pro",
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
       "reasoning": true,
+      "attachment": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -48,7 +54,33 @@
           ]
         }
       ],
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.003
+      }
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek V4 Pro",
+      "reasoning": true,
       "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
       "limit": {
         "context": 1000000,
         "output": 384000
@@ -56,8 +88,35 @@
       "cost": {
         "input": 0.435,
         "output": 0.87,
-        "cache_read": 0.003625,
-        "cache_write": 0
+        "cache_read": 0.003625
+      }
+    },
+    {
+      "id": "deepseek-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.003
       }
     }
   ]

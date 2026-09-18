@@ -1,0 +1,132 @@
+{
+  "name": "Xiaomi MiMo",
+  "id": "xiaomimimo",
+  "type": "xiaomimimo",
+  "models": [
+    {
+      "id": "mimo-v2.5-pro-ultraspeed",
+      "name": "MiMo-V2.5-Pro-UltraSpeed",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 1.305,
+        "output": 2.61,
+        "cache_read": 0.0108
+      }
+    },
+    {
+      "id": "mimo-v2-flash",
+      "name": "MiMo-V2-Flash",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.0028
+      }
+    },
+    {
+      "id": "mimo-v2-pro",
+      "name": "MiMo-V2-Pro",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.435,
+        "output": 0.87,
+        "cache_read": 0.0036
+      }
+    },
+    {
+      "id": "mimo-v2-omni",
+      "name": "MiMo-V2-Omni",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.0028
+      }
+    },
+    {
+      "id": "mimo-v2.5",
+      "name": "MiMo-V2.5",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.0028
+      }
+    },
+    {
+      "id": "mimo-v2.5-pro",
+      "name": "MiMo-V2.5-Pro",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.435,
+        "output": 0.87,
+        "cache_read": 0.0036
+      }
+    }
+  ],
+  "default_large_model_id": "mimo-v2.5-pro-ultraspeed",
+  "default_small_model_id": "mimo-v2.5-pro",
+  "api_key": "$XIAOMI_API_KEY",
+  "api_endpoint": "https://api.xiaomimimo.com/v1",
+  "doc": "https://platform.xiaomimimo.com/#/docs"
+}

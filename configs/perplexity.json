@@ -1,0 +1,89 @@
+{
+  "name": "Perplexity",
+  "id": "perplexity",
+  "type": "perplexity",
+  "models": [
+    {
+      "id": "sonar",
+      "name": "Sonar",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 1,
+        "output": 1
+      }
+    },
+    {
+      "id": "sonar-reasoning-pro",
+      "name": "Sonar Reasoning Pro",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 2,
+        "output": 8
+      }
+    },
+    {
+      "id": "sonar-pro",
+      "name": "Sonar Pro",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 200000,
+        "output": 8192
+      },
+      "cost": {
+        "input": 3,
+        "output": 15
+      }
+    },
+    {
+      "id": "sonar-deep-research",
+      "name": "Perplexity Sonar Deep Research",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 128000,
+        "output": 32768
+      },
+      "cost": {
+        "input": 2,
+        "output": 8
+      }
+    }
+  ],
+  "default_large_model_id": "sonar",
+  "default_small_model_id": "sonar-deep-research",
+  "api_key": "$PERPLEXITY_API_KEY",
+  "doc": "https://docs.perplexity.ai"
+}
