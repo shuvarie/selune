@@ -43,6 +43,18 @@ fn provider_type_serde_round_trip() {
 }
 
 #[test]
+fn auth_backed_provider_types_round_trip() {
+    for (kind, expected) in [
+        ("chatgpt", ProviderType::Chatgpt),
+        ("copilot", ProviderType::Copilot),
+    ] {
+        let t: ProviderType = serde_json::from_str(&format!("\"{kind}\"")).unwrap();
+        assert_eq!(t, expected);
+        assert_eq!(serde_json::to_string(&t).unwrap(), format!("\"{kind}\""));
+    }
+}
+
+#[test]
 fn provider_lookup_and_defaults() {
     let providers = embedded::all();
     let anthropic = providers

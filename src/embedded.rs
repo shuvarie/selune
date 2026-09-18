@@ -14,6 +14,7 @@ pub fn all() -> Vec<Provider> {
         include_str!("../configs/bedrock-eu.json"),
         include_str!("../configs/bedrock.json"),
         include_str!("../configs/cerebras.json"),
+        include_str!("../configs/chatgpt.json"),
         include_str!("../configs/chutes.json"),
         include_str!("../configs/copilot.json"),
         include_str!("../configs/cortecs.json"),
