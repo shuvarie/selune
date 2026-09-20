@@ -1,6 +1,6 @@
 use crate::client::Client;
 use crate::embedded;
-use crate::types::{InferenceProvider, ProviderType};
+use crate::types::{AuthMethod, InferenceProvider, Provider, ProviderType};
 
 #[test]
 fn embedded_providers_have_doc() {
@@ -52,6 +52,49 @@ fn auth_backed_provider_types_round_trip() {
         assert_eq!(t, expected);
         assert_eq!(serde_json::to_string(&t).unwrap(), format!("\"{kind}\""));
     }
+}
+
+#[test]
+fn auth_method_serde_round_trip() {
+    let m: AuthMethod = serde_json::from_str("\"oauth2-device\"").unwrap();
+    assert_eq!(m, AuthMethod::Oauth2Device);
+    assert_eq!(serde_json::to_string(&m).unwrap(), "\"oauth2-device\"");
+    let m: AuthMethod = serde_json::from_str("\"api-key\"").unwrap();
+    assert_eq!(m, AuthMethod::ApiKey);
+    assert_eq!(serde_json::to_string(&m).unwrap(), "\"api-key\"");
+}
+
+#[test]
+fn auth_backed_providers_marked_for_device_login() {
+    let providers = embedded::all();
+    for id in ["chatgpt", "copilot"] {
+        let p = providers
+            .iter()
+            .find(|p| p.id == InferenceProvider(id.into()))
+            .unwrap_or_else(|| panic!("missing catalog entry {id}"));
+        assert_eq!(p.auth, Some(AuthMethod::Oauth2Device), "auth for {id}");
+        assert!(p.oauth_device_login(), "device login for {id}");
+    }
+    for id in ["openai", "anthropic"] {
+        let p = providers
+            .iter()
+            .find(|p| p.id == InferenceProvider(id.into()))
+            .unwrap_or_else(|| panic!("missing catalog entry {id}"));
+        assert_eq!(p.auth, None, "auth for {id}");
+        assert!(!p.oauth_device_login(), "device login for {id}");
+    }
+}
+
+#[test]
+fn auth_field_is_optional_and_skipped_when_absent() {
+    let p: Provider = serde_json::from_str(r#"{"name": "Acme", "id": "acme"}"#).unwrap();
+    assert_eq!(p.auth, None);
+    assert!(!p.oauth_device_login());
+    let back = serde_json::to_string(&p).unwrap();
+    assert!(
+        !back.contains("auth"),
+        "absent auth must not serialize: {back}"
+    );
 }
 
 #[test]
