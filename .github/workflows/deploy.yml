@@ -2,7 +2,7 @@ name: Deploy configs
 on:
   push:
     branches:
-      - main
+      - deploy
     paths:
       - 'configs/**'
   workflow_dispatch:
