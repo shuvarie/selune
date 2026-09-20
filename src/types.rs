@@ -14,12 +14,40 @@ pub enum ProviderType {
     Bedrock,
     GoogleVertex,
     Ollama,
+    Chatgpt,
+    Copilot,
+    Cohere,
+    Deepseek,
+    Doubleword,
+    Groq,
+    Huggingface,
+    Hyperbolic,
+    Llamafile,
+    Minimax,
+    Mira,
+    Mistral,
+    Moonshot,
+    Perplexity,
+    Together,
+    Venice,
+    Voyageai,
+    Xai,
+    Xiaomimimo,
+    Zai,
 }
 
 /// The inference provider identifier, mirroring Catwalk's `InferenceProvider`.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, Serialize, Deserialize)]
 #[serde(transparent)]
 pub struct InferenceProvider(pub String);
+
+/// How a provider authenticates: a pasted API key or an OAuth2 device flow.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[serde(rename_all = "kebab-case")]
+pub enum AuthMethod {
+    ApiKey,
+    Oauth2Device,
+}
 
 /// An AI provider configuration, mirroring Catwalk's `Provider`.
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -28,6 +56,8 @@ pub struct Provider {
     pub id: InferenceProvider,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub api_key: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub auth: Option<AuthMethod>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub api_endpoint: Option<String>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
@@ -120,6 +150,14 @@ pub struct Model {
 }
 
 impl Provider {
+    /// Whether sign-in for this provider runs the OAuth2 device flow instead
+    /// of asking for an API key.
+    pub fn oauth_device_login(&self) -> bool {
+        self.auth
+            .as_ref()
+            .is_some_and(|a| matches!(a, AuthMethod::Oauth2Device))
+    }
+
     /// The default large model id, or the first model's id when unset.
     pub fn default_large_model(&self) -> Option<&str> {
         self.default_large_model_id

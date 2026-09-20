@@ -7,6 +7,6 @@ mod tests;
 
 pub use client::{Client, ClientError, DEFAULT_URL};
 pub use types::{
-    InferenceProvider, Model, ModelCost, ModelLimit, ModelOptions, Provider, ProviderType,
-    ReasoningOption,
+    AuthMethod, InferenceProvider, Model, ModelCost, ModelLimit, ModelOptions, Provider,
+    ProviderType, ReasoningOption,
 };

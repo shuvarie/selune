@@ -3,182 +3,24 @@
   "id": "zai-coding",
   "api_key": "$ZHIPU_API_KEY",
   "api_endpoint": "https://api.z.ai/api/coding/paas/v4",
-  "type": "openai-compat",
+  "type": "zai",
   "doc": "https://docs.z.ai/guides/overview/pricing",
   "default_large_model_id": "glm-5.2",
   "default_small_model_id": "glm-5-turbo",
   "models": [
     {
-      "id": "glm-5.3",
-      "name": "GLM-5.3",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "high",
-            "xhigh"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 1000000,
-        "output": 131072
-      },
-      "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-5.2",
-      "name": "GLM-5.2",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "high",
-            "xhigh"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 1000000,
-        "output": 131072
-      },
-      "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-5.1",
-      "name": "GLM-5.1",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 204800,
-        "output": 65536
-      },
-      "cost": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_read": 0.26,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-5-turbo",
-      "name": "GLM-5-Turbo",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 200000,
-        "output": 128000
-      },
-      "cost": {
-        "input": 1.2,
-        "output": 4,
-        "cache_read": 0.24,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-5",
-      "name": "GLM-5",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 204800,
-        "output": 65536
-      },
-      "cost": {
-        "input": 1,
-        "output": 3.2,
-        "cache_read": 0.2,
-        "cache_write": 0
-      }
-    },
-    {
       "id": "glm-4.7",
       "name": "GLM-4.7",
       "reasoning": true,
       "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "limit": {
         "context": 204800,
-        "output": 98000
-      },
-      "cost": {
-        "input": 0.6,
-        "output": 2.2,
-        "cache_read": 0.11,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-4.7-flash",
-      "name": "GLM-4.7 Flash",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 200000,
-        "output": 65550
-      },
-      "cost": {
-        "input": 0.07,
-        "output": 0.4,
-        "cache_read": 0.01,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-4.6",
-      "name": "GLM-4.6",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 204800,
-        "output": 102400
-      },
-      "cost": {
-        "input": 0.6,
-        "output": 2.2,
-        "cache_read": 0.11,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-4.6v",
-      "name": "GLM-4.6V",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 131072,
-        "output": 65536
-      },
-      "cost": {
-        "input": 0.3,
-        "output": 0.9,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-4.5",
-      "name": "GLM-4.5",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 131072,
-        "output": 49152
+        "output": 131072
       },
       "cost": {
         "input": 0.6,
@@ -192,9 +34,14 @@
       "name": "GLM-4.5-Air",
       "reasoning": true,
       "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "limit": {
         "context": 131072,
-        "output": 49152
+        "output": 98304
       },
       "cost": {
         "input": 0.2,
@@ -204,18 +51,306 @@
       }
     },
     {
+      "id": "glm-4.6",
+      "name": "GLM-4.6",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.6,
+        "output": 2.2,
+        "cache_read": 0.11,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "glm-4.6v",
+      "name": "GLM-4.6V",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 128000,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.3,
+        "output": 0.9
+      }
+    },
+    {
+      "id": "glm-5.2",
+      "name": "GLM-5.2",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "glm-4.5-flash",
+      "name": "GLM-4.5-Flash",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 131072,
+        "output": 98304
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "glm-5.3-flash",
+      "name": "GLM-5.3-Flash",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.075,
+        "output": 0.25,
+        "cache_read": 0.015,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "glm-4.5",
+      "name": "GLM-4.5",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 131072,
+        "output": 98304
+      },
+      "cost": {
+        "input": 0.6,
+        "output": 2.2,
+        "cache_read": 0.11,
+        "cache_write": 0
+      }
+    },
+    {
       "id": "glm-4.5v",
       "name": "GLM-4.5V",
       "reasoning": true,
       "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "limit": {
-        "context": 65536,
-        "output": 8192
+        "context": 64000,
+        "output": 16384
       },
       "cost": {
         "input": 0.6,
-        "output": 1.8,
-        "cache_read": 0.11,
+        "output": 1.8
+      }
+    },
+    {
+      "id": "glm-4.7-flashx",
+      "name": "GLM-4.7-FlashX",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 200000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.07,
+        "output": 0.4,
+        "cache_read": 0.01,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "glm-5",
+      "name": "GLM-5",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "cost": {
+        "input": 1,
+        "output": 3.2,
+        "cache_read": 0.2,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "glm-5.1",
+      "name": "GLM-5.1",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 200000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "glm-5-turbo",
+      "name": "GLM-5-Turbo",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 200000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 1.2,
+        "output": 4,
+        "cache_read": 0.24,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "glm-5.3",
+      "name": "GLM-5.3",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "glm-5v-turbo",
+      "name": "GLM-5V-Turbo",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 200000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 1.2,
+        "output": 4,
+        "cache_read": 0.24,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "glm-4.7-flash",
+      "name": "GLM-4.7-Flash",
+      "reasoning": true,
+      "attachment": false,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "limit": {
+        "context": 200000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
         "cache_write": 0
       }
     }
