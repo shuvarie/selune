@@ -1,8 +1,8 @@
 name: Deploy configs
 on:
   push:
-    branches:
-      - deploy
+    tags:
+      - "deploy-*"
     paths:
       - 'configs/**'
   workflow_dispatch:
