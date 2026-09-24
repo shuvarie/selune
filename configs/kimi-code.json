@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "k3",
+      "modelCode": "moonshotai/Kimi-K3",
       "name": "Kimi K3",
       "reasoning": true,
       "attachment": true,
@@ -26,6 +27,7 @@
     },
     {
       "id": "k3-256k",
+      "modelCode": "moonshotai/Kimi-K3:256k",
       "name": "Kimi K3 256K",
       "reasoning": true,
       "attachment": true,
@@ -42,6 +44,7 @@
     },
     {
       "id": "kimi-for-coding",
+      "modelCode": "moonshotai/kimi-for-coding",
       "name": "Kimi for Coding",
       "reasoning": true,
       "attachment": true,
@@ -58,6 +61,7 @@
     },
     {
       "id": "kimi-for-coding-highspeed",
+      "modelCode": "moonshotai/kimi-for-coding:highspeed",
       "name": "Kimi for Coding Highspeed",
       "reasoning": true,
       "attachment": true,

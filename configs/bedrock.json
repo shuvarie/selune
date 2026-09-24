@@ -8,6 +8,7 @@
   "models": [
     {
       "id": "us.anthropic.claude-sonnet-5",
+      "modelCode": "anthropic/claude-sonnet-5",
       "name": "Claude Sonnet 5",
       "reasoning": true,
       "reasoning_options": [
@@ -36,6 +37,7 @@
     },
     {
       "id": "us.anthropic.claude-sonnet-4-6",
+      "modelCode": "anthropic/claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
       "reasoning": true,
       "reasoning_options": [
@@ -63,6 +65,7 @@
     },
     {
       "id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+      "modelCode": "anthropic/claude-sonnet-4-5",
       "name": "Claude Sonnet 4.5",
       "reasoning": true,
       "attachment": true,
@@ -79,6 +82,7 @@
     },
     {
       "id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "modelCode": "anthropic/claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
       "reasoning": true,
       "attachment": true,
@@ -95,6 +99,7 @@
     },
     {
       "id": "us.anthropic.claude-opus-5",
+      "modelCode": "anthropic/claude-opus-5",
       "name": "Claude Opus 5",
       "reasoning": true,
       "reasoning_options": [
@@ -123,6 +128,7 @@
     },
     {
       "id": "us.anthropic.claude-opus-4-8",
+      "modelCode": "anthropic/claude-opus-4-8",
       "name": "Claude Opus 4.8",
       "reasoning": true,
       "reasoning_options": [
@@ -151,6 +157,7 @@
     },
     {
       "id": "us.anthropic.claude-opus-4-7",
+      "modelCode": "anthropic/claude-opus-4-7",
       "name": "Claude Opus 4.7",
       "reasoning": true,
       "reasoning_options": [
@@ -179,6 +186,7 @@
     },
     {
       "id": "us.anthropic.claude-opus-4-6-v1",
+      "modelCode": "anthropic/claude-opus-4-6",
       "name": "Claude Opus 4.6",
       "reasoning": true,
       "reasoning_options": [
@@ -206,6 +214,7 @@
     },
     {
       "id": "us.anthropic.claude-opus-4-5-20251101-v1:0",
+      "modelCode": "anthropic/claude-opus-4-5",
       "name": "Claude Opus 4.5",
       "reasoning": true,
       "attachment": true,
@@ -222,6 +231,7 @@
     },
     {
       "id": "us.anthropic.claude-opus-4-1-20250805-v1:0",
+      "modelCode": "anthropic/claude-opus-4-1",
       "name": "Claude Opus 4.1",
       "reasoning": true,
       "attachment": true,
@@ -238,6 +248,7 @@
     },
     {
       "id": "us.anthropic.claude-fable-5",
+      "modelCode": "anthropic/claude-fable-5",
       "name": "Claude Fable 5",
       "reasoning": true,
       "reasoning_options": [

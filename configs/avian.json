@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "deepseek/deepseek-v3.2",
+      "modelCode": "deepseek-ai/DeepSeek-V3.2",
       "name": "DeepSeek V3.2 (Legacy)",
       "reasoning": true,
       "reasoning_options": [
@@ -36,6 +37,7 @@
     },
     {
       "id": "deepseek/deepseek-v4-flash",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash",
       "name": "DeepSeek V4 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -62,6 +64,7 @@
     },
     {
       "id": "deepseek/deepseek-v4-pro",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Pro",
       "name": "DeepSeek V4 Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -88,6 +91,7 @@
     },
     {
       "id": "deepseek/deepseek-v4-pro-0813",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "reasoning": true,
       "reasoning_options": [
@@ -114,6 +118,7 @@
     },
     {
       "id": "z-ai/glm-4.7",
+      "modelCode": "zai-org/GLM-4.7",
       "name": "GLM-4.7",
       "reasoning": false,
       "attachment": false,
@@ -130,6 +135,7 @@
     },
     {
       "id": "z-ai/glm-5",
+      "modelCode": "zai-org/GLM-5",
       "name": "GLM-5",
       "reasoning": false,
       "attachment": false,
@@ -146,6 +152,7 @@
     },
     {
       "id": "z-ai/glm-5.1",
+      "modelCode": "zai-org/GLM-5.1",
       "name": "GLM-5.1",
       "reasoning": false,
       "attachment": false,
@@ -162,6 +169,7 @@
     },
     {
       "id": "z-ai/glm-5.2",
+      "modelCode": "zai-org/GLM-5.2",
       "name": "GLM-5.2",
       "reasoning": false,
       "attachment": false,
@@ -178,6 +186,7 @@
     },
     {
       "id": "moonshotai/kimi-k2.5",
+      "modelCode": "moonshotai/Kimi-K2.5",
       "name": "Kimi K2.5",
       "reasoning": false,
       "attachment": false,
@@ -194,6 +203,7 @@
     },
     {
       "id": "moonshotai/kimi-k2.6",
+      "modelCode": "moonshotai/Kimi-K2.6",
       "name": "Kimi K2.6",
       "reasoning": false,
       "attachment": false,
@@ -210,6 +220,7 @@
     },
     {
       "id": "xiaomi/mimo-v2.5-pro",
+      "modelCode": "xiaomimimo/MiMo-V2.5-Pro",
       "name": "MiMo-V2.5 Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -236,6 +247,7 @@
     },
     {
       "id": "xiaomi/mimo-v2.5",
+      "modelCode": "xiaomimimo/MiMo-V2.5",
       "name": "MiMo-V2.5 Small",
       "reasoning": true,
       "reasoning_options": [
@@ -262,6 +274,7 @@
     },
     {
       "id": "minimax/minimax-m2.5",
+      "modelCode": "minimaxai/MiniMax-M2.5",
       "name": "MiniMax M2.5",
       "reasoning": false,
       "attachment": false,

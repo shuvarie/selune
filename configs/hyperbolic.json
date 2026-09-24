@@ -7,6 +7,7 @@
   "models": [
     {
       "id": "meta-llama/Llama-3.3-70B-Instruct",
+      "modelCode": "meta-llama/Llama-3.3-70B-Instruct",
       "name": "Llama 3.3 70B",
       "reasoning": false,
       "attachment": false,
@@ -18,6 +19,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-V2.5",
+      "modelCode": "deepseek-ai/DeepSeek-V2.5",
       "name": "DeepSeek V2.5",
       "reasoning": true,
       "attachment": false,
@@ -29,6 +31,7 @@
     },
     {
       "id": "Qwen/Qwen2.5-72B-Instruct",
+      "modelCode": "qwen/Qwen2.5-72B-Instruct",
       "name": "Qwen 2.5 72B",
       "reasoning": false,
       "attachment": false,
@@ -40,6 +43,7 @@
     },
     {
       "id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+      "modelCode": "meta-llama/Meta-Llama-3.1-8B-Instruct",
       "name": "Llama 3.1 8B",
       "reasoning": false,
       "attachment": false,

@@ -29,8 +29,6 @@ pub fn all() -> Vec<Provider> {
         include_str!("../configs/hyperbolic.json"),
         include_str!("../configs/ionet.json"),
         include_str!("../configs/kimi-code.json"),
-        include_str!("../configs/minimax-cn.json"),
-        include_str!("../configs/kimi-code.json"),
         include_str!("../configs/llamafile.json"),
         include_str!("../configs/minimax-cn.json"),
         include_str!("../configs/minimax.json"),

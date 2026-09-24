@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "deepseek-v4.1-flash",
+      "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash",
       "name": "DeepSeek V4.1 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -35,6 +36,7 @@
     },
     {
       "id": "glm-5.3",
+      "modelCode": "zai-org/GLM-5.3",
       "name": "GLM-5.3",
       "reasoning": true,
       "reasoning_options": [
@@ -61,6 +63,7 @@
     },
     {
       "id": "glm-5.3-flash:cloud",
+      "modelCode": "zai-org/GLM-5.3-Flash:cloud",
       "name": "GLM-5.3-Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -87,6 +90,7 @@
     },
     {
       "id": "nemotron-3-ultra",
+      "modelCode": "nvidia/nemotron-3-ultra-550b-a55b",
       "name": "Nemotron 3 Ultra",
       "reasoning": true,
       "reasoning_options": [
@@ -112,6 +116,7 @@
     },
     {
       "id": "kimi-k2.7-code",
+      "modelCode": "moonshotai/Kimi-K2.7-Code",
       "name": "Kimi K2.7 Code",
       "reasoning": true,
       "reasoning_options": [
@@ -137,6 +142,7 @@
     },
     {
       "id": "kimi-k3",
+      "modelCode": "moonshotai/Kimi-K3",
       "name": "Kimi K3",
       "reasoning": true,
       "reasoning_options": [
@@ -163,6 +169,7 @@
     },
     {
       "id": "deepseek-v4-pro",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Pro",
       "name": "DeepSeek V4 Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -188,6 +195,7 @@
     },
     {
       "id": "mistral-large-3:675b",
+      "modelCode": "mistralai/mistral-large-3:675b",
       "name": "Mistral Large 3",
       "reasoning": false,
       "attachment": true,
@@ -204,6 +212,7 @@
     },
     {
       "id": "minimax-m3",
+      "modelCode": "minimaxai/MiniMax-M3",
       "name": "MiniMax M3",
       "reasoning": true,
       "reasoning_options": [
@@ -231,6 +240,7 @@
     },
     {
       "id": "minimax-m2.7",
+      "modelCode": "minimaxai/MiniMax-M2.7",
       "name": "MiniMax M2.7",
       "reasoning": true,
       "reasoning_options": [
@@ -256,6 +266,7 @@
     },
     {
       "id": "gpt-oss:20b",
+      "modelCode": "openai/gpt-oss-20b",
       "name": "GPT OSS 20B",
       "reasoning": true,
       "reasoning_options": [
@@ -282,6 +293,7 @@
     },
     {
       "id": "nemotron-3-super",
+      "modelCode": "nvidia/nemotron-3-super-120b-a12b",
       "name": "Nemotron 3 Super",
       "reasoning": true,
       "reasoning_options": [
@@ -307,6 +319,7 @@
     },
     {
       "id": "kimi-k2.5",
+      "modelCode": "moonshotai/Kimi-K2.5",
       "name": "Kimi K2.5",
       "reasoning": true,
       "reasoning_options": [
@@ -332,6 +345,7 @@
     },
     {
       "id": "glm-5.2",
+      "modelCode": "zai-org/GLM-5.2",
       "name": "GLM-5.2",
       "reasoning": true,
       "reasoning_options": [
@@ -357,6 +371,7 @@
     },
     {
       "id": "minimax-m2.5",
+      "modelCode": "minimaxai/MiniMax-M2.5",
       "name": "MiniMax M2.5",
       "reasoning": true,
       "attachment": false,
@@ -373,6 +388,7 @@
     },
     {
       "id": "gpt-oss:120b",
+      "modelCode": "openai/gpt-oss-120b",
       "name": "GPT OSS 120B",
       "reasoning": true,
       "reasoning_options": [
@@ -399,6 +415,7 @@
     },
     {
       "id": "nemotron-3-nano:30b",
+      "modelCode": "nvidia/nemotron-3-nano-30b-a3b",
       "name": "Nemotron 3 Nano 30B",
       "reasoning": true,
       "reasoning_options": [
@@ -424,6 +441,7 @@
     },
     {
       "id": "gemma4:31b",
+      "modelCode": "google/gemma-4-31b",
       "name": "Gemma 4 31B",
       "reasoning": true,
       "reasoning_options": [
@@ -449,6 +467,7 @@
     },
     {
       "id": "kimi-k2.6",
+      "modelCode": "moonshotai/Kimi-K2.6",
       "name": "Kimi K2.6",
       "reasoning": true,
       "reasoning_options": [

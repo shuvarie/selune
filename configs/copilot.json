@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "claude-fable-5",
+      "modelCode": "anthropic/claude-fable-5",
       "name": "Claude Fable 5",
       "reasoning": false,
       "attachment": true,
@@ -26,6 +27,7 @@
     },
     {
       "id": "claude-haiku-4.5",
+      "modelCode": "anthropic/claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
       "reasoning": false,
       "attachment": true,
@@ -42,6 +44,7 @@
     },
     {
       "id": "claude-opus-4.5",
+      "modelCode": "anthropic/claude-opus-4-5",
       "name": "Claude Opus 4.5",
       "reasoning": false,
       "attachment": true,
@@ -58,6 +61,7 @@
     },
     {
       "id": "claude-opus-4.7",
+      "modelCode": "anthropic/claude-opus-4-7",
       "name": "Claude Opus 4.7",
       "reasoning": false,
       "attachment": true,
@@ -74,6 +78,7 @@
     },
     {
       "id": "claude-opus-4.8",
+      "modelCode": "anthropic/claude-opus-4-8",
       "name": "Claude Opus 4.8",
       "reasoning": false,
       "attachment": true,
@@ -90,6 +95,7 @@
     },
     {
       "id": "claude-opus-4.8-fast",
+      "modelCode": "anthropic/claude-opus-4-8:fast",
       "name": "Claude Opus 4.8 (fast mode)",
       "reasoning": false,
       "attachment": true,
@@ -106,6 +112,7 @@
     },
     {
       "id": "claude-opus-5",
+      "modelCode": "anthropic/claude-opus-5",
       "name": "Claude Opus 5",
       "reasoning": false,
       "attachment": true,
@@ -122,6 +129,7 @@
     },
     {
       "id": "claude-sonnet-4.5",
+      "modelCode": "anthropic/claude-sonnet-4-5",
       "name": "Claude Sonnet 4.5",
       "reasoning": false,
       "attachment": true,
@@ -138,6 +146,7 @@
     },
     {
       "id": "claude-sonnet-4.6",
+      "modelCode": "anthropic/claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
       "reasoning": false,
       "attachment": true,
@@ -154,6 +163,7 @@
     },
     {
       "id": "claude-sonnet-5",
+      "modelCode": "anthropic/claude-sonnet-5",
       "name": "Claude Sonnet 5",
       "reasoning": false,
       "attachment": true,
@@ -170,6 +180,7 @@
     },
     {
       "id": "gemini-3.1-pro-preview",
+      "modelCode": "google/gemini-3.1-pro-preview",
       "name": "Gemini 3.1 Pro",
       "reasoning": false,
       "attachment": true,
@@ -186,6 +197,7 @@
     },
     {
       "id": "gemini-3.5-flash",
+      "modelCode": "google/gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
       "reasoning": false,
       "attachment": true,
@@ -202,6 +214,7 @@
     },
     {
       "id": "gemini-3.6-flash",
+      "modelCode": "google/gemini-3.6-flash",
       "name": "Gemini 3.6 Flash",
       "reasoning": false,
       "attachment": true,
@@ -218,6 +231,7 @@
     },
     {
       "id": "gemini-3.7-flash",
+      "modelCode": "google/gemini-3.7-flash",
       "name": "Gemini 3.7 Flash",
       "reasoning": false,
       "attachment": true,
@@ -234,6 +248,7 @@
     },
     {
       "id": "gpt-3.5-turbo",
+      "modelCode": "openai/gpt-3.5-turbo",
       "name": "GPT 3.5 Turbo",
       "reasoning": false,
       "attachment": false,
@@ -250,6 +265,7 @@
     },
     {
       "id": "gpt-4",
+      "modelCode": "openai/gpt-4",
       "name": "GPT 4",
       "reasoning": false,
       "attachment": false,
@@ -266,6 +282,7 @@
     },
     {
       "id": "gpt-4-0125-preview",
+      "modelCode": "openai/gpt-4-0125-preview",
       "name": "GPT 4 Turbo",
       "reasoning": false,
       "attachment": false,
@@ -282,6 +299,7 @@
     },
     {
       "id": "gpt-4.1",
+      "modelCode": "openai/gpt-4.1",
       "name": "GPT-4.1",
       "reasoning": false,
       "attachment": true,
@@ -298,6 +316,7 @@
     },
     {
       "id": "gpt-4o",
+      "modelCode": "openai/gpt-4o",
       "name": "GPT-4o",
       "reasoning": false,
       "attachment": true,
@@ -314,6 +333,7 @@
     },
     {
       "id": "gpt-4o-mini",
+      "modelCode": "openai/gpt-4o-mini",
       "name": "GPT-4o mini",
       "reasoning": false,
       "attachment": false,
@@ -330,6 +350,7 @@
     },
     {
       "id": "gpt-5-mini",
+      "modelCode": "openai/gpt-5-mini",
       "name": "GPT-5 mini",
       "reasoning": false,
       "attachment": true,
@@ -346,6 +367,7 @@
     },
     {
       "id": "gpt-5.3-codex",
+      "modelCode": "openai/gpt-5.3-codex",
       "name": "GPT-5.3-Codex",
       "reasoning": false,
       "attachment": true,
@@ -362,6 +384,7 @@
     },
     {
       "id": "gpt-5.4",
+      "modelCode": "openai/gpt-5.4",
       "name": "GPT-5.4",
       "reasoning": false,
       "attachment": true,
@@ -378,6 +401,7 @@
     },
     {
       "id": "gpt-5.4-mini",
+      "modelCode": "openai/gpt-5.4-mini",
       "name": "GPT-5.4 mini",
       "reasoning": false,
       "attachment": true,
@@ -394,6 +418,7 @@
     },
     {
       "id": "gpt-5.5",
+      "modelCode": "openai/gpt-5.5",
       "name": "GPT-5.5",
       "reasoning": false,
       "attachment": true,
@@ -410,6 +435,7 @@
     },
     {
       "id": "gpt-5.6-luna",
+      "modelCode": "openai/gpt-5.6-luna",
       "name": "GPT-5.6 Luna",
       "reasoning": false,
       "attachment": true,
@@ -426,6 +452,7 @@
     },
     {
       "id": "gpt-5.6-sol",
+      "modelCode": "openai/gpt-5.6-sol",
       "name": "GPT-5.6 Sol",
       "reasoning": false,
       "attachment": true,
@@ -442,6 +469,7 @@
     },
     {
       "id": "gpt-5.6-terra",
+      "modelCode": "openai/gpt-5.6-terra",
       "name": "GPT-5.6 Terra",
       "reasoning": false,
       "attachment": true,
@@ -458,6 +486,7 @@
     },
     {
       "id": "grok-4.5",
+      "modelCode": "xai-org/grok-4.5",
       "name": "Grok 4.5",
       "reasoning": false,
       "attachment": true,
@@ -474,6 +503,7 @@
     },
     {
       "id": "grok-4.6",
+      "modelCode": "xai-org/grok-4.6",
       "name": "Grok 4.6",
       "reasoning": false,
       "attachment": true,
@@ -490,6 +520,7 @@
     },
     {
       "id": "kimi-k2.7-code",
+      "modelCode": "moonshotai/Kimi-K2.7-Code",
       "name": "Kimi K2.7 Code",
       "reasoning": false,
       "attachment": true,
@@ -506,6 +537,7 @@
     },
     {
       "id": "kimi-k3",
+      "modelCode": "moonshotai/Kimi-K3",
       "name": "Kimi K3",
       "reasoning": false,
       "attachment": true,

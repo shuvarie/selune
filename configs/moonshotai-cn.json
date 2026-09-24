@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "kimi-k2.7-code-highspeed",
+      "modelCode": "moonshotai/Kimi-K2.7-Code:highspeed",
       "name": "Kimi K2.7 Code HighSpeed",
       "reasoning": true,
       "attachment": true,
@@ -25,6 +26,7 @@
     },
     {
       "id": "kimi-k2.6",
+      "modelCode": "moonshotai/Kimi-K2.6",
       "name": "Kimi K2.6",
       "reasoning": true,
       "attachment": true,
@@ -45,6 +47,7 @@
     },
     {
       "id": "kimi-k2.7-code",
+      "modelCode": "moonshotai/Kimi-K2.7-Code",
       "name": "Kimi K2.7 Code",
       "reasoning": true,
       "attachment": true,
@@ -60,6 +63,7 @@
     },
     {
       "id": "kimi-k3",
+      "modelCode": "moonshotai/Kimi-K3",
       "name": "Kimi K3",
       "reasoning": true,
       "attachment": true,

@@ -6,6 +6,7 @@
   "models": [
     {
       "id": "LLaMA_CPP",
+      "modelCode": "mozilla-ai/llamafile",
       "name": "LLaMA_CPP",
       "reasoning": false,
       "attachment": false,

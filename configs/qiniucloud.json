@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "minimax/minimax-m2.5",
+      "modelCode": "minimaxai/MiniMax-M2.5",
       "name": "Minimax/Minimax-M2.5",
       "reasoning": false,
       "attachment": false,
@@ -26,6 +27,7 @@
     },
     {
       "id": "z-ai/glm-5",
+      "modelCode": "zai-org/GLM-5",
       "name": "Z-Ai/GLM 5",
       "reasoning": false,
       "attachment": false,
@@ -42,6 +44,7 @@
     },
     {
       "id": "minimax/minimax-m2.1",
+      "modelCode": "minimaxai/MiniMax-M2.1",
       "name": "Minimax/Minimax-M2.1",
       "reasoning": true,
       "attachment": false,
@@ -58,6 +61,7 @@
     },
     {
       "id": "moonshotai/kimi-k2-thinking",
+      "modelCode": "moonshotai/Kimi-K2-Thinking",
       "name": "Kimi K2 Thinking",
       "reasoning": true,
       "attachment": false,
@@ -74,6 +78,7 @@
     },
     {
       "id": "z-ai/glm-4.7",
+      "modelCode": "zai-org/GLM-4.7",
       "name": "Z-Ai/GLM 4.7",
       "reasoning": true,
       "attachment": false,
@@ -90,6 +95,7 @@
     },
     {
       "id": "minimax/minimax-m2",
+      "modelCode": "minimaxai/MiniMax-M2",
       "name": "Minimax/Minimax-M2",
       "reasoning": true,
       "attachment": false,
@@ -106,6 +112,7 @@
     },
     {
       "id": "z-ai/glm-4.6",
+      "modelCode": "zai-org/GLM-4.6",
       "name": "Z-AI/GLM 4.6",
       "reasoning": true,
       "attachment": false,
@@ -122,6 +129,7 @@
     },
     {
       "id": "deepseek/deepseek-v3.1-terminus",
+      "modelCode": "deepseek-ai/DeepSeek-V3.1-Terminus",
       "name": "DeepSeek/DeepSeek-V3.1-Terminus",
       "reasoning": false,
       "attachment": false,
@@ -138,6 +146,7 @@
     },
     {
       "id": "deepseek-v3.1",
+      "modelCode": "deepseek-ai/DeepSeek-V3.1",
       "name": "DeepSeek-V3.1",
       "reasoning": false,
       "attachment": false,
@@ -154,6 +163,7 @@
     },
     {
       "id": "doubao-seed-2.0-pro",
+      "modelCode": "bytedance-seed/doubao-seed-2-0-pro",
       "name": "Doubao Seed 2.0 Pro",
       "reasoning": false,
       "attachment": true,
@@ -170,6 +180,7 @@
     },
     {
       "id": "doubao-seed-2.0-code",
+      "modelCode": "bytedance-seed/doubao-seed-2.0-code",
       "name": "Doubao Seed 2.0 Code",
       "reasoning": false,
       "attachment": true,
@@ -186,6 +197,7 @@
     },
     {
       "id": "qwen3-coder-480b-a35b-instruct",
+      "modelCode": "qwen/Qwen3-Coder-480B-A35B-Instruct",
       "name": "Qwen3 Coder 480B A35B Instruct",
       "reasoning": false,
       "attachment": false,
@@ -202,6 +214,7 @@
     },
     {
       "id": "glm-4.5",
+      "modelCode": "zai-org/GLM-4.5",
       "name": "GLM 4.5",
       "reasoning": false,
       "attachment": false,
@@ -218,6 +231,7 @@
     },
     {
       "id": "moonshotai/kimi-k2-0905",
+      "modelCode": "moonshotai/Kimi-K2-Instruct-0905",
       "name": "Kimi K2 0905",
       "reasoning": true,
       "attachment": false,

@@ -5,6 +5,7 @@
   "models": [
     {
       "id": "command-r7b-arabic-02-2025",
+      "modelCode": "cohere/command-r7b-arabic-02-2025",
       "name": "Command R7B Arabic",
       "reasoning": false,
       "attachment": false,
@@ -19,6 +20,7 @@
     },
     {
       "id": "command-a-plus-05-2026",
+      "modelCode": "cohere/command-a-plus-05-2026",
       "name": "Command A Plus",
       "reasoning": true,
       "attachment": true,
@@ -41,6 +43,7 @@
     },
     {
       "id": "command-a-reasoning-08-2025",
+      "modelCode": "cohere/command-a-reasoning-08-2025",
       "name": "Command A Reasoning",
       "reasoning": true,
       "attachment": false,
@@ -63,6 +66,7 @@
     },
     {
       "id": "command-a-vision-07-2025",
+      "modelCode": "cohere/command-a-vision-07-2025",
       "name": "Command A Vision",
       "reasoning": false,
       "attachment": true,
@@ -77,6 +81,7 @@
     },
     {
       "id": "north-mini-code-1-0",
+      "modelCode": "cohere/north-mini-code-1-0",
       "name": "North Mini Code",
       "reasoning": true,
       "attachment": false,
@@ -100,6 +105,7 @@
     },
     {
       "id": "command-r-plus-08-2024",
+      "modelCode": "cohere/command-r-plus-08-2024",
       "name": "Command R+",
       "reasoning": false,
       "attachment": false,
@@ -114,6 +120,7 @@
     },
     {
       "id": "command-a-translate-08-2025",
+      "modelCode": "cohere/command-a-translate-08-2025",
       "name": "Command A Translate",
       "reasoning": false,
       "attachment": false,
@@ -128,6 +135,7 @@
     },
     {
       "id": "command-a-03-2025",
+      "modelCode": "cohere/command-a",
       "name": "Command A",
       "reasoning": false,
       "attachment": false,
@@ -142,6 +150,7 @@
     },
     {
       "id": "c4ai-aya-expanse-32b",
+      "modelCode": "cohere/c4ai-aya-expanse-32b",
       "name": "Aya Expanse 32B",
       "reasoning": false,
       "attachment": false,
@@ -153,6 +162,7 @@
     },
     {
       "id": "c4ai-aya-expanse-8b",
+      "modelCode": "cohere/c4ai-aya-expanse-8b",
       "name": "Aya Expanse 8B",
       "reasoning": false,
       "attachment": false,
@@ -164,6 +174,7 @@
     },
     {
       "id": "c4ai-aya-vision-8b",
+      "modelCode": "cohere/c4ai-aya-vision-8b",
       "name": "Aya Vision 8B",
       "reasoning": false,
       "attachment": true,
@@ -175,6 +186,7 @@
     },
     {
       "id": "command-r7b-12-2024",
+      "modelCode": "cohere/command-r7b-12-2024",
       "name": "Command R7B",
       "reasoning": false,
       "attachment": false,
@@ -189,6 +201,7 @@
     },
     {
       "id": "c4ai-aya-vision-32b",
+      "modelCode": "cohere/c4ai-aya-vision-32b",
       "name": "Aya Vision 32B",
       "reasoning": false,
       "attachment": true,
@@ -200,6 +213,7 @@
     },
     {
       "id": "command-r-08-2024",
+      "modelCode": "cohere/command-r-08-2024",
       "name": "Command R",
       "reasoning": false,
       "attachment": false,

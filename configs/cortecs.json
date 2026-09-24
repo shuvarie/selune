@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "qwen3.8-27b",
+      "modelCode": "qwen/Qwen3.8-27B",
       "name": "qwen3.8-27b",
       "reasoning": true,
       "reasoning_options": [
@@ -36,6 +37,7 @@
     },
     {
       "id": "gemini-3.7-flash",
+      "modelCode": "google/gemini-3.7-flash",
       "name": "gemini-3.7-flash",
       "reasoning": true,
       "reasoning_options": [
@@ -62,6 +64,7 @@
     },
     {
       "id": "gemini-3.6-flash",
+      "modelCode": "google/gemini-3.6-flash",
       "name": "gemini-3.6-flash",
       "reasoning": true,
       "reasoning_options": [
@@ -88,6 +91,7 @@
     },
     {
       "id": "qwen3.8-2.4t-a95b",
+      "modelCode": "qwen/Qwen3.8-2.4T-A95B",
       "name": "qwen3.8-2.4t-a95b",
       "reasoning": true,
       "reasoning_options": [
@@ -114,6 +118,7 @@
     },
     {
       "id": "gemini-3.5-flash-lite",
+      "modelCode": "google/gemini-3.5-flash-lite",
       "name": "gemini-3.5-flash-lite",
       "reasoning": true,
       "reasoning_options": [
@@ -140,6 +145,7 @@
     },
     {
       "id": "deepseek-v4-flash-0731",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "name": "deepseek-v4-flash-0731",
       "reasoning": true,
       "reasoning_options": [
@@ -166,6 +172,7 @@
     },
     {
       "id": "kimi-k3",
+      "modelCode": "moonshotai/Kimi-K3",
       "name": "kimi-k3",
       "reasoning": true,
       "reasoning_options": [
@@ -192,6 +199,7 @@
     },
     {
       "id": "claude-opus-5",
+      "modelCode": "anthropic/claude-opus-5",
       "name": "claude-opus-5",
       "reasoning": true,
       "reasoning_options": [
@@ -218,6 +226,7 @@
     },
     {
       "id": "gpt-5.6-sol",
+      "modelCode": "openai/gpt-5.6-sol",
       "name": "gpt-5.6-sol",
       "reasoning": true,
       "reasoning_options": [
@@ -244,6 +253,7 @@
     },
     {
       "id": "gpt-5.6-terra",
+      "modelCode": "openai/gpt-5.6-terra",
       "name": "gpt-5.6-terra",
       "reasoning": true,
       "reasoning_options": [
@@ -270,6 +280,7 @@
     },
     {
       "id": "gpt-5.6-luna",
+      "modelCode": "openai/gpt-5.6-luna",
       "name": "gpt-5.6-luna",
       "reasoning": true,
       "reasoning_options": [
@@ -296,6 +307,7 @@
     },
     {
       "id": "apertus-70b",
+      "modelCode": "swiss-ai/apertus-70b",
       "name": "apertus-70b",
       "reasoning": true,
       "reasoning_options": [
@@ -322,6 +334,7 @@
     },
     {
       "id": "claude-sonnet-5",
+      "modelCode": "anthropic/claude-sonnet-5",
       "name": "claude-sonnet-5",
       "reasoning": true,
       "reasoning_options": [
@@ -348,6 +361,7 @@
     },
     {
       "id": "gemma-4-31b-it",
+      "modelCode": "google/gemma-4-31B-it",
       "name": "gemma-4-31b-it",
       "reasoning": true,
       "reasoning_options": [
@@ -374,6 +388,7 @@
     },
     {
       "id": "glm-5.2",
+      "modelCode": "zai-org/GLM-5.2",
       "name": "glm-5.2",
       "reasoning": true,
       "reasoning_options": [
@@ -400,6 +415,7 @@
     },
     {
       "id": "kimi-k2.7-code",
+      "modelCode": "moonshotai/Kimi-K2.7-Code",
       "name": "kimi-k2.7-code",
       "reasoning": true,
       "reasoning_options": [
@@ -426,6 +442,7 @@
     },
     {
       "id": "minimax-m3",
+      "modelCode": "minimaxai/MiniMax-M3",
       "name": "minimax-m3",
       "reasoning": true,
       "reasoning_options": [
@@ -452,6 +469,7 @@
     },
     {
       "id": "qwen3.6-27b",
+      "modelCode": "qwen/Qwen3.6-27B",
       "name": "qwen3.6-27b",
       "reasoning": true,
       "reasoning_options": [
@@ -478,6 +496,7 @@
     },
     {
       "id": "cosmos3-super-reasoner",
+      "modelCode": "nvidia/cosmos3-super-reasoner",
       "name": "cosmos3-super-reasoner",
       "reasoning": true,
       "reasoning_options": [
@@ -504,6 +523,7 @@
     },
     {
       "id": "claude-opus4-8",
+      "modelCode": "anthropic/claude-opus-4-8",
       "name": "claude-opus4-8",
       "reasoning": true,
       "reasoning_options": [
@@ -530,6 +550,7 @@
     },
     {
       "id": "gemini-3.5-flash",
+      "modelCode": "google/gemini-3.5-flash",
       "name": "gemini-3.5-flash",
       "reasoning": true,
       "reasoning_options": [
@@ -556,6 +577,7 @@
     },
     {
       "id": "gemini-3.1-flash-lite",
+      "modelCode": "google/gemini-3.1-flash-lite",
       "name": "gemini-3.1-flash-lite",
       "reasoning": true,
       "reasoning_options": [
@@ -582,6 +604,7 @@
     },
     {
       "id": "qwen3.6-35b-a3b",
+      "modelCode": "qwen/Qwen3.6-35B-A3B",
       "name": "qwen3.6-35b-a3b",
       "reasoning": true,
       "reasoning_options": [
@@ -608,6 +631,7 @@
     },
     {
       "id": "glm-5v-turbo",
+      "modelCode": "zai-org/glm-5v-turbo",
       "name": "glm-5v-turbo",
       "reasoning": true,
       "reasoning_options": [
@@ -634,6 +658,7 @@
     },
     {
       "id": "glm-5-turbo",
+      "modelCode": "zai-org/glm-5-turbo",
       "name": "glm-5-turbo",
       "reasoning": true,
       "reasoning_options": [
@@ -660,6 +685,7 @@
     },
     {
       "id": "gemma-4-26b-a4b-it",
+      "modelCode": "google/gemma-4-26B-A4B-it",
       "name": "gemma-4-26b-a4b-it",
       "reasoning": true,
       "reasoning_options": [
@@ -686,6 +712,7 @@
     },
     {
       "id": "deepseek-v4-pro",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Pro",
       "name": "deepseek-v4-pro",
       "reasoning": true,
       "reasoning_options": [
@@ -712,6 +739,7 @@
     },
     {
       "id": "mistral-medium-3.5",
+      "modelCode": "mistralai/mistral-medium-3.5",
       "name": "mistral-medium-3.5",
       "reasoning": true,
       "reasoning_options": [
@@ -738,6 +766,7 @@
     },
     {
       "id": "nvidia-nemotron-3-nano-omni",
+      "modelCode": "nvidia/nemotron-3-nano-omni",
       "name": "nvidia-nemotron-3-nano-omni",
       "reasoning": true,
       "reasoning_options": [
@@ -764,6 +793,7 @@
     },
     {
       "id": "gpt-5.4",
+      "modelCode": "openai/gpt-5.4",
       "name": "gpt-5.4",
       "reasoning": true,
       "reasoning_options": [
@@ -790,6 +820,7 @@
     },
     {
       "id": "kimi-k2.6",
+      "modelCode": "moonshotai/Kimi-K2.6",
       "name": "kimi-k2.6",
       "reasoning": true,
       "reasoning_options": [
@@ -816,6 +847,7 @@
     },
     {
       "id": "claude-opus4-7",
+      "modelCode": "anthropic/claude-opus-4-7",
       "name": "claude-opus4-7",
       "reasoning": true,
       "reasoning_options": [
@@ -842,6 +874,7 @@
     },
     {
       "id": "minimax-m2.7",
+      "modelCode": "minimaxai/MiniMax-M2.7",
       "name": "minimax-m2.7",
       "reasoning": true,
       "reasoning_options": [
@@ -868,6 +901,7 @@
     },
     {
       "id": "glm-5.1",
+      "modelCode": "zai-org/GLM-5.1",
       "name": "glm-5.1",
       "reasoning": true,
       "reasoning_options": [
@@ -894,6 +928,7 @@
     },
     {
       "id": "qwen3.5-122b-a10b",
+      "modelCode": "qwen/Qwen3.5-122B-A10B",
       "name": "qwen3.5-122b-a10b",
       "reasoning": true,
       "reasoning_options": [
@@ -920,6 +955,7 @@
     },
     {
       "id": "qwen3.5-9b",
+      "modelCode": "qwen/Qwen3.5-9B",
       "name": "qwen3.5-9b",
       "reasoning": true,
       "reasoning_options": [
@@ -946,6 +982,7 @@
     },
     {
       "id": "qwen3-coder-next",
+      "modelCode": "qwen/Qwen3-Coder-Next",
       "name": "qwen3-coder-next",
       "reasoning": true,
       "reasoning_options": [
@@ -972,6 +1009,7 @@
     },
     {
       "id": "glm-5",
+      "modelCode": "zai-org/GLM-5",
       "name": "glm-5",
       "reasoning": true,
       "reasoning_options": [
@@ -998,6 +1036,7 @@
     },
     {
       "id": "qwen3.5-397b-a17b",
+      "modelCode": "qwen/Qwen3.5-397B-A17B",
       "name": "qwen3.5-397b-a17b",
       "reasoning": true,
       "reasoning_options": [
@@ -1024,6 +1063,7 @@
     },
     {
       "id": "deepseek-v3.2",
+      "modelCode": "deepseek-ai/DeepSeek-V3.2",
       "name": "deepseek-v3.2",
       "reasoning": true,
       "reasoning_options": [
@@ -1050,6 +1090,7 @@
     },
     {
       "id": "mistral-small-2603",
+      "modelCode": "mistralai/mistral-small-2603",
       "name": "mistral-small-2603",
       "reasoning": true,
       "reasoning_options": [
@@ -1076,6 +1117,7 @@
     },
     {
       "id": "minimax-m2.5",
+      "modelCode": "minimaxai/MiniMax-M2.5",
       "name": "minimax-m2.5",
       "reasoning": true,
       "reasoning_options": [
@@ -1102,6 +1144,7 @@
     },
     {
       "id": "claude-4-6-sonnet",
+      "modelCode": "anthropic/claude-sonnet-4-6",
       "name": "claude-4-6-sonnet",
       "reasoning": true,
       "reasoning_options": [
@@ -1128,6 +1171,7 @@
     },
     {
       "id": "glm-4.7-flash",
+      "modelCode": "zai-org/GLM-4.7-Flash",
       "name": "glm-4.7-flash",
       "reasoning": false,
       "attachment": false,
@@ -1144,6 +1188,7 @@
     },
     {
       "id": "kimi-k2.5",
+      "modelCode": "moonshotai/Kimi-K2.5",
       "name": "kimi-k2.5",
       "reasoning": true,
       "reasoning_options": [
@@ -1170,6 +1215,7 @@
     },
     {
       "id": "claude-opus4-6",
+      "modelCode": "anthropic/claude-opus-4-6",
       "name": "claude-opus4-6",
       "reasoning": true,
       "reasoning_options": [
@@ -1196,6 +1242,7 @@
     },
     {
       "id": "minimax-m2",
+      "modelCode": "minimaxai/MiniMax-M2",
       "name": "minimax-m2",
       "reasoning": true,
       "reasoning_options": [
@@ -1222,6 +1269,7 @@
     },
     {
       "id": "glm-4.7",
+      "modelCode": "zai-org/GLM-4.7",
       "name": "glm-4.7",
       "reasoning": true,
       "reasoning_options": [
@@ -1248,6 +1296,7 @@
     },
     {
       "id": "minimax-m2.1",
+      "modelCode": "minimaxai/MiniMax-M2.1",
       "name": "minimax-m2.1",
       "reasoning": true,
       "reasoning_options": [
@@ -1274,6 +1323,7 @@
     },
     {
       "id": "qwen3-vl-235b-a22b",
+      "modelCode": "qwen/qwen3-vl-235b-a22b",
       "name": "qwen3-vl-235b-a22b",
       "reasoning": true,
       "reasoning_options": [
@@ -1300,6 +1350,7 @@
     },
     {
       "id": "nvidia-nemotron-3-nano-30b-a3b",
+      "modelCode": "nvidia/nemotron-3-nano-30b-a3b",
       "name": "nvidia-nemotron-3-nano-30b-a3b",
       "reasoning": true,
       "reasoning_options": [
@@ -1326,6 +1377,7 @@
     },
     {
       "id": "claude-opus4-5",
+      "modelCode": "anthropic/claude-opus-4-5",
       "name": "claude-opus4-5",
       "reasoning": true,
       "reasoning_options": [
@@ -1352,6 +1404,7 @@
     },
     {
       "id": "qwen3-next-80b-a3b-thinking",
+      "modelCode": "qwen/Qwen3-Next-80B-A3B-Thinking",
       "name": "qwen3-next-80b-a3b-thinking",
       "reasoning": true,
       "reasoning_options": [
@@ -1378,6 +1431,7 @@
     },
     {
       "id": "devstral-2512",
+      "modelCode": "mistralai/devstral-2512",
       "name": "devstral-2512",
       "reasoning": false,
       "attachment": false,
@@ -1394,6 +1448,7 @@
     },
     {
       "id": "nova-2-lite",
+      "modelCode": "amazon/nova-2-lite",
       "name": "nova-2-lite",
       "reasoning": true,
       "reasoning_options": [
@@ -1420,6 +1475,7 @@
     },
     {
       "id": "gpt-oss-safeguard-120b",
+      "modelCode": "openai/gpt-oss-safeguard-120b",
       "name": "gpt-oss-safeguard-120b",
       "reasoning": true,
       "reasoning_options": [
@@ -1446,6 +1502,7 @@
     },
     {
       "id": "mistral-large-2512",
+      "modelCode": "mistralai/mistral-large-2512",
       "name": "mistral-large-2512",
       "reasoning": false,
       "attachment": true,
@@ -1462,6 +1519,7 @@
     },
     {
       "id": "ministral-8b-2512",
+      "modelCode": "mistralai/ministral-8b-2512",
       "name": "ministral-8b-2512",
       "reasoning": false,
       "attachment": true,
@@ -1478,6 +1536,7 @@
     },
     {
       "id": "ministral-3b-2512",
+      "modelCode": "mistralai/ministral-3b-2512",
       "name": "ministral-3b-2512",
       "reasoning": false,
       "attachment": true,
@@ -1494,6 +1553,7 @@
     },
     {
       "id": "ministral-14b-2512",
+      "modelCode": "mistralai/ministral-14b-2512",
       "name": "ministral-14b-2512",
       "reasoning": false,
       "attachment": true,
@@ -1510,6 +1570,7 @@
     },
     {
       "id": "gpt-5.1",
+      "modelCode": "openai/gpt-5.1",
       "name": "gpt-5.1",
       "reasoning": true,
       "reasoning_options": [
@@ -1536,6 +1597,7 @@
     },
     {
       "id": "nemotron-nano-v2-12b",
+      "modelCode": "nvidia/nemotron-nano-v2-12b",
       "name": "nemotron-nano-v2-12b",
       "reasoning": true,
       "reasoning_options": [
@@ -1562,6 +1624,7 @@
     },
     {
       "id": "claude-haiku-4-5",
+      "modelCode": "anthropic/claude-haiku-4-5",
       "name": "claude-haiku-4-5",
       "reasoning": true,
       "reasoning_options": [
@@ -1588,6 +1651,7 @@
     },
     {
       "id": "claude-4-5-sonnet",
+      "modelCode": "anthropic/claude-sonnet-4-5",
       "name": "claude-4-5-sonnet",
       "reasoning": true,
       "reasoning_options": [
@@ -1614,6 +1678,7 @@
     },
     {
       "id": "hermes-4-70b",
+      "modelCode": "nousresearch/Hermes-4-70B",
       "name": "hermes-4-70b",
       "reasoning": false,
       "attachment": false,
@@ -1630,6 +1695,7 @@
     },
     {
       "id": "gpt-5",
+      "modelCode": "openai/gpt-5",
       "name": "gpt-5",
       "reasoning": true,
       "reasoning_options": [
@@ -1656,6 +1722,7 @@
     },
     {
       "id": "gpt-oss-120b",
+      "modelCode": "openai/gpt-oss-120b",
       "name": "gpt-oss-120b",
       "reasoning": true,
       "reasoning_options": [
@@ -1682,6 +1749,7 @@
     },
     {
       "id": "qwen3-30b-a3b-instruct-2507",
+      "modelCode": "qwen/Qwen3-30B-A3B-Instruct-2507",
       "name": "qwen3-30b-a3b-instruct-2507",
       "reasoning": true,
       "reasoning_options": [
@@ -1708,6 +1776,7 @@
     },
     {
       "id": "gpt-oss-20b",
+      "modelCode": "openai/gpt-oss-20b",
       "name": "gpt-oss-20b",
       "reasoning": true,
       "reasoning_options": [
@@ -1734,6 +1803,7 @@
     },
     {
       "id": "mistral-7b-instruct-v0.3",
+      "modelCode": "mistralai/mistral-7b-instruct-v0.3",
       "name": "mistral-7b-instruct-v0.3",
       "reasoning": false,
       "attachment": false,
@@ -1750,6 +1820,7 @@
     },
     {
       "id": "mistral-small-3.2-24b-instruct-2506",
+      "modelCode": "mistralai/mistral-small-3.2-24b-instruct-2506",
       "name": "mistral-small-3.2-24b-instruct-2506",
       "reasoning": false,
       "attachment": true,
@@ -1766,6 +1837,7 @@
     },
     {
       "id": "mistral-large-2402",
+      "modelCode": "mistralai/mistral-large-2402",
       "name": "mistral-large-2402",
       "reasoning": true,
       "reasoning_options": [
@@ -1792,6 +1864,7 @@
     },
     {
       "id": "pixtral-large-2502",
+      "modelCode": "mistralai/pixtral-large-2502",
       "name": "pixtral-large-2502",
       "reasoning": true,
       "reasoning_options": [
@@ -1818,6 +1891,7 @@
     },
     {
       "id": "qwen3-235b-a22b-instruct-2507",
+      "modelCode": "qwen/Qwen3-235B-A22B-Instruct-2507",
       "name": "qwen3-235b-a22b-instruct-2507",
       "reasoning": true,
       "reasoning_options": [
@@ -1844,6 +1918,7 @@
     },
     {
       "id": "qwen3-coder-30b-a3b-instruct",
+      "modelCode": "qwen/Qwen3-Coder-30B-A3B-Instruct",
       "name": "qwen3-coder-30b-a3b-instruct",
       "reasoning": true,
       "reasoning_options": [
@@ -1870,6 +1945,7 @@
     },
     {
       "id": "qwen3-32b",
+      "modelCode": "qwen/Qwen3-32B",
       "name": "qwen3-32b",
       "reasoning": true,
       "reasoning_options": [
@@ -1896,6 +1972,7 @@
     },
     {
       "id": "nova-lite-v1",
+      "modelCode": "amazon/nova-lite",
       "name": "nova-lite-v1",
       "reasoning": true,
       "reasoning_options": [
@@ -1922,6 +1999,7 @@
     },
     {
       "id": "claude-sonnet-4",
+      "modelCode": "anthropic/claude-sonnet-4",
       "name": "claude-sonnet-4",
       "reasoning": true,
       "reasoning_options": [
@@ -1948,6 +2026,7 @@
     },
     {
       "id": "gpt-4.1-mini",
+      "modelCode": "openai/gpt-4.1-mini",
       "name": "gpt-4.1-mini",
       "reasoning": true,
       "reasoning_options": [
@@ -1974,6 +2053,7 @@
     },
     {
       "id": "gpt-4.1-nano",
+      "modelCode": "openai/gpt-4.1-nano",
       "name": "gpt-4.1-nano",
       "reasoning": true,
       "reasoning_options": [
@@ -2000,6 +2080,7 @@
     },
     {
       "id": "nova-micro-v1",
+      "modelCode": "amazon/nova-micro",
       "name": "nova-micro-v1",
       "reasoning": true,
       "reasoning_options": [
@@ -2026,6 +2107,7 @@
     },
     {
       "id": "gpt-4.1",
+      "modelCode": "openai/gpt-4.1",
       "name": "gpt-4.1",
       "reasoning": true,
       "reasoning_options": [
@@ -2052,6 +2134,7 @@
     },
     {
       "id": "nova-pro-v1",
+      "modelCode": "amazon/nova-pro",
       "name": "nova-pro-v1",
       "reasoning": true,
       "reasoning_options": [
@@ -2078,6 +2161,7 @@
     },
     {
       "id": "llama-3.1-nemotron-ultra-253b-v1",
+      "modelCode": "meta-llama/llama-3.1-nemotron-ultra-253b-v1",
       "name": "llama-3.1-nemotron-ultra-253b-v1",
       "reasoning": true,
       "reasoning_options": [
@@ -2104,6 +2188,7 @@
     },
     {
       "id": "mistral-small-2503",
+      "modelCode": "mistralai/mistral-small-2503",
       "name": "mistral-small-2503",
       "reasoning": false,
       "attachment": true,
@@ -2120,6 +2205,7 @@
     },
     {
       "id": "gemini-2.5-flash",
+      "modelCode": "google/gemini-2.5-flash",
       "name": "gemini-2.5-flash",
       "reasoning": true,
       "reasoning_options": [
@@ -2146,6 +2232,7 @@
     },
     {
       "id": "gemini-2.5-pro",
+      "modelCode": "google/gemini-2.5-pro",
       "name": "gemini-2.5-pro",
       "reasoning": true,
       "reasoning_options": [
@@ -2172,6 +2259,7 @@
     },
     {
       "id": "gemma-3-27b-it",
+      "modelCode": "google/gemma-3-27b-it",
       "name": "gemma-3-27b-it",
       "reasoning": true,
       "reasoning_options": [
@@ -2198,6 +2286,7 @@
     },
     {
       "id": "deepseek-r1-0528",
+      "modelCode": "deepseek-ai/DeepSeek-R1-0528",
       "name": "deepseek-r1-0528",
       "reasoning": true,
       "reasoning_options": [
@@ -2224,6 +2313,7 @@
     },
     {
       "id": "codestral-2508",
+      "modelCode": "mistralai/codestral-2508",
       "name": "codestral-2508",
       "reasoning": false,
       "attachment": false,
@@ -2240,6 +2330,7 @@
     },
     {
       "id": "llama-3.3-70b-instruct",
+      "modelCode": "meta-llama/Llama-3.3-70B-Instruct",
       "name": "llama-3.3-70b-instruct",
       "reasoning": true,
       "reasoning_options": [
@@ -2266,6 +2357,7 @@
     },
     {
       "id": "gpt-4o",
+      "modelCode": "openai/gpt-4o",
       "name": "gpt-4o",
       "reasoning": true,
       "reasoning_options": [
@@ -2292,6 +2384,7 @@
     },
     {
       "id": "gpt-5-mini",
+      "modelCode": "openai/gpt-5-mini",
       "name": "gpt-5-mini",
       "reasoning": true,
       "reasoning_options": [
@@ -2318,6 +2411,7 @@
     },
     {
       "id": "gpt-5-nano",
+      "modelCode": "openai/gpt-5-nano",
       "name": "gpt-5-nano",
       "reasoning": true,
       "reasoning_options": [
@@ -2344,6 +2438,7 @@
     },
     {
       "id": "hermes-4-405b",
+      "modelCode": "nousresearch/Hermes-4-405B",
       "name": "hermes-4-405b",
       "reasoning": false,
       "attachment": false,
@@ -2360,6 +2455,7 @@
     },
     {
       "id": "mistral-medium-2508",
+      "modelCode": "mistralai/mistral-medium-2508",
       "name": "mistral-medium-2508",
       "reasoning": true,
       "reasoning_options": [
@@ -2386,6 +2482,7 @@
     },
     {
       "id": "mistral-nemo-instruct-2407",
+      "modelCode": "mistralai/mistral-nemo-instruct-2407",
       "name": "mistral-nemo-instruct-2407",
       "reasoning": false,
       "attachment": false,
@@ -2402,6 +2499,7 @@
     },
     {
       "id": "llama-3.1-405b-instruct",
+      "modelCode": "meta-llama/llama-3.1-405b-instruct",
       "name": "llama-3.1-405b-instruct",
       "reasoning": true,
       "reasoning_options": [
@@ -2428,6 +2526,7 @@
     },
     {
       "id": "gpt-4o-mini",
+      "modelCode": "openai/gpt-4o-mini",
       "name": "gpt-4o-mini",
       "reasoning": true,
       "reasoning_options": [
@@ -2454,6 +2553,7 @@
     },
     {
       "id": "llama-3.1-8b-instruct",
+      "modelCode": "meta-llama/Llama-3.1-8B-Instruct",
       "name": "llama-3.1-8b-instruct",
       "reasoning": true,
       "reasoning_options": [

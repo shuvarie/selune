@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "essentialai/Rnj-1-Instruct",
+      "modelCode": "essentialai/Rnj-1-Instruct",
       "name": "Rnj-1 Instruct",
       "reasoning": false,
       "attachment": false,
@@ -24,6 +25,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-V3-1",
+      "modelCode": "deepseek-ai/DeepSeek-V3.1",
       "name": "DeepSeek V3.1",
       "reasoning": true,
       "attachment": false,
@@ -43,6 +45,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-V3",
+      "modelCode": "deepseek-ai/DeepSeek-V3",
       "name": "DeepSeek-V3",
       "reasoning": false,
       "attachment": false,
@@ -57,6 +60,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "reasoning": true,
       "attachment": false,
@@ -84,6 +88,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash",
       "name": "DeepSeek V4.1 Flash",
       "reasoning": true,
       "attachment": true,
@@ -109,6 +114,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "reasoning": true,
       "attachment": false,
@@ -137,6 +143,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-R1",
+      "modelCode": "deepseek-ai/DeepSeek-R1",
       "name": "DeepSeek-R1",
       "reasoning": true,
       "attachment": false,
@@ -151,6 +158,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Pro",
       "name": "DeepSeek V4 Pro",
       "reasoning": true,
       "attachment": false,
@@ -178,6 +186,7 @@
     },
     {
       "id": "pearl-ai/gemma-4-31b-it",
+      "modelCode": "pearl-ai/gemma-4-31B-it",
       "name": "Pearl AI Gemma 4 31B Instruct",
       "reasoning": true,
       "attachment": false,
@@ -192,6 +201,7 @@
     },
     {
       "id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "modelCode": "nvidia/nemotron-3-ultra-550b-a55b",
       "name": "Nemotron 3 Ultra 550B A55B",
       "reasoning": true,
       "attachment": false,
@@ -212,6 +222,7 @@
     },
     {
       "id": "google/gemma-4-31B-it",
+      "modelCode": "google/gemma-4-31B-it",
       "name": "Gemma 4 31B Instruct",
       "reasoning": true,
       "attachment": true,
@@ -226,6 +237,7 @@
     },
     {
       "id": "google/gemma-3n-E4B-it",
+      "modelCode": "google/gemma-3n-E4B-it",
       "name": "Gemma 3N E4B Instruct",
       "reasoning": false,
       "attachment": false,
@@ -240,6 +252,7 @@
     },
     {
       "id": "zai-org/GLM-5.1",
+      "modelCode": "zai-org/GLM-5.1",
       "name": "GLM-5.1",
       "reasoning": true,
       "attachment": false,
@@ -260,6 +273,7 @@
     },
     {
       "id": "zai-org/GLM-5.3",
+      "modelCode": "zai-org/GLM-5.3",
       "name": "GLM-5.3",
       "reasoning": true,
       "attachment": false,
@@ -285,6 +299,7 @@
     },
     {
       "id": "zai-org/GLM-5.2",
+      "modelCode": "zai-org/GLM-5.2",
       "name": "GLM-5.2",
       "reasoning": true,
       "attachment": false,
@@ -312,6 +327,7 @@
     },
     {
       "id": "zai-org/GLM-5",
+      "modelCode": "zai-org/GLM-5",
       "name": "GLM-5",
       "reasoning": true,
       "attachment": false,
@@ -331,6 +347,7 @@
     },
     {
       "id": "zai-org/GLM-5.3-Flash",
+      "modelCode": "zai-org/GLM-5.3-Flash",
       "name": "GLM-5.3-Flash",
       "reasoning": true,
       "attachment": true,
@@ -356,6 +373,7 @@
     },
     {
       "id": "LiquidAI/LFM2-24B-A2B",
+      "modelCode": "liquid/LFM2-24B-A2B",
       "name": "LFM2-24B-A2B",
       "reasoning": false,
       "attachment": false,
@@ -370,6 +388,7 @@
     },
     {
       "id": "thinkingmachines/Inkling",
+      "modelCode": "thinkingmachines/Inkling",
       "name": "Inkling",
       "reasoning": true,
       "attachment": true,
@@ -398,6 +417,7 @@
     },
     {
       "id": "Qwen/Qwen3.7-Max",
+      "modelCode": "qwen/qwen3.7-max",
       "name": "Qwen3.7 Max",
       "reasoning": false,
       "attachment": false,
@@ -413,6 +433,7 @@
     },
     {
       "id": "Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+      "modelCode": "qwen/Qwen3-235B-A22B-Instruct-2507:tput",
       "name": "Qwen3 235B A22B Instruct 2507 FP8",
       "reasoning": false,
       "attachment": false,
@@ -427,6 +448,7 @@
     },
     {
       "id": "Qwen/Qwen3.6-Plus",
+      "modelCode": "qwen/qwen3.6-plus",
       "name": "Qwen3.6 Plus",
       "reasoning": true,
       "attachment": false,
@@ -446,6 +468,7 @@
     },
     {
       "id": "Qwen/Qwen3.5-9B",
+      "modelCode": "qwen/Qwen3.5-9B",
       "name": "Qwen3.5 9B",
       "reasoning": true,
       "attachment": true,
@@ -465,6 +488,7 @@
     },
     {
       "id": "Qwen/Qwen3.5-397B-A17B",
+      "modelCode": "qwen/Qwen3.5-397B-A17B",
       "name": "Qwen3.5 397B A17B",
       "reasoning": true,
       "attachment": false,
@@ -485,6 +509,7 @@
     },
     {
       "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+      "modelCode": "qwen/Qwen3-Coder-480B-A35B-Instruct:fp8",
       "name": "Qwen3 Coder 480B A35B Instruct",
       "reasoning": false,
       "attachment": false,
@@ -499,6 +524,7 @@
     },
     {
       "id": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+      "modelCode": "qwen/Qwen2.5-7B-Instruct-Turbo",
       "name": "Qwen 2.5 7B Instruct Turbo",
       "reasoning": false,
       "attachment": false,
@@ -513,6 +539,7 @@
     },
     {
       "id": "Qwen/Qwen3-Coder-Next-FP8",
+      "modelCode": "qwen/Qwen3-Coder-Next:fp8",
       "name": "Qwen3 Coder Next FP8",
       "reasoning": false,
       "attachment": false,
@@ -527,6 +554,7 @@
     },
     {
       "id": "deepcogito/cogito-v2-1-671b",
+      "modelCode": "deepcogito/cogito-v2-1-671b",
       "name": "Cogito v2.1 671B",
       "reasoning": true,
       "attachment": false,
@@ -546,6 +574,7 @@
     },
     {
       "id": "MiniMaxAI/MiniMax-M2.5",
+      "modelCode": "minimaxai/MiniMax-M2.5",
       "name": "MiniMax-M2.5",
       "reasoning": true,
       "attachment": false,
@@ -561,6 +590,7 @@
     },
     {
       "id": "MiniMaxAI/MiniMax-M3",
+      "modelCode": "minimaxai/MiniMax-M3",
       "name": "MiniMax-M3",
       "reasoning": true,
       "attachment": true,
@@ -576,6 +606,7 @@
     },
     {
       "id": "MiniMaxAI/MiniMax-M2.7",
+      "modelCode": "minimaxai/MiniMax-M2.7",
       "name": "MiniMax-M2.7",
       "reasoning": true,
       "attachment": false,
@@ -591,6 +622,7 @@
     },
     {
       "id": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+      "modelCode": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
       "name": "Llama 3.3 70B",
       "reasoning": false,
       "attachment": false,
@@ -605,6 +637,7 @@
     },
     {
       "id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+      "modelCode": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
       "name": "Meta Llama 3 8B Instruct Lite",
       "reasoning": false,
       "attachment": false,
@@ -619,6 +652,7 @@
     },
     {
       "id": "openai/gpt-oss-20b",
+      "modelCode": "openai/gpt-oss-20b",
       "name": "GPT OSS 20B",
       "reasoning": true,
       "attachment": false,
@@ -643,6 +677,7 @@
     },
     {
       "id": "openai/gpt-oss-120b",
+      "modelCode": "openai/gpt-oss-120b",
       "name": "GPT OSS 120B",
       "reasoning": true,
       "attachment": false,
@@ -667,6 +702,7 @@
     },
     {
       "id": "moonshotai/Kimi-K2.5",
+      "modelCode": "moonshotai/Kimi-K2.5",
       "name": "Kimi K2.5",
       "reasoning": true,
       "attachment": false,
@@ -686,6 +722,7 @@
     },
     {
       "id": "moonshotai/Kimi-K2.7-Code",
+      "modelCode": "moonshotai/Kimi-K2.7-Code",
       "name": "Kimi K2.7 Code",
       "reasoning": true,
       "attachment": false,
@@ -701,6 +738,7 @@
     },
     {
       "id": "moonshotai/Kimi-K2.6",
+      "modelCode": "moonshotai/Kimi-K2.6",
       "name": "Kimi K2.6",
       "reasoning": true,
       "attachment": true,
@@ -721,6 +759,7 @@
     },
     {
       "id": "moonshotai/Kimi-K3",
+      "modelCode": "moonshotai/Kimi-K3",
       "name": "Kimi K3",
       "reasoning": true,
       "attachment": true,

@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "whisper-large-v3",
+      "modelCode": "openai/whisper-large-v3",
       "name": "Whisper",
       "reasoning": false,
       "attachment": false,
@@ -21,6 +22,7 @@
     },
     {
       "id": "whisper-large-v3-turbo",
+      "modelCode": "openai/whisper-large-v3-turbo",
       "name": "Whisper Large V3 Turbo",
       "reasoning": false,
       "attachment": false,
@@ -32,6 +34,7 @@
     },
     {
       "id": "llama-3.1-8b-instant",
+      "modelCode": "meta-llama/llama-3.1-8b:instant",
       "name": "Llama 3.1 8B",
       "reasoning": false,
       "attachment": false,
@@ -46,6 +49,7 @@
     },
     {
       "id": "allam-2-7b",
+      "modelCode": "sdaia/allam-2-7b",
       "name": "ALLaM-2-7b",
       "reasoning": false,
       "attachment": false,
@@ -60,6 +64,7 @@
     },
     {
       "id": "llama-3.3-70b-versatile",
+      "modelCode": "meta-llama/Llama-3.3-70B-Instruct:versatile",
       "name": "Llama 3.3 70B",
       "reasoning": false,
       "attachment": false,
@@ -74,6 +79,7 @@
     },
     {
       "id": "qwen/qwen3.8-27b",
+      "modelCode": "qwen/Qwen3.8-27B",
       "name": "Qwen3.8 27B",
       "reasoning": true,
       "attachment": true,
@@ -100,6 +106,7 @@
     },
     {
       "id": "qwen/qwen3.6-27b",
+      "modelCode": "qwen/Qwen3.6-27B",
       "name": "Qwen3.6 27B",
       "reasoning": true,
       "attachment": true,
@@ -124,6 +131,7 @@
     },
     {
       "id": "groq/compound",
+      "modelCode": "groq/compound",
       "name": "Compound",
       "reasoning": false,
       "attachment": false,
@@ -135,6 +143,7 @@
     },
     {
       "id": "groq/compound-mini",
+      "modelCode": "groq/compound-mini",
       "name": "Compound Mini",
       "reasoning": false,
       "attachment": false,
@@ -146,6 +155,7 @@
     },
     {
       "id": "meta-llama/llama-prompt-guard-2-86m",
+      "modelCode": "meta-llama/llama-prompt-guard-2-86m",
       "name": "Prompt Guard 2 86M",
       "reasoning": false,
       "attachment": false,
@@ -160,6 +170,7 @@
     },
     {
       "id": "meta-llama/llama-prompt-guard-2-22m",
+      "modelCode": "meta-llama/llama-prompt-guard-2-22m",
       "name": "Llama Prompt Guard 2 22M",
       "reasoning": false,
       "attachment": false,
@@ -174,6 +185,7 @@
     },
     {
       "id": "openai/gpt-oss-20b",
+      "modelCode": "openai/gpt-oss-20b",
       "name": "GPT OSS 20B",
       "reasoning": true,
       "attachment": false,
@@ -199,6 +211,7 @@
     },
     {
       "id": "openai/gpt-oss-safeguard-20b",
+      "modelCode": "openai/gpt-oss-safeguard-20b",
       "name": "Safety GPT OSS 20B",
       "reasoning": true,
       "attachment": false,
@@ -223,6 +236,7 @@
     },
     {
       "id": "openai/gpt-oss-120b",
+      "modelCode": "openai/gpt-oss-120b",
       "name": "GPT OSS 120B",
       "reasoning": true,
       "attachment": false,
@@ -248,6 +262,7 @@
     },
     {
       "id": "canopylabs/orpheus-v1-english",
+      "modelCode": "canopylabs/orpheus-v1-english",
       "name": "Canopy Labs Orpheus V1 English",
       "reasoning": false,
       "attachment": false,
@@ -259,6 +274,7 @@
     },
     {
       "id": "canopylabs/orpheus-arabic-saudi",
+      "modelCode": "canopylabs/orpheus-arabic-saudi",
       "name": "Canopy Labs Orpheus Arabic Saudi",
       "reasoning": false,
       "attachment": false,

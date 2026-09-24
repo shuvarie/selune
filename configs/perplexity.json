@@ -5,6 +5,7 @@
   "models": [
     {
       "id": "sonar",
+      "modelCode": "perplexity-ai/sonar",
       "name": "Sonar",
       "reasoning": false,
       "attachment": false,
@@ -19,6 +20,7 @@
     },
     {
       "id": "sonar-reasoning-pro",
+      "modelCode": "perplexity-ai/sonar-reasoning-pro",
       "name": "Sonar Reasoning Pro",
       "reasoning": true,
       "attachment": true,
@@ -44,6 +46,7 @@
     },
     {
       "id": "sonar-pro",
+      "modelCode": "perplexity-ai/sonar-pro",
       "name": "Sonar Pro",
       "reasoning": false,
       "attachment": true,
@@ -58,6 +61,7 @@
     },
     {
       "id": "sonar-deep-research",
+      "modelCode": "perplexity-ai/sonar-deep-research",
       "name": "Perplexity Sonar Deep Research",
       "reasoning": true,
       "attachment": false,

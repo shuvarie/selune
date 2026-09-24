@@ -1,6 +1,8 @@
 use crate::client::Client;
 use crate::embedded;
-use crate::types::{AuthMethod, InferenceProvider, Provider, ProviderType};
+use crate::types::{
+    AuthMethod, InferenceProvider, ModelCode, ModelCodeError, Provider, ProviderType,
+};
 
 #[test]
 fn embedded_providers_have_doc() {
@@ -214,6 +216,136 @@ fn openrouter_carries_default_headers() {
         headers.get("HTTP-Referer").map(String::as_str),
         Some("https://charm.land")
     );
+}
+
+#[test]
+fn model_code_parses_display_and_round_trips() {
+    let code: ModelCode = "zai-org/GLM-5.3-Flash:high".parse().unwrap();
+    assert_eq!(code.org(), "zai-org");
+    assert_eq!(code.model(), "GLM-5.3-Flash");
+    assert_eq!(code.variant(), Some("high"));
+    assert_eq!(code.to_string(), "zai-org/GLM-5.3-Flash:high");
+
+    let bare: ModelCode = "deepseek-ai/DeepSeek-V4-Flash".parse().unwrap();
+    assert_eq!(bare.variant(), None);
+    assert_eq!(bare.to_string(), "deepseek-ai/DeepSeek-V4-Flash");
+
+    assert_eq!(
+        "anthropic/claude-opus-4-8:fast"
+            .parse::<ModelCode>()
+            .unwrap()
+            .to_string(),
+        "anthropic/claude-opus-4-8:fast"
+    );
+}
+
+#[test]
+fn model_code_rejects_invalid_input() {
+    for input in [
+        "zai-org",               // missing model
+        "ZAI-org/GLM-5.3",       // org must be lowercase
+        "zai-org/GLM 5.3",       // space in model id
+        "zai-org/GLM-5.3:High",  // variant must be lowercase
+        "zai-org/GLM-5.3:hi:gh", // two variants
+        "/GLM-5.3",              // empty org
+        "zai-org/",              // empty model
+        "zai-org/GLM-5.3:",      // empty variant
+    ] {
+        assert!(
+            input.parse::<ModelCode>().is_err(),
+            "{input:?} should not parse"
+        );
+    }
+}
+
+#[test]
+fn model_code_parts_must_be_valid() {
+    assert!(matches!(
+        ModelCode::new("Zai-Org", "GLM-5.3", None),
+        Err(ModelCodeError::Org(_))
+    ));
+    assert!(matches!(
+        ModelCode::new("zai-org", "GLM 5.3", None),
+        Err(ModelCodeError::Model(_))
+    ));
+    assert!(matches!(
+        ModelCode::new("zai-org", "GLM-5.3", Some("High")),
+        Err(ModelCodeError::Variant(_))
+    ));
+    assert!(ModelCode::new("zai-org", "GLM-5.3", Some("high")).is_ok());
+}
+
+#[test]
+fn model_code_serde_round_trip() {
+    let code: ModelCode = serde_json::from_str("\"zai-org/GLM-5.3-Flash:high\"").unwrap();
+    assert_eq!(code.to_string(), "zai-org/GLM-5.3-Flash:high");
+    assert_eq!(
+        serde_json::to_string(&code).unwrap(),
+        "\"zai-org/GLM-5.3-Flash:high\""
+    );
+    assert!(serde_json::from_str::<ModelCode>("\"zai-org\"").is_err());
+}
+
+#[test]
+fn embedded_models_have_valid_model_codes() {
+    for provider in embedded::all() {
+        for model in &provider.models {
+            assert!(
+                model
+                    .model_code
+                    .org()
+                    .chars()
+                    .all(|c| c.is_ascii_lowercase() || c.is_ascii_digit() || c == '-'),
+                "org {:?} for {}",
+                model.model_code.org(),
+                provider.name
+            );
+            assert!(!model.model_code.model().is_empty(), "empty model id");
+            if let Some(variant) = model.model_code.variant() {
+                assert!(
+                    variant
+                        .chars()
+                        .all(|c| c.is_ascii_lowercase() || c.is_ascii_digit() || c == '-'),
+                    "variant {variant:?} for {}",
+                    provider.name
+                );
+            }
+        }
+    }
+}
+
+#[test]
+fn provider_lookup_by_model_code() {
+    let providers = embedded::all();
+    let anthropic = providers
+        .iter()
+        .find(|p| p.id == InferenceProvider("anthropic".into()))
+        .unwrap();
+    let code: ModelCode = "anthropic/claude-sonnet-4-6".parse().unwrap();
+    let model = anthropic.model_by_code(&code).unwrap();
+    assert_eq!(model.id, "claude-sonnet-4-6");
+    assert_eq!(model.model_code, code);
+}
+
+#[test]
+fn model_codes_identify_models_across_providers() {
+    let providers = embedded::all();
+    let code: ModelCode = "zai-org/GLM-5.3-Flash".parse().unwrap();
+    let found_in: Vec<&str> = providers
+        .iter()
+        .filter(|p| p.model_by_code(&code).is_some())
+        .map(|p| p.id.0.as_str())
+        .collect();
+    assert!(
+        found_in.len() >= 4,
+        "GLM-5.3-Flash should be recognizable across providers, found in {found_in:?}"
+    );
+    for name in ["huggingface", "openrouter", "vercel", "zai"] {
+        assert!(
+            found_in.contains(&name),
+            "expected {name} to carry {code}, found in {found_in:?}"
+        );
+    }
 }
 
 #[test]

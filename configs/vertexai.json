@@ -8,6 +8,7 @@
   "models": [
     {
       "id": "gemini-3.5-flash",
+      "modelCode": "google/gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -35,6 +36,7 @@
     },
     {
       "id": "gemini-3.1-pro-preview",
+      "modelCode": "google/gemini-3.1-pro-preview",
       "name": "Gemini 3.1 Pro (Regular)",
       "reasoning": true,
       "reasoning_options": [
@@ -61,6 +63,7 @@
     },
     {
       "id": "gemini-3.1-pro-preview-customtools",
+      "modelCode": "google/gemini-3.1-pro-preview-customtools",
       "name": "Gemini 3.1 Pro (Optimized for Coding Agents)",
       "reasoning": true,
       "reasoning_options": [
@@ -87,6 +90,7 @@
     },
     {
       "id": "gemini-3-pro-preview",
+      "modelCode": "google/gemini-3-pro-preview",
       "name": "Gemini 3 Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -112,6 +116,7 @@
     },
     {
       "id": "gemini-3-flash-preview",
+      "modelCode": "google/gemini-3-flash-preview",
       "name": "Gemini 3 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -139,6 +144,7 @@
     },
     {
       "id": "gemini-2.5-pro",
+      "modelCode": "google/gemini-2.5-pro",
       "name": "Gemini 2.5 Pro",
       "reasoning": true,
       "attachment": true,
@@ -155,6 +161,7 @@
     },
     {
       "id": "gemini-2.5-flash",
+      "modelCode": "google/gemini-2.5-flash",
       "name": "Gemini 2.5 Flash",
       "reasoning": true,
       "attachment": true,
@@ -171,6 +178,7 @@
     },
     {
       "id": "claude-sonnet-4-6",
+      "modelCode": "anthropic/claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
       "reasoning": true,
       "reasoning_options": [
@@ -198,6 +206,7 @@
     },
     {
       "id": "claude-sonnet-4-5-20250929",
+      "modelCode": "anthropic/claude-sonnet-4-5",
       "name": "Claude Sonnet 4.5",
       "reasoning": true,
       "attachment": true,
@@ -214,6 +223,7 @@
     },
     {
       "id": "claude-opus-4-6",
+      "modelCode": "anthropic/claude-opus-4-6",
       "name": "Claude Opus 4.6",
       "reasoning": true,
       "reasoning_options": [
@@ -241,6 +251,7 @@
     },
     {
       "id": "claude-opus-4-5-20251101",
+      "modelCode": "anthropic/claude-opus-4-5",
       "name": "Claude Opus 4.5",
       "reasoning": true,
       "attachment": true,
@@ -257,6 +268,7 @@
     },
     {
       "id": "claude-haiku-4-5-20251001",
+      "modelCode": "anthropic/claude-haiku-4-5",
       "name": "Claude 4.5 Haiku",
       "reasoning": true,
       "attachment": true,

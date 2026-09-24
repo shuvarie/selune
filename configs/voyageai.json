@@ -7,6 +7,7 @@
   "models": [
     {
       "id": "voyage-3.5",
+      "modelCode": "voyageai/voyage-3.5",
       "name": "Voyage 3.5",
       "reasoning": false,
       "attachment": false,
@@ -18,6 +19,7 @@
     },
     {
       "id": "voyage-3.5-lite",
+      "modelCode": "voyageai/voyage-3.5-lite",
       "name": "Voyage 3.5 Lite",
       "reasoning": false,
       "attachment": false,
@@ -29,6 +31,7 @@
     },
     {
       "id": "voyage-3-large",
+      "modelCode": "voyageai/voyage-3-large",
       "name": "Voyage 3 Large",
       "reasoning": false,
       "attachment": false,
@@ -40,6 +43,7 @@
     },
     {
       "id": "voyage-code-3",
+      "modelCode": "voyageai/voyage-code-3",
       "name": "Voyage Code 3",
       "reasoning": false,
       "attachment": false,
@@ -51,6 +55,7 @@
     },
     {
       "id": "voyage-finance-2",
+      "modelCode": "voyageai/voyage-finance-2",
       "name": "Voyage Finance 2",
       "reasoning": false,
       "attachment": false,
@@ -62,6 +67,7 @@
     },
     {
       "id": "voyage-law-2",
+      "modelCode": "voyageai/voyage-law-2",
       "name": "Voyage Law 2",
       "reasoning": false,
       "attachment": false,

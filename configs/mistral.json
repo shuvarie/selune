@@ -5,6 +5,7 @@
   "models": [
     {
       "id": "pixtral-12b",
+      "modelCode": "mistralai/pixtral-12b",
       "name": "Pixtral 12B",
       "reasoning": false,
       "attachment": true,
@@ -19,6 +20,7 @@
     },
     {
       "id": "devstral-small-2507",
+      "modelCode": "mistralai/devstral-small-2507",
       "name": "Devstral Small",
       "reasoning": false,
       "attachment": false,
@@ -33,6 +35,7 @@
     },
     {
       "id": "mistral-small-2506",
+      "modelCode": "mistralai/mistral-small-2506",
       "name": "Mistral Small 3.2",
       "reasoning": false,
       "attachment": false,
@@ -47,6 +50,7 @@
     },
     {
       "id": "magistral-small",
+      "modelCode": "mistralai/magistral-small",
       "name": "Magistral Small",
       "reasoning": true,
       "attachment": false,
@@ -61,6 +65,7 @@
     },
     {
       "id": "devstral-2512",
+      "modelCode": "mistralai/devstral-2512",
       "name": "Devstral 2",
       "reasoning": false,
       "attachment": false,
@@ -75,6 +80,7 @@
     },
     {
       "id": "mistral-embed",
+      "modelCode": "mistralai/mistral-embed",
       "name": "Mistral Embed",
       "reasoning": false,
       "attachment": false,
@@ -89,6 +95,7 @@
     },
     {
       "id": "devstral-small-2505",
+      "modelCode": "mistralai/devstral-small-2505",
       "name": "Devstral Small 2505",
       "reasoning": false,
       "attachment": false,
@@ -103,6 +110,7 @@
     },
     {
       "id": "labs-devstral-small-2512",
+      "modelCode": "mistralai/labs-devstral-small-2512",
       "name": "Devstral Small 2",
       "reasoning": false,
       "attachment": false,
@@ -117,6 +125,7 @@
     },
     {
       "id": "magistral-medium-latest",
+      "modelCode": "mistralai/magistral-medium-latest",
       "name": "Magistral Medium (latest)",
       "reasoning": true,
       "attachment": false,
@@ -131,6 +140,7 @@
     },
     {
       "id": "zai-glm-5-3",
+      "modelCode": "zai-org/GLM-5.3",
       "name": "GLM-5.3",
       "reasoning": true,
       "attachment": false,
@@ -156,6 +166,7 @@
     },
     {
       "id": "open-mixtral-8x22b",
+      "modelCode": "mistralai/open-mixtral-8x22b",
       "name": "Mixtral 8x22B",
       "reasoning": false,
       "attachment": false,
@@ -170,6 +181,7 @@
     },
     {
       "id": "open-mixtral-8x7b",
+      "modelCode": "mistralai/open-mixtral-8x7b",
       "name": "Mixtral 8x7B",
       "reasoning": false,
       "attachment": false,
@@ -184,6 +196,7 @@
     },
     {
       "id": "open-mistral-7b",
+      "modelCode": "mistralai/open-mistral-7b",
       "name": "Mistral 7B",
       "reasoning": false,
       "attachment": false,
@@ -198,6 +211,7 @@
     },
     {
       "id": "mistral-medium-latest",
+      "modelCode": "mistralai/mistral-medium-latest",
       "name": "Mistral Medium (latest)",
       "reasoning": true,
       "attachment": true,
@@ -221,6 +235,7 @@
     },
     {
       "id": "devstral-medium-2507",
+      "modelCode": "mistralai/devstral-medium-2507",
       "name": "Devstral Medium",
       "reasoning": false,
       "attachment": false,
@@ -235,6 +250,7 @@
     },
     {
       "id": "mistral-medium-2604",
+      "modelCode": "mistralai/mistral-medium-2604",
       "name": "Mistral Medium 3.5",
       "reasoning": true,
       "attachment": true,
@@ -258,6 +274,7 @@
     },
     {
       "id": "mistral-large-2512",
+      "modelCode": "mistralai/mistral-large-2512",
       "name": "Mistral Large 3",
       "reasoning": false,
       "attachment": true,
@@ -272,6 +289,7 @@
     },
     {
       "id": "devstral-medium-latest",
+      "modelCode": "mistralai/devstral-medium-latest",
       "name": "Devstral 2 (latest)",
       "reasoning": false,
       "attachment": false,
@@ -286,6 +304,7 @@
     },
     {
       "id": "voxtral-small-latest",
+      "modelCode": "mistralai/voxtral-small-latest",
       "name": "Voxtral Small (latest)",
       "reasoning": false,
       "attachment": true,
@@ -300,6 +319,7 @@
     },
     {
       "id": "ministral-8b-latest",
+      "modelCode": "mistralai/ministral-8b-latest",
       "name": "Ministral 8B (latest)",
       "reasoning": false,
       "attachment": false,
@@ -314,6 +334,7 @@
     },
     {
       "id": "mistral-nemo",
+      "modelCode": "mistralai/mistral-nemo",
       "name": "Mistral Nemo",
       "reasoning": false,
       "attachment": false,
@@ -328,6 +349,7 @@
     },
     {
       "id": "voxtral-mini-tts-latest",
+      "modelCode": "mistralai/voxtral-mini-tts-latest",
       "name": "Voxtral Mini TTS (latest)",
       "reasoning": false,
       "attachment": false,
@@ -339,6 +361,7 @@
     },
     {
       "id": "mistral-small-latest",
+      "modelCode": "mistralai/mistral-small-latest",
       "name": "Mistral Small (latest)",
       "reasoning": true,
       "attachment": true,
@@ -362,6 +385,7 @@
     },
     {
       "id": "open-mistral-nemo",
+      "modelCode": "mistralai/open-mistral-nemo",
       "name": "Open Mistral Nemo",
       "reasoning": false,
       "attachment": false,
@@ -376,6 +400,7 @@
     },
     {
       "id": "mistral-large-latest",
+      "modelCode": "mistralai/mistral-large-latest",
       "name": "Mistral Large (latest)",
       "reasoning": false,
       "attachment": true,
@@ -390,6 +415,7 @@
     },
     {
       "id": "voxtral-mini-latest",
+      "modelCode": "mistralai/voxtral-mini-latest",
       "name": "Voxtral Mini (latest)",
       "reasoning": false,
       "attachment": false,
@@ -401,6 +427,7 @@
     },
     {
       "id": "mistral-large-2411",
+      "modelCode": "mistralai/mistral-large-2411",
       "name": "Mistral Large 2.1",
       "reasoning": false,
       "attachment": false,
@@ -415,6 +442,7 @@
     },
     {
       "id": "devstral-latest",
+      "modelCode": "mistralai/devstral-latest",
       "name": "Devstral 2",
       "reasoning": false,
       "attachment": false,
@@ -429,6 +457,7 @@
     },
     {
       "id": "zai-glm-5-2",
+      "modelCode": "zai-org/GLM-5.2",
       "name": "GLM-5.2",
       "reasoning": true,
       "attachment": false,
@@ -454,6 +483,7 @@
     },
     {
       "id": "mistral-small-2603",
+      "modelCode": "mistralai/mistral-small-2603",
       "name": "Mistral Small 4",
       "reasoning": true,
       "attachment": true,
@@ -477,6 +507,7 @@
     },
     {
       "id": "mistral-medium-2505",
+      "modelCode": "mistralai/mistral-medium-2505",
       "name": "Mistral Medium 3",
       "reasoning": false,
       "attachment": true,
@@ -491,6 +522,7 @@
     },
     {
       "id": "codestral-latest",
+      "modelCode": "mistralai/codestral-latest",
       "name": "Codestral (latest)",
       "reasoning": false,
       "attachment": false,
@@ -505,6 +537,7 @@
     },
     {
       "id": "ministral-3b-latest",
+      "modelCode": "mistralai/ministral-3b-latest",
       "name": "Ministral 3B (latest)",
       "reasoning": false,
       "attachment": false,
@@ -519,6 +552,7 @@
     },
     {
       "id": "mistral-medium-2508",
+      "modelCode": "mistralai/mistral-medium-2508",
       "name": "Mistral Medium 3.1",
       "reasoning": false,
       "attachment": true,
@@ -533,6 +567,7 @@
     },
     {
       "id": "pixtral-large-latest",
+      "modelCode": "mistralai/pixtral-large-latest",
       "name": "Pixtral Large (latest)",
       "reasoning": false,
       "attachment": true,

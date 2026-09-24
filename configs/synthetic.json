@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "hf:zai-org/GLM-4.7-Flash",
+      "modelCode": "zai-org/GLM-4.7-Flash",
       "name": "GLM 4.7 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -36,6 +37,7 @@
     },
     {
       "id": "hf:zai-org/GLM-5.2",
+      "modelCode": "zai-org/GLM-5.2",
       "name": "GLM 5.2",
       "reasoning": true,
       "reasoning_options": [
@@ -62,6 +64,7 @@
     },
     {
       "id": "hf:moonshotai/Kimi-K3",
+      "modelCode": "moonshotai/Kimi-K3",
       "name": "Kimi K3",
       "reasoning": true,
       "reasoning_options": [
@@ -88,6 +91,7 @@
     },
     {
       "id": "hf:nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",
+      "modelCode": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B:nvfp4",
       "name": "NVIDIA Nemotron 3 Super 120B A12B NVFP4",
       "reasoning": true,
       "reasoning_options": [
@@ -114,6 +118,7 @@
     },
     {
       "id": "hf:Qwen/Qwen3.6-27B",
+      "modelCode": "qwen/Qwen3.6-27B",
       "name": "Qwen3.6 27B",
       "reasoning": false,
       "attachment": true,
@@ -130,6 +135,7 @@
     },
     {
       "id": "hf:Qwen/Qwen3.8-27B",
+      "modelCode": "qwen/Qwen3.8-27B",
       "name": "Qwen3.8 27B",
       "reasoning": false,
       "attachment": true,
@@ -146,6 +152,7 @@
     },
     {
       "id": "hf:openai/gpt-oss-120b",
+      "modelCode": "openai/gpt-oss-120b",
       "name": "gpt oss 120b",
       "reasoning": true,
       "reasoning_options": [
@@ -172,6 +179,7 @@
     },
     {
       "id": "syn:large:text",
+      "modelCode": "synthetic/syn-large-text",
       "name": "syn:large:text",
       "reasoning": true,
       "reasoning_options": [
@@ -198,6 +206,7 @@
     },
     {
       "id": "syn:large:vision",
+      "modelCode": "synthetic/syn-large-vision",
       "name": "syn:large:vision",
       "reasoning": true,
       "reasoning_options": [
@@ -224,6 +233,7 @@
     },
     {
       "id": "syn:small:text",
+      "modelCode": "synthetic/syn-small-text",
       "name": "syn:small:text",
       "reasoning": true,
       "reasoning_options": [
@@ -250,6 +260,7 @@
     },
     {
       "id": "syn:small:vision",
+      "modelCode": "synthetic/syn-small-vision",
       "name": "syn:small:vision",
       "reasoning": true,
       "reasoning_options": [

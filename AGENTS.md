@@ -11,30 +11,37 @@ JSON. This file orients AI agents (and humans) to the layout and conventions.
 - **Types** (`src/types.rs`) — the wire contract, mirroring OpenCode's model
   schema (see https://models.opencode.ai/api.json) plus Catwalk's `Provider`
   wrapper: `Provider`, `Model`, `ModelLimit`, `ModelCost`, `ReasoningOption`,
-  `ModelOptions`, `ProviderType`, and the `InferenceProvider` id wrapper. Field
-  names are snake_case and match the JSON exactly, so serde needs no per-field
-  renames.
+  `ModelOptions`, `ProviderType`, the `InferenceProvider` id wrapper, and
+  `ModelCode`/`ModelCodeError`. Field names are snake_case and match the JSON
+  exactly, so serde needs no per-field renames — except `modelCode` (see
+  Model codes below).
 - **Client** (`src/client.rs`) — a blocking HTTP client that fetches
   `/providers` from a base URL. The base URL is a **placeholder**
   (`DEFAULT_URL`); the user hosts the configs themselves and points the client
   at them via the `CATALOG_URL` env var or `Client::new_with_url`.
 - **Embedded catalog** (`src/embedded.rs`) — the sample provider configs in
   `configs/*.json` compiled in via `include_str!`, exposed as `embedded::all()`.
-- **Python generator** (`python/generate.py`) — reads `configs/*.json` and
-  emits a combined `catalog.json` (a JSON array of providers) that the user
-  hosts. This is the artifact the Rust client fetches.
+- **Python generator** (`python/generate.py`) — reads `configs/*.json`,
+  validates each model's `modelCode`, and emits a combined `catalog.json` (a
+  JSON array of providers) that the user hosts. This is the artifact the Rust
+  client fetches.
+- **Model code population** (`python/model_codes.py`) — derives and writes the
+  `modelCode` field on every model in `configs/*.json`, with `--check` (validate
+  only), `--dump <provider>` (preview), and org/alias/override tables for
+  ambiguous ids.
 
 ## Layout
 
 | Path | Role |
 |---|---|
-| `src/types.rs` | `Provider`/`Model`/`ModelLimit`/`ModelCost`/`ReasoningOption`/`ModelOptions`/`ProviderType`/`InferenceProvider` + lookup helpers |
+| `src/types.rs` | `Provider`/`Model`/`ModelCode`/`ModelCodeError`/`ModelLimit`/`ModelCost`/`ReasoningOption`/`ModelOptions`/`ProviderType`/`InferenceProvider` + lookup helpers |
 | `src/client.rs` | `Client` (fetch providers), `ClientError`, `DEFAULT_URL` |
 | `src/embedded.rs` | `embedded::all()` — parses the embedded `configs/*.json` |
 | `src/lib.rs` | Barrel re-exports |
 | `src/tests.rs` | Unit tests (embedded parse, default-model validity, serde round-trip, lookup) |
 | `configs/*.json` | One provider config per file, in OpenCode model format (Catwalk provider wrapper) |
 | `python/generate.py` | Static JSON generator → `catalog.json` |
+| `python/model_codes.py` | Populates/validates `modelCode` on every model in `configs/*.json` |
 | `Cargo.toml` | Standalone crate (has its own `[workspace]`; not a member of the parent workspace) |
 
 ## Conventions
@@ -50,6 +57,16 @@ JSON. This file orients AI agents (and humans) to the layout and conventions.
   named so kebab-case yields the exact Catwalk strings (`Openai` → `openai`,
   `OpenaiCompat` → `openai-compat`, `Openrouter` → `openrouter`). Prefer
   `rename_all` over per-field `#[serde(rename = ...)]`.
+- **Model codes.** Every model carries a required `modelCode` string
+  (`org/model` or `org/model:variant`) identifying the same model across
+  providers. The org is the training organization's id (Hugging Face or GitHub
+  style, lowercase kebab-case — `zai-org`, `moonshotai`, `deepseek-ai`); the
+  model id is kebab-case, case sensitive, dots allowed; the optional variant is
+  a lowercase serving qualifier (`fast`, `free`, `high`, `256k`, ...). The Rust
+  field is `model_code: ModelCode` with `#[serde(rename = "modelCode")]` — the
+  one deliberate camelCase exception. Derive new codes with
+  `python3 python/model_codes.py` (flags unresolvable ids) and regenerate
+  `catalog.json` afterwards.
 - **Optional fields** use `Option<T>` with `#[serde(default, skip_serializing_if = "Option::is_none")]`; collections use `#[serde(default, skip_serializing_if = "Vec::is_empty")]`.
 - **Errors**: `thiserror` enum (`ClientError`). Box large variants (e.g.
   `reqwest::Error`) to keep the error type small.
@@ -68,7 +85,8 @@ cargo fmt --check
 ## Adding a provider config
 
 1. Add `configs/<id>.json` in OpenCode model format (Catwalk provider wrapper,
-   see `configs/anthropic.json`).
+   see `configs/anthropic.json`). Every model needs a `modelCode` (run
+   `python3 python/model_codes.py` to derive missing ones).
 2. Add it to `src/embedded.rs` (`include_str!` + the `all()` array) and to the
    `ORDER` list in `python/generate.py`.
 3. Add a test in `src/tests.rs` if it exercises new behavior.

@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "qwen3.5-397b-a17b",
+      "modelCode": "qwen/Qwen3.5-397B-A17B",
       "name": "Qwen 3.5 397B A17B",
       "reasoning": true,
       "attachment": true,
@@ -26,6 +27,7 @@
     },
     {
       "id": "qwen3.6-35b-a3b",
+      "modelCode": "qwen/Qwen3.6-35B-A3B",
       "name": "Qwen 3.6 35B A3B",
       "reasoning": true,
       "attachment": true,
@@ -42,6 +44,7 @@
     },
     {
       "id": "gemma-4-26b-a4b-it",
+      "modelCode": "google/gemma-4-26B-A4B-it",
       "name": "Gemma 4 26B A4B IT",
       "reasoning": true,
       "attachment": true,
@@ -58,6 +61,7 @@
     },
     {
       "id": "gpt-oss-120b",
+      "modelCode": "openai/gpt-oss-120b",
       "name": "GPT OSS 120B",
       "reasoning": true,
       "attachment": false,
@@ -74,6 +78,7 @@
     },
     {
       "id": "mistral-medium-3.5-128b",
+      "modelCode": "mistralai/mistral-medium-3.5:128b",
       "name": "Mistral Medium 3.5 128B",
       "reasoning": true,
       "attachment": false,
@@ -90,6 +95,7 @@
     },
     {
       "id": "llama-3.3-70b-instruct",
+      "modelCode": "meta-llama/Llama-3.3-70B-Instruct",
       "name": "Llama 3.3 70B Instruct",
       "reasoning": false,
       "attachment": false,
@@ -106,6 +112,7 @@
     },
     {
       "id": "qwen3-235b-a22b-instruct-2507",
+      "modelCode": "qwen/Qwen3-235B-A22B-Instruct-2507",
       "name": "Qwen 3 235B A22B Instruct 2507",
       "reasoning": false,
       "attachment": false,
@@ -122,6 +129,7 @@
     },
     {
       "id": "qwen3-coder-30b-a3b-instruct",
+      "modelCode": "qwen/Qwen3-Coder-30B-A3B-Instruct",
       "name": "Qwen 3 Coder 30B A3B Instruct",
       "reasoning": false,
       "attachment": false,
@@ -138,6 +146,7 @@
     },
     {
       "id": "voxtral-small-24b-2507",
+      "modelCode": "mistralai/voxtral-small-24b-2507",
       "name": "Voxtral Small 24B 2507",
       "reasoning": false,
       "attachment": false,
@@ -154,6 +163,7 @@
     },
     {
       "id": "mistral-small-3.2-24b-instruct-2506",
+      "modelCode": "mistralai/mistral-small-3.2-24b-instruct-2506",
       "name": "Mistral Small 3.2 24B Instruct 2506",
       "reasoning": false,
       "attachment": true,
@@ -170,6 +180,7 @@
     },
     {
       "id": "devstral-2-123b-instruct-2512",
+      "modelCode": "mistralai/devstral-2-123b-instruct-2512",
       "name": "Devstral 2 123B Instruct 2512",
       "reasoning": false,
       "attachment": false,
@@ -186,6 +197,7 @@
     },
     {
       "id": "gemma-3-27b-it",
+      "modelCode": "google/gemma-3-27b-it",
       "name": "Gemma 3 27B IT",
       "reasoning": false,
       "attachment": true,

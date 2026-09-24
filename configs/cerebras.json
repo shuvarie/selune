@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "gpt-oss-120b",
+      "modelCode": "openai/gpt-oss-120b",
       "name": "OpenAI GPT OSS",
       "reasoning": true,
       "reasoning_options": [
@@ -36,6 +37,7 @@
     },
     {
       "id": "gemma-4-31b",
+      "modelCode": "google/gemma-4-31b",
       "name": "Gemma 4 31B",
       "reasoning": true,
       "reasoning_options": [

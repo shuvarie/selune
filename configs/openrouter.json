@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "aion-labs/aion-2.0",
+      "modelCode": "aion-labs/aion-2.0",
       "name": "AionLabs: Aion-2.0",
       "reasoning": true,
       "reasoning_options": [
@@ -36,6 +37,7 @@
     },
     {
       "id": "aion-labs/aion-3.0",
+      "modelCode": "aion-labs/aion-3.0",
       "name": "AionLabs: Aion-3.0",
       "reasoning": true,
       "reasoning_options": [
@@ -62,6 +64,7 @@
     },
     {
       "id": "aion-labs/aion-3.0-mini",
+      "modelCode": "aion-labs/aion-3.0-mini",
       "name": "AionLabs: Aion-3.0-Mini",
       "reasoning": true,
       "reasoning_options": [
@@ -88,6 +91,7 @@
     },
     {
       "id": "amazon/nova-2-lite-v1",
+      "modelCode": "amazon/nova-2-lite",
       "name": "Amazon: Nova 2 Lite",
       "reasoning": true,
       "reasoning_options": [
@@ -114,6 +118,7 @@
     },
     {
       "id": "amazon/nova-lite-v1",
+      "modelCode": "amazon/nova-lite",
       "name": "Amazon: Nova Lite 1.0",
       "reasoning": false,
       "attachment": true,
@@ -130,6 +135,7 @@
     },
     {
       "id": "amazon/nova-micro-v1",
+      "modelCode": "amazon/nova-micro",
       "name": "Amazon: Nova Micro 1.0",
       "reasoning": false,
       "attachment": false,
@@ -146,6 +152,7 @@
     },
     {
       "id": "amazon/nova-premier-v1",
+      "modelCode": "amazon/nova-premier-v1",
       "name": "Amazon: Nova Premier 1.0",
       "reasoning": false,
       "attachment": true,
@@ -162,6 +169,7 @@
     },
     {
       "id": "amazon/nova-pro-v1",
+      "modelCode": "amazon/nova-pro",
       "name": "Amazon: Nova Pro 1.0",
       "reasoning": false,
       "attachment": true,
@@ -178,6 +186,7 @@
     },
     {
       "id": "anthropic/claude-3-haiku",
+      "modelCode": "anthropic/claude-3-haiku",
       "name": "Anthropic: Claude 3 Haiku",
       "reasoning": false,
       "attachment": true,
@@ -194,6 +203,7 @@
     },
     {
       "id": "anthropic/claude-fable-5",
+      "modelCode": "anthropic/claude-fable-5",
       "name": "Anthropic: Claude Fable 5",
       "reasoning": true,
       "reasoning_options": [
@@ -220,6 +230,7 @@
     },
     {
       "id": "anthropic/claude-haiku-4.5",
+      "modelCode": "anthropic/claude-haiku-4-5",
       "name": "Anthropic: Claude Haiku 4.5",
       "reasoning": true,
       "reasoning_options": [
@@ -246,6 +257,7 @@
     },
     {
       "id": "anthropic/claude-opus-4",
+      "modelCode": "anthropic/claude-opus-4",
       "name": "Anthropic: Claude Opus 4",
       "reasoning": true,
       "reasoning_options": [
@@ -272,6 +284,7 @@
     },
     {
       "id": "anthropic/claude-opus-4.1",
+      "modelCode": "anthropic/claude-opus-4-1",
       "name": "Anthropic: Claude Opus 4.1",
       "reasoning": true,
       "reasoning_options": [
@@ -298,6 +311,7 @@
     },
     {
       "id": "anthropic/claude-opus-4.5",
+      "modelCode": "anthropic/claude-opus-4-5",
       "name": "Anthropic: Claude Opus 4.5",
       "reasoning": true,
       "reasoning_options": [
@@ -324,6 +338,7 @@
     },
     {
       "id": "anthropic/claude-opus-4.6",
+      "modelCode": "anthropic/claude-opus-4-6",
       "name": "Anthropic: Claude Opus 4.6",
       "reasoning": true,
       "reasoning_options": [
@@ -350,6 +365,7 @@
     },
     {
       "id": "anthropic/claude-opus-4.7",
+      "modelCode": "anthropic/claude-opus-4-7",
       "name": "Anthropic: Claude Opus 4.7",
       "reasoning": true,
       "reasoning_options": [
@@ -376,6 +392,7 @@
     },
     {
       "id": "anthropic/claude-opus-4.7-fast",
+      "modelCode": "anthropic/claude-opus-4-7:fast",
       "name": "Anthropic: Claude Opus 4.7 (Fast)",
       "reasoning": true,
       "reasoning_options": [
@@ -402,6 +419,7 @@
     },
     {
       "id": "anthropic/claude-opus-4.8",
+      "modelCode": "anthropic/claude-opus-4-8",
       "name": "Anthropic: Claude Opus 4.8",
       "reasoning": true,
       "reasoning_options": [
@@ -428,6 +446,7 @@
     },
     {
       "id": "anthropic/claude-opus-4.8-fast",
+      "modelCode": "anthropic/claude-opus-4-8:fast",
       "name": "Anthropic: Claude Opus 4.8 (Fast)",
       "reasoning": true,
       "reasoning_options": [
@@ -454,6 +473,7 @@
     },
     {
       "id": "anthropic/claude-sonnet-4",
+      "modelCode": "anthropic/claude-sonnet-4",
       "name": "Anthropic: Claude Sonnet 4",
       "reasoning": true,
       "reasoning_options": [
@@ -480,6 +500,7 @@
     },
     {
       "id": "anthropic/claude-sonnet-4.5",
+      "modelCode": "anthropic/claude-sonnet-4-5",
       "name": "Anthropic: Claude Sonnet 4.5",
       "reasoning": true,
       "reasoning_options": [
@@ -506,6 +527,7 @@
     },
     {
       "id": "anthropic/claude-sonnet-4.6",
+      "modelCode": "anthropic/claude-sonnet-4-6",
       "name": "Anthropic: Claude Sonnet 4.6",
       "reasoning": true,
       "reasoning_options": [
@@ -532,6 +554,7 @@
     },
     {
       "id": "anthropic/claude-sonnet-5",
+      "modelCode": "anthropic/claude-sonnet-5",
       "name": "Anthropic: Claude Sonnet 5",
       "reasoning": true,
       "reasoning_options": [
@@ -558,6 +581,7 @@
     },
     {
       "id": "arcee-ai/trinity-large-thinking",
+      "modelCode": "arcee-ai/trinity-large-thinking",
       "name": "Arcee AI: Trinity Large Thinking",
       "reasoning": true,
       "reasoning_options": [
@@ -584,6 +608,7 @@
     },
     {
       "id": "arcee-ai/virtuoso-large",
+      "modelCode": "arcee-ai/virtuoso-large",
       "name": "Arcee AI: Virtuoso Large",
       "reasoning": false,
       "attachment": false,
@@ -600,6 +625,7 @@
     },
     {
       "id": "bytedance-seed/seed-1.6",
+      "modelCode": "bytedance-seed/seed-1.6",
       "name": "ByteDance Seed: Seed 1.6",
       "reasoning": true,
       "reasoning_options": [
@@ -626,6 +652,7 @@
     },
     {
       "id": "bytedance-seed/seed-1.6-flash",
+      "modelCode": "bytedance-seed/seed-1.6-flash",
       "name": "ByteDance Seed: Seed 1.6 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -652,6 +679,7 @@
     },
     {
       "id": "bytedance-seed/seed-2-1-turbo",
+      "modelCode": "bytedance-seed/doubao-seed-2-1-turbo",
       "name": "ByteDance Seed: Seed 2.1 Turbo",
       "reasoning": true,
       "reasoning_options": [
@@ -678,6 +706,7 @@
     },
     {
       "id": "bytedance-seed/seed-2.0-code",
+      "modelCode": "bytedance-seed/seed-2.0-code",
       "name": "ByteDance Seed: Seed-2.0-Code",
       "reasoning": true,
       "reasoning_options": [
@@ -704,6 +733,7 @@
     },
     {
       "id": "bytedance-seed/seed-2.0-lite",
+      "modelCode": "bytedance-seed/seed-2.0-lite",
       "name": "ByteDance Seed: Seed-2.0-Lite",
       "reasoning": true,
       "reasoning_options": [
@@ -730,6 +760,7 @@
     },
     {
       "id": "bytedance-seed/seed-2.0-mini",
+      "modelCode": "bytedance-seed/seed-2.0-mini",
       "name": "ByteDance Seed: Seed-2.0-Mini",
       "reasoning": true,
       "reasoning_options": [
@@ -756,6 +787,7 @@
     },
     {
       "id": "anthropic/claude-opus-5",
+      "modelCode": "anthropic/claude-opus-5",
       "name": "Claude Opus 5",
       "reasoning": true,
       "reasoning_options": [
@@ -782,6 +814,7 @@
     },
     {
       "id": "anthropic/claude-opus-5-fast",
+      "modelCode": "anthropic/claude-opus-5:fast",
       "name": "Claude Opus 5 (Fast)",
       "reasoning": true,
       "reasoning_options": [
@@ -808,6 +841,7 @@
     },
     {
       "id": "cohere/command-r-08-2024",
+      "modelCode": "cohere/command-r-08-2024",
       "name": "Cohere: Command R (08-2024)",
       "reasoning": false,
       "attachment": false,
@@ -824,6 +858,7 @@
     },
     {
       "id": "cohere/command-r-plus-08-2024",
+      "modelCode": "cohere/command-r-plus-08-2024",
       "name": "Cohere: Command R+ (08-2024)",
       "reasoning": false,
       "attachment": false,
@@ -840,6 +875,7 @@
     },
     {
       "id": "cohere/north-mini-code:free",
+      "modelCode": "cohere/north-mini-code-1-0:free",
       "name": "Cohere: North Mini Code (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -866,6 +902,7 @@
     },
     {
       "id": "deepseek/deepseek-chat",
+      "modelCode": "deepseek-ai/deepseek-chat",
       "name": "DeepSeek: DeepSeek V3",
       "reasoning": false,
       "attachment": false,
@@ -882,6 +919,7 @@
     },
     {
       "id": "deepseek/deepseek-chat-v3-0324",
+      "modelCode": "deepseek-ai/deepseek-chat-v3-0324",
       "name": "DeepSeek: DeepSeek V3 0324",
       "reasoning": false,
       "attachment": false,
@@ -898,6 +936,7 @@
     },
     {
       "id": "deepseek/deepseek-chat-v3.1",
+      "modelCode": "deepseek-ai/deepseek-chat-v3.1",
       "name": "DeepSeek: DeepSeek V3.1",
       "reasoning": true,
       "reasoning_options": [
@@ -924,6 +963,7 @@
     },
     {
       "id": "deepseek/deepseek-v3.1-terminus",
+      "modelCode": "deepseek-ai/DeepSeek-V3.1-Terminus",
       "name": "DeepSeek: DeepSeek V3.1 Terminus",
       "reasoning": true,
       "reasoning_options": [
@@ -950,6 +990,7 @@
     },
     {
       "id": "deepseek/deepseek-v3.2",
+      "modelCode": "deepseek-ai/DeepSeek-V3.2",
       "name": "DeepSeek: DeepSeek V3.2",
       "reasoning": true,
       "reasoning_options": [
@@ -976,6 +1017,7 @@
     },
     {
       "id": "deepseek/deepseek-v3.2-exp",
+      "modelCode": "deepseek-ai/DeepSeek-V3.2-Exp",
       "name": "DeepSeek: DeepSeek V3.2 Exp",
       "reasoning": true,
       "reasoning_options": [
@@ -1002,6 +1044,7 @@
     },
     {
       "id": "deepseek/deepseek-v4-flash",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash",
       "name": "DeepSeek: DeepSeek V4 Flash 0423",
       "reasoning": true,
       "reasoning_options": [
@@ -1028,6 +1071,7 @@
     },
     {
       "id": "deepseek/deepseek-v4-flash-0731",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "name": "DeepSeek: DeepSeek V4 Flash 0731",
       "reasoning": true,
       "reasoning_options": [
@@ -1054,6 +1098,7 @@
     },
     {
       "id": "deepseek/deepseek-v4-flash-vision-exp",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
       "name": "DeepSeek: DeepSeek V4 Flash Vision Exp",
       "reasoning": true,
       "reasoning_options": [
@@ -1080,6 +1125,7 @@
     },
     {
       "id": "deepseek/deepseek-v4-pro",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Pro",
       "name": "DeepSeek: DeepSeek V4 Pro 0423",
       "reasoning": true,
       "reasoning_options": [
@@ -1106,6 +1152,7 @@
     },
     {
       "id": "deepseek/deepseek-v4-pro-0813",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Pro-0813",
       "name": "DeepSeek: DeepSeek V4 Pro 0813",
       "reasoning": true,
       "reasoning_options": [
@@ -1132,6 +1179,7 @@
     },
     {
       "id": "deepseek/deepseek-r1",
+      "modelCode": "deepseek-ai/DeepSeek-R1",
       "name": "DeepSeek: R1",
       "reasoning": true,
       "reasoning_options": [
@@ -1158,6 +1206,7 @@
     },
     {
       "id": "deepseek/deepseek-r1-0528",
+      "modelCode": "deepseek-ai/DeepSeek-R1-0528",
       "name": "DeepSeek: R1 0528",
       "reasoning": true,
       "reasoning_options": [
@@ -1184,6 +1233,7 @@
     },
     {
       "id": "dots-studio/dots-3-note-preview:free",
+      "modelCode": "dots-studio/dots-3-note-preview:free",
       "name": "Dots Studio: Dots3-Note Preview (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -1210,6 +1260,7 @@
     },
     {
       "id": "google/gemini-2.5-flash",
+      "modelCode": "google/gemini-2.5-flash",
       "name": "Google: Gemini 2.5 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -1236,6 +1287,7 @@
     },
     {
       "id": "google/gemini-2.5-flash-lite",
+      "modelCode": "google/gemini-2.5-flash-lite",
       "name": "Google: Gemini 2.5 Flash Lite",
       "reasoning": true,
       "reasoning_options": [
@@ -1262,6 +1314,7 @@
     },
     {
       "id": "google/gemini-2.5-pro",
+      "modelCode": "google/gemini-2.5-pro",
       "name": "Google: Gemini 2.5 Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -1288,6 +1341,7 @@
     },
     {
       "id": "google/gemini-2.5-pro-preview-05-06",
+      "modelCode": "google/gemini-2.5-pro-preview-05-06",
       "name": "Google: Gemini 2.5 Pro Preview 05-06",
       "reasoning": true,
       "reasoning_options": [
@@ -1314,6 +1368,7 @@
     },
     {
       "id": "google/gemini-2.5-pro-preview",
+      "modelCode": "google/gemini-2.5-pro-preview",
       "name": "Google: Gemini 2.5 Pro Preview 06-05",
       "reasoning": true,
       "reasoning_options": [
@@ -1340,6 +1395,7 @@
     },
     {
       "id": "google/gemini-3-flash-preview",
+      "modelCode": "google/gemini-3-flash-preview",
       "name": "Google: Gemini 3 Flash Preview",
       "reasoning": true,
       "reasoning_options": [
@@ -1366,6 +1422,7 @@
     },
     {
       "id": "google/gemini-3.1-flash-lite",
+      "modelCode": "google/gemini-3.1-flash-lite",
       "name": "Google: Gemini 3.1 Flash Lite",
       "reasoning": true,
       "reasoning_options": [
@@ -1392,6 +1449,7 @@
     },
     {
       "id": "google/gemini-3.1-flash-lite-preview",
+      "modelCode": "google/gemini-3.1-flash-lite-preview",
       "name": "Google: Gemini 3.1 Flash Lite Preview",
       "reasoning": true,
       "reasoning_options": [
@@ -1418,6 +1476,7 @@
     },
     {
       "id": "google/gemini-3.1-pro-preview",
+      "modelCode": "google/gemini-3.1-pro-preview",
       "name": "Google: Gemini 3.1 Pro Preview",
       "reasoning": true,
       "reasoning_options": [
@@ -1444,6 +1503,7 @@
     },
     {
       "id": "google/gemini-3.1-pro-preview-customtools",
+      "modelCode": "google/gemini-3.1-pro-preview-customtools",
       "name": "Google: Gemini 3.1 Pro Preview Custom Tools",
       "reasoning": true,
       "reasoning_options": [
@@ -1470,6 +1530,7 @@
     },
     {
       "id": "google/gemini-3.5-flash",
+      "modelCode": "google/gemini-3.5-flash",
       "name": "Google: Gemini 3.5 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -1496,6 +1557,7 @@
     },
     {
       "id": "google/gemini-3.5-flash-lite",
+      "modelCode": "google/gemini-3.5-flash-lite",
       "name": "Google: Gemini 3.5 Flash Lite",
       "reasoning": true,
       "reasoning_options": [
@@ -1522,6 +1584,7 @@
     },
     {
       "id": "google/gemini-3.6-flash",
+      "modelCode": "google/gemini-3.6-flash",
       "name": "Google: Gemini 3.6 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -1548,6 +1611,7 @@
     },
     {
       "id": "google/gemini-3.7-flash",
+      "modelCode": "google/gemini-3.7-flash",
       "name": "Google: Gemini 3.7 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -1574,6 +1638,7 @@
     },
     {
       "id": "google/gemma-3-12b-it",
+      "modelCode": "google/gemma-3-12b-it",
       "name": "Google: Gemma 3 12B",
       "reasoning": false,
       "attachment": true,
@@ -1590,6 +1655,7 @@
     },
     {
       "id": "google/gemma-3-27b-it",
+      "modelCode": "google/gemma-3-27b-it",
       "name": "Google: Gemma 3 27B",
       "reasoning": false,
       "attachment": true,
@@ -1606,6 +1672,7 @@
     },
     {
       "id": "google/gemma-4-26b-a4b-it",
+      "modelCode": "google/gemma-4-26B-A4B-it",
       "name": "Google: Gemma 4 26B A4B ",
       "reasoning": true,
       "reasoning_options": [
@@ -1632,6 +1699,7 @@
     },
     {
       "id": "google/gemma-4-26b-a4b-it:free",
+      "modelCode": "google/gemma-4-26B-A4B-it:free",
       "name": "Google: Gemma 4 26B A4B  (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -1658,6 +1726,7 @@
     },
     {
       "id": "google/gemma-4-31b-it",
+      "modelCode": "google/gemma-4-31B-it",
       "name": "Google: Gemma 4 31B",
       "reasoning": true,
       "reasoning_options": [
@@ -1684,6 +1753,7 @@
     },
     {
       "id": "google/gemma-4-31b-it:free",
+      "modelCode": "google/gemma-4-31B-it:free",
       "name": "Google: Gemma 4 31B (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -1710,6 +1780,7 @@
     },
     {
       "id": "google/gemini-3-pro-image",
+      "modelCode": "google/gemini-3-pro-image",
       "name": "Google: Nano Banana Pro (Gemini 3 Pro Image)",
       "reasoning": true,
       "reasoning_options": [
@@ -1736,6 +1807,7 @@
     },
     {
       "id": "ibm-granite/granite-4.1-8b",
+      "modelCode": "ibm-granite/granite-4.1-8b",
       "name": "IBM: Granite 4.1 8B",
       "reasoning": false,
       "attachment": false,
@@ -1752,6 +1824,7 @@
     },
     {
       "id": "inception/mercury-2",
+      "modelCode": "inception/mercury-2",
       "name": "Inception: Mercury 2",
       "reasoning": true,
       "reasoning_options": [
@@ -1778,6 +1851,7 @@
     },
     {
       "id": "kwaipilot/kat-coder-air-v2.5",
+      "modelCode": "kwaipilot/kat-coder-air-v2.5",
       "name": "Kwaipilot: KAT-Coder-Air V2.5",
       "reasoning": false,
       "attachment": false,
@@ -1794,6 +1868,7 @@
     },
     {
       "id": "kwaipilot/kat-coder-pro-v2",
+      "modelCode": "kwaipilot/kat-coder-pro-v2",
       "name": "Kwaipilot: KAT-Coder-Pro V2",
       "reasoning": false,
       "attachment": false,
@@ -1810,6 +1885,7 @@
     },
     {
       "id": "kwaipilot/kat-coder-pro-v2.5",
+      "modelCode": "kwaipilot/kat-coder-pro-v2.5",
       "name": "Kwaipilot: KAT-Coder-Pro V2.5",
       "reasoning": false,
       "attachment": false,
@@ -1826,6 +1902,7 @@
     },
     {
       "id": "inclusionai/ling-3.0-flash",
+      "modelCode": "inclusionai/ling-3.0-flash",
       "name": "Ling-3.0-flash",
       "reasoning": true,
       "reasoning_options": [
@@ -1852,6 +1929,7 @@
     },
     {
       "id": "liquid/lfm-2.5-2.6b:free",
+      "modelCode": "liquid/lfm-2.5-2.6b:free",
       "name": "LiquidAI: LFM2.5-2.6B (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -1878,6 +1956,7 @@
     },
     {
       "id": "meituan/longcat-2.0",
+      "modelCode": "meituan-longcat/longcat-2.0",
       "name": "Meituan: LongCat 2.0",
       "reasoning": true,
       "reasoning_options": [
@@ -1904,6 +1983,7 @@
     },
     {
       "id": "meta-llama/llama-3.1-70b-instruct",
+      "modelCode": "meta-llama/llama-3.1-70b-instruct",
       "name": "Meta: Llama 3.1 70B Instruct",
       "reasoning": false,
       "attachment": false,
@@ -1920,6 +2000,7 @@
     },
     {
       "id": "meta-llama/llama-3.1-8b-instruct",
+      "modelCode": "meta-llama/Llama-3.1-8B-Instruct",
       "name": "Meta: Llama 3.1 8B Instruct",
       "reasoning": false,
       "attachment": false,
@@ -1936,6 +2017,7 @@
     },
     {
       "id": "meta-llama/llama-3.3-70b-instruct",
+      "modelCode": "meta-llama/Llama-3.3-70B-Instruct",
       "name": "Meta: Llama 3.3 70B Instruct",
       "reasoning": false,
       "attachment": false,
@@ -1952,6 +2034,7 @@
     },
     {
       "id": "meta-llama/llama-4-maverick",
+      "modelCode": "meta-llama/llama-4-maverick",
       "name": "Meta: Llama 4 Maverick",
       "reasoning": false,
       "attachment": true,
@@ -1968,6 +2051,7 @@
     },
     {
       "id": "meta-llama/llama-4-scout",
+      "modelCode": "meta-llama/llama-4-scout",
       "name": "Meta: Llama 4 Scout",
       "reasoning": false,
       "attachment": true,
@@ -1984,6 +2068,7 @@
     },
     {
       "id": "meta/muse-glimmer-30b",
+      "modelCode": "meta-llama/muse-glimmer-30b",
       "name": "Meta: Muse Glimmer 30B",
       "reasoning": true,
       "reasoning_options": [
@@ -2010,6 +2095,7 @@
     },
     {
       "id": "meta/muse-spark-1.1",
+      "modelCode": "meta-llama/muse-spark-1.1",
       "name": "Meta: Muse Spark 1.1",
       "reasoning": true,
       "reasoning_options": [
@@ -2036,6 +2122,7 @@
     },
     {
       "id": "meta/muse-spark-1.2",
+      "modelCode": "meta-llama/muse-spark-1.2",
       "name": "Meta: Muse Spark 1.2",
       "reasoning": true,
       "reasoning_options": [
@@ -2062,6 +2149,7 @@
     },
     {
       "id": "meta/muse-spark-1.2-contributor",
+      "modelCode": "meta-llama/muse-spark-1.2-contributor",
       "name": "Meta: Muse Spark 1.2 Contributor",
       "reasoning": true,
       "reasoning_options": [
@@ -2088,6 +2176,7 @@
     },
     {
       "id": "minimax/minimax-m2",
+      "modelCode": "minimaxai/MiniMax-M2",
       "name": "MiniMax: MiniMax M2",
       "reasoning": true,
       "reasoning_options": [
@@ -2114,6 +2203,7 @@
     },
     {
       "id": "minimax/minimax-m2.1",
+      "modelCode": "minimaxai/MiniMax-M2.1",
       "name": "MiniMax: MiniMax M2.1",
       "reasoning": true,
       "reasoning_options": [
@@ -2140,6 +2230,7 @@
     },
     {
       "id": "minimax/minimax-m2.5",
+      "modelCode": "minimaxai/MiniMax-M2.5",
       "name": "MiniMax: MiniMax M2.5",
       "reasoning": true,
       "reasoning_options": [
@@ -2166,6 +2257,7 @@
     },
     {
       "id": "minimax/minimax-m2.7",
+      "modelCode": "minimaxai/MiniMax-M2.7",
       "name": "MiniMax: MiniMax M2.7",
       "reasoning": true,
       "reasoning_options": [
@@ -2192,6 +2284,7 @@
     },
     {
       "id": "minimax/minimax-m2.7:free",
+      "modelCode": "minimaxai/MiniMax-M2.7:free",
       "name": "MiniMax: MiniMax M2.7 (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -2218,6 +2311,7 @@
     },
     {
       "id": "minimax/minimax-m3",
+      "modelCode": "minimaxai/MiniMax-M3",
       "name": "MiniMax: MiniMax M3",
       "reasoning": true,
       "reasoning_options": [
@@ -2244,6 +2338,7 @@
     },
     {
       "id": "minimax/minimax-m3:free",
+      "modelCode": "minimaxai/MiniMax-M3:free",
       "name": "MiniMax: MiniMax M3 (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -2270,6 +2365,7 @@
     },
     {
       "id": "mistralai/mistral-large",
+      "modelCode": "mistralai/mistral-large",
       "name": "Mistral Large",
       "reasoning": false,
       "attachment": false,
@@ -2286,6 +2382,7 @@
     },
     {
       "id": "mistralai/mistral-large-2407",
+      "modelCode": "mistralai/mistral-large-2407",
       "name": "Mistral Large 2407",
       "reasoning": false,
       "attachment": false,
@@ -2302,6 +2399,7 @@
     },
     {
       "id": "mistralai/codestral-2508",
+      "modelCode": "mistralai/codestral-2508",
       "name": "Mistral: Codestral 2508",
       "reasoning": false,
       "attachment": false,
@@ -2318,6 +2416,7 @@
     },
     {
       "id": "mistralai/devstral-2512",
+      "modelCode": "mistralai/devstral-2512",
       "name": "Mistral: Devstral 2 2512",
       "reasoning": false,
       "attachment": false,
@@ -2334,6 +2433,7 @@
     },
     {
       "id": "mistralai/ministral-14b-2512",
+      "modelCode": "mistralai/ministral-14b-2512",
       "name": "Mistral: Ministral 3 14B 2512",
       "reasoning": false,
       "attachment": true,
@@ -2350,6 +2450,7 @@
     },
     {
       "id": "mistralai/ministral-3b-2512",
+      "modelCode": "mistralai/ministral-3b-2512",
       "name": "Mistral: Ministral 3 3B 2512",
       "reasoning": false,
       "attachment": true,
@@ -2366,6 +2467,7 @@
     },
     {
       "id": "mistralai/ministral-8b-2512",
+      "modelCode": "mistralai/ministral-8b-2512",
       "name": "Mistral: Ministral 3 8B 2512",
       "reasoning": false,
       "attachment": true,
@@ -2382,6 +2484,7 @@
     },
     {
       "id": "mistralai/mistral-large-2512",
+      "modelCode": "mistralai/mistral-large-2512",
       "name": "Mistral: Mistral Large 3 2512",
       "reasoning": false,
       "attachment": true,
@@ -2398,6 +2501,7 @@
     },
     {
       "id": "mistralai/mistral-medium-3",
+      "modelCode": "mistralai/mistral-medium-3",
       "name": "Mistral: Mistral Medium 3",
       "reasoning": false,
       "attachment": true,
@@ -2414,6 +2518,7 @@
     },
     {
       "id": "mistralai/mistral-medium-3.1",
+      "modelCode": "mistralai/mistral-medium-3.1",
       "name": "Mistral: Mistral Medium 3.1",
       "reasoning": false,
       "attachment": true,
@@ -2430,6 +2535,7 @@
     },
     {
       "id": "mistralai/mistral-medium-3-5",
+      "modelCode": "mistralai/mistral-medium-3.5",
       "name": "Mistral: Mistral Medium 3.5",
       "reasoning": true,
       "reasoning_options": [
@@ -2456,6 +2562,7 @@
     },
     {
       "id": "mistralai/mistral-nemo",
+      "modelCode": "mistralai/mistral-nemo",
       "name": "Mistral: Mistral Nemo",
       "reasoning": false,
       "attachment": false,
@@ -2472,6 +2579,7 @@
     },
     {
       "id": "mistralai/mistral-small-3.2-24b-instruct",
+      "modelCode": "mistralai/mistral-small-3.2-24b-instruct",
       "name": "Mistral: Mistral Small 3.2 24B",
       "reasoning": false,
       "attachment": true,
@@ -2488,6 +2596,7 @@
     },
     {
       "id": "mistralai/mistral-small-2603",
+      "modelCode": "mistralai/mistral-small-2603",
       "name": "Mistral: Mistral Small 4",
       "reasoning": true,
       "reasoning_options": [
@@ -2514,6 +2623,7 @@
     },
     {
       "id": "mistralai/mixtral-8x22b-instruct",
+      "modelCode": "mistralai/mixtral-8x22b-instruct",
       "name": "Mistral: Mixtral 8x22B Instruct",
       "reasoning": false,
       "attachment": false,
@@ -2530,6 +2640,7 @@
     },
     {
       "id": "mistralai/mistral-saba",
+      "modelCode": "mistralai/mistral-saba",
       "name": "Mistral: Saba",
       "reasoning": false,
       "attachment": false,
@@ -2546,6 +2657,7 @@
     },
     {
       "id": "mistralai/voxtral-small-24b-2507",
+      "modelCode": "mistralai/voxtral-small-24b-2507",
       "name": "Mistral: Voxtral Small 24B 2507",
       "reasoning": false,
       "attachment": false,
@@ -2562,6 +2674,7 @@
     },
     {
       "id": "moonshotai/kimi-k2",
+      "modelCode": "moonshotai/Kimi-K2-Instruct",
       "name": "MoonshotAI: Kimi K2 0711",
       "reasoning": false,
       "attachment": false,
@@ -2578,6 +2691,7 @@
     },
     {
       "id": "moonshotai/kimi-k2-0905",
+      "modelCode": "moonshotai/Kimi-K2-Instruct-0905",
       "name": "MoonshotAI: Kimi K2 0905",
       "reasoning": false,
       "attachment": false,
@@ -2594,6 +2708,7 @@
     },
     {
       "id": "moonshotai/kimi-k2-thinking",
+      "modelCode": "moonshotai/Kimi-K2-Thinking",
       "name": "MoonshotAI: Kimi K2 Thinking",
       "reasoning": true,
       "reasoning_options": [
@@ -2620,6 +2735,7 @@
     },
     {
       "id": "moonshotai/kimi-k2.5",
+      "modelCode": "moonshotai/Kimi-K2.5",
       "name": "MoonshotAI: Kimi K2.5",
       "reasoning": true,
       "reasoning_options": [
@@ -2646,6 +2762,7 @@
     },
     {
       "id": "moonshotai/kimi-k2.6",
+      "modelCode": "moonshotai/Kimi-K2.6",
       "name": "MoonshotAI: Kimi K2.6",
       "reasoning": true,
       "reasoning_options": [
@@ -2672,6 +2789,7 @@
     },
     {
       "id": "moonshotai/kimi-k2.7-code",
+      "modelCode": "moonshotai/Kimi-K2.7-Code",
       "name": "MoonshotAI: Kimi K2.7 Code",
       "reasoning": true,
       "reasoning_options": [
@@ -2698,6 +2816,7 @@
     },
     {
       "id": "moonshotai/kimi-k3",
+      "modelCode": "moonshotai/Kimi-K3",
       "name": "MoonshotAI: Kimi K3",
       "reasoning": true,
       "reasoning_options": [
@@ -2724,6 +2843,7 @@
     },
     {
       "id": "nvidia/nemotron-3-nano-30b-a3b",
+      "modelCode": "nvidia/nemotron-3-nano-30b-a3b",
       "name": "NVIDIA: Nemotron 3 Nano 30B A3B",
       "reasoning": true,
       "reasoning_options": [
@@ -2750,6 +2870,7 @@
     },
     {
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "modelCode": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
       "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -2776,6 +2897,7 @@
     },
     {
       "id": "nvidia/nemotron-3-super-120b-a12b",
+      "modelCode": "nvidia/nemotron-3-super-120b-a12b",
       "name": "NVIDIA: Nemotron 3 Super",
       "reasoning": true,
       "reasoning_options": [
@@ -2802,6 +2924,7 @@
     },
     {
       "id": "nvidia/nemotron-3-super-120b-a12b:free",
+      "modelCode": "nvidia/nemotron-3-super-120b-a12b:free",
       "name": "NVIDIA: Nemotron 3 Super (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -2828,6 +2951,7 @@
     },
     {
       "id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "modelCode": "nvidia/nemotron-3-ultra-550b-a55b",
       "name": "NVIDIA: Nemotron 3 Ultra",
       "reasoning": true,
       "reasoning_options": [
@@ -2854,6 +2978,7 @@
     },
     {
       "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "modelCode": "nvidia/nemotron-3-ultra-550b-a55b:free",
       "name": "NVIDIA: Nemotron 3 Ultra (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -2880,6 +3005,7 @@
     },
     {
       "id": "nvidia/nemotron-3.5-lightning:free",
+      "modelCode": "nvidia/nemotron-lightning-3.5-30b-a3b:free",
       "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -2906,6 +3032,7 @@
     },
     {
       "id": "nex-agi/nex-n2-mini",
+      "modelCode": "nex-agi/nex-n2-mini",
       "name": "Nex AGI: Nex-N2-Mini",
       "reasoning": true,
       "reasoning_options": [
@@ -2932,6 +3059,7 @@
     },
     {
       "id": "nex-agi/nex-n2-pro",
+      "modelCode": "nex-agi/nex-n2-pro",
       "name": "Nex AGI: Nex-N2-Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -2958,6 +3086,7 @@
     },
     {
       "id": "openai/gpt-audio",
+      "modelCode": "openai/gpt-audio",
       "name": "OpenAI: GPT Audio",
       "reasoning": false,
       "attachment": false,
@@ -2974,6 +3103,7 @@
     },
     {
       "id": "openai/gpt-audio-mini",
+      "modelCode": "openai/gpt-audio-mini",
       "name": "OpenAI: GPT Audio Mini",
       "reasoning": false,
       "attachment": false,
@@ -2990,6 +3120,7 @@
     },
     {
       "id": "openai/gpt-chat-latest",
+      "modelCode": "openai/gpt-chat-latest",
       "name": "OpenAI: GPT Chat Latest",
       "reasoning": false,
       "attachment": true,
@@ -3006,6 +3137,7 @@
     },
     {
       "id": "openai/gpt-4-turbo",
+      "modelCode": "openai/gpt-4-turbo",
       "name": "OpenAI: GPT-4 Turbo",
       "reasoning": false,
       "attachment": true,
@@ -3022,6 +3154,7 @@
     },
     {
       "id": "openai/gpt-4-turbo-preview",
+      "modelCode": "openai/gpt-4-turbo-preview",
       "name": "OpenAI: GPT-4 Turbo Preview",
       "reasoning": false,
       "attachment": false,
@@ -3038,6 +3171,7 @@
     },
     {
       "id": "openai/gpt-4.1",
+      "modelCode": "openai/gpt-4.1",
       "name": "OpenAI: GPT-4.1",
       "reasoning": false,
       "attachment": true,
@@ -3054,6 +3188,7 @@
     },
     {
       "id": "openai/gpt-4.1-mini",
+      "modelCode": "openai/gpt-4.1-mini",
       "name": "OpenAI: GPT-4.1 Mini",
       "reasoning": false,
       "attachment": true,
@@ -3070,6 +3205,7 @@
     },
     {
       "id": "openai/gpt-4.1-nano",
+      "modelCode": "openai/gpt-4.1-nano",
       "name": "OpenAI: GPT-4.1 Nano",
       "reasoning": false,
       "attachment": true,
@@ -3086,6 +3222,7 @@
     },
     {
       "id": "openai/gpt-4o",
+      "modelCode": "openai/gpt-4o",
       "name": "OpenAI: GPT-4o",
       "reasoning": false,
       "attachment": true,
@@ -3102,6 +3239,7 @@
     },
     {
       "id": "openai/gpt-4o-2024-05-13",
+      "modelCode": "openai/gpt-4o",
       "name": "OpenAI: GPT-4o (2024-05-13)",
       "reasoning": false,
       "attachment": true,
@@ -3118,6 +3256,7 @@
     },
     {
       "id": "openai/gpt-4o-2024-08-06",
+      "modelCode": "openai/gpt-4o",
       "name": "OpenAI: GPT-4o (2024-08-06)",
       "reasoning": false,
       "attachment": true,
@@ -3134,6 +3273,7 @@
     },
     {
       "id": "openai/gpt-4o-2024-11-20",
+      "modelCode": "openai/gpt-4o",
       "name": "OpenAI: GPT-4o (2024-11-20)",
       "reasoning": false,
       "attachment": true,
@@ -3150,6 +3290,7 @@
     },
     {
       "id": "openai/gpt-4o-mini",
+      "modelCode": "openai/gpt-4o-mini",
       "name": "OpenAI: GPT-4o-mini",
       "reasoning": false,
       "attachment": true,
@@ -3166,6 +3307,7 @@
     },
     {
       "id": "openai/gpt-4o-mini-2024-07-18",
+      "modelCode": "openai/gpt-4o-mini",
       "name": "OpenAI: GPT-4o-mini (2024-07-18)",
       "reasoning": false,
       "attachment": true,
@@ -3182,6 +3324,7 @@
     },
     {
       "id": "openai/gpt-5",
+      "modelCode": "openai/gpt-5",
       "name": "OpenAI: GPT-5",
       "reasoning": true,
       "reasoning_options": [
@@ -3208,6 +3351,7 @@
     },
     {
       "id": "openai/gpt-5-mini",
+      "modelCode": "openai/gpt-5-mini",
       "name": "OpenAI: GPT-5 Mini",
       "reasoning": true,
       "reasoning_options": [
@@ -3234,6 +3378,7 @@
     },
     {
       "id": "openai/gpt-5-nano",
+      "modelCode": "openai/gpt-5-nano",
       "name": "OpenAI: GPT-5 Nano",
       "reasoning": true,
       "reasoning_options": [
@@ -3260,6 +3405,7 @@
     },
     {
       "id": "openai/gpt-5-pro",
+      "modelCode": "openai/gpt-5-pro",
       "name": "OpenAI: GPT-5 Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -3286,6 +3432,7 @@
     },
     {
       "id": "openai/gpt-5.1",
+      "modelCode": "openai/gpt-5.1",
       "name": "OpenAI: GPT-5.1",
       "reasoning": true,
       "reasoning_options": [
@@ -3312,6 +3459,7 @@
     },
     {
       "id": "openai/gpt-5.1-codex",
+      "modelCode": "openai/gpt-5.1-codex",
       "name": "OpenAI: GPT-5.1-Codex",
       "reasoning": true,
       "reasoning_options": [
@@ -3338,6 +3486,7 @@
     },
     {
       "id": "openai/gpt-5.1-codex-max",
+      "modelCode": "openai/gpt-5.1-codex-max",
       "name": "OpenAI: GPT-5.1-Codex-Max",
       "reasoning": true,
       "reasoning_options": [
@@ -3364,6 +3513,7 @@
     },
     {
       "id": "openai/gpt-5.1-codex-mini",
+      "modelCode": "openai/gpt-5.1-codex-mini",
       "name": "OpenAI: GPT-5.1-Codex-Mini",
       "reasoning": true,
       "reasoning_options": [
@@ -3390,6 +3540,7 @@
     },
     {
       "id": "openai/gpt-5.2",
+      "modelCode": "openai/gpt-5.2",
       "name": "OpenAI: GPT-5.2",
       "reasoning": true,
       "reasoning_options": [
@@ -3416,6 +3567,7 @@
     },
     {
       "id": "openai/gpt-5.2-chat",
+      "modelCode": "openai/gpt-5.2-chat",
       "name": "OpenAI: GPT-5.2 Chat",
       "reasoning": false,
       "attachment": true,
@@ -3432,6 +3584,7 @@
     },
     {
       "id": "openai/gpt-5.2-pro",
+      "modelCode": "openai/gpt-5.2-pro",
       "name": "OpenAI: GPT-5.2 Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -3458,6 +3611,7 @@
     },
     {
       "id": "openai/gpt-5.2-codex",
+      "modelCode": "openai/gpt-5.2-codex",
       "name": "OpenAI: GPT-5.2-Codex",
       "reasoning": true,
       "reasoning_options": [
@@ -3484,6 +3638,7 @@
     },
     {
       "id": "openai/gpt-5.3-codex",
+      "modelCode": "openai/gpt-5.3-codex",
       "name": "OpenAI: GPT-5.3-Codex",
       "reasoning": true,
       "reasoning_options": [
@@ -3510,6 +3665,7 @@
     },
     {
       "id": "openai/gpt-5.4",
+      "modelCode": "openai/gpt-5.4",
       "name": "OpenAI: GPT-5.4",
       "reasoning": true,
       "reasoning_options": [
@@ -3536,6 +3692,7 @@
     },
     {
       "id": "openai/gpt-5.4-mini",
+      "modelCode": "openai/gpt-5.4-mini",
       "name": "OpenAI: GPT-5.4 Mini",
       "reasoning": true,
       "reasoning_options": [
@@ -3562,6 +3719,7 @@
     },
     {
       "id": "openai/gpt-5.4-nano",
+      "modelCode": "openai/gpt-5.4-nano",
       "name": "OpenAI: GPT-5.4 Nano",
       "reasoning": true,
       "reasoning_options": [
@@ -3588,6 +3746,7 @@
     },
     {
       "id": "openai/gpt-5.4-pro",
+      "modelCode": "openai/gpt-5.4-pro",
       "name": "OpenAI: GPT-5.4 Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -3614,6 +3773,7 @@
     },
     {
       "id": "openai/gpt-5.5",
+      "modelCode": "openai/gpt-5.5",
       "name": "OpenAI: GPT-5.5",
       "reasoning": true,
       "reasoning_options": [
@@ -3640,6 +3800,7 @@
     },
     {
       "id": "openai/gpt-5.5-pro",
+      "modelCode": "openai/gpt-5.5-pro",
       "name": "OpenAI: GPT-5.5 Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -3666,6 +3827,7 @@
     },
     {
       "id": "openai/gpt-5.6-luna",
+      "modelCode": "openai/gpt-5.6-luna",
       "name": "OpenAI: GPT-5.6 Luna",
       "reasoning": true,
       "reasoning_options": [
@@ -3692,6 +3854,7 @@
     },
     {
       "id": "openai/gpt-5.6-luna-pro",
+      "modelCode": "openai/gpt-5.6-luna-pro",
       "name": "OpenAI: GPT-5.6 Luna Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -3718,6 +3881,7 @@
     },
     {
       "id": "openai/gpt-5.6-sol",
+      "modelCode": "openai/gpt-5.6-sol",
       "name": "OpenAI: GPT-5.6 Sol",
       "reasoning": true,
       "reasoning_options": [
@@ -3744,6 +3908,7 @@
     },
     {
       "id": "openai/gpt-5.6-sol-pro",
+      "modelCode": "openai/gpt-5.6-sol-pro",
       "name": "OpenAI: GPT-5.6 Sol Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -3770,6 +3935,7 @@
     },
     {
       "id": "openai/gpt-5.6-terra",
+      "modelCode": "openai/gpt-5.6-terra",
       "name": "OpenAI: GPT-5.6 Terra",
       "reasoning": true,
       "reasoning_options": [
@@ -3796,6 +3962,7 @@
     },
     {
       "id": "openai/gpt-5.6-terra-pro",
+      "modelCode": "openai/gpt-5.6-terra-pro",
       "name": "OpenAI: GPT-5.6 Terra Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -3822,6 +3989,7 @@
     },
     {
       "id": "openai/gpt-oss-120b",
+      "modelCode": "openai/gpt-oss-120b",
       "name": "OpenAI: gpt-oss-120b",
       "reasoning": true,
       "reasoning_options": [
@@ -3848,6 +4016,7 @@
     },
     {
       "id": "openai/gpt-oss-20b",
+      "modelCode": "openai/gpt-oss-20b",
       "name": "OpenAI: gpt-oss-20b",
       "reasoning": true,
       "reasoning_options": [
@@ -3874,6 +4043,7 @@
     },
     {
       "id": "openai/gpt-oss-safeguard-20b",
+      "modelCode": "openai/gpt-oss-safeguard-20b",
       "name": "OpenAI: gpt-oss-safeguard-20b",
       "reasoning": true,
       "reasoning_options": [
@@ -3900,6 +4070,7 @@
     },
     {
       "id": "openai/o1",
+      "modelCode": "openai/o1",
       "name": "OpenAI: o1",
       "reasoning": true,
       "reasoning_options": [
@@ -3926,6 +4097,7 @@
     },
     {
       "id": "openai/o3",
+      "modelCode": "openai/o3",
       "name": "OpenAI: o3",
       "reasoning": true,
       "reasoning_options": [
@@ -3952,6 +4124,7 @@
     },
     {
       "id": "openai/o3-mini",
+      "modelCode": "openai/o3-mini",
       "name": "OpenAI: o3 Mini",
       "reasoning": true,
       "reasoning_options": [
@@ -3978,6 +4151,7 @@
     },
     {
       "id": "openai/o3-mini-high",
+      "modelCode": "openai/o3-mini:high",
       "name": "OpenAI: o3 Mini High",
       "reasoning": true,
       "reasoning_options": [
@@ -4004,6 +4178,7 @@
     },
     {
       "id": "openai/o3-pro",
+      "modelCode": "openai/o3-pro",
       "name": "OpenAI: o3 Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -4030,6 +4205,7 @@
     },
     {
       "id": "openai/o4-mini",
+      "modelCode": "openai/o4-mini",
       "name": "OpenAI: o4 Mini",
       "reasoning": true,
       "reasoning_options": [
@@ -4056,6 +4232,7 @@
     },
     {
       "id": "openai/o4-mini-high",
+      "modelCode": "openai/o4-mini:high",
       "name": "OpenAI: o4 Mini High",
       "reasoning": true,
       "reasoning_options": [
@@ -4082,6 +4259,7 @@
     },
     {
       "id": "poolside/laguna-s-2.1",
+      "modelCode": "poolside/laguna-s-2.1",
       "name": "Poolside: Laguna S 2.1",
       "reasoning": true,
       "reasoning_options": [
@@ -4108,6 +4286,7 @@
     },
     {
       "id": "poolside/laguna-s-2.1:free",
+      "modelCode": "poolside/laguna-s-2.1:free",
       "name": "Poolside: Laguna S 2.1 (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -4134,6 +4313,7 @@
     },
     {
       "id": "poolside/laguna-xs-2.1",
+      "modelCode": "poolside/laguna-xs-2.1",
       "name": "Poolside: Laguna XS 2.1",
       "reasoning": true,
       "reasoning_options": [
@@ -4160,6 +4340,7 @@
     },
     {
       "id": "poolside/laguna-xs-2.1:free",
+      "modelCode": "poolside/laguna-xs-2.1:free",
       "name": "Poolside: Laguna XS 2.1 (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -4186,6 +4367,7 @@
     },
     {
       "id": "qwen/qwen-2.5-72b-instruct",
+      "modelCode": "qwen/qwen-2.5-72b-instruct",
       "name": "Qwen2.5 72B Instruct",
       "reasoning": false,
       "attachment": false,
@@ -4202,6 +4384,7 @@
     },
     {
       "id": "qwen/qwen-plus-2025-07-28",
+      "modelCode": "qwen/qwen-plus",
       "name": "Qwen: Qwen Plus 0728",
       "reasoning": false,
       "attachment": false,
@@ -4218,6 +4401,7 @@
     },
     {
       "id": "qwen/qwen-plus",
+      "modelCode": "qwen/qwen-plus",
       "name": "Qwen: Qwen-Plus",
       "reasoning": false,
       "attachment": false,
@@ -4234,6 +4418,7 @@
     },
     {
       "id": "qwen/qwen-2.5-7b-instruct",
+      "modelCode": "qwen/qwen-2.5-7b-instruct",
       "name": "Qwen: Qwen2.5 7B Instruct",
       "reasoning": false,
       "attachment": false,
@@ -4250,6 +4435,7 @@
     },
     {
       "id": "qwen/qwen3-14b",
+      "modelCode": "qwen/qwen3-14b",
       "name": "Qwen: Qwen3 14B",
       "reasoning": true,
       "reasoning_options": [
@@ -4276,6 +4462,7 @@
     },
     {
       "id": "qwen/qwen3-235b-a22b",
+      "modelCode": "qwen/Qwen3-235B-A22B",
       "name": "Qwen: Qwen3 235B A22B",
       "reasoning": true,
       "reasoning_options": [
@@ -4302,6 +4489,7 @@
     },
     {
       "id": "qwen/qwen3-235b-a22b-2507",
+      "modelCode": "qwen/qwen3-235b-a22b-2507",
       "name": "Qwen: Qwen3 235B A22B Instruct 2507",
       "reasoning": false,
       "attachment": false,
@@ -4318,6 +4506,7 @@
     },
     {
       "id": "qwen/qwen3-235b-a22b-thinking-2507",
+      "modelCode": "qwen/Qwen3-235B-A22B-Thinking-2507",
       "name": "Qwen: Qwen3 235B A22B Thinking 2507",
       "reasoning": true,
       "reasoning_options": [
@@ -4344,6 +4533,7 @@
     },
     {
       "id": "qwen/qwen3-30b-a3b",
+      "modelCode": "qwen/Qwen3-30B-A3B",
       "name": "Qwen: Qwen3 30B A3B",
       "reasoning": true,
       "reasoning_options": [
@@ -4370,6 +4560,7 @@
     },
     {
       "id": "qwen/qwen3-30b-a3b-instruct-2507",
+      "modelCode": "qwen/Qwen3-30B-A3B-Instruct-2507",
       "name": "Qwen: Qwen3 30B A3B Instruct 2507",
       "reasoning": false,
       "attachment": false,
@@ -4386,6 +4577,7 @@
     },
     {
       "id": "qwen/qwen3-30b-a3b-thinking-2507",
+      "modelCode": "qwen/qwen3-30b-a3b-thinking-2507",
       "name": "Qwen: Qwen3 30B A3B Thinking 2507",
       "reasoning": true,
       "reasoning_options": [
@@ -4412,6 +4604,7 @@
     },
     {
       "id": "qwen/qwen3-32b",
+      "modelCode": "qwen/Qwen3-32B",
       "name": "Qwen: Qwen3 32B",
       "reasoning": true,
       "reasoning_options": [
@@ -4438,6 +4631,7 @@
     },
     {
       "id": "qwen/qwen3-8b",
+      "modelCode": "qwen/qwen3-8b",
       "name": "Qwen: Qwen3 8B",
       "reasoning": true,
       "reasoning_options": [
@@ -4464,6 +4658,7 @@
     },
     {
       "id": "qwen/qwen3-coder-30b-a3b-instruct",
+      "modelCode": "qwen/Qwen3-Coder-30B-A3B-Instruct",
       "name": "Qwen: Qwen3 Coder 30B A3B Instruct",
       "reasoning": false,
       "attachment": false,
@@ -4480,6 +4675,7 @@
     },
     {
       "id": "qwen/qwen3-coder",
+      "modelCode": "qwen/qwen3-coder",
       "name": "Qwen: Qwen3 Coder 480B A35B",
       "reasoning": false,
       "attachment": false,
@@ -4496,6 +4692,7 @@
     },
     {
       "id": "qwen/qwen3-coder-flash",
+      "modelCode": "qwen/qwen3-coder-flash",
       "name": "Qwen: Qwen3 Coder Flash",
       "reasoning": false,
       "attachment": false,
@@ -4512,6 +4709,7 @@
     },
     {
       "id": "qwen/qwen3-coder-next",
+      "modelCode": "qwen/Qwen3-Coder-Next",
       "name": "Qwen: Qwen3 Coder Next",
       "reasoning": false,
       "attachment": false,
@@ -4528,6 +4726,7 @@
     },
     {
       "id": "qwen/qwen3-coder-plus",
+      "modelCode": "qwen/qwen3-coder-plus",
       "name": "Qwen: Qwen3 Coder Plus",
       "reasoning": false,
       "attachment": false,
@@ -4544,6 +4743,7 @@
     },
     {
       "id": "qwen/qwen3-max",
+      "modelCode": "qwen/qwen3-max",
       "name": "Qwen: Qwen3 Max",
       "reasoning": false,
       "attachment": false,
@@ -4560,6 +4760,7 @@
     },
     {
       "id": "qwen/qwen3-max-thinking",
+      "modelCode": "qwen/qwen3-max-thinking",
       "name": "Qwen: Qwen3 Max Thinking",
       "reasoning": true,
       "reasoning_options": [
@@ -4586,6 +4787,7 @@
     },
     {
       "id": "qwen/qwen3-next-80b-a3b-instruct",
+      "modelCode": "qwen/Qwen3-Next-80B-A3B-Instruct",
       "name": "Qwen: Qwen3 Next 80B A3B Instruct",
       "reasoning": false,
       "attachment": false,
@@ -4602,6 +4804,7 @@
     },
     {
       "id": "qwen/qwen3-next-80b-a3b-thinking",
+      "modelCode": "qwen/Qwen3-Next-80B-A3B-Thinking",
       "name": "Qwen: Qwen3 Next 80B A3B Thinking",
       "reasoning": true,
       "reasoning_options": [
@@ -4628,6 +4831,7 @@
     },
     {
       "id": "qwen/qwen3-vl-235b-a22b-instruct",
+      "modelCode": "qwen/Qwen3-VL-235B-A22B-Instruct",
       "name": "Qwen: Qwen3 VL 235B A22B Instruct",
       "reasoning": false,
       "attachment": true,
@@ -4644,6 +4848,7 @@
     },
     {
       "id": "qwen/qwen3-vl-235b-a22b-thinking",
+      "modelCode": "qwen/Qwen3-VL-235B-A22B-Thinking",
       "name": "Qwen: Qwen3 VL 235B A22B Thinking",
       "reasoning": true,
       "reasoning_options": [
@@ -4670,6 +4875,7 @@
     },
     {
       "id": "qwen/qwen3-vl-30b-a3b-instruct",
+      "modelCode": "qwen/qwen3-vl-30b-a3b-instruct",
       "name": "Qwen: Qwen3 VL 30B A3B Instruct",
       "reasoning": false,
       "attachment": true,
@@ -4686,6 +4892,7 @@
     },
     {
       "id": "qwen/qwen3-vl-30b-a3b-thinking",
+      "modelCode": "qwen/qwen3-vl-30b-a3b-thinking",
       "name": "Qwen: Qwen3 VL 30B A3B Thinking",
       "reasoning": true,
       "reasoning_options": [
@@ -4712,6 +4919,7 @@
     },
     {
       "id": "qwen/qwen3-vl-32b-instruct",
+      "modelCode": "qwen/qwen3-vl-32b-instruct",
       "name": "Qwen: Qwen3 VL 32B Instruct",
       "reasoning": false,
       "attachment": true,
@@ -4728,6 +4936,7 @@
     },
     {
       "id": "qwen/qwen3-vl-8b-instruct",
+      "modelCode": "qwen/qwen3-vl-8b-instruct",
       "name": "Qwen: Qwen3 VL 8B Instruct",
       "reasoning": false,
       "attachment": true,
@@ -4744,6 +4953,7 @@
     },
     {
       "id": "qwen/qwen3-vl-8b-thinking",
+      "modelCode": "qwen/qwen3-vl-8b-thinking",
       "name": "Qwen: Qwen3 VL 8B Thinking",
       "reasoning": true,
       "reasoning_options": [
@@ -4770,6 +4980,7 @@
     },
     {
       "id": "qwen/qwen3.5-397b-a17b",
+      "modelCode": "qwen/Qwen3.5-397B-A17B",
       "name": "Qwen: Qwen3.5 397B A17B",
       "reasoning": true,
       "reasoning_options": [
@@ -4796,6 +5007,7 @@
     },
     {
       "id": "qwen/qwen3.5-plus-02-15",
+      "modelCode": "qwen/qwen3.5-plus-02-15",
       "name": "Qwen: Qwen3.5 Plus 2026-02-15",
       "reasoning": true,
       "reasoning_options": [
@@ -4822,6 +5034,7 @@
     },
     {
       "id": "qwen/qwen3.5-plus-20260420",
+      "modelCode": "qwen/qwen3.5-plus",
       "name": "Qwen: Qwen3.5 Plus 2026-04-20",
       "reasoning": true,
       "reasoning_options": [
@@ -4848,6 +5061,7 @@
     },
     {
       "id": "qwen/qwen3.5-122b-a10b",
+      "modelCode": "qwen/Qwen3.5-122B-A10B",
       "name": "Qwen: Qwen3.5-122B-A10B",
       "reasoning": true,
       "reasoning_options": [
@@ -4874,6 +5088,7 @@
     },
     {
       "id": "qwen/qwen3.5-27b",
+      "modelCode": "qwen/Qwen3.5-27B",
       "name": "Qwen: Qwen3.5-27B",
       "reasoning": true,
       "reasoning_options": [
@@ -4900,6 +5115,7 @@
     },
     {
       "id": "qwen/qwen3.5-35b-a3b",
+      "modelCode": "qwen/Qwen3.5-35B-A3B",
       "name": "Qwen: Qwen3.5-35B-A3B",
       "reasoning": true,
       "reasoning_options": [
@@ -4926,6 +5142,7 @@
     },
     {
       "id": "qwen/qwen3.5-9b",
+      "modelCode": "qwen/Qwen3.5-9B",
       "name": "Qwen: Qwen3.5-9B",
       "reasoning": true,
       "reasoning_options": [
@@ -4952,6 +5169,7 @@
     },
     {
       "id": "qwen/qwen3.5-flash-02-23",
+      "modelCode": "qwen/qwen3.5-flash-02-23",
       "name": "Qwen: Qwen3.5-Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -4978,6 +5196,7 @@
     },
     {
       "id": "qwen/qwen3.6-27b",
+      "modelCode": "qwen/Qwen3.6-27B",
       "name": "Qwen: Qwen3.6 27B",
       "reasoning": true,
       "reasoning_options": [
@@ -5004,6 +5223,7 @@
     },
     {
       "id": "qwen/qwen3.6-35b-a3b",
+      "modelCode": "qwen/Qwen3.6-35B-A3B",
       "name": "Qwen: Qwen3.6 35B A3B",
       "reasoning": true,
       "reasoning_options": [
@@ -5030,6 +5250,7 @@
     },
     {
       "id": "qwen/qwen3.6-flash",
+      "modelCode": "qwen/qwen3.6-flash",
       "name": "Qwen: Qwen3.6 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -5056,6 +5277,7 @@
     },
     {
       "id": "qwen/qwen3.6-max-preview",
+      "modelCode": "qwen/qwen3.6-max-preview",
       "name": "Qwen: Qwen3.6 Max Preview",
       "reasoning": true,
       "reasoning_options": [
@@ -5082,6 +5304,7 @@
     },
     {
       "id": "qwen/qwen3.6-plus",
+      "modelCode": "qwen/qwen3.6-plus",
       "name": "Qwen: Qwen3.6 Plus",
       "reasoning": true,
       "reasoning_options": [
@@ -5108,6 +5331,7 @@
     },
     {
       "id": "qwen/qwen3.7-flash",
+      "modelCode": "qwen/qwen3.7-flash",
       "name": "Qwen: Qwen3.7 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -5134,6 +5358,7 @@
     },
     {
       "id": "qwen/qwen3.7-max",
+      "modelCode": "qwen/qwen3.7-max",
       "name": "Qwen: Qwen3.7 Max",
       "reasoning": true,
       "reasoning_options": [
@@ -5160,6 +5385,7 @@
     },
     {
       "id": "qwen/qwen3.7-plus",
+      "modelCode": "qwen/qwen3.7-plus",
       "name": "Qwen: Qwen3.7 Plus",
       "reasoning": true,
       "reasoning_options": [
@@ -5186,6 +5412,7 @@
     },
     {
       "id": "qwen/qwen3.8-2.4t-a95b",
+      "modelCode": "qwen/Qwen3.8-2.4T-A95B",
       "name": "Qwen: Qwen3.8 2.4T A95B",
       "reasoning": true,
       "reasoning_options": [
@@ -5212,6 +5439,7 @@
     },
     {
       "id": "qwen/qwen3.8-27b",
+      "modelCode": "qwen/Qwen3.8-27B",
       "name": "Qwen: Qwen3.8 27B",
       "reasoning": true,
       "reasoning_options": [
@@ -5238,6 +5466,7 @@
     },
     {
       "id": "qwen/qwen3.8-max",
+      "modelCode": "qwen/qwen3.8-max",
       "name": "Qwen: Qwen3.8 Max",
       "reasoning": true,
       "reasoning_options": [
@@ -5264,6 +5493,7 @@
     },
     {
       "id": "relace/relace-search",
+      "modelCode": "relace/relace-search",
       "name": "Relace: Relace Search",
       "reasoning": false,
       "attachment": false,
@@ -5280,6 +5510,7 @@
     },
     {
       "id": "sakana/fugu-ultra",
+      "modelCode": "sakana/fugu-ultra",
       "name": "Sakana: Fugu Ultra",
       "reasoning": true,
       "reasoning_options": [
@@ -5306,6 +5537,7 @@
     },
     {
       "id": "sakana/sakana-namazu",
+      "modelCode": "sakana/sakana-namazu",
       "name": "Sakana: Sakana Namazu",
       "reasoning": true,
       "reasoning_options": [
@@ -5332,6 +5564,7 @@
     },
     {
       "id": "x-ai/grok-4.20",
+      "modelCode": "xai-org/grok-4.20",
       "name": "SpaceXAI: Grok 4.20",
       "reasoning": true,
       "reasoning_options": [
@@ -5358,6 +5591,7 @@
     },
     {
       "id": "x-ai/grok-4.3",
+      "modelCode": "xai-org/grok-4.3",
       "name": "SpaceXAI: Grok 4.3",
       "reasoning": true,
       "reasoning_options": [
@@ -5384,6 +5618,7 @@
     },
     {
       "id": "x-ai/grok-4.5",
+      "modelCode": "xai-org/grok-4.5",
       "name": "SpaceXAI: Grok 4.5",
       "reasoning": true,
       "reasoning_options": [
@@ -5410,6 +5645,7 @@
     },
     {
       "id": "x-ai/grok-4.6",
+      "modelCode": "xai-org/grok-4.6",
       "name": "SpaceXAI: Grok 4.6",
       "reasoning": true,
       "reasoning_options": [
@@ -5436,6 +5672,7 @@
     },
     {
       "id": "x-ai/grok-build-0.1",
+      "modelCode": "xai-org/grok-build-0.1",
       "name": "SpaceXAI: Grok Build 0.1",
       "reasoning": true,
       "reasoning_options": [
@@ -5462,6 +5699,7 @@
     },
     {
       "id": "stepfun/step-3.5-flash",
+      "modelCode": "stepfun-ai/Step-3.5-Flash",
       "name": "StepFun: Step 3.5 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -5488,6 +5726,7 @@
     },
     {
       "id": "stepfun/step-3.7-flash",
+      "modelCode": "stepfun-ai/Step-3.7-Flash",
       "name": "StepFun: Step 3.7 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -5514,6 +5753,7 @@
     },
     {
       "id": "tencent/hy3",
+      "modelCode": "tencent/Hy3",
       "name": "Tencent: Hy3",
       "reasoning": true,
       "reasoning_options": [
@@ -5540,6 +5780,7 @@
     },
     {
       "id": "tencent/hy3-preview",
+      "modelCode": "tencent/hy3-preview",
       "name": "Tencent: Hy3 preview",
       "reasoning": true,
       "reasoning_options": [
@@ -5566,6 +5807,7 @@
     },
     {
       "id": "thedrummer/unslopnemo-12b",
+      "modelCode": "thedrummer/unslopnemo-12b",
       "name": "TheDrummer: UnslopNemo 12B",
       "reasoning": false,
       "attachment": false,
@@ -5582,6 +5824,7 @@
     },
     {
       "id": "thinkingmachines/inkling",
+      "modelCode": "thinkingmachines/Inkling",
       "name": "Thinking Machines: Inkling",
       "reasoning": true,
       "reasoning_options": [
@@ -5608,6 +5851,7 @@
     },
     {
       "id": "thinkingmachines/inkling:free",
+      "modelCode": "thinkingmachines/Inkling:free",
       "name": "Thinking Machines: Inkling (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -5634,6 +5878,7 @@
     },
     {
       "id": "thinkingmachines/inkling-small",
+      "modelCode": "thinkingmachines/Inkling-Small",
       "name": "Thinking Machines: Inkling Small",
       "reasoning": true,
       "reasoning_options": [
@@ -5660,6 +5905,7 @@
     },
     {
       "id": "thinkingmachines/inkling-small:free",
+      "modelCode": "thinkingmachines/Inkling-Small:free",
       "name": "Thinking Machines: Inkling Small (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -5686,6 +5932,7 @@
     },
     {
       "id": "upstage/solar-pro-3",
+      "modelCode": "upstage/solar-pro-3",
       "name": "Upstage: Solar Pro 3",
       "reasoning": true,
       "reasoning_options": [
@@ -5712,6 +5959,7 @@
     },
     {
       "id": "upstage/solar-pro4",
+      "modelCode": "upstage/solar-pro4",
       "name": "Upstage: Solar Pro 4",
       "reasoning": true,
       "reasoning_options": [
@@ -5738,6 +5986,7 @@
     },
     {
       "id": "xiaomi/mimo-v2.5",
+      "modelCode": "xiaomimimo/MiMo-V2.5",
       "name": "Xiaomi: MiMo-V2.5",
       "reasoning": true,
       "reasoning_options": [
@@ -5764,6 +6013,7 @@
     },
     {
       "id": "xiaomi/mimo-v2.5-pro",
+      "modelCode": "xiaomimimo/MiMo-V2.5-Pro",
       "name": "Xiaomi: MiMo-V2.5-Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -5790,6 +6040,7 @@
     },
     {
       "id": "z-ai/glm-4.5",
+      "modelCode": "zai-org/GLM-4.5",
       "name": "Z.ai: GLM 4.5",
       "reasoning": true,
       "reasoning_options": [
@@ -5816,6 +6067,7 @@
     },
     {
       "id": "z-ai/glm-4.5-air",
+      "modelCode": "zai-org/GLM-4.5-Air",
       "name": "Z.ai: GLM 4.5 Air",
       "reasoning": true,
       "reasoning_options": [
@@ -5842,6 +6094,7 @@
     },
     {
       "id": "z-ai/glm-4.5v",
+      "modelCode": "zai-org/GLM-4.5V",
       "name": "Z.ai: GLM 4.5V",
       "reasoning": true,
       "reasoning_options": [
@@ -5868,6 +6121,7 @@
     },
     {
       "id": "z-ai/glm-4.6",
+      "modelCode": "zai-org/GLM-4.6",
       "name": "Z.ai: GLM 4.6",
       "reasoning": true,
       "reasoning_options": [
@@ -5894,6 +6148,7 @@
     },
     {
       "id": "z-ai/glm-4.6v",
+      "modelCode": "zai-org/glm-4.6v",
       "name": "Z.ai: GLM 4.6V",
       "reasoning": true,
       "reasoning_options": [
@@ -5920,6 +6175,7 @@
     },
     {
       "id": "z-ai/glm-4.7",
+      "modelCode": "zai-org/GLM-4.7",
       "name": "Z.ai: GLM 4.7",
       "reasoning": true,
       "reasoning_options": [
@@ -5946,6 +6202,7 @@
     },
     {
       "id": "z-ai/glm-4.7-flash",
+      "modelCode": "zai-org/GLM-4.7-Flash",
       "name": "Z.ai: GLM 4.7 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -5972,6 +6229,7 @@
     },
     {
       "id": "z-ai/glm-5",
+      "modelCode": "zai-org/GLM-5",
       "name": "Z.ai: GLM 5",
       "reasoning": true,
       "reasoning_options": [
@@ -5998,6 +6256,7 @@
     },
     {
       "id": "z-ai/glm-5-turbo",
+      "modelCode": "zai-org/glm-5-turbo",
       "name": "Z.ai: GLM 5 Turbo",
       "reasoning": true,
       "reasoning_options": [
@@ -6024,6 +6283,7 @@
     },
     {
       "id": "z-ai/glm-5.1",
+      "modelCode": "zai-org/GLM-5.1",
       "name": "Z.ai: GLM 5.1",
       "reasoning": true,
       "reasoning_options": [
@@ -6050,6 +6310,7 @@
     },
     {
       "id": "z-ai/glm-5.2",
+      "modelCode": "zai-org/GLM-5.2",
       "name": "Z.ai: GLM 5.2",
       "reasoning": true,
       "reasoning_options": [
@@ -6076,6 +6337,7 @@
     },
     {
       "id": "z-ai/glm-5.2:free",
+      "modelCode": "zai-org/GLM-5.2:free",
       "name": "Z.ai: GLM 5.2 (free)",
       "reasoning": true,
       "reasoning_options": [
@@ -6102,6 +6364,7 @@
     },
     {
       "id": "z-ai/glm-5.3",
+      "modelCode": "zai-org/GLM-5.3",
       "name": "Z.ai: GLM 5.3",
       "reasoning": true,
       "reasoning_options": [
@@ -6128,6 +6391,7 @@
     },
     {
       "id": "z-ai/glm-5.3-flash",
+      "modelCode": "zai-org/GLM-5.3-Flash",
       "name": "Z.ai: GLM 5.3 Flash",
       "reasoning": true,
       "reasoning_options": [
@@ -6154,6 +6418,7 @@
     },
     {
       "id": "z-ai/glm-5v-turbo",
+      "modelCode": "zai-org/glm-5v-turbo",
       "name": "Z.ai: GLM 5V Turbo",
       "reasoning": true,
       "reasoning_options": [

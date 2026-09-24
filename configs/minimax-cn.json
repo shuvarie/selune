@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "MiniMax-M3",
+      "modelCode": "minimaxai/MiniMax-M3",
       "name": "MiniMax-M3",
       "reasoning": false,
       "attachment": false,
@@ -26,6 +27,7 @@
     },
     {
       "id": "MiniMax-M2.7-highspeed",
+      "modelCode": "minimaxai/MiniMax-M2.7:highspeed",
       "name": "MiniMax-M2.7-highspeed",
       "reasoning": false,
       "attachment": false,
@@ -42,6 +44,7 @@
     },
     {
       "id": "MiniMax-M2.7",
+      "modelCode": "minimaxai/MiniMax-M2.7",
       "name": "MiniMax-M2.7",
       "reasoning": false,
       "attachment": false,
@@ -58,6 +61,7 @@
     },
     {
       "id": "MiniMax-M2.5-highspeed",
+      "modelCode": "minimaxai/MiniMax-M2.5:highspeed",
       "name": "MiniMax-M2.5-highspeed",
       "reasoning": false,
       "attachment": false,
@@ -74,6 +78,7 @@
     },
     {
       "id": "MiniMax-M2.5",
+      "modelCode": "minimaxai/MiniMax-M2.5",
       "name": "MiniMax-M2.5",
       "reasoning": false,
       "attachment": false,
@@ -90,6 +95,7 @@
     },
     {
       "id": "MiniMax-M2.1-highspeed",
+      "modelCode": "minimaxai/MiniMax-M2.1:highspeed",
       "name": "MiniMax-M2.1-highspeed",
       "reasoning": false,
       "attachment": false,
@@ -106,6 +112,7 @@
     },
     {
       "id": "MiniMax-M2.1",
+      "modelCode": "minimaxai/MiniMax-M2.1",
       "name": "MiniMax-M2.1",
       "reasoning": false,
       "attachment": false,
@@ -122,6 +129,7 @@
     },
     {
       "id": "MiniMax-M2",
+      "modelCode": "minimaxai/MiniMax-M2",
       "name": "MiniMax-M2",
       "reasoning": false,
       "attachment": false,

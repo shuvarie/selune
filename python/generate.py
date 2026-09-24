@@ -10,12 +10,19 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
+RE_MODEL_CODE = re.compile(
+    r"^[a-z0-9]+(?:-[a-z0-9]+)*"  # org: lowercase kebab-case
+    r"/[A-Za-z0-9]+(?:[.-][A-Za-z0-9]+)*"  # model: kebab-case, dots allowed
+    r"(?::[a-z0-9]+(?:-[a-z0-9]+)*)?$"  # optional variant: lowercase kebab-case
+)
 
 REQUIRED_MODEL_FIELDS = {
     "id",
+    "modelCode",
     "name",
     "reasoning",
     "attachment",
@@ -46,6 +53,9 @@ def load_provider(path: Path) -> dict:
         missing = REQUIRED_MODEL_FIELDS - set(model)
         if missing:
             raise ValueError(f"{path}: model {model.get('id')!r} missing {sorted(missing)}")
+        code = model["modelCode"]
+        if not isinstance(code, str) or not RE_MODEL_CODE.match(code):
+            raise ValueError(f"{path}: model {model['id']!r} has invalid modelCode {code!r}")
         if model["id"] in ids:
             raise ValueError(f"{path}: duplicate model id {model['id']!r}")
         ids.add(model["id"])

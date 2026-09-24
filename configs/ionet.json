@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "deepseek-ai/DeepSeek-V3.2",
+      "modelCode": "deepseek-ai/DeepSeek-V3.2",
       "name": "DeepSeek: DeepSeek V3.2",
       "reasoning": true,
       "attachment": false,
@@ -26,6 +27,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash",
       "name": "DeepSeek: DeepSeek V4 Flash",
       "reasoning": true,
       "attachment": false,
@@ -42,6 +44,7 @@
     },
     {
       "id": "MiniMaxAI/MiniMax-M2.7",
+      "modelCode": "minimaxai/MiniMax-M2.7",
       "name": "DeepSeek: DeepSeek V4 Flash 0731",
       "reasoning": false,
       "attachment": false,
@@ -58,6 +61,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "name": "DeepSeek: DeepSeek V4 Flash 0731",
       "reasoning": true,
       "attachment": false,
@@ -74,6 +78,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Pro",
       "name": "DeepSeek: DeepSeek V4 Pro",
       "reasoning": true,
       "attachment": false,
@@ -90,6 +95,7 @@
     },
     {
       "id": "google/gemma-4-26b-a4b-it",
+      "modelCode": "google/gemma-4-26B-A4B-it",
       "name": "Google: Gemma 4 26B A4B",
       "reasoning": true,
       "attachment": false,
@@ -106,6 +112,7 @@
     },
     {
       "id": "Intel/Qwen3-Coder-480B-A35B-Instruct-int4-mixed-ar",
+      "modelCode": "intel/Qwen3-Coder-480B-A35B-Instruct-int4-mixed-ar",
       "name": "Intel: Qwen3 Coder 480B A35B Instruct INT4 Mixed AR",
       "reasoning": false,
       "attachment": false,
@@ -122,6 +129,7 @@
     },
     {
       "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+      "modelCode": "meta-llama/Llama-4-Maverick-17B-128E-Instruct:fp8",
       "name": "Meta-Llama: Llama 4 Maverick 17B 128E Instruct FP8",
       "reasoning": true,
       "attachment": false,
@@ -138,6 +146,7 @@
     },
     {
       "id": "meta-llama/Llama-3.3-70B-Instruct",
+      "modelCode": "meta-llama/Llama-3.3-70B-Instruct",
       "name": "Meta: Llama 3.3 70B Instruct",
       "reasoning": true,
       "attachment": false,
@@ -154,6 +163,7 @@
     },
     {
       "id": "MiniMaxAI/MiniMax-M2.5",
+      "modelCode": "minimaxai/MiniMax-M2.5",
       "name": "MiniMaxAI/MiniMax-M2.5",
       "reasoning": false,
       "attachment": false,
@@ -170,6 +180,7 @@
     },
     {
       "id": "moonshotai/Kimi-K2-Instruct-0905",
+      "modelCode": "moonshotai/Kimi-K2-Instruct-0905",
       "name": "MoonshotAI: Kimi K2 Instruct 0905",
       "reasoning": false,
       "attachment": false,
@@ -186,6 +197,7 @@
     },
     {
       "id": "moonshotai/Kimi-K2-Thinking",
+      "modelCode": "moonshotai/Kimi-K2-Thinking",
       "name": "MoonshotAI: Kimi K2 Thinking",
       "reasoning": true,
       "attachment": false,
@@ -202,6 +214,7 @@
     },
     {
       "id": "moonshotai/Kimi-K2.5",
+      "modelCode": "moonshotai/Kimi-K2.5",
       "name": "MoonshotAI: Kimi K2.5",
       "reasoning": true,
       "attachment": false,
@@ -218,6 +231,7 @@
     },
     {
       "id": "moonshotai/Kimi-K2.6",
+      "modelCode": "moonshotai/Kimi-K2.6",
       "name": "MoonshotAI: Kimi K2.6",
       "reasoning": true,
       "attachment": false,
@@ -234,6 +248,7 @@
     },
     {
       "id": "moonshotai/Kimi-K2.7-Code",
+      "modelCode": "moonshotai/Kimi-K2.7-Code",
       "name": "MoonshotAI: Kimi K2.7 Code",
       "reasoning": false,
       "attachment": false,
@@ -250,6 +265,7 @@
     },
     {
       "id": "moonshotai/Kimi-K3",
+      "modelCode": "moonshotai/Kimi-K3",
       "name": "MoonshotAI: Kimi K3",
       "reasoning": false,
       "attachment": false,
@@ -266,6 +282,7 @@
     },
     {
       "id": "openai/gpt-oss-120b",
+      "modelCode": "openai/gpt-oss-120b",
       "name": "OpenAI: gpt-oss-120b",
       "reasoning": true,
       "reasoning_options": [
@@ -292,6 +309,7 @@
     },
     {
       "id": "openai/gpt-oss-20b",
+      "modelCode": "openai/gpt-oss-20b",
       "name": "OpenAI: gpt-oss-20b",
       "reasoning": true,
       "reasoning_options": [
@@ -318,6 +336,7 @@
     },
     {
       "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+      "modelCode": "qwen/Qwen3-Next-80B-A3B-Instruct",
       "name": "Qwen: Qwen3 Next 80B A3B Instruct",
       "reasoning": false,
       "attachment": false,
@@ -334,6 +353,7 @@
     },
     {
       "id": "Qwen/Qwen3.6-27B",
+      "modelCode": "qwen/Qwen3.6-27B",
       "name": "Qwen: Qwen3.6 27B",
       "reasoning": false,
       "attachment": false,
@@ -350,6 +370,7 @@
     },
     {
       "id": "Qwen/Qwen3.6-35B-A3B",
+      "modelCode": "qwen/Qwen3.6-35B-A3B",
       "name": "Qwen: Qwen3.6 35B A3B",
       "reasoning": false,
       "attachment": false,
@@ -366,6 +387,7 @@
     },
     {
       "id": "Qwen/Qwen3.8-27B",
+      "modelCode": "qwen/Qwen3.8-27B",
       "name": "Qwen: Qwen3.8 27B",
       "reasoning": false,
       "attachment": false,
@@ -382,6 +404,7 @@
     },
     {
       "id": "XiaomiMiMo/MiMo-V2.5",
+      "modelCode": "xiaomimimo/MiMo-V2.5",
       "name": "Xiaomi: MiMo-V2.5",
       "reasoning": false,
       "attachment": false,
@@ -398,6 +421,7 @@
     },
     {
       "id": "zai-org/GLM-4.6",
+      "modelCode": "zai-org/GLM-4.6",
       "name": "Z.ai: GLM 4.6",
       "reasoning": true,
       "attachment": false,
@@ -414,6 +438,7 @@
     },
     {
       "id": "zai-org/GLM-4.7",
+      "modelCode": "zai-org/GLM-4.7",
       "name": "Z.ai: GLM 4.7",
       "reasoning": true,
       "attachment": false,
@@ -430,6 +455,7 @@
     },
     {
       "id": "zai-org/GLM-4.7-Flash",
+      "modelCode": "zai-org/GLM-4.7-Flash",
       "name": "Z.ai: GLM 4.7 Flash",
       "reasoning": true,
       "attachment": false,
@@ -446,6 +472,7 @@
     },
     {
       "id": "zai-org/GLM-5",
+      "modelCode": "zai-org/GLM-5",
       "name": "Z.ai: GLM 5",
       "reasoning": true,
       "attachment": false,
@@ -462,6 +489,7 @@
     },
     {
       "id": "zai-org/GLM-5.1",
+      "modelCode": "zai-org/GLM-5.1",
       "name": "Z.ai: GLM 5.1",
       "reasoning": true,
       "attachment": false,
@@ -478,6 +506,7 @@
     },
     {
       "id": "zai-org/GLM-5.2",
+      "modelCode": "zai-org/GLM-5.2",
       "name": "Z.ai: GLM 5.2",
       "reasoning": true,
       "attachment": false,
@@ -494,6 +523,7 @@
     },
     {
       "id": "zai-org/GLM-5.3",
+      "modelCode": "zai-org/GLM-5.3",
       "name": "Z.ai: GLM 5.3",
       "reasoning": true,
       "attachment": false,
@@ -510,6 +540,7 @@
     },
     {
       "id": "zai-org/GLM-5.3-Flash",
+      "modelCode": "zai-org/GLM-5.3-Flash",
       "name": "Z.ai: GLM 5.3 Flash",
       "reasoning": true,
       "attachment": false,
@@ -526,6 +557,7 @@
     },
     {
       "id": "zai-org/GLM-4.5-Air",
+      "modelCode": "zai-org/GLM-4.5-Air",
       "name": "Z.ai: GLM-4.5-Air",
       "reasoning": true,
       "attachment": false,

@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "glm-5.3",
+      "modelCode": "zai-org/GLM-5.3",
       "name": "GLM-5.3",
       "reasoning": true,
       "reasoning_options": [
@@ -36,6 +37,7 @@
     },
     {
       "id": "glm-5.1",
+      "modelCode": "zai-org/GLM-5.1",
       "name": "GLM-5.1",
       "reasoning": true,
       "attachment": false,
@@ -52,6 +54,7 @@
     },
     {
       "id": "glm-5-turbo",
+      "modelCode": "zai-org/glm-5-turbo",
       "name": "GLM-5-Turbo",
       "reasoning": true,
       "attachment": false,
@@ -68,6 +71,7 @@
     },
     {
       "id": "glm-5",
+      "modelCode": "zai-org/GLM-5",
       "name": "GLM-5",
       "reasoning": true,
       "attachment": false,
@@ -84,6 +88,7 @@
     },
     {
       "id": "glm-4.7",
+      "modelCode": "zai-org/GLM-4.7",
       "name": "GLM-4.7",
       "reasoning": true,
       "attachment": false,
@@ -100,6 +105,7 @@
     },
     {
       "id": "glm-4.7-flash",
+      "modelCode": "zai-org/GLM-4.7-Flash",
       "name": "GLM-4.7 Flash",
       "reasoning": true,
       "attachment": false,
@@ -116,6 +122,7 @@
     },
     {
       "id": "glm-4.6",
+      "modelCode": "zai-org/GLM-4.6",
       "name": "GLM-4.6",
       "reasoning": true,
       "attachment": false,
@@ -132,6 +139,7 @@
     },
     {
       "id": "glm-4.6v",
+      "modelCode": "zai-org/glm-4.6v",
       "name": "GLM-4.6V",
       "reasoning": true,
       "attachment": true,
@@ -148,6 +156,7 @@
     },
     {
       "id": "glm-4.5",
+      "modelCode": "zai-org/GLM-4.5",
       "name": "GLM-4.5",
       "reasoning": true,
       "attachment": false,
@@ -164,6 +173,7 @@
     },
     {
       "id": "glm-4.5-air",
+      "modelCode": "zai-org/GLM-4.5-Air",
       "name": "GLM-4.5-Air",
       "reasoning": true,
       "attachment": false,
@@ -180,6 +190,7 @@
     },
     {
       "id": "glm-4.5v",
+      "modelCode": "zai-org/GLM-4.5V",
       "name": "GLM-4.5V",
       "reasoning": true,
       "attachment": true,

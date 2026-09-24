@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "gpt-6-astra",
+      "modelCode": "openai/gpt-6-astra",
       "name": "GPT-6 Astra",
       "reasoning": true,
       "reasoning_options": [
@@ -38,6 +39,7 @@
     },
     {
       "id": "gpt-5.6-sol",
+      "modelCode": "openai/gpt-5.6-sol",
       "name": "GPT-5.6 Sol",
       "reasoning": true,
       "reasoning_options": [
@@ -67,6 +69,7 @@
     },
     {
       "id": "gpt-5.6-terra",
+      "modelCode": "openai/gpt-5.6-terra",
       "name": "GPT-5.6 Terra",
       "reasoning": true,
       "reasoning_options": [
@@ -96,6 +99,7 @@
     },
     {
       "id": "gpt-5.6-luna",
+      "modelCode": "openai/gpt-5.6-luna",
       "name": "GPT-5.6 Luna",
       "reasoning": true,
       "reasoning_options": [
@@ -125,6 +129,7 @@
     },
     {
       "id": "gpt-5.5",
+      "modelCode": "openai/gpt-5.5",
       "name": "GPT-5.5",
       "reasoning": true,
       "reasoning_options": [
@@ -152,6 +157,7 @@
     },
     {
       "id": "gpt-5.5-pro",
+      "modelCode": "openai/gpt-5.5-pro",
       "name": "GPT-5.5 Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -179,6 +185,7 @@
     },
     {
       "id": "gpt-5.4",
+      "modelCode": "openai/gpt-5.4",
       "name": "GPT-5.4",
       "reasoning": true,
       "reasoning_options": [
@@ -206,6 +213,7 @@
     },
     {
       "id": "gpt-5.4-pro",
+      "modelCode": "openai/gpt-5.4-pro",
       "name": "GPT-5.4 Pro",
       "reasoning": true,
       "reasoning_options": [
@@ -232,6 +240,7 @@
     },
     {
       "id": "gpt-5.4-mini",
+      "modelCode": "openai/gpt-5.4-mini",
       "name": "GPT-5.4 Mini",
       "reasoning": true,
       "reasoning_options": [
@@ -259,6 +268,7 @@
     },
     {
       "id": "gpt-5.4-nano",
+      "modelCode": "openai/gpt-5.4-nano",
       "name": "GPT-5.4 Nano",
       "reasoning": true,
       "reasoning_options": [
@@ -286,6 +296,7 @@
     },
     {
       "id": "gpt-5.3-codex",
+      "modelCode": "openai/gpt-5.3-codex",
       "name": "GPT-5.3 Codex",
       "reasoning": true,
       "reasoning_options": [
@@ -313,6 +324,7 @@
     },
     {
       "id": "gpt-5.2",
+      "modelCode": "openai/gpt-5.2",
       "name": "GPT-5.2",
       "reasoning": true,
       "reasoning_options": [
@@ -340,6 +352,7 @@
     },
     {
       "id": "gpt-5.2-codex",
+      "modelCode": "openai/gpt-5.2-codex",
       "name": "GPT-5.2 Codex",
       "reasoning": true,
       "reasoning_options": [
@@ -367,6 +380,7 @@
     },
     {
       "id": "gpt-5.1",
+      "modelCode": "openai/gpt-5.1",
       "name": "GPT-5.1",
       "reasoning": true,
       "reasoning_options": [
@@ -394,6 +408,7 @@
     },
     {
       "id": "gpt-5.1-codex",
+      "modelCode": "openai/gpt-5.1-codex",
       "name": "GPT-5.1 Codex",
       "reasoning": true,
       "reasoning_options": [
@@ -421,6 +436,7 @@
     },
     {
       "id": "gpt-5.1-codex-max",
+      "modelCode": "openai/gpt-5.1-codex-max",
       "name": "GPT-5.1 Codex Max",
       "reasoning": true,
       "reasoning_options": [
@@ -448,6 +464,7 @@
     },
     {
       "id": "gpt-5.1-codex-mini",
+      "modelCode": "openai/gpt-5.1-codex-mini",
       "name": "GPT-5.1 Codex Mini",
       "reasoning": true,
       "reasoning_options": [
@@ -474,6 +491,7 @@
     },
     {
       "id": "gpt-5-codex",
+      "modelCode": "openai/gpt-5-codex",
       "name": "GPT-5 Codex",
       "reasoning": true,
       "reasoning_options": [
@@ -501,6 +519,7 @@
     },
     {
       "id": "gpt-5",
+      "modelCode": "openai/gpt-5",
       "name": "GPT-5",
       "reasoning": true,
       "reasoning_options": [
@@ -528,6 +547,7 @@
     },
     {
       "id": "gpt-5-mini",
+      "modelCode": "openai/gpt-5-mini",
       "name": "GPT-5 Mini",
       "reasoning": true,
       "reasoning_options": [
@@ -554,6 +574,7 @@
     },
     {
       "id": "gpt-5-nano",
+      "modelCode": "openai/gpt-5-nano",
       "name": "GPT-5 Nano",
       "reasoning": true,
       "reasoning_options": [
@@ -580,6 +601,7 @@
     },
     {
       "id": "o4-mini",
+      "modelCode": "openai/o4-mini",
       "name": "o4 Mini",
       "reasoning": true,
       "reasoning_options": [
@@ -606,6 +628,7 @@
     },
     {
       "id": "o3",
+      "modelCode": "openai/o3",
       "name": "o3",
       "reasoning": true,
       "reasoning_options": [
@@ -632,6 +655,7 @@
     },
     {
       "id": "gpt-4.1",
+      "modelCode": "openai/gpt-4.1",
       "name": "GPT-4.1",
       "reasoning": false,
       "attachment": true,
@@ -648,6 +672,7 @@
     },
     {
       "id": "gpt-4.1-mini",
+      "modelCode": "openai/gpt-4.1-mini",
       "name": "GPT-4.1 Mini",
       "reasoning": false,
       "attachment": true,
@@ -664,6 +689,7 @@
     },
     {
       "id": "gpt-4.1-nano",
+      "modelCode": "openai/gpt-4.1-nano",
       "name": "GPT-4.1 Nano",
       "reasoning": false,
       "attachment": true,
@@ -680,6 +706,7 @@
     },
     {
       "id": "o3-mini",
+      "modelCode": "openai/o3-mini",
       "name": "o3 Mini",
       "reasoning": true,
       "reasoning_options": [
@@ -706,6 +733,7 @@
     },
     {
       "id": "gpt-4o",
+      "modelCode": "openai/gpt-4o",
       "name": "GPT-4o",
       "reasoning": false,
       "attachment": true,
@@ -722,6 +750,7 @@
     },
     {
       "id": "gpt-4o-mini",
+      "modelCode": "openai/gpt-4o-mini",
       "name": "GPT-4o-mini",
       "reasoning": false,
       "attachment": true,

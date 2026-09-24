@@ -10,6 +10,7 @@
   "models": [
     {
       "id": "deepseek-v4-flash-vision-exp",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
       "name": "DeepSeek V4 Flash Vision Exp",
       "reasoning": true,
       "attachment": true,
@@ -38,6 +39,7 @@
     },
     {
       "id": "deepseek-v4-flash",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash",
       "name": "DeepSeek V4 Flash",
       "reasoning": true,
       "attachment": true,
@@ -66,6 +68,7 @@
     },
     {
       "id": "deepseek-v4-pro",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Pro",
       "name": "DeepSeek V4 Pro",
       "reasoning": true,
       "attachment": false,
@@ -93,6 +96,7 @@
     },
     {
       "id": "deepseek-flash",
+      "modelCode": "deepseek-ai/deepseek-flash",
       "name": "DeepSeek V4.1 Flash",
       "reasoning": true,
       "attachment": true,
