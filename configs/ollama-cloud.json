@@ -62,7 +62,7 @@
       }
     },
     {
-      "id": "glm-5.3-flash:cloud",
+      "id": "glm-5.3-flash",
       "modelCode": "zai-org/GLM-5.3-Flash",
       "name": "GLM-5.3-Flash",
       "reasoning": true,
