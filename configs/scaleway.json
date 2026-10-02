@@ -11,7 +11,7 @@
     {
       "id": "qwen3.5-397b-a17b",
       "modelCode": "qwen/Qwen3.5-397B-A17B",
-      "name": "Qwen 3.5 397B A17B",
+      "name": "Qwen3.5 397B A17B",
       "reasoning": true,
       "attachment": true,
       "limit": {
@@ -20,15 +20,24 @@
       },
       "cost": {
         "input": 0.6,
-        "output": 3.6,
-        "cache_read": 0,
-        "cache_write": 0
-      }
+        "output": 3.6
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ]
     },
     {
       "id": "qwen3.6-35b-a3b",
       "modelCode": "qwen/Qwen3.6-35B-A3B",
-      "name": "Qwen 3.6 35B A3B",
+      "name": "Qwen3.6 35B A3B",
       "reasoning": true,
       "attachment": true,
       "limit": {
@@ -37,10 +46,19 @@
       },
       "cost": {
         "input": 0.25,
-        "output": 1.5,
-        "cache_read": 0,
-        "cache_write": 0
-      }
+        "output": 1.5
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ]
     },
     {
       "id": "gemma-4-26b-a4b-it",
@@ -54,83 +72,104 @@
       },
       "cost": {
         "input": 0.25,
-        "output": 0.5,
-        "cache_read": 0,
-        "cache_write": 0
-      }
+        "output": 0.5
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ]
     },
     {
       "id": "gpt-oss-120b",
       "modelCode": "openai/gpt-oss-120b",
-      "name": "GPT OSS 120B",
+      "name": "GPT-OSS 120B",
       "reasoning": true,
-      "attachment": false,
+      "attachment": true,
       "limit": {
         "context": 128000,
         "output": 32768
       },
       "cost": {
         "input": 0.15,
-        "output": 0.6,
-        "cache_read": 0,
-        "cache_write": 0
-      }
+        "output": 0.6
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ]
     },
     {
       "id": "mistral-medium-3.5-128b",
       "modelCode": "mistralai/mistral-medium-3.5:128b",
       "name": "Mistral Medium 3.5 128B",
       "reasoning": true,
-      "attachment": false,
+      "attachment": true,
       "limit": {
         "context": 256000,
         "output": 16384
       },
       "cost": {
         "input": 1.5,
-        "output": 7.5,
-        "cache_read": 0,
-        "cache_write": 0
-      }
+        "output": 7.5
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ]
     },
     {
       "id": "llama-3.3-70b-instruct",
       "modelCode": "meta-llama/Llama-3.3-70B-Instruct",
-      "name": "Llama 3.3 70B Instruct",
+      "name": "Llama-3.3-70B-Instruct",
       "reasoning": false,
-      "attachment": false,
+      "attachment": true,
       "limit": {
         "context": 100000,
         "output": 16384
       },
       "cost": {
         "input": 0.9,
-        "output": 0.9,
-        "cache_read": 0,
-        "cache_write": 0
+        "output": 0.9
       }
     },
     {
       "id": "qwen3-235b-a22b-instruct-2507",
       "modelCode": "qwen/Qwen3-235B-A22B-Instruct-2507",
-      "name": "Qwen 3 235B A22B Instruct 2507",
-      "reasoning": false,
+      "name": "Qwen3 235B A22B Instruct 2507",
+      "reasoning": true,
       "attachment": false,
       "limit": {
-        "context": 256000,
+        "context": 260000,
         "output": 16384
       },
       "cost": {
         "input": 0.75,
         "output": 2.25,
-        "cache_read": 0,
-        "cache_write": 0
+        "reasoning": 8.4
       }
     },
     {
       "id": "qwen3-coder-30b-a3b-instruct",
       "modelCode": "qwen/Qwen3-Coder-30B-A3B-Instruct",
-      "name": "Qwen 3 Coder 30B A3B Instruct",
+      "name": "Qwen3-Coder 30B-A3B Instruct",
       "reasoning": false,
       "attachment": false,
       "limit": {
@@ -139,77 +178,119 @@
       },
       "cost": {
         "input": 0.2,
-        "output": 0.8,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "voxtral-small-24b-2507",
-      "modelCode": "mistralai/voxtral-small-24b-2507",
-      "name": "Voxtral Small 24B 2507",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 32000,
-        "output": 16384
-      },
-      "cost": {
-        "input": 0.15,
-        "output": 0.35,
-        "cache_read": 0,
-        "cache_write": 0
+        "output": 0.8
       }
     },
     {
       "id": "mistral-small-3.2-24b-instruct-2506",
       "modelCode": "mistralai/mistral-small-3.2-24b-instruct-2506",
-      "name": "Mistral Small 3.2 24B Instruct 2506",
+      "name": "Mistral Small 3.2 24B Instruct (2506)",
       "reasoning": false,
-      "attachment": true,
+      "attachment": false,
       "limit": {
         "context": 128000,
         "output": 32768
       },
       "cost": {
         "input": 0.15,
-        "output": 0.35,
-        "cache_read": 0,
-        "cache_write": 0
+        "output": 0.35
       }
     },
     {
-      "id": "devstral-2-123b-instruct-2512",
-      "modelCode": "mistralai/devstral-2-123b-instruct-2512",
-      "name": "Devstral 2 123B Instruct 2512",
-      "reasoning": false,
+      "id": "deepseek-v4-flash-0731",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "name": "DeepSeek V4 Flash 0731",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 256000,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.468,
+        "output": 0.936,
+        "cache_read": 0.0936,
+        "reasoning": 0.936
+      }
+    },
+    {
+      "id": "glm-5.2",
+      "modelCode": "zai-org/GLM-5.2",
+      "name": "GLM-5.2",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "attachment": false,
       "limit": {
         "context": 256000,
         "output": 16384
       },
       "cost": {
-        "input": 0.4,
-        "output": 2,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 1.8,
+        "output": 5.5
       }
     },
     {
-      "id": "gemma-3-27b-it",
-      "modelCode": "google/gemma-3-27b-it",
-      "name": "Gemma 3 27B IT",
+      "id": "pixtral-12b-2409",
+      "modelCode": "mistralai/pixtral-12b-2409",
+      "name": "Pixtral 12B 2409",
       "reasoning": false,
       "attachment": true,
       "limit": {
-        "context": 40000,
-        "output": 8192
+        "context": 128000,
+        "output": 4096
       },
       "cost": {
-        "input": 0.25,
-        "output": 0.5,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.2,
+        "output": 0.2
+      }
+    },
+    {
+      "id": "qwen3.8-27b",
+      "modelCode": "qwen/Qwen3.8-27B",
+      "name": "Qwen3.8 27B",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.684,
+        "output": 3.762,
+        "cache_read": 0.137,
+        "reasoning": 3.762
       }
     }
   ]

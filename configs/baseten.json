@@ -18,8 +18,11 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
+            "medium",
             "high",
+            "xhigh",
             "max"
           ]
         }
@@ -32,8 +35,7 @@
       "cost": {
         "input": 0.13,
         "output": 0.26,
-        "cache_read": 0,
-        "cache_write": 0.028
+        "cache_read": 0.028
       }
     },
     {
@@ -45,8 +47,13 @@
         {
           "type": "effort",
           "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -58,8 +65,7 @@
       "cost": {
         "input": 1.74,
         "output": 3.48,
-        "cache_read": 0,
-        "cache_write": 0.145
+        "cache_read": 0.145
       }
     },
     {
@@ -85,16 +91,14 @@
       },
       "cost": {
         "input": 1.32,
-        "output": 3.96,
-        "cache_read": 0,
-        "cache_write": 0.132
+        "output": 3.96
       }
     },
     {
       "id": "zai-org/GLM-4.7",
       "modelCode": "zai-org/GLM-4.7",
       "name": "GLM 4.7",
-      "reasoning": false,
+      "reasoning": true,
       "attachment": false,
       "limit": {
         "context": 200000,
@@ -103,9 +107,13 @@
       "cost": {
         "input": 0.6,
         "output": 2.2,
-        "cache_read": 0,
-        "cache_write": 0.12
-      }
+        "cache_read": 0.12
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ]
     },
     {
       "id": "zai-org/GLM-5.2",
@@ -125,13 +133,12 @@
       "attachment": true,
       "limit": {
         "context": 1048576,
-        "output": 32768
+        "output": 262144
       },
       "cost": {
         "input": 1.4,
         "output": 4.4,
-        "cache_read": 0,
-        "cache_write": 0.14
+        "cache_read": 0.3
       }
     },
     {
@@ -143,9 +150,9 @@
         {
           "type": "effort",
           "values": [
-            "low",
-            "medium",
-            "high"
+            "none",
+            "high",
+            "max"
           ]
         }
       ],
@@ -157,8 +164,7 @@
       "cost": {
         "input": 2.1,
         "output": 6.6,
-        "cache_read": 0,
-        "cache_write": 0.21
+        "cache_read": 0.21
       }
     },
     {
@@ -183,9 +189,7 @@
       },
       "cost": {
         "input": 0.15,
-        "output": 0.5,
-        "cache_read": 0,
-        "cache_write": 0.03
+        "output": 0.5
       }
     },
     {
@@ -202,7 +206,8 @@
             "low",
             "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -213,9 +218,7 @@
       },
       "cost": {
         "input": 1,
-        "output": 4.05,
-        "cache_read": 0,
-        "cache_write": 0.17
+        "output": 4.05
       }
     },
     {
@@ -227,9 +230,13 @@
         {
           "type": "effort",
           "values": [
+            "none",
+            "minimal",
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -241,8 +248,7 @@
       "cost": {
         "input": 0.5,
         "output": 1.2,
-        "cache_read": 0,
-        "cache_write": 0.1
+        "cache_read": 0.1
       }
     },
     {
@@ -252,12 +258,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": true,
@@ -268,8 +269,7 @@
       "cost": {
         "input": 0.95,
         "output": 4,
-        "cache_read": 0,
-        "cache_write": 0.16
+        "cache_read": 0.16
       }
     },
     {
@@ -280,14 +280,18 @@
       "attachment": true,
       "limit": {
         "context": 262000,
-        "output": 32768
+        "output": 262000
       },
       "cost": {
         "input": 0.95,
         "output": 4,
-        "cache_read": 0,
-        "cache_write": 0.16
-      }
+        "cache_read": 0.16
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ]
     },
     {
       "id": "moonshotai/Kimi-K3",
@@ -298,6 +302,7 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "high",
             "max"
@@ -311,9 +316,7 @@
       },
       "cost": {
         "input": 3,
-        "output": 15,
-        "cache_read": 0,
-        "cache_write": 0.3
+        "output": 15
       }
     },
     {
@@ -323,12 +326,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": false,
@@ -339,8 +337,7 @@
       "cost": {
         "input": 0.6,
         "output": 2.4,
-        "cache_read": 0,
-        "cache_write": 0.12
+        "cache_read": 0.12
       }
     },
     {
@@ -369,9 +366,170 @@
       },
       "cost": {
         "input": 0.1,
-        "output": 0.5,
-        "cache_read": 0,
-        "cache_write": 0.1
+        "output": 0.5
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "name": "DeepSeek V4.1 Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.03
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash-Fast",
+      "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash:fast",
+      "name": "deepseek-ai/DeepSeek-V4.1-Flash-Fast",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.6,
+        "output": 2.4
+      }
+    },
+    {
+      "id": "zai-org/GLM-5",
+      "modelCode": "zai-org/GLM-5",
+      "name": "GLM 5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 202800,
+        "output": 202800
+      },
+      "cost": {
+        "input": 0.95,
+        "output": 3.15,
+        "cache_read": 0.2
+      }
+    },
+    {
+      "id": "zai-org/GLM-5.1",
+      "modelCode": "zai-org/GLM-5.1",
+      "name": "GLM 5.1",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 202800,
+        "output": 202800
+      },
+      "cost": {
+        "input": 1.3,
+        "output": 4.3,
+        "cache_read": 0.26
+      }
+    },
+    {
+      "id": "zai-org/GLM-5.3-Fast",
+      "modelCode": "zai-org/GLM-5.3:fast",
+      "name": "GLM 5.3 Fast",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "cost": {
+        "input": 2.1,
+        "output": 6.6
+      }
+    },
+    {
+      "id": "moonshotai/Kimi-K2.5",
+      "modelCode": "moonshotai/Kimi-K2.5",
+      "name": "Kimi K2.5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 262000,
+        "output": 262000
+      },
+      "cost": {
+        "input": 0.6,
+        "output": 3,
+        "cache_read": 0.12
+      }
+    },
+    {
+      "id": "nvidia/Nemotron-120B-A12B",
+      "modelCode": "nvidia/nemotron-3-super-120b-a12b",
+      "name": "Nemotron Super",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 202800,
+        "output": 202800
+      },
+      "cost": {
+        "input": 0.3,
+        "output": 0.75,
+        "cache_read": 0.06
       }
     }
   ]

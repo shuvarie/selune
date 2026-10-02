@@ -29,10 +29,9 @@
         "output": 384000
       },
       "cost": {
-        "input": 0.22,
-        "output": 0.66,
-        "cache_read": 0.01,
-        "cache_write": 0
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.003
       }
     },
     {
@@ -41,6 +40,9 @@
       "name": "DeepSeek V4 Flash Vision Exp",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -56,10 +58,9 @@
         "output": 384000
       },
       "cost": {
-        "input": 0.22,
-        "output": 0.66,
-        "cache_read": 0.01,
-        "cache_write": 0
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.003
       }
     },
     {
@@ -71,7 +72,6 @@
         {
           "type": "effort",
           "values": [
-            "low",
             "high",
             "max"
           ]
@@ -85,62 +85,7 @@
       "cost": {
         "input": 0.66,
         "output": 1.98,
-        "cache_read": 0.02,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-5",
-      "modelCode": "zai-org/GLM-5",
-      "name": "GLM-5",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 202752,
-        "output": 32768
-      },
-      "cost": {
-        "input": 1,
-        "output": 3.2,
-        "cache_read": 0.2,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-5.1",
-      "modelCode": "zai-org/GLM-5.1",
-      "name": "GLM-5.1",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 202752,
-        "output": 32768
-      },
-      "cost": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_read": 0.26,
-        "cache_write": 0
+        "cache_read": 0.022
       }
     },
     {
@@ -152,9 +97,8 @@
         {
           "type": "effort",
           "values": [
-            "low",
-            "medium",
-            "high"
+            "high",
+            "max"
           ]
         }
       ],
@@ -166,8 +110,7 @@
       "cost": {
         "input": 1.4,
         "output": 4.4,
-        "cache_read": 0.26,
-        "cache_write": 0
+        "cache_read": 0.26
       }
     },
     {
@@ -180,8 +123,8 @@
           "type": "effort",
           "values": [
             "low",
-            "medium",
-            "high"
+            "high",
+            "max"
           ]
         }
       ],
@@ -193,22 +136,21 @@
       "cost": {
         "input": 1.4,
         "output": 4.4,
-        "cache_read": 0.26,
-        "cache_write": 0
+        "cache_read": 0.26
       }
     },
     {
       "id": "glm-5.3-flash",
       "modelCode": "zai-org/GLM-5.3-Flash",
-      "name": "GLM-5.3-Flash (2x usage)",
+      "name": "GLM-5.3-Flash",
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
           "values": [
             "low",
-            "medium",
-            "high"
+            "high",
+            "max"
           ]
         }
       ],
@@ -218,10 +160,9 @@
         "output": 131072
       },
       "cost": {
-        "input": 0.08,
-        "output": 0.25,
-        "cache_read": 0.02,
-        "cache_write": 0
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03
       }
     },
     {
@@ -233,22 +174,26 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh",
+            "max"
           ]
         }
       ],
       "attachment": true,
       "limit": {
         "context": 1050000,
-        "output": 128000
+        "output": 128000,
+        "input": 922000
       },
       "cost": {
         "input": 0.2,
         "output": 1.2,
         "cache_read": 0.02,
-        "cache_write": 0
+        "cache_write": 0.25
       }
     },
     {
@@ -274,8 +219,7 @@
       "cost": {
         "input": 2,
         "output": 6,
-        "cache_read": 0.3,
-        "cache_write": 0
+        "cache_read": 0.3
       }
     },
     {
@@ -289,7 +233,8 @@
           "values": [
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh"
           ]
         }
       ],
@@ -301,21 +246,20 @@
       "cost": {
         "input": 2,
         "output": 6,
-        "cache_read": 0.5,
-        "cache_write": 0
+        "cache_read": 0.5
       }
     },
     {
       "id": "hy3",
       "modelCode": "tencent/Hy3",
-      "name": "Hy3 (8x usage)",
+      "name": "Hy3",
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
-            "medium",
             "high"
           ]
         }
@@ -323,40 +267,13 @@
       "attachment": false,
       "limit": {
         "context": 256000,
-        "output": 64000
+        "output": 128000,
+        "input": 192000
       },
       "cost": {
-        "input": 0.02,
-        "output": 0.07,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "kimi-k2.5",
-      "modelCode": "moonshotai/Kimi-K2.5",
-      "name": "Kimi K2.5",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": true,
-      "limit": {
-        "context": 262144,
-        "output": 65536
-      },
-      "cost": {
-        "input": 0.6,
-        "output": 3,
-        "cache_read": 0.1,
-        "cache_write": 0
+        "input": 0.14,
+        "output": 0.58,
+        "cache_read": 0.035
       }
     },
     {
@@ -382,8 +299,7 @@
       "cost": {
         "input": 0.95,
         "output": 4,
-        "cache_read": 0.16,
-        "cache_write": 0
+        "cache_read": 0.16
       }
     },
     {
@@ -409,8 +325,7 @@
       "cost": {
         "input": 0.95,
         "output": 4,
-        "cache_read": 0.19,
-        "cache_write": 0
+        "cache_read": 0.19
       }
     },
     {
@@ -422,9 +337,7 @@
         {
           "type": "effort",
           "values": [
-            "low",
-            "medium",
-            "high"
+            "max"
           ]
         }
       ],
@@ -436,8 +349,7 @@
       "cost": {
         "input": 3,
         "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 0
+        "cache_read": 0.3
       }
     },
     {
@@ -447,12 +359,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": false,
@@ -463,62 +370,7 @@
       "cost": {
         "input": 0.3,
         "output": 1.2,
-        "cache_read": 0.01,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "mimo-v2-omni",
-      "modelCode": "xiaomimimo/mimo-v2-omni",
-      "name": "MiMo V2 Omni",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": true,
-      "limit": {
-        "context": 262144,
-        "output": 128000
-      },
-      "cost": {
-        "input": 0.4,
-        "output": 2,
-        "cache_read": 0.08,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "mimo-v2-pro",
-      "modelCode": "xiaomimimo/mimo-v2-pro",
-      "name": "MiMo V2 Pro",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": true,
-      "limit": {
-        "context": 1048576,
-        "output": 128000
-      },
-      "cost": {
-        "input": 1,
-        "output": 3,
-        "cache_read": 0.2,
-        "cache_write": 0
+        "cache_read": 0.006
       }
     },
     {
@@ -544,8 +396,7 @@
       "cost": {
         "input": 0.14,
         "output": 0.28,
-        "cache_read": 0,
-        "cache_write": 0
+        "cache_read": 0.0028
       }
     },
     {
@@ -569,37 +420,9 @@
         "output": 128000
       },
       "cost": {
-        "input": 0.44,
+        "input": 0.435,
         "output": 0.87,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "minimax-m2.5",
-      "modelCode": "minimaxai/MiniMax-M2.5",
-      "name": "MiniMax-M2.5",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 204800,
-        "output": 65536
-      },
-      "cost": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0.03,
-        "cache_write": 0
+        "cache_read": 0.003625
       }
     },
     {
@@ -626,7 +449,7 @@
         "input": 0.3,
         "output": 1.2,
         "cache_read": 0.06,
-        "cache_write": 0
+        "cache_write": 0.375
       }
     },
     {
@@ -636,12 +459,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": false,
@@ -652,8 +470,7 @@
       "cost": {
         "input": 0.3,
         "output": 1.2,
-        "cache_read": 0.06,
-        "cache_write": 0
+        "cache_read": 0.06
       }
     },
     {
@@ -665,9 +482,11 @@
         {
           "type": "effort",
           "values": [
+            "minimal",
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh"
           ]
         }
       ],
@@ -679,14 +498,125 @@
       "cost": {
         "input": 0.1,
         "output": 0.2,
-        "cache_read": 0,
-        "cache_write": 0
+        "cache_read": 0.002
       }
     },
     {
-      "id": "ox-alpha-free",
-      "modelCode": "ox/ox-alpha:free",
-      "name": "Ox Alpha Free (Unlimited)",
+      "id": "qwen3.6-plus",
+      "modelCode": "qwen/qwen3.6-plus",
+      "name": "Qwen3.6 Plus",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "max": 81920
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.5,
+        "output": 3,
+        "cache_read": 0.05,
+        "cache_write": 0.625
+      }
+    },
+    {
+      "id": "qwen3.7-max",
+      "modelCode": "qwen/qwen3.7-max",
+      "name": "Qwen3.7 Max",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "max": 262144
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "cost": {
+        "input": 2.5,
+        "output": 7.5,
+        "cache_read": 0.5,
+        "cache_write": 3.125
+      }
+    },
+    {
+      "id": "qwen3.7-plus",
+      "modelCode": "qwen/qwen3.7-plus",
+      "name": "Qwen3.7 Plus",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "max": 262144
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.4,
+        "output": 1.6,
+        "cache_read": 0.04,
+        "cache_write": 0.5
+      }
+    },
+    {
+      "id": "qwen3.8-max",
+      "modelCode": "qwen/qwen3.8-max",
+      "name": "Qwen3.8 Max",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        },
+        {
+          "type": "budget_tokens",
+          "max": 262144
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 2,
+        "output": 6,
+        "cache_read": 0.25,
+        "cache_write": 2.5
+      }
+    },
+    {
+      "id": "deepseek-v4.1-flash",
+      "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "name": "DeepSeek V4.1 Flash",
       "reasoning": true,
       "reasoning_options": [
         {
@@ -701,46 +631,49 @@
       "attachment": true,
       "limit": {
         "context": 1000000,
-        "output": 131072
+        "output": 384000
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.003
       }
     },
     {
-      "id": "qwen3.5-plus",
-      "modelCode": "qwen/qwen3.5-plus",
-      "name": "Qwen3.5 Plus",
+      "id": "gpt-6-luna",
+      "modelCode": "openai/gpt-6-luna",
+      "name": "GPT-6 Luna",
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh",
+            "max"
           ]
         }
       ],
       "attachment": true,
       "limit": {
-        "context": 262144,
-        "output": 65536
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
       },
       "cost": {
-        "input": 0.2,
-        "output": 1.2,
-        "cache_read": 0.02,
-        "cache_write": 0
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.01,
+        "cache_write": 0.125
       }
     },
     {
-      "id": "qwen3.6-plus",
-      "modelCode": "qwen/qwen3.6-plus",
-      "name": "Qwen3.6 Plus",
+      "id": "grok-4.7",
+      "modelCode": "xai-org/grok-4.7",
+      "name": "Grok 4.7",
       "reasoning": true,
       "reasoning_options": [
         {
@@ -748,89 +681,55 @@
           "values": [
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh"
           ]
         }
       ],
       "attachment": true,
       "limit": {
-        "context": 1000000,
-        "output": 65536
+        "context": 500000,
+        "output": 500000
       },
       "cost": {
-        "input": 0.5,
-        "output": 3,
-        "cache_read": 0.05,
-        "cache_write": 0
+        "input": 2,
+        "output": 6,
+        "cache_read": 0.5
       }
     },
     {
-      "id": "qwen3.7-max",
-      "modelCode": "qwen/qwen3.7-max",
-      "name": "Qwen3.7 Max",
+      "id": "hy4-preview",
+      "modelCode": "tencent/Hy4-preview",
+      "name": "Hy4 preview",
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
           "values": [
-            "low",
-            "medium",
+            "none",
             "high"
           ]
         }
       ],
       "attachment": false,
       "limit": {
-        "context": 1000000,
-        "output": 65536
+        "context": 1024000,
+        "output": 64000
       },
       "cost": {
-        "input": 2.5,
-        "output": 7.5,
-        "cache_read": 0.5,
-        "cache_write": 0
+        "input": 0.834,
+        "output": 2.501,
+        "cache_read": 0.042
       }
     },
     {
-      "id": "qwen3.7-plus",
-      "modelCode": "qwen/qwen3.7-plus",
-      "name": "Qwen3.7 Plus",
+      "id": "longcat-2.5-preview-free",
+      "modelCode": "meituan-longcat/longcat-2.5-preview:free",
+      "name": "LongCat 2.5 Preview Free",
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": true,
-      "limit": {
-        "context": 1000000,
-        "output": 65536
-      },
-      "cost": {
-        "input": 0.4,
-        "output": 1.6,
-        "cache_read": 0.04,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "qwen3.8-max",
-      "modelCode": "qwen/qwen3.8-max",
-      "name": "Qwen3.8 Max",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": true,
@@ -839,9 +738,131 @@
         "output": 131072
       },
       "cost": {
-        "input": 2,
-        "output": 6,
-        "cache_read": 0.25,
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    },
+    {
+      "id": "mimo-v2.6-flash",
+      "modelCode": "xiaomimimo/mimo-v2.6-flash",
+      "name": "MiMo-V2.6-Flash",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.0028
+      }
+    },
+    {
+      "id": "mimo-v2.6-pro",
+      "modelCode": "xiaomimimo/mimo-v2.6-pro",
+      "name": "MiMo-V2.6-Pro",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.435,
+        "output": 0.87,
+        "cache_read": 0.003625
+      }
+    },
+    {
+      "id": "muse-spark-1.3-contributor",
+      "modelCode": "meta-llama/muse-spark-1.3-contributor",
+      "name": "Muse Spark 1.3 Contributor",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.2,
+        "cache_read": 0.002
+      }
+    },
+    {
+      "id": "qwen3.8-flash",
+      "modelCode": "qwen/qwen3.8-flash",
+      "name": "Qwen3.8 Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.47,
+        "cache_read": 0.016,
+        "cache_write": 0.2
+      }
+    },
+    {
+      "id": "space-bunny-free",
+      "modelCode": "stealth/space-bunny-free",
+      "name": "Space Bunny Free",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "input": 524288,
+        "output": 524288
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
         "cache_write": 0
       }
     }

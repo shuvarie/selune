@@ -74,8 +74,7 @@
       "cost": {
         "input": 3.6,
         "output": 18,
-        "cache_read": 0.36,
-        "cache_write": 4.5
+        "cache_read": 0.36
       }
     },
     {
@@ -149,8 +148,7 @@
       ],
       "limit": {
         "context": 1000000,
-        "output": 128000,
-        "input": 922000
+        "output": 128000
       },
       "cost": {
         "input": 37.5,
@@ -364,8 +362,7 @@
       "cost": {
         "input": 0.625,
         "output": 3.75,
-        "cache_read": 0.0625,
-        "cache_write": 0.78
+        "cache_read": 0.0625
       }
     },
     {
@@ -388,8 +385,7 @@
       ],
       "limit": {
         "context": 1000000,
-        "output": 131072,
-        "input": 922000
+        "output": 131072
       },
       "cost": {
         "input": 6.25,
@@ -422,8 +418,7 @@
       "cost": {
         "input": 12,
         "output": 60,
-        "cache_read": 1.2,
-        "cache_write": 15
+        "cache_read": 1.2
       }
     },
     {
@@ -501,8 +496,7 @@
       "cost": {
         "input": 1.55,
         "output": 9.45,
-        "cache_read": 0.155,
-        "cache_write": 0.086
+        "cache_read": 0.155
       }
     },
     {
@@ -530,8 +524,7 @@
       "cost": {
         "input": 6,
         "output": 30,
-        "cache_read": 0.6,
-        "cache_write": 7.5
+        "cache_read": 0.6
       }
     },
     {
@@ -547,8 +540,7 @@
       "cost": {
         "input": 2.7,
         "output": 8.05,
-        "cache_read": 0.27,
-        "cache_write": 3.35
+        "cache_read": 0.27
       }
     },
     {
@@ -564,8 +556,7 @@
       "cost": {
         "input": 2.5,
         "output": 7.5,
-        "cache_read": 0.3125,
-        "cache_write": 3.125
+        "cache_read": 0.3125
       }
     },
     {
@@ -588,8 +579,7 @@
       ],
       "limit": {
         "context": 1000000,
-        "output": 131072,
-        "input": 922000
+        "output": 131072
       },
       "cost": {
         "input": 3.13,
@@ -644,14 +634,12 @@
       ],
       "limit": {
         "context": 1050000,
-        "output": 128000,
-        "input": 922000
+        "output": 128000
       },
       "cost": {
         "input": 10,
         "output": 50,
-        "cache_read": 1,
-        "cache_write": 12.5
+        "cache_read": 1
       }
     },
     {
@@ -720,8 +708,7 @@
       "cost": {
         "input": 6,
         "output": 30,
-        "cache_read": 0.6,
-        "cache_write": 7.5
+        "cache_read": 0.6
       }
     },
     {
@@ -820,8 +807,7 @@
       "cost": {
         "input": 2.5,
         "output": 15,
-        "cache_read": 0.25,
-        "cache_write": 3.125
+        "cache_read": 0.25
       }
     },
     {
@@ -1025,7 +1011,7 @@
     },
     {
       "id": "seed-2-1-turbo",
-      "modelCode": "bytedance-seed/doubao-seed-2-1-turbo",
+      "modelCode": "bytedance-seed/doubao-seed-2.1-turbo",
       "name": "Seed 2.1 Turbo",
       "reasoning": true,
       "attachment": true,
@@ -1064,8 +1050,7 @@
       "cost": {
         "input": 12,
         "output": 60,
-        "cache_read": 0.3,
-        "cache_write": 15
+        "cache_read": 0.3
       }
     },
     {
@@ -1087,8 +1072,7 @@
       ],
       "limit": {
         "context": 1000000,
-        "output": 128000,
-        "input": 922000
+        "output": 128000
       },
       "cost": {
         "input": 37.5,
@@ -1147,9 +1131,9 @@
         "output": 65536
       },
       "cost": {
-        "input": 0.04999999999999999,
-        "output": 0.18749999999999994,
-        "cache_read": 0.004999999999999999
+        "input": 0.25,
+        "output": 0.9375,
+        "cache_read": 0.025
       }
     },
     {
@@ -1204,8 +1188,7 @@
       "cost": {
         "input": 12.5,
         "output": 62.5,
-        "cache_read": 1.25,
-        "cache_write": 15.625
+        "cache_read": 1.25
       }
     },
     {
@@ -1228,8 +1211,7 @@
       ],
       "limit": {
         "context": 400000,
-        "output": 128000,
-        "input": 272000
+        "output": 128000
       },
       "cost": {
         "input": 0.9375,
@@ -1319,8 +1301,7 @@
       "cost": {
         "input": 6,
         "output": 30,
-        "cache_read": 0.6,
-        "cache_write": 7.5
+        "cache_read": 0.6
       }
     },
     {
@@ -1402,8 +1383,7 @@
       ],
       "limit": {
         "context": 400000,
-        "output": 128000,
-        "input": 272000
+        "output": 128000
       },
       "cost": {
         "input": 2.19,
@@ -1429,7 +1409,7 @@
     },
     {
       "id": "claude-opus-4-7",
-      "modelCode": "anthropic/claude-opus-4-7",
+      "modelCode": "anthropic/claude-opus-4.7",
       "name": "Claude Opus 4.7",
       "reasoning": true,
       "attachment": true,
@@ -1452,8 +1432,7 @@
       "cost": {
         "input": 6,
         "output": 30,
-        "cache_read": 0.6,
-        "cache_write": 7.5
+        "cache_read": 0.6
       }
     },
     {
@@ -1507,10 +1486,9 @@
         "output": 128000
       },
       "cost": {
-        "input": 2.5,
-        "output": 12.5,
-        "cache_read": 0.25,
-        "cache_write": 3.125
+        "input": 5,
+        "output": 25,
+        "cache_read": 0.5
       }
     },
     {
@@ -1590,8 +1568,7 @@
       "cost": {
         "input": 2.5,
         "output": 15,
-        "cache_read": 0.5,
-        "cache_write": 0.5
+        "cache_read": 0.5
       }
     },
     {
@@ -1619,8 +1596,7 @@
       "cost": {
         "input": 2.5,
         "output": 15,
-        "cache_read": 0.25,
-        "cache_write": 3.125
+        "cache_read": 0.25
       }
     },
     {
@@ -1674,8 +1650,7 @@
       "cost": {
         "input": 12,
         "output": 60,
-        "cache_read": 1.2,
-        "cache_write": 15
+        "cache_read": 1.2
       }
     },
     {
@@ -1698,8 +1673,7 @@
       ],
       "limit": {
         "context": 256000,
-        "output": 65536,
-        "input": 272000
+        "output": 65536
       },
       "cost": {
         "input": 2.19,
@@ -1709,7 +1683,7 @@
     },
     {
       "id": "claude-opus-4-8-fast",
-      "modelCode": "anthropic/claude-opus-4-8:fast",
+      "modelCode": "anthropic/claude-opus-4.8:fast",
       "name": "Claude Opus 4.8 Fast",
       "reasoning": true,
       "attachment": true,
@@ -1732,8 +1706,7 @@
       "cost": {
         "input": 12,
         "output": 60,
-        "cache_read": 1.2,
-        "cache_write": 15
+        "cache_read": 1.2
       }
     },
     {
@@ -1761,8 +1734,7 @@
       "cost": {
         "input": 0.25,
         "output": 1.5,
-        "cache_read": 0.025,
-        "cache_write": 0.3125
+        "cache_read": 0.025
       }
     },
     {
@@ -2060,8 +2032,7 @@
       "cost": {
         "input": 3.75,
         "output": 18.75,
-        "cache_read": 0.375,
-        "cache_write": 4.69
+        "cache_read": 0.375
       }
     },
     {
@@ -2203,7 +2174,7 @@
     },
     {
       "id": "claude-opus-4-8",
-      "modelCode": "anthropic/claude-opus-4-8",
+      "modelCode": "anthropic/claude-opus-4.8",
       "name": "Claude Opus 4.8",
       "reasoning": true,
       "attachment": true,
@@ -2226,8 +2197,7 @@
       "cost": {
         "input": 6,
         "output": 30,
-        "cache_read": 0.6,
-        "cache_write": 7.5
+        "cache_read": 0.6
       }
     },
     {
@@ -2243,8 +2213,7 @@
       "cost": {
         "input": 0.5,
         "output": 2,
-        "cache_read": 0.05,
-        "cache_write": 0.625
+        "cache_read": 0.05
       }
     },
     {
@@ -2359,8 +2328,7 @@
       "cost": {
         "input": 0.25,
         "output": 1.5,
-        "cache_read": 0.025,
-        "cache_write": 0.3125
+        "cache_read": 0.025
       }
     },
     {
@@ -2403,8 +2371,7 @@
       "cost": {
         "input": 3,
         "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 3.75
+        "cache_read": 0.3
       }
     },
     {
@@ -2441,7 +2408,7 @@
     },
     {
       "id": "gemini-3-8-flash",
-      "modelCode": "google/gemini-3-8-flash",
+      "modelCode": "google/gemini-3.8-flash",
       "name": "Gemini 3.8 Flash",
       "reasoning": true,
       "attachment": true,
@@ -2479,10 +2446,493 @@
         "output": 128000
       },
       "cost": {
+        "input": 5,
+        "output": 25,
+        "cache_read": 0.5
+      }
+    },
+    {
+      "id": "abliteration-abliterated-model-large-v2",
+      "modelCode": "abliteration/abliterated-model-large-v2",
+      "name": "Abliterated Large V2",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 32768
+      },
+      "cost": {
+        "input": 3,
+        "output": 5,
+        "cache_read": 0.3
+      }
+    },
+    {
+      "id": "aion-labs-aion-3-5",
+      "modelCode": "aion-labs/aion-3.5",
+      "name": "Aion 3.5",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "cost": {
+        "input": 3.75,
+        "output": 7.5,
+        "cache_read": 0.9375
+      }
+    },
+    {
+      "id": "aion-labs-aion-3-5-mini",
+      "modelCode": "aion-labs/aion-3.5-mini",
+      "name": "Aion 3.5 Mini",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.875,
+        "output": 1.75,
+        "cache_read": 0.225
+      }
+    },
+    {
+      "id": "claude-opus-5-5",
+      "modelCode": "anthropic/claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 4.8,
+        "output": 24,
+        "cache_read": 0.24
+      }
+    },
+    {
+      "id": "claude-opus-5-5-fast",
+      "modelCode": "anthropic/claude-opus-5-5:fast",
+      "name": "Claude Opus 5.5 Fast",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 9.6,
+        "output": 48,
+        "cache_read": 0.48
+      }
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "modelCode": "anthropic/claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 3.75,
+        "output": 18.75,
+        "cache_read": 0.375
+      }
+    },
+    {
+      "id": "e2ee-deepseek-v4-flash",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash:e2ee",
+      "name": "E2ee deepseek v4 flash",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 8192
+      },
+      "cost": {
+        "input": 0.182,
+        "output": 0.373,
+        "cache_read": 0.038
+      }
+    },
+    {
+      "id": "e2ee-gemma-4-26b-a4b-uncensored-p",
+      "modelCode": "venice/gemma-4-26b-a4b-uncensored:e2ee",
+      "name": "E2ee gemma 4 26b a4b uncensored p",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 64000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.19,
+        "output": 0.88
+      }
+    },
+    {
+      "id": "e2ee-glm-5-2-p",
+      "modelCode": "zai-org/GLM-5.2:e2ee",
+      "name": "E2ee glm 5 2 p",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 524288,
+        "output": 32768
+      },
+      "cost": {
+        "input": 1.75,
+        "output": 5.75,
+        "cache_read": 0.3
+      }
+    },
+    {
+      "id": "e2ee-glm-5-3-flash",
+      "modelCode": "zai-org/GLM-5.3-Flash:e2ee",
+      "name": "E2ee glm 5 3 flash",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.16,
+        "output": 0.54,
+        "cache_read": 0.038
+      }
+    },
+    {
+      "id": "e2ee-glm-5-3-p",
+      "modelCode": "zai-org/GLM-5.3:e2ee",
+      "name": "E2ee glm 5 3 p",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 32768
+      },
+      "cost": {
+        "input": 1.75,
+        "output": 5.5,
+        "cache_read": 0.325
+      }
+    },
+    {
+      "id": "e2ee-gpt-oss-120b-p",
+      "modelCode": "openai/gpt-oss-120b:e2ee",
+      "name": "E2ee gpt oss 120b p",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.13,
+        "output": 0.65
+      }
+    },
+    {
+      "id": "e2ee-kimi-k2-6",
+      "modelCode": "moonshotai/Kimi-K2.6:e2ee",
+      "name": "E2ee kimi k2 6",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 262144,
+        "output": 8192
+      },
+      "cost": {
+        "input": 0.87,
+        "output": 4.12,
+        "cache_read": 0.44
+      }
+    },
+    {
+      "id": "e2ee-kimi-k3-p",
+      "modelCode": "moonshotai/Kimi-K3:e2ee",
+      "name": "E2ee kimi k3 p",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 3.75,
+        "output": 18.75,
+        "cache_read": 0.375
+      }
+    },
+    {
+      "id": "e2ee-qwen-2-5-7b-p",
+      "modelCode": "qwen/qwen-2.5-7b-instruct:e2ee",
+      "name": "E2ee qwen 2 5 7b p",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 32000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.05,
+        "output": 0.13
+      }
+    },
+    {
+      "id": "e2ee-qwen3-6-35b-a3b",
+      "modelCode": "qwen/Qwen3.6-35B-A3B:e2ee",
+      "name": "E2ee qwen3 6 35b a3b",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 32000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.182,
+        "output": 1.18,
+        "cache_read": 0.06
+      }
+    },
+    {
+      "id": "e2ee-qwen3-8-27b",
+      "modelCode": "qwen/qwen-3.8-27b:e2ee",
+      "name": "E2ee qwen3 8 27b",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 262144,
+        "output": 8192
+      },
+      "cost": {
+        "input": 0.47,
+        "output": 3.53,
+        "cache_read": 0.047
+      }
+    },
+    {
+      "id": "e2ee-qwen3-vl-30b-a3b-p",
+      "modelCode": "qwen/Qwen3-VL-30B-A3B-Instruct:e2ee",
+      "name": "E2ee qwen3 vl 30b a3b p",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.25,
+        "output": 0.9
+      }
+    },
+    {
+      "id": "grok-4-7",
+      "modelCode": "xai-org/grok-4.7",
+      "name": "Grok 4.7",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 500000,
+        "output": 200000
+      },
+      "cost": {
+        "input": 2.27,
+        "output": 6.8,
+        "cache_read": 0.57
+      }
+    },
+    {
+      "id": "openai-gpt-6-luna",
+      "modelCode": "openai/gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0.125,
+        "output": 0.625,
+        "cache_read": 0.0125
+      }
+    },
+    {
+      "id": "openai-gpt-6-sol",
+      "modelCode": "openai/gpt-6-sol",
+      "name": "GPT-6 Sol",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "cost": {
         "input": 2.5,
         "output": 12.5,
-        "cache_read": 0.25,
-        "cache_write": 3.125
+        "cache_read": 0.25
+      }
+    },
+    {
+      "id": "openai-gpt-61-sol",
+      "modelCode": "openai/gpt-6.1-sol",
+      "name": "GPT-6.1 Sol",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 2.5,
+        "output": 12.5,
+        "cache_read": 0.125
+      }
+    },
+    {
+      "id": "xiaomi-mimo-v2-6-flash",
+      "modelCode": "xiaomimimo/mimo-v2.6-flash",
+      "name": "MiMo-V2.6-Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.175,
+        "output": 0.35,
+        "cache_read": 0.00375
       }
     }
   ]

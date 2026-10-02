@@ -31,8 +31,7 @@
       "cost": {
         "input": 0.23,
         "output": 0.33,
-        "cache_read": 0.012,
-        "cache_write": 0
+        "cache_read": 0.012
       }
     },
     {
@@ -56,10 +55,9 @@
         "output": 393216
       },
       "cost": {
-        "input": 0.0805,
-        "output": 0.161,
-        "cache_read": 0.0165,
-        "cache_write": 0
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.0028
       }
     },
     {
@@ -85,8 +83,7 @@
       "cost": {
         "input": 1.305,
         "output": 2.61,
-        "cache_read": 0.10875,
-        "cache_write": 0
+        "cache_read": 0.10875
       }
     },
     {
@@ -110,10 +107,9 @@
         "output": 393216
       },
       "cost": {
-        "input": 0.594,
-        "output": 1.782,
-        "cache_read": 0.0198,
-        "cache_write": 0
+        "input": 0.561,
+        "output": 1.683,
+        "cache_read": 0.0187
       }
     },
     {
@@ -129,8 +125,7 @@
       "cost": {
         "input": 0.388,
         "output": 1.806,
-        "cache_read": 0.097,
-        "cache_write": 0
+        "cache_read": 0.097
       }
     },
     {
@@ -146,8 +141,7 @@
       "cost": {
         "input": 0.516,
         "output": 2.322,
-        "cache_read": 0.129,
-        "cache_write": 0
+        "cache_read": 0.129
       }
     },
     {
@@ -163,8 +157,7 @@
       "cost": {
         "input": 0.743,
         "output": 2.971,
-        "cache_read": 0.186,
-        "cache_write": 0
+        "cache_read": 0.186
       }
     },
     {
@@ -180,8 +173,7 @@
       "cost": {
         "input": 0.495,
         "output": 1.733,
-        "cache_read": 0.124,
-        "cache_write": 0
+        "cache_read": 0.124
       }
     },
     {
@@ -197,8 +189,7 @@
       "cost": {
         "input": 0.45,
         "output": 2.2,
-        "cache_read": 0.225,
-        "cache_write": 0
+        "cache_read": 0.225
       }
     },
     {
@@ -213,9 +204,8 @@
       },
       "cost": {
         "input": 0.95,
-        "output": 4,
-        "cache_read": 0.16,
-        "cache_write": 0
+        "output": 4.0,
+        "cache_read": 0.16
       }
     },
     {
@@ -235,41 +225,13 @@
       ],
       "attachment": false,
       "limit": {
-        "context": 1050000,
-        "output": 131072
-      },
-      "cost": {
-        "input": 0.435,
-        "output": 0.87,
-        "cache_read": 0.0036,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "xiaomi/mimo-v2.5",
-      "modelCode": "xiaomimimo/MiMo-V2.5",
-      "name": "MiMo-V2.5 Small",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
         "context": 1048576,
         "output": 131072
       },
       "cost": {
-        "input": 0.2,
-        "output": 0.4,
-        "cache_read": 0.05,
-        "cache_write": 0
+        "input": 0.36975,
+        "output": 0.7395,
+        "cache_read": 0.00306
       }
     },
     {
@@ -285,8 +247,39 @@
       "cost": {
         "input": 0.27,
         "output": 1.08,
-        "cache_read": 0.15,
-        "cache_write": 0
+        "cache_read": 0.15
+      }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-flash",
+      "modelCode": "xiaomimimo/mimo-v2.6-flash",
+      "name": "MiMo-V2.6 Flash",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.0028
+      }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-pro",
+      "modelCode": "xiaomimimo/mimo-v2.6-pro",
+      "name": "MiMo-V2.6 Pro",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.36975,
+        "output": 0.7395,
+        "cache_read": 0.00306
       }
     }
   ]

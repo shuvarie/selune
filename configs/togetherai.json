@@ -78,7 +78,7 @@
         }
       ],
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 384000
       },
       "cost": {
@@ -158,49 +158,6 @@
       }
     },
     {
-      "id": "deepseek-ai/DeepSeek-V4-Pro",
-      "modelCode": "deepseek-ai/DeepSeek-V4-Pro",
-      "name": "DeepSeek V4 Pro",
-      "reasoning": true,
-      "attachment": false,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "limit": {
-        "context": 512000,
-        "output": 384000
-      },
-      "cost": {
-        "input": 1.74,
-        "output": 3.48,
-        "cache_read": 0.2
-      }
-    },
-    {
-      "id": "pearl-ai/gemma-4-31b-it",
-      "modelCode": "pearl-ai/gemma-4-31B-it",
-      "name": "Pearl AI Gemma 4 31B Instruct",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 32000,
-        "output": 32000
-      },
-      "cost": {
-        "input": 0.28,
-        "output": 0.86
-      }
-    },
-    {
       "id": "nvidia/nemotron-3-ultra-550b-a55b",
       "modelCode": "nvidia/nemotron-3-ultra-550b-a55b",
       "name": "Nemotron 3 Ultra 550B A55B",
@@ -219,36 +176,6 @@
         "input": 0.6,
         "output": 3.6,
         "cache_read": 0.2
-      }
-    },
-    {
-      "id": "google/gemma-4-31B-it",
-      "modelCode": "google/gemma-4-31B-it",
-      "name": "Gemma 4 31B Instruct",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 262144,
-        "output": 131072
-      },
-      "cost": {
-        "input": 0.39,
-        "output": 0.97
-      }
-    },
-    {
-      "id": "google/gemma-3n-E4B-it",
-      "modelCode": "google/gemma-3n-E4B-it",
-      "name": "Gemma 3N E4B Instruct",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "cost": {
-        "input": 0.06,
-        "output": 0.12
       }
     },
     {
@@ -317,7 +244,7 @@
         }
       ],
       "limit": {
-        "context": 512000,
+        "context": 1048575,
         "output": 164000
       },
       "cost": {
@@ -554,26 +481,6 @@
       }
     },
     {
-      "id": "deepcogito/cogito-v2-1-671b",
-      "modelCode": "deepcogito/cogito-v2-1-671b",
-      "name": "Cogito v2.1 671B",
-      "reasoning": true,
-      "attachment": false,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "limit": {
-        "context": 163840,
-        "output": 163840
-      },
-      "cost": {
-        "input": 1.25,
-        "output": 1.25
-      }
-    },
-    {
       "id": "MiniMaxAI/MiniMax-M2.5",
       "modelCode": "minimaxai/MiniMax-M2.5",
       "name": "MiniMax-M2.5",
@@ -612,7 +519,7 @@
       "reasoning": true,
       "attachment": false,
       "limit": {
-        "context": 202752,
+        "context": 196608,
         "output": 131072
       },
       "cost": {
@@ -634,46 +541,6 @@
       "cost": {
         "input": 1.04,
         "output": 1.04
-      }
-    },
-    {
-      "id": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
-      "modelCode": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
-      "name": "Meta Llama 3 8B Instruct Lite",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 8192,
-        "output": 8192
-      },
-      "cost": {
-        "input": 0.14,
-        "output": 0.14
-      }
-    },
-    {
-      "id": "openai/gpt-oss-20b",
-      "modelCode": "openai/gpt-oss-20b",
-      "name": "GPT OSS 20B",
-      "reasoning": true,
-      "attachment": false,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "cost": {
-        "input": 0.05,
-        "output": 0.2
       }
     },
     {
@@ -699,63 +566,6 @@
       "cost": {
         "input": 0.15,
         "output": 0.6
-      }
-    },
-    {
-      "id": "moonshotai/Kimi-K2.5",
-      "modelCode": "moonshotai/Kimi-K2.5",
-      "name": "Kimi K2.5",
-      "reasoning": true,
-      "attachment": false,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "cost": {
-        "input": 0.5,
-        "output": 2.8
-      }
-    },
-    {
-      "id": "moonshotai/Kimi-K2.7-Code",
-      "modelCode": "moonshotai/Kimi-K2.7-Code",
-      "name": "Kimi K2.7 Code",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 262144,
-        "output": 131072
-      },
-      "cost": {
-        "input": 0.95,
-        "output": 4,
-        "cache_read": 0.19
-      }
-    },
-    {
-      "id": "moonshotai/Kimi-K2.6",
-      "modelCode": "moonshotai/Kimi-K2.6",
-      "name": "Kimi K2.6",
-      "reasoning": true,
-      "attachment": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "limit": {
-        "context": 262144,
-        "output": 131000
-      },
-      "cost": {
-        "input": 1.2,
-        "output": 4.5,
-        "cache_read": 0.2
       }
     },
     {

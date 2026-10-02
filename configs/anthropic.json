@@ -5,7 +5,7 @@
   "api_endpoint": "$ANTHROPIC_API_ENDPOINT",
   "type": "anthropic",
   "doc": "https://docs.anthropic.com/en/docs/about-claude/models",
-  "default_large_model_id": "claude-sonnet-4-6",
+  "default_large_model_id": "claude-sonnet-5-5",
   "default_small_model_id": "claude-haiku-4-5-20251001",
   "models": [
     {
@@ -33,8 +33,8 @@
       "cost": {
         "input": 10,
         "output": 50,
-        "cache_read": 12.5,
-        "cache_write": 1
+        "cache_read": 1,
+        "cache_write": 12.5
       }
     },
     {
@@ -62,13 +62,13 @@
       "cost": {
         "input": 5,
         "output": 25,
-        "cache_read": 6.25,
-        "cache_write": 0.5
+        "cache_read": 0.5,
+        "cache_write": 6.25
       }
     },
     {
       "id": "claude-opus-4-8",
-      "modelCode": "anthropic/claude-opus-4-8",
+      "modelCode": "anthropic/claude-opus-4.8",
       "name": "Claude Opus 4.8",
       "reasoning": true,
       "reasoning_options": [
@@ -91,13 +91,13 @@
       "cost": {
         "input": 5,
         "output": 25,
-        "cache_read": 6.25,
-        "cache_write": 0.5
+        "cache_read": 0.5,
+        "cache_write": 6.25
       }
     },
     {
       "id": "claude-opus-4-7",
-      "modelCode": "anthropic/claude-opus-4-7",
+      "modelCode": "anthropic/claude-opus-4.7",
       "name": "Claude Opus 4.7",
       "reasoning": true,
       "reasoning_options": [
@@ -120,8 +120,8 @@
       "cost": {
         "input": 5,
         "output": 25,
-        "cache_read": 6.25,
-        "cache_write": 0.5
+        "cache_read": 0.5,
+        "cache_write": 6.25
       }
     },
     {
@@ -138,18 +138,22 @@
             "high",
             "max"
           ]
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
         }
       ],
       "attachment": true,
       "limit": {
-        "context": 200000,
+        "context": 1000000,
         "output": 128000
       },
       "cost": {
         "input": 5,
         "output": 25,
-        "cache_read": 6.25,
-        "cache_write": 0.5
+        "cache_read": 0.5,
+        "cache_write": 6.25
       }
     },
     {
@@ -165,6 +169,10 @@
             "medium",
             "high"
           ]
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
         }
       ],
       "attachment": true,
@@ -175,8 +183,8 @@
       "cost": {
         "input": 5,
         "output": 25,
-        "cache_read": 6.25,
-        "cache_write": 0.5
+        "cache_read": 0.5,
+        "cache_write": 6.25
       }
     },
     {
@@ -185,6 +193,9 @@
       "name": "Claude Sonnet 5",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -204,8 +215,8 @@
       "cost": {
         "input": 2,
         "output": 10,
-        "cache_read": 2.5,
-        "cache_write": 0.2
+        "cache_read": 0.2,
+        "cache_write": 2.5
       }
     },
     {
@@ -222,18 +233,22 @@
             "high",
             "max"
           ]
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
         }
       ],
       "attachment": true,
       "limit": {
-        "context": 200000,
+        "context": 1000000,
         "output": 128000
       },
       "cost": {
         "input": 3,
         "output": 15,
-        "cache_read": 3.75,
-        "cache_write": 0.3
+        "cache_read": 0.3,
+        "cache_write": 3.75
       }
     },
     {
@@ -243,15 +258,21 @@
       "reasoning": true,
       "attachment": true,
       "limit": {
-        "context": 200000,
+        "context": 1000000,
         "output": 64000
       },
       "cost": {
         "input": 3,
         "output": 15,
-        "cache_read": 3.75,
-        "cache_write": 0.3
-      }
+        "cache_read": 0.3,
+        "cache_write": 3.75
+      },
+      "reasoning_options": [
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ]
     },
     {
       "id": "claude-haiku-4-5-20251001",
@@ -266,60 +287,15 @@
       "cost": {
         "input": 1,
         "output": 5,
-        "cache_read": 1.25,
-        "cache_write": 0.1
-      }
-    },
-    {
-      "id": "claude-opus-4-1-20250805",
-      "modelCode": "anthropic/claude-opus-4-1",
-      "name": "Claude Opus 4.1",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 200000,
-        "output": 32000
+        "cache_read": 0.1,
+        "cache_write": 1.25
       },
-      "cost": {
-        "input": 15,
-        "output": 75,
-        "cache_read": 18.75,
-        "cache_write": 1.5
-      }
-    },
-    {
-      "id": "claude-opus-4-20250514",
-      "modelCode": "anthropic/claude-opus-4",
-      "name": "Claude Opus 4",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 200000,
-        "output": 32000
-      },
-      "cost": {
-        "input": 15,
-        "output": 75,
-        "cache_read": 18.75,
-        "cache_write": 1.5
-      }
-    },
-    {
-      "id": "claude-sonnet-4-20250514",
-      "modelCode": "anthropic/claude-sonnet-4",
-      "name": "Claude Sonnet 4",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 3.75,
-        "cache_write": 0.3
-      }
+      "reasoning_options": [
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ]
     },
     {
       "id": "claude-fable-5",
@@ -346,8 +322,124 @@
       "cost": {
         "input": 10,
         "output": 50,
-        "cache_read": 12.5,
-        "cache_write": 1
+        "cache_read": 1,
+        "cache_write": 12.5
+      }
+    },
+    {
+      "id": "claude-mythos-5-1",
+      "modelCode": "anthropic/claude-mythos-5-1",
+      "name": "Claude Mythos 5.1",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 10,
+        "output": 50,
+        "cache_read": 0.25,
+        "cache_write": 12.5
+      }
+    },
+    {
+      "id": "claude-fable-5-1",
+      "modelCode": "anthropic/claude-fable-5-1",
+      "name": "Claude Fable 5.1",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 10,
+        "output": 50,
+        "cache_read": 0.25,
+        "cache_write": 12.5
+      }
+    },
+    {
+      "id": "claude-opus-5-5",
+      "modelCode": "anthropic/claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2,
+        "cache_write": 5
+      }
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "modelCode": "anthropic/claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2.5
       }
     }
   ]

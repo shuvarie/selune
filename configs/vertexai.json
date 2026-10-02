@@ -25,19 +25,19 @@
       "attachment": true,
       "limit": {
         "context": 1048576,
-        "output": 64000
+        "output": 65536
       },
       "cost": {
         "input": 1.5,
         "output": 9,
-        "cache_read": 0,
-        "cache_write": 1
+        "cache_read": 0.15,
+        "input_audio": 1.5
       }
     },
     {
       "id": "gemini-3.1-pro-preview",
       "modelCode": "google/gemini-3.1-pro-preview",
-      "name": "Gemini 3.1 Pro (Regular)",
+      "name": "Gemini 3.1 Pro Preview",
       "reasoning": true,
       "reasoning_options": [
         {
@@ -52,19 +52,18 @@
       "attachment": true,
       "limit": {
         "context": 1048576,
-        "output": 64000
+        "output": 65536
       },
       "cost": {
         "input": 2,
         "output": 12,
-        "cache_read": 0,
-        "cache_write": 0.2
+        "cache_read": 0.2
       }
     },
     {
       "id": "gemini-3.1-pro-preview-customtools",
       "modelCode": "google/gemini-3.1-pro-preview-customtools",
-      "name": "Gemini 3.1 Pro (Optimized for Coding Agents)",
+      "name": "Gemini 3.1 Pro Preview Custom Tools",
       "reasoning": true,
       "reasoning_options": [
         {
@@ -79,45 +78,18 @@
       "attachment": true,
       "limit": {
         "context": 1048576,
-        "output": 64000
+        "output": 65536
       },
       "cost": {
         "input": 2,
         "output": 12,
-        "cache_read": 0,
-        "cache_write": 0.2
-      }
-    },
-    {
-      "id": "gemini-3-pro-preview",
-      "modelCode": "google/gemini-3-pro-preview",
-      "name": "Gemini 3 Pro",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "high"
-          ]
-        }
-      ],
-      "attachment": true,
-      "limit": {
-        "context": 1048576,
-        "output": 64000
-      },
-      "cost": {
-        "input": 2,
-        "output": 12,
-        "cache_read": 0,
-        "cache_write": 0.2
+        "cache_read": 0.2
       }
     },
     {
       "id": "gemini-3-flash-preview",
       "modelCode": "google/gemini-3-flash-preview",
-      "name": "Gemini 3 Flash",
+      "name": "Gemini 3 Flash Preview",
       "reasoning": true,
       "reasoning_options": [
         {
@@ -133,13 +105,13 @@
       "attachment": true,
       "limit": {
         "context": 1048576,
-        "output": 50000
+        "output": 65536
       },
       "cost": {
         "input": 0.5,
         "output": 3,
-        "cache_read": 0,
-        "cache_write": 0.05
+        "cache_read": 0.05,
+        "input_audio": 1
       }
     },
     {
@@ -150,14 +122,20 @@
       "attachment": true,
       "limit": {
         "context": 1048576,
-        "output": 50000
+        "output": 65536
       },
       "cost": {
         "input": 1.25,
         "output": 10,
-        "cache_read": 0,
-        "cache_write": 0.125
-      }
+        "cache_read": 0.125
+      },
+      "reasoning_options": [
+        {
+          "type": "budget_tokens",
+          "min": 128,
+          "max": 32768
+        }
+      ]
     },
     {
       "id": "gemini-2.5-flash",
@@ -167,14 +145,24 @@
       "attachment": true,
       "limit": {
         "context": 1048576,
-        "output": 50000
+        "output": 65536
       },
       "cost": {
         "input": 0.3,
         "output": 2.5,
-        "cache_read": 0,
-        "cache_write": 0.03
-      }
+        "cache_read": 0.03,
+        "input_audio": 1
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 0,
+          "max": 24576
+        }
+      ]
     },
     {
       "id": "claude-sonnet-4-6",
@@ -190,18 +178,22 @@
             "high",
             "max"
           ]
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
         }
       ],
       "attachment": true,
       "limit": {
         "context": 1000000,
-        "output": 50000
+        "output": 128000
       },
       "cost": {
         "input": 3,
         "output": 15,
-        "cache_read": 3.75,
-        "cache_write": 0.3
+        "cache_read": 0.3,
+        "cache_write": 3.75
       }
     },
     {
@@ -212,14 +204,20 @@
       "attachment": true,
       "limit": {
         "context": 200000,
-        "output": 50000
+        "output": 64000
       },
       "cost": {
         "input": 3,
         "output": 15,
-        "cache_read": 3.75,
-        "cache_write": 0.3
-      }
+        "cache_read": 0.3,
+        "cache_write": 3.75
+      },
+      "reasoning_options": [
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ]
     },
     {
       "id": "claude-opus-4-6",
@@ -235,18 +233,22 @@
             "high",
             "max"
           ]
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
         }
       ],
       "attachment": true,
       "limit": {
         "context": 1000000,
-        "output": 126000
+        "output": 128000
       },
       "cost": {
         "input": 5,
         "output": 25,
-        "cache_read": 6.25,
-        "cache_write": 0.5
+        "cache_read": 0.5,
+        "cache_write": 6.25
       }
     },
     {
@@ -257,30 +259,505 @@
       "attachment": true,
       "limit": {
         "context": 200000,
-        "output": 50000
+        "output": 64000
       },
       "cost": {
         "input": 5,
         "output": 25,
-        "cache_read": 6.25,
-        "cache_write": 0.5
-      }
+        "cache_read": 0.5,
+        "cache_write": 6.25
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ]
     },
     {
       "id": "claude-haiku-4-5-20251001",
       "modelCode": "anthropic/claude-haiku-4-5",
-      "name": "Claude 4.5 Haiku",
+      "name": "Claude Haiku 4.5",
       "reasoning": true,
       "attachment": true,
       "limit": {
         "context": 200000,
-        "output": 32000
+        "output": 64000
       },
       "cost": {
         "input": 1,
         "output": 5,
-        "cache_read": 1.25,
-        "cache_write": 0.09999999999999999
+        "cache_read": 0.1,
+        "cache_write": 1.25
+      },
+      "reasoning_options": [
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ]
+    },
+    {
+      "id": "claude-fable-5",
+      "modelCode": "anthropic/claude-fable-5",
+      "name": "Claude Fable 5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 10,
+        "output": 50,
+        "cache_read": 1,
+        "cache_write": 12.5
+      }
+    },
+    {
+      "id": "claude-fable-5-1",
+      "modelCode": "anthropic/claude-fable-5-1",
+      "name": "Claude Fable 5.1",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 10,
+        "output": 50,
+        "cache_read": 0.25,
+        "cache_write": 12.5
+      }
+    },
+    {
+      "id": "claude-opus-4-7",
+      "modelCode": "anthropic/claude-opus-4.7",
+      "name": "Claude Opus 4.7",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 5,
+        "output": 25,
+        "cache_read": 0.5,
+        "cache_write": 6.25
+      }
+    },
+    {
+      "id": "claude-opus-4-8",
+      "modelCode": "anthropic/claude-opus-4.8",
+      "name": "Claude Opus 4.8",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 5,
+        "output": 25,
+        "cache_read": 0.5,
+        "cache_write": 6.25
+      }
+    },
+    {
+      "id": "claude-opus-5",
+      "modelCode": "anthropic/claude-opus-5",
+      "name": "Claude Opus 5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 5,
+        "output": 25,
+        "cache_read": 0.5,
+        "cache_write": 6.25
+      }
+    },
+    {
+      "id": "claude-opus-5-5",
+      "modelCode": "anthropic/claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2,
+        "cache_write": 5
+      }
+    },
+    {
+      "id": "claude-sonnet-5",
+      "modelCode": "anthropic/claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2.5
+      }
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "modelCode": "anthropic/claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2.5
+      }
+    },
+    {
+      "id": "gemini-2.5-flash-lite",
+      "modelCode": "google/gemini-2.5-flash-lite",
+      "name": "Gemini 2.5 Flash-Lite",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 512,
+          "max": 24576
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65535
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.4,
+        "cache_read": 0.01,
+        "input_audio": 0.3
+      }
+    },
+    {
+      "id": "gemini-3.1-flash-lite",
+      "modelCode": "google/gemini-3.1-flash-lite",
+      "name": "Gemini 3.1 Flash Lite",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.25,
+        "output": 1.5,
+        "cache_read": 0.025,
+        "input_audio": 0.5
+      }
+    },
+    {
+      "id": "gemini-3.5-flash-lite",
+      "modelCode": "google/gemini-3.5-flash-lite",
+      "name": "Gemini 3.5 Flash Lite",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.3,
+        "output": 2.5,
+        "cache_read": 0.03
+      }
+    },
+    {
+      "id": "gemini-3.6-flash",
+      "modelCode": "google/gemini-3.6-flash",
+      "name": "Gemini 3.6 Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.75,
+        "output": 3.75,
+        "cache_read": 0.075,
+        "input_audio": 0.75
+      }
+    },
+    {
+      "id": "gemini-3.7-flash",
+      "modelCode": "google/gemini-3.7-flash",
+      "name": "Gemini 3.7 Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.75,
+        "output": 3.75,
+        "cache_read": 0.075,
+        "input_audio": 0.75
+      }
+    },
+    {
+      "id": "gemini-3.8-flash",
+      "modelCode": "google/gemini-3.8-flash",
+      "name": "Gemini 3.8 Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.75,
+        "output": 3.75,
+        "cache_read": 0.075,
+        "input_audio": 0.75
+      }
+    },
+    {
+      "id": "gemini-flash-latest",
+      "modelCode": "google/gemini-flash-latest",
+      "name": "Gemini Flash Latest",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 1.5,
+        "output": 9,
+        "cache_read": 0.15,
+        "input_audio": 1.5
+      }
+    },
+    {
+      "id": "gemini-flash-lite-latest",
+      "modelCode": "google/gemini-flash-lite-latest",
+      "name": "Gemini Flash-Lite Latest",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.25,
+        "output": 1.5,
+        "cache_read": 0.025,
+        "input_audio": 0.5
       }
     }
   ]

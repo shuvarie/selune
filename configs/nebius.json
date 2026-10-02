@@ -5,90 +5,9 @@
   "api_endpoint": "https://api.tokenfactory.nebius.com/v1",
   "type": "openai-compat",
   "doc": "https://docs.tokenfactory.nebius.com/",
-  "default_large_model_id": "moonshotai/Kimi-K2.5",
-  "default_small_model_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "default_large_model_id": "moonshotai/Kimi-K3",
+  "default_small_model_id": "openai/gpt-oss-120b-fast",
   "models": [
-    {
-      "id": "deepseek-ai/DeepSeek-V3.2",
-      "modelCode": "deepseek-ai/DeepSeek-V3.2",
-      "name": "DeepSeek-V3.2",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 163000,
-        "output": 16300
-      },
-      "cost": {
-        "input": 0.3,
-        "output": 0.45,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V3.2-fast",
-      "modelCode": "deepseek-ai/DeepSeek-V3.2:fast",
-      "name": "DeepSeek-V3.2 (fast)",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 8000,
-        "output": 800
-      },
-      "cost": {
-        "input": 0.4,
-        "output": 2,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "zai-org/GLM-5",
-      "modelCode": "zai-org/GLM-5",
-      "name": "GLM-5",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 202752,
-        "output": 20275
-      },
-      "cost": {
-        "input": 1,
-        "output": 3.2,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
     {
       "id": "NousResearch/Hermes-4-405B",
       "modelCode": "nousresearch/Hermes-4-405B",
@@ -107,242 +26,21 @@
       "attachment": false,
       "limit": {
         "context": 131072,
-        "output": 13107
+        "output": 8192,
+        "input": 120000
       },
       "cost": {
         "input": 1,
         "output": 3,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "NousResearch/Hermes-4-70B",
-      "modelCode": "nousresearch/Hermes-4-70B",
-      "name": "Hermes-4-70B",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 131072,
-        "output": 13107
-      },
-      "cost": {
-        "input": 0.13,
-        "output": 0.4,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "PrimeIntellect/INTELLECT-3",
-      "modelCode": "primeintellect/INTELLECT-3",
-      "name": "INTELLECT-3",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 131072,
-        "output": 13107
-      },
-      "cost": {
-        "input": 0.2,
-        "output": 1.1,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "moonshotai/Kimi-K2.5",
-      "modelCode": "moonshotai/Kimi-K2.5",
-      "name": "Kimi-K2.5",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 262144,
-        "output": 26214
-      },
-      "cost": {
-        "input": 0.5,
-        "output": 2.5,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "moonshotai/Kimi-K2.5-fast",
-      "modelCode": "moonshotai/Kimi-K2.5:fast",
-      "name": "Kimi-K2.5 (fast)",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 8000,
-        "output": 800
-      },
-      "cost": {
-        "input": 0.5,
-        "output": 2.5,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "meta-llama/Llama-3.3-70B-Instruct",
-      "modelCode": "meta-llama/Llama-3.3-70B-Instruct",
-      "name": "Llama-3.3-70B-Instruct",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 131072,
-        "output": 13107
-      },
-      "cost": {
-        "input": 0.13,
-        "output": 0.4,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
-      "modelCode": "meta-llama/Meta-Llama-3.1-8B-Instruct",
-      "name": "Meta-Llama-3.1-8B-Instruct",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 131072,
-        "output": 13107
-      },
-      "cost": {
-        "input": 0.02,
-        "output": 0.06,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "MiniMaxAI/MiniMax-M2.5",
-      "modelCode": "minimaxai/MiniMax-M2.5",
-      "name": "MiniMax-M2.5",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 196608,
-        "output": 19660
-      },
-      "cost": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "MiniMaxAI/MiniMax-M2.5-fast",
-      "modelCode": "minimaxai/MiniMax-M2.5:fast",
-      "name": "MiniMax-M2.5 (fast)",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 8000,
-        "output": 800
-      },
-      "cost": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
-      "modelCode": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
-      "name": "Nemotron-3-Nano-30B-A3B",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 262144,
-        "output": 26214
-      },
-      "cost": {
-        "input": 0.06,
-        "output": 0.24,
-        "cache_read": 0,
-        "cache_write": 0
+        "cache_read": 0.1,
+        "cache_write": 1.25,
+        "reasoning": 3
       }
     },
     {
       "id": "nvidia/nemotron-3-super-120b-a12b",
       "modelCode": "nvidia/nemotron-3-super-120b-a12b",
-      "name": "Nemotron-3-Super-120b-a12b",
+      "name": "Nemotron-3-Super-120B-A12B",
       "reasoning": true,
       "reasoning_options": [
         {
@@ -357,57 +55,27 @@
       "attachment": false,
       "limit": {
         "context": 262144,
-        "output": 26214
+        "output": 32768,
+        "input": 262144
       },
       "cost": {
         "input": 0.3,
-        "output": 0.9,
-        "cache_read": 0,
-        "cache_write": 0
+        "output": 0.9
       }
     },
     {
       "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
       "modelCode": "qwen/Qwen3-235B-A22B-Instruct-2507",
-      "name": "Qwen3-235B-A22B-Instruct-2507",
+      "name": "Qwen3 235B A22B Instruct 2507",
       "reasoning": false,
       "attachment": false,
       "limit": {
         "context": 262144,
-        "output": 26214
+        "output": 8192
       },
       "cost": {
         "input": 0.2,
-        "output": 0.6,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "Qwen/Qwen3-235B-A22B-Thinking-2507-fast",
-      "modelCode": "qwen/Qwen3-235B-A22B-Thinking-2507:fast",
-      "name": "Qwen3-235B-A22B-Thinking-2507 (fast)",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 8000,
-        "output": 800
-      },
-      "cost": {
-        "input": 0.5,
-        "output": 2,
-        "cache_read": 0,
-        "cache_write": 0
+        "output": 0.6
       }
     },
     {
@@ -418,94 +86,14 @@
       "attachment": false,
       "limit": {
         "context": 262144,
-        "output": 26214
+        "output": 8192,
+        "input": 262144
       },
       "cost": {
         "input": 0.1,
         "output": 0.3,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "Qwen/Qwen3-32B",
-      "modelCode": "qwen/Qwen3-32B",
-      "name": "Qwen3-32B",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 40960,
-        "output": 4096
-      },
-      "cost": {
-        "input": 0.1,
-        "output": 0.3,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "Qwen/Qwen3-Next-80B-A3B-Thinking",
-      "modelCode": "qwen/Qwen3-Next-80B-A3B-Thinking",
-      "name": "Qwen3-Next-80B-A3B-Thinking",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 128000,
-        "output": 12800
-      },
-      "cost": {
-        "input": 0.15,
-        "output": 1.2,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "Qwen/Qwen3-Next-80B-A3B-Thinking-fast",
-      "modelCode": "qwen/Qwen3-Next-80B-A3B-Thinking:fast",
-      "name": "Qwen3-Next-80B-A3B-Thinking (fast)",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 8000,
-        "output": 800
-      },
-      "cost": {
-        "input": 0.15,
-        "output": 1.2,
-        "cache_read": 0,
-        "cache_write": 0
+        "cache_read": 0.01,
+        "cache_write": 0.125
       }
     },
     {
@@ -515,51 +103,43 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": false,
       "limit": {
         "context": 262144,
-        "output": 26214
+        "output": 8192,
+        "input": 250000
       },
       "cost": {
         "input": 0.6,
         "output": 3.6,
-        "cache_read": 0,
-        "cache_write": 0
+        "cache_read": 0.06,
+        "cache_write": 0.75
       }
     },
     {
       "id": "Qwen/Qwen3.5-397B-A17B-fast",
       "modelCode": "qwen/Qwen3.5-397B-A17B:fast",
-      "name": "Qwen3.5-397B-A17B (fast)",
+      "name": "Qwen3.5-397B-A17B",
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": false,
       "limit": {
-        "context": 8000,
-        "output": 800
+        "context": 262144,
+        "output": 8192,
+        "input": 250000
       },
       "cost": {
         "input": 0.6,
         "output": 3.6,
-        "cache_read": 0,
-        "cache_write": 0
+        "cache_read": 0.06,
+        "cache_write": 0.75
       }
     },
     {
@@ -580,19 +160,21 @@
       "attachment": false,
       "limit": {
         "context": 131072,
-        "output": 13107
+        "output": 8192,
+        "input": 124000
       },
       "cost": {
         "input": 0.15,
         "output": 0.6,
-        "cache_read": 0,
-        "cache_write": 0
+        "cache_read": 0.015,
+        "cache_write": 0.18,
+        "reasoning": 0.6
       }
     },
     {
       "id": "openai/gpt-oss-120b-fast",
       "modelCode": "openai/gpt-oss-120b:fast",
-      "name": "gpt-oss-120b (fast)",
+      "name": "gpt-oss-120b",
       "reasoning": true,
       "reasoning_options": [
         {
@@ -606,14 +188,354 @@
       ],
       "attachment": false,
       "limit": {
-        "context": 8000,
-        "output": 800
+        "context": 131072,
+        "output": 8192,
+        "input": 124000
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.015,
+        "cache_write": 0.18,
+        "reasoning": 0.6
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "name": "DeepSeek V4.1 Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048000,
+        "output": 1048000
+      },
+      "cost": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.3
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "name": "DeepSeek V4 Flash 0731",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1024000,
+        "output": 1024000
+      },
+      "cost": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.14
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Pro",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Pro",
+      "name": "DeepSeek V4 Pro",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 1.75,
+        "output": 3.5,
+        "cache_read": 0.15
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "name": "DeepSeek V4 Pro 0813",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 979000,
+        "output": 979000
+      },
+      "cost": {
+        "input": 1.32,
+        "output": 3.96,
+        "cache_read": 1.32
+      }
+    },
+    {
+      "id": "google/gemma-3-27b-it",
+      "modelCode": "google/gemma-3-27b-it",
+      "name": "Gemma-3-27b-it",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 110000,
+        "input": 100000,
+        "output": 8192
       },
       "cost": {
         "input": 0.1,
+        "output": 0.3,
+        "cache_read": 0.01,
+        "cache_write": 0.125
+      }
+    },
+    {
+      "id": "zai-org/GLM-5.2",
+      "modelCode": "zai-org/GLM-5.2",
+      "name": "GLM-5.2",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 1.4,
+        "output": 4.4
+      }
+    },
+    {
+      "id": "zai-org/GLM-5.3",
+      "modelCode": "zai-org/GLM-5.3",
+      "name": "GLM-5.3",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1024000,
+        "output": 1024000
+      },
+      "cost": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 1.4
+      }
+    },
+    {
+      "id": "zai-org/GLM-5.3-Flash",
+      "modelCode": "zai-org/GLM-5.3-Flash",
+      "name": "GLM-5.3-Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1024000,
+        "output": 1024000
+      },
+      "cost": {
+        "input": 0.15,
         "output": 0.5,
-        "cache_read": 0,
-        "cache_write": 0
+        "cache_read": 0.15
+      }
+    },
+    {
+      "id": "moonshotai/Kimi-K2.7-Code",
+      "modelCode": "moonshotai/Kimi-K2.7-Code",
+      "name": "Kimi K2.7 Code",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 8000
+      },
+      "cost": {
+        "input": 0.95,
+        "output": 4
+      }
+    },
+    {
+      "id": "moonshotai/Kimi-K3",
+      "modelCode": "moonshotai/Kimi-K3",
+      "name": "Kimi K3",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 8000
+      },
+      "cost": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 3
+      }
+    },
+    {
+      "id": "MiniMaxAI/MiniMax-M3",
+      "modelCode": "minimaxai/MiniMax-M3",
+      "name": "MiniMax-M3",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      }
+    },
+    {
+      "id": "nvidia/Nemotron-3_5-Lightning",
+      "modelCode": "nvidia/nemotron-lightning-3.5-30b-a3b",
+      "name": "Nemotron 3.5 Lightning 30B A3B",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 0.06,
+        "output": 0.24,
+        "cache_read": 0.06
+      }
+    },
+    {
+      "id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "modelCode": "nvidia/nemotron-3-ultra-550b-a55b",
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 1,
+        "output": 3,
+        "cache_read": 1
+      }
+    },
+    {
+      "id": "Qwen/Qwen3.8-27B",
+      "modelCode": "qwen/Qwen3.8-27B",
+      "name": "Qwen3.8 27B",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "cost": {
+        "input": 0.45,
+        "output": 3,
+        "cache_read": 0.45
       }
     }
   ]

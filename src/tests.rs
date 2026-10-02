@@ -106,14 +106,17 @@ fn provider_lookup_and_defaults() {
         .iter()
         .find(|p| p.id == InferenceProvider("anthropic".into()))
         .unwrap();
-    assert_eq!(anthropic.default_large_model(), Some("claude-sonnet-4-6"));
+    assert_eq!(anthropic.default_large_model(), Some("claude-sonnet-5-5"));
     assert_eq!(
         anthropic.default_small_model(),
         Some("claude-haiku-4-5-20251001")
     );
     let model = anthropic.model("claude-sonnet-4-6").unwrap();
-    assert_eq!(model.limit.context, Some(200_000));
+    assert_eq!(model.limit.context, Some(1_000_000));
+    assert_eq!(model.limit.output, Some(128_000));
     assert_eq!(model.cost.input, Some(3.0));
+    assert_eq!(model.cost.cache_read, Some(0.3));
+    assert_eq!(model.cost.cache_write, Some(3.75));
     assert!(model.reasoning);
     assert!(model.attachment);
 }

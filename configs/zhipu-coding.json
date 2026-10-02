@@ -5,13 +5,13 @@
   "api_endpoint": "https://open.bigmodel.cn/api/coding/paas/v4",
   "type": "openai-compat",
   "doc": "https://docs.bigmodel.cn/cn/coding-plan/overview",
-  "default_large_model_id": "glm-5.2",
-  "default_small_model_id": "glm-5-turbo",
+  "default_large_model_id": "glm-5.3",
+  "default_small_model_id": "glm-5.3-flash",
   "models": [
     {
       "id": "glm-5.3",
       "modelCode": "zai-org/GLM-5.3",
-      "name": "GLM-5.3",
+      "name": "GLM-5.3 Highspeed",
       "reasoning": true,
       "reasoning_options": [
         {
@@ -19,7 +19,7 @@
           "values": [
             "low",
             "high",
-            "xhigh"
+            "max"
           ]
         }
       ],
@@ -32,134 +32,6 @@
         "input": 0,
         "output": 0,
         "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-5.2",
-      "modelCode": "zai-org/GLM-5.2",
-      "name": "GLM-5.2",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "high",
-            "xhigh"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 1000000,
-        "output": 131072
-      },
-      "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-5.1",
-      "modelCode": "zai-org/GLM-5.1",
-      "name": "GLM-5.1",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 204800,
-        "output": 65536
-      },
-      "cost": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_read": 0.26,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-5-turbo",
-      "modelCode": "zai-org/glm-5-turbo",
-      "name": "GLM-5-Turbo",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 200000,
-        "output": 128000
-      },
-      "cost": {
-        "input": 1.2,
-        "output": 4,
-        "cache_read": 0.24,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-5",
-      "modelCode": "zai-org/GLM-5",
-      "name": "GLM-5",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 204800,
-        "output": 65536
-      },
-      "cost": {
-        "input": 1,
-        "output": 3.2,
-        "cache_read": 0.2,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-4.7",
-      "modelCode": "zai-org/GLM-4.7",
-      "name": "GLM-4.7",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 204800,
-        "output": 98000
-      },
-      "cost": {
-        "input": 0.6,
-        "output": 2.2,
-        "cache_read": 0.11,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-4.7-flash",
-      "modelCode": "zai-org/GLM-4.7-Flash",
-      "name": "GLM-4.7 Flash",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 200000,
-        "output": 65550
-      },
-      "cost": {
-        "input": 0.07,
-        "output": 0.4,
-        "cache_read": 0.01,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-4.6",
-      "modelCode": "zai-org/GLM-4.6",
-      "name": "GLM-4.6",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 204800,
-        "output": 102400
-      },
-      "cost": {
-        "input": 0.6,
-        "output": 2.2,
-        "cache_read": 0.11,
         "cache_write": 0
       }
     },
@@ -170,64 +42,70 @@
       "reasoning": true,
       "attachment": true,
       "limit": {
-        "context": 131072,
-        "output": 65536
+        "context": 128000,
+        "output": 32768
       },
       "cost": {
         "input": 0.3,
-        "output": 0.9,
+        "output": 0.9
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ]
+    },
+    {
+      "id": "glm-5.3-flash",
+      "modelCode": "zai-org/GLM-5.3-Flash",
+      "name": "GLM-5.3-Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
         "cache_read": 0,
         "cache_write": 0
       }
     },
     {
-      "id": "glm-4.5",
-      "modelCode": "zai-org/GLM-4.5",
-      "name": "GLM-4.5",
+      "id": "glm-5.3-highspeed",
+      "modelCode": "zai-org/GLM-5.3:highspeed",
+      "name": "GLM-5.3 Highspeed",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "attachment": false,
       "limit": {
-        "context": 131072,
-        "output": 49152
+        "context": 1000000,
+        "output": 131072
       },
       "cost": {
-        "input": 0.6,
-        "output": 2.2,
-        "cache_read": 0.11,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-4.5-air",
-      "modelCode": "zai-org/GLM-4.5-Air",
-      "name": "GLM-4.5-Air",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 131072,
-        "output": 49152
-      },
-      "cost": {
-        "input": 0.2,
-        "output": 1.1,
-        "cache_read": 0.03,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-4.5v",
-      "modelCode": "zai-org/GLM-4.5V",
-      "name": "GLM-4.5V",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 65536,
-        "output": 8192
-      },
-      "cost": {
-        "input": 0.6,
-        "output": 1.8,
-        "cache_read": 0.11,
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
         "cache_write": 0
       }
     }

@@ -7,39 +7,19 @@
   "api_endpoint": "https://api.doubleword.ai/v1",
   "models": [
     {
-      "id": "Qwen/Qwen3.5-397B-A17B-FP8",
-      "modelCode": "qwen/Qwen3.5-397B-A17B:fp8",
-      "name": "Qwen 3.5 397B A17B",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {},
-      "cost": {
-        "input": 0,
-        "output": 0
-      }
-    },
-    {
-      "id": "Qwen/Qwen3.6-35B-A3B-FP8",
-      "modelCode": "qwen/Qwen3.6-35B-A3B:fp8",
-      "name": "Qwen 3.6 35B A3B",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {},
-      "cost": {
-        "input": 0,
-        "output": 0
-      }
-    },
-    {
       "id": "deepseek-ai/DeepSeek-V4-Pro",
       "modelCode": "deepseek-ai/DeepSeek-V4-Pro",
       "name": "DeepSeek V4 Pro",
       "reasoning": true,
       "attachment": false,
-      "limit": {},
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
       "cost": {
-        "input": 0,
-        "output": 0
+        "input": 1.3,
+        "output": 2.6,
+        "cache_read": 0.13
       }
     },
     {
@@ -48,10 +28,14 @@
       "name": "DeepSeek V4 Flash",
       "reasoning": true,
       "attachment": false,
-      "limit": {},
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
       "cost": {
-        "input": 0,
-        "output": 0
+        "input": 0.09,
+        "output": 0.18,
+        "cache_read": 0.02
       }
     },
     {
@@ -60,10 +44,14 @@
       "name": "GPT-OSS 120B",
       "reasoning": true,
       "attachment": false,
-      "limit": {},
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
       "cost": {
-        "input": 0,
-        "output": 0
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.11
       }
     },
     {
@@ -72,10 +60,416 @@
       "name": "GPT-OSS 20B",
       "reasoning": true,
       "attachment": false,
-      "limit": {},
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
       "cost": {
-        "input": 0,
-        "output": 0
+        "input": 0.03,
+        "output": 0.13,
+        "cache_read": 0.02
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "name": "DeepSeek V4 Flash 0731",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "cost": {
+        "input": 0.09,
+        "output": 0.18,
+        "cache_read": 0.02
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "name": "DeepSeek V4 Pro 0813",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "cost": {
+        "input": 1.32,
+        "output": 3.96,
+        "cache_read": 0.13
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "name": "DeepSeek V4.1 Flash",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.01
+      }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it",
+      "modelCode": "google/gemma-4-26B-A4B-it",
+      "name": "Gemma 4 26B A4B IT",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.35,
+        "cache_read": 0.02
+      }
+    },
+    {
+      "id": "google/gemma-4-31b-it",
+      "modelCode": "google/gemma-4-31B-it",
+      "name": "Gemma 4 31B IT",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.12,
+        "output": 0.35,
+        "cache_read": 0.12
+      }
+    },
+    {
+      "id": "meta-models/Muse-Glimmer-30B",
+      "modelCode": "meta-models/Muse-Glimmer-30B",
+      "name": "Muse Glimmer 30B",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.11,
+        "output": 0.32,
+        "cache_read": 0.01
+      }
+    },
+    {
+      "id": "moonshotai/Kimi-K2.6",
+      "modelCode": "moonshotai/Kimi-K2.6",
+      "name": "Kimi K2.6",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "cost": {
+        "input": 0.66,
+        "output": 3.41,
+        "cache_read": 0.13
+      }
+    },
+    {
+      "id": "moonshotai/Kimi-K3",
+      "modelCode": "moonshotai/Kimi-K3",
+      "name": "Kimi K3",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 3.0,
+        "output": 15.0,
+        "cache_read": 0.3
+      }
+    },
+    {
+      "id": "nvidia/nemotron-3-super-120b-a12b-nvfp4",
+      "modelCode": "nvidia/nemotron-3-super-120b-a12b:nvfp4",
+      "name": "Nemotron 3 Super 120B A12B NVFP4",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.08,
+        "output": 0.45,
+        "cache_read": 0.02
+      }
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b-nvfp4",
+      "modelCode": "nvidia/nemotron-3-ultra-550b-a55b:nvfp4",
+      "name": "Nemotron 3 Ultra 550B A55B NVFP4",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 0.5,
+        "output": 2.2,
+        "cache_read": 0.13
+      }
+    },
+    {
+      "id": "tencent/Hy3-FP8",
+      "modelCode": "tencent/Hy3:fp8",
+      "name": "Hy3 FP8",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "input": 192000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0.14,
+        "output": 0.58,
+        "cache_read": 0.14
+      }
+    },
+    {
+      "id": "thinkingmachines/Inkling-NVFP4",
+      "modelCode": "thinkingmachines/Inkling:nvfp4",
+      "name": "Inkling NVFP4",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "cost": {
+        "input": 1.2,
+        "output": 4.0,
+        "cache_read": 0.2
+      }
+    },
+    {
+      "id": "xiaomimimo/MiMo-V2.5-Pro",
+      "modelCode": "xiaomimimo/MiMo-V2.5-Pro",
+      "name": "MiMo V2.5 Pro",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.44,
+        "output": 0.87,
+        "cache_read": 0.01
+      }
+    },
+    {
+      "id": "zai-org/GLM-5.1-FP8",
+      "modelCode": "zai-org/GLM-5.1:fp8",
+      "name": "GLM 5.1 FP8",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 202752,
+        "output": 16384
+      },
+      "cost": {
+        "input": 1.05,
+        "output": 3.5,
+        "cache_read": 0.26
+      }
+    },
+    {
+      "id": "zai-org/GLM-5.2-FP8",
+      "modelCode": "zai-org/GLM-5.2:fp8",
+      "name": "GLM 5.2 FP8",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.93,
+        "output": 3.0,
+        "cache_read": 0.19
+      }
+    },
+    {
+      "id": "zai-org/GLM-5.3",
+      "modelCode": "zai-org/GLM-5.3",
+      "name": "GLM 5.3",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.28
+      }
+    },
+    {
+      "id": "zai-org/GLM-5.3-Flash",
+      "modelCode": "zai-org/GLM-5.3-Flash",
+      "name": "GLM 5.3 Flash",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03
+      }
+    },
+    {
+      "id": "Qwen/Qwen3-14B-FP8",
+      "modelCode": "qwen/Qwen3-14B:fp8",
+      "name": "Qwen3 14B FP8",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 131000,
+        "output": 131000
+      },
+      "cost": {
+        "input": 0.05,
+        "output": 0.6,
+        "cache_read": 0.01
+      }
+    },
+    {
+      "id": "Qwen/Qwen3-VL-235B-A22B-Instruct-FP8",
+      "modelCode": "qwen/Qwen3-VL-235B-A22B-Instruct:fp8",
+      "name": "Qwen3 VL 235B A22B Instruct FP8",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 218000,
+        "output": 16384
+      },
+      "cost": {
+        "input": 0.21,
+        "output": 1.9,
+        "cache_read": 0.12
+      }
+    },
+    {
+      "id": "Qwen/Qwen3-VL-30B-A3B-Instruct-FP8",
+      "modelCode": "qwen/Qwen3-VL-30B-A3B-Instruct:fp8",
+      "name": "Qwen3 VL 30B A3B Instruct FP8",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 262000,
+        "output": 262000
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.04
+      }
+    },
+    {
+      "id": "Qwen/Qwen3.5-397B-A17B-FP8",
+      "modelCode": "qwen/Qwen3.5-397B-A17B:fp8",
+      "name": "Qwen3.5 397B A17B FP8",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 200000,
+        "input": 200000,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.39,
+        "output": 2.45,
+        "cache_read": 0.16
+      }
+    },
+    {
+      "id": "Qwen/Qwen3.5-4B",
+      "modelCode": "qwen/Qwen3.5-4B",
+      "name": "Qwen3.5 4B",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.05,
+        "output": 0.08,
+        "cache_read": 0.01
+      }
+    },
+    {
+      "id": "Qwen/Qwen3.5-9B",
+      "modelCode": "qwen/Qwen3.5-9B",
+      "name": "Qwen3.5 9B",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.15,
+        "cache_read": 0.02
+      }
+    },
+    {
+      "id": "Qwen/Qwen3.6-35B-A3B-FP8",
+      "modelCode": "qwen/Qwen3.6-35B-A3B:fp8",
+      "name": "Qwen3.6 35B A3B FP8",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.14,
+        "output": 1.0,
+        "cache_read": 0.14
+      }
+    },
+    {
+      "id": "Qwen/Qwen3.8-27B-FP8",
+      "modelCode": "qwen/Qwen3.8-27B:fp8",
+      "name": "Qwen3.8 27B FP8",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.45,
+        "output": 3.0,
+        "cache_read": 0.04
       }
     }
   ],

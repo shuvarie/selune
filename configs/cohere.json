@@ -20,7 +20,7 @@
     },
     {
       "id": "command-a-plus-05-2026",
-      "modelCode": "cohere/command-a-plus-05-2026",
+      "modelCode": "cohere/command-a-plus",
       "name": "Command A Plus",
       "reasoning": true,
       "attachment": true,
@@ -29,7 +29,8 @@
           "type": "toggle"
         },
         {
-          "type": "budget_tokens"
+          "type": "budget_tokens",
+          "min": 1
         }
       ],
       "limit": {
@@ -52,7 +53,8 @@
           "type": "toggle"
         },
         {
-          "type": "budget_tokens"
+          "type": "budget_tokens",
+          "min": 1
         }
       ],
       "limit": {
@@ -105,7 +107,7 @@
     },
     {
       "id": "command-r-plus-08-2024",
-      "modelCode": "cohere/command-r-plus-08-2024",
+      "modelCode": "cohere/command-r-plus",
       "name": "Command R+",
       "reasoning": false,
       "attachment": false,
@@ -213,7 +215,7 @@
     },
     {
       "id": "command-r-08-2024",
-      "modelCode": "cohere/command-r-08-2024",
+      "modelCode": "cohere/command-r",
       "name": "Command R",
       "reasoning": false,
       "attachment": false,
@@ -225,10 +227,93 @@
         "input": 0.15,
         "output": 0.6
       }
+    },
+    {
+      "id": "north-small-translate-09-2026",
+      "modelCode": "cohere/north-small-translate-09-2026",
+      "name": "North Small Translate",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 32768,
+        "output": 16000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "tiny-aya-earth",
+      "modelCode": "cohere/tiny-aya-earth",
+      "name": "Tiny Aya Earth",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 8000,
+        "output": 8000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "tiny-aya-fire",
+      "modelCode": "cohere/tiny-aya-fire",
+      "name": "Tiny Aya Fire",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 8000,
+        "output": 8000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "tiny-aya-global",
+      "modelCode": "cohere/tiny-aya-global",
+      "name": "Tiny Aya Global",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 8000,
+        "output": 8000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "tiny-aya-water",
+      "modelCode": "cohere/tiny-aya-water",
+      "name": "Tiny Aya Water",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 8000,
+        "output": 8000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
     }
   ],
-  "default_large_model_id": "command-r7b-arabic-02-2025",
-  "default_small_model_id": "command-r-08-2024",
+  "default_large_model_id": "command-a-plus-05-2026",
+  "default_small_model_id": "command-r7b-12-2024",
   "api_key": "$COHERE_API_KEY",
   "doc": "https://docs.cohere.com/docs/models"
 }

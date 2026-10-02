@@ -6,7 +6,7 @@
   "type": "openai-compat",
   "doc": "https://inference-docs.cerebras.ai/models/overview",
   "default_large_model_id": "gpt-oss-120b",
-  "default_small_model_id": "gemma-4-31b",
+  "default_small_model_id": "qwen3.8-27b",
   "models": [
     {
       "id": "gpt-oss-120b",
@@ -36,30 +36,30 @@
       }
     },
     {
-      "id": "gemma-4-31b",
-      "modelCode": "google/gemma-4-31b",
-      "name": "Gemma 4 31B",
+      "id": "qwen3.8-27b",
+      "modelCode": "qwen/Qwen3.8-27B",
+      "name": "Qwen3.8 27B",
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
-            "high"
+            "xhigh"
           ]
         }
       ],
-      "attachment": true,
+      "attachment": false,
       "limit": {
-        "context": 131072,
-        "output": 25000
+        "context": 262144,
+        "output": 262144
       },
       "cost": {
-        "input": 0.99,
-        "output": 1.49,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.45,
+        "output": 3,
+        "cache_read": 0.45
       }
     }
   ],

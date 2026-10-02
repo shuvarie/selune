@@ -9,9 +9,12 @@
     {
       "id": "us.anthropic.claude-sonnet-5",
       "modelCode": "anthropic/claude-sonnet-5",
-      "name": "Claude Sonnet 5",
+      "name": "Claude Sonnet 5 (US)",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -29,18 +32,21 @@
         "output": 128000
       },
       "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 3.75,
-        "cache_write": 0.3
+        "input": 2.2,
+        "output": 11,
+        "cache_read": 0.22,
+        "cache_write": 2.75
       }
     },
     {
       "id": "us.anthropic.claude-sonnet-4-6",
       "modelCode": "anthropic/claude-sonnet-4-6",
-      "name": "Claude Sonnet 4.6",
+      "name": "Claude Sonnet 4.6 (US)",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -49,24 +55,28 @@
             "high",
             "max"
           ]
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
         }
       ],
       "attachment": true,
       "limit": {
         "context": 1000000,
-        "output": 64000
+        "output": 128000
       },
       "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 3.75,
-        "cache_write": 0.3
+        "input": 3.3,
+        "output": 16.5,
+        "cache_read": 0.33,
+        "cache_write": 4.125
       }
     },
     {
       "id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
       "modelCode": "anthropic/claude-sonnet-4-5",
-      "name": "Claude Sonnet 4.5",
+      "name": "Claude Sonnet 4.5 (US)",
       "reasoning": true,
       "attachment": true,
       "limit": {
@@ -74,16 +84,25 @@
         "output": 64000
       },
       "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 3.75,
-        "cache_write": 0.3
-      }
+        "input": 3.3,
+        "output": 16.5,
+        "cache_read": 0.33,
+        "cache_write": 4.125
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ]
     },
     {
       "id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
       "modelCode": "anthropic/claude-haiku-4-5",
-      "name": "Claude Haiku 4.5",
+      "name": "Claude Haiku 4.5 (US)",
       "reasoning": true,
       "attachment": true,
       "limit": {
@@ -91,18 +110,30 @@
         "output": 64000
       },
       "cost": {
-        "input": 1,
-        "output": 5,
-        "cache_read": 1.25,
-        "cache_write": 0.1
-      }
+        "input": 1.1,
+        "output": 5.5,
+        "cache_read": 0.11,
+        "cache_write": 1.375
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ]
     },
     {
       "id": "us.anthropic.claude-opus-5",
       "modelCode": "anthropic/claude-opus-5",
-      "name": "Claude Opus 5",
+      "name": "Claude Opus 5 (US)",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -120,18 +151,21 @@
         "output": 128000
       },
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 6.25,
-        "cache_write": 0.5
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       }
     },
     {
       "id": "us.anthropic.claude-opus-4-8",
-      "modelCode": "anthropic/claude-opus-4-8",
-      "name": "Claude Opus 4.8",
+      "modelCode": "anthropic/claude-opus-4.8",
+      "name": "Claude Opus 4.8 (US)",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -149,18 +183,21 @@
         "output": 128000
       },
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 6.25,
-        "cache_write": 0.5
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       }
     },
     {
       "id": "us.anthropic.claude-opus-4-7",
-      "modelCode": "anthropic/claude-opus-4-7",
-      "name": "Claude Opus 4.7",
+      "modelCode": "anthropic/claude-opus-4.7",
+      "name": "Claude Opus 4.7 (US)",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -178,18 +215,21 @@
         "output": 128000
       },
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 6.25,
-        "cache_write": 0.5
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       }
     },
     {
       "id": "us.anthropic.claude-opus-4-6-v1",
       "modelCode": "anthropic/claude-opus-4-6",
-      "name": "Claude Opus 4.6",
+      "name": "Claude Opus 4.6 (US)",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -198,6 +238,10 @@
             "high",
             "max"
           ]
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
         }
       ],
       "attachment": true,
@@ -206,16 +250,16 @@
         "output": 128000
       },
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 6.25,
-        "cache_write": 0.5
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       }
     },
     {
       "id": "us.anthropic.claude-opus-4-5-20251101-v1:0",
       "modelCode": "anthropic/claude-opus-4-5",
-      "name": "Claude Opus 4.5",
+      "name": "Claude Opus 4.5 (US)",
       "reasoning": true,
       "attachment": true,
       "limit": {
@@ -223,16 +267,33 @@
         "output": 64000
       },
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 6.25,
-        "cache_write": 0.5
-      }
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ]
     },
     {
       "id": "us.anthropic.claude-opus-4-1-20250805-v1:0",
-      "modelCode": "anthropic/claude-opus-4-1",
-      "name": "Claude Opus 4.1",
+      "modelCode": "anthropic/claude-opus-4.1",
+      "name": "Claude Opus 4.1 (US)",
       "reasoning": true,
       "attachment": true,
       "limit": {
@@ -242,14 +303,23 @@
       "cost": {
         "input": 15,
         "output": 75,
-        "cache_read": 18.75,
-        "cache_write": 1.5
-      }
+        "cache_read": 1.5,
+        "cache_write": 18.75
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ]
     },
     {
       "id": "us.anthropic.claude-fable-5",
       "modelCode": "anthropic/claude-fable-5",
-      "name": "Claude Fable 5",
+      "name": "Claude Fable 5 (US)",
       "reasoning": true,
       "reasoning_options": [
         {
@@ -269,10 +339,614 @@
         "output": 128000
       },
       "cost": {
-        "input": 10,
-        "output": 50,
-        "cache_read": 12.5,
-        "cache_write": 1
+        "input": 11,
+        "output": 55,
+        "cache_read": 1.1,
+        "cache_write": 13.75
+      }
+    },
+    {
+      "id": "us.amazon.nova-2-lite-v1:0",
+      "modelCode": "amazon/nova-2-lite",
+      "name": "Nova 2 Lite (US)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 65535
+      },
+      "cost": {
+        "input": 0.33,
+        "output": 2.75,
+        "cache_read": 0.0825,
+        "cache_write": 0.33
+      }
+    },
+    {
+      "id": "us.amazon.nova-lite-v1:0",
+      "modelCode": "amazon/nova-lite",
+      "name": "Nova Lite (US)",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 300000,
+        "output": 10000
+      },
+      "cost": {
+        "input": 0.06,
+        "output": 0.24,
+        "cache_read": 0.015,
+        "cache_write": 0.06
+      }
+    },
+    {
+      "id": "us.amazon.nova-micro-v1:0",
+      "modelCode": "amazon/nova-micro",
+      "name": "Nova Micro (US)",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 10000
+      },
+      "cost": {
+        "input": 0.035,
+        "output": 0.14,
+        "cache_read": 0.00875,
+        "cache_write": 0.035
+      }
+    },
+    {
+      "id": "us.amazon.nova-premier-v1:0",
+      "modelCode": "amazon/nova-premier",
+      "name": "Nova Premier (US)",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 10000
+      },
+      "cost": {
+        "input": 2.5,
+        "output": 12.5,
+        "cache_read": 0.625,
+        "cache_write": 2.5
+      }
+    },
+    {
+      "id": "us.amazon.nova-pro-v1:0",
+      "modelCode": "amazon/nova-pro",
+      "name": "Nova Pro (US)",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 300000,
+        "output": 10000
+      },
+      "cost": {
+        "input": 0.8,
+        "output": 3.2,
+        "cache_read": 0.2,
+        "cache_write": 0.8
+      }
+    },
+    {
+      "id": "us.anthropic.claude-fable-5-1",
+      "modelCode": "anthropic/claude-fable-5-1",
+      "name": "Claude Fable 5.1 (US)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 11,
+        "output": 55,
+        "cache_read": 0.275,
+        "cache_write": 13.75
+      }
+    },
+    {
+      "id": "us.anthropic.claude-opus-5-5",
+      "modelCode": "anthropic/claude-opus-5-5",
+      "name": "Claude Opus 5.5 (US)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 4.4,
+        "output": 22,
+        "cache_read": 0.22,
+        "cache_write": 5.5
+      }
+    },
+    {
+      "id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "modelCode": "anthropic/claude-sonnet-4",
+      "name": "Claude Sonnet 4 (US)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "cost": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3,
+        "cache_write": 3.75
+      }
+    },
+    {
+      "id": "us.deepseek.r1-v1:0",
+      "modelCode": "deepseek-ai/DeepSeek-R1",
+      "name": "DeepSeek-R1 (US)",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 32768
+      },
+      "cost": {
+        "input": 1.35,
+        "output": 5.4
+      }
+    },
+    {
+      "id": "us.meta.llama3-1-70b-instruct-v1:0",
+      "modelCode": "meta-llama/llama-3.1-70b-instruct",
+      "name": "Llama 3.1 70B Instruct (US)",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.72,
+        "output": 0.72
+      }
+    },
+    {
+      "id": "us.meta.llama3-1-8b-instruct-v1:0",
+      "modelCode": "meta-llama/Llama-3.1-8B-Instruct",
+      "name": "Llama 3.1 8B Instruct (US)",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.22,
+        "output": 0.22
+      }
+    },
+    {
+      "id": "us.meta.llama3-3-70b-instruct-v1:0",
+      "modelCode": "meta-llama/Llama-3.3-70B-Instruct",
+      "name": "Llama 3.3 70B Instruct (US)",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.72,
+        "output": 0.72
+      }
+    },
+    {
+      "id": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "modelCode": "meta-llama/Llama-4-Maverick-17B-128E-Instruct",
+      "name": "Llama 4 Maverick 17B Instruct (US)",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 8192
+      },
+      "cost": {
+        "input": 0.24,
+        "output": 0.97
+      }
+    },
+    {
+      "id": "us.meta.llama4-scout-17b-instruct-v1:0",
+      "modelCode": "meta-llama/Llama-4-Scout-17B-128E-Instruct",
+      "name": "Llama 4 Scout 17B Instruct (US)",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 10000000,
+        "output": 8192
+      },
+      "cost": {
+        "input": 0.17,
+        "output": 0.66
+      }
+    },
+    {
+      "id": "us.mistral.pixtral-large-2502-v1:0",
+      "modelCode": "mistralai/pixtral-large-2502",
+      "name": "Pixtral Large (25.02) (US)",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "cost": {
+        "input": 2,
+        "output": 6
+      }
+    },
+    {
+      "id": "us.moonshotai.kimi-k3",
+      "modelCode": "moonshotai/Kimi-K3",
+      "name": "Kimi K3 (US)",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 128000
+      },
+      "cost": {
+        "input": 3.3,
+        "output": 16.5,
+        "cache_read": 0.33,
+        "cache_write": 4.125
+      }
+    },
+    {
+      "id": "us.openai.gpt-5.6-luna",
+      "modelCode": "openai/gpt-5.6-luna",
+      "name": "GPT-5.6 Luna (US)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0.22,
+        "output": 1.32,
+        "cache_read": 0.022,
+        "cache_write": 0.275
+      }
+    },
+    {
+      "id": "us.openai.gpt-5.6-sol",
+      "modelCode": "openai/gpt-5.6-sol",
+      "name": "GPT-5.6 Sol (US)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 4.4,
+        "output": 22,
+        "cache_read": 0.44,
+        "cache_write": 5.5
+      }
+    },
+    {
+      "id": "us.openai.gpt-5.6-terra",
+      "modelCode": "openai/gpt-5.6-terra",
+      "name": "GPT-5.6 Terra (US)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 2.2,
+        "output": 13.2,
+        "cache_read": 0.22,
+        "cache_write": 2.75
+      }
+    },
+    {
+      "id": "us.openai.gpt-6.1-sol",
+      "modelCode": "openai/gpt-6.1-sol",
+      "name": "GPT-6.1 Sol (US)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 2.2,
+        "output": 11,
+        "cache_read": 0.11,
+        "cache_write": 2.75
+      }
+    },
+    {
+      "id": "us.openai.gpt-6-astra",
+      "modelCode": "openai/gpt-6-astra",
+      "name": "GPT-6 Astra (US)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 11,
+        "output": 55,
+        "cache_read": 1.1,
+        "cache_write": 13.75
+      }
+    },
+    {
+      "id": "us.openai.gpt-6-luna",
+      "modelCode": "openai/gpt-6-luna",
+      "name": "GPT-6 Luna (US)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0.11,
+        "output": 0.55,
+        "cache_read": 0.011,
+        "cache_write": 0.1375
+      }
+    },
+    {
+      "id": "us.openai.gpt-6-sol",
+      "modelCode": "openai/gpt-6-sol",
+      "name": "GPT-6 Sol (US)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 2.2,
+        "output": 11,
+        "cache_read": 0.22,
+        "cache_write": 2.75
+      }
+    },
+    {
+      "id": "us.writer.palmyra-x4-v1:0",
+      "modelCode": "writer/palmyra-x4",
+      "name": "Palmyra X4 (US)",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 122880,
+        "output": 8192
+      },
+      "cost": {
+        "input": 2.5,
+        "output": 10
+      }
+    },
+    {
+      "id": "us.writer.palmyra-x5-v1:0",
+      "modelCode": "writer/palmyra-x5",
+      "name": "Palmyra X5 (US)",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1040000,
+        "input": 1040000,
+        "output": 8192
+      },
+      "cost": {
+        "input": 0.6,
+        "output": 6
+      }
+    },
+    {
+      "id": "us.xai.grok-4.6",
+      "modelCode": "xai/grok-4.6",
+      "name": "Grok 4.6 (US)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 500000,
+        "output": 500000
+      },
+      "cost": {
+        "input": 2.2,
+        "output": 6.6,
+        "cache_read": 0.55
+      }
+    },
+    {
+      "id": "us.xai.grok-4.7",
+      "modelCode": "xai/grok-4.7",
+      "name": "Grok 4.7 (US)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 500000,
+        "output": 500000
+      },
+      "cost": {
+        "input": 2.2,
+        "output": 6.6,
+        "cache_read": 0.55
       }
     }
   ]

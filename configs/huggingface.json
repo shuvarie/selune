@@ -1378,6 +1378,30 @@
         "input": 0.1,
         "output": 0.3
       }
+    },
+    {
+      "id": "tencent/Hy4-preview",
+      "modelCode": "tencent/Hy4-preview",
+      "name": "Hy4 preview",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "cost": {
+        "input": 0.834,
+        "output": 2.501
+      }
     }
   ],
   "default_headers": {

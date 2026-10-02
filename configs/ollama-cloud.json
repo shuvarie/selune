@@ -15,23 +15,26 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
+            "low",
             "high",
             "max"
           ]
         }
       ],
-      "attachment": false,
+      "attachment": true,
       "limit": {
         "context": 1048576,
-        "output": 1048576
+        "output": 384000
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.003
       }
     },
     {
@@ -45,20 +48,19 @@
           "values": [
             "low",
             "high",
-            "xhigh"
+            "max"
           ]
         }
       ],
-      "attachment": true,
+      "attachment": false,
       "limit": {
-        "context": 1310720,
+        "context": 1048576,
         "output": 131072
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26
       }
     },
     {
@@ -78,14 +80,13 @@
       ],
       "attachment": true,
       "limit": {
-        "context": 1310720,
+        "context": 1000000,
         "output": 131072
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03
       }
     },
     {
@@ -95,11 +96,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": false,
@@ -108,10 +105,9 @@
         "output": 128000
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.1,
+        "output": 3,
+        "cache_read": 0.1
       }
     },
     {
@@ -121,11 +117,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": true,
@@ -134,10 +126,9 @@
         "output": 262144
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.95,
+        "output": 4,
+        "cache_read": 0.19
       }
     },
     {
@@ -146,6 +137,9 @@
       "name": "Kimi K3",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -161,10 +155,9 @@
         "output": 131072
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3
       }
     },
     {
@@ -173,6 +166,9 @@
       "name": "DeepSeek V4 Pro",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -187,10 +183,9 @@
         "output": 1048576
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.66,
+        "output": 1.98,
+        "cache_read": 0.022
       }
     },
     {
@@ -204,10 +199,8 @@
         "output": 262144
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.5,
+        "output": 1.5
       }
     },
     {
@@ -216,6 +209,9 @@
       "name": "MiniMax M3",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -232,10 +228,9 @@
         "output": 131072
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.6,
+        "output": 2.4,
+        "cache_read": 0.12
       }
     },
     {
@@ -245,11 +240,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": false,
@@ -258,10 +249,9 @@
         "output": 196608
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.06
       }
     },
     {
@@ -285,10 +275,9 @@
         "output": 32768
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.07,
+        "output": 0.3,
+        "cache_read": 0.035
       }
     },
     {
@@ -298,11 +287,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": false,
@@ -311,10 +296,9 @@
         "output": 65536
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.015,
+        "output": 0.6,
+        "cache_read": 0.015
       }
     },
     {
@@ -324,11 +308,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": true,
@@ -363,10 +343,9 @@
         "output": 131072
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26
       }
     },
     {
@@ -407,10 +386,9 @@
         "output": 32768
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.014
       }
     },
     {
@@ -420,11 +398,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": false,
@@ -433,10 +407,8 @@
         "output": 131072
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.06,
+        "output": 0.24
       }
     },
     {
@@ -446,11 +418,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": true,
@@ -459,10 +427,9 @@
         "output": 262144
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.14,
+        "output": 0.4,
+        "cache_read": 0.05
       }
     },
     {
@@ -472,11 +439,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "low",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "attachment": true,
@@ -485,10 +448,78 @@
         "output": 262144
       },
       "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
+        "input": 0.95,
+        "output": 4,
+        "cache_read": 0.16
+      }
+    },
+    {
+      "id": "deepseek-v4-flash:0731",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "name": "DeepSeek V4 Flash 0731",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 0.22,
+        "output": 0.66,
+        "cache_read": 0.007
+      }
+    },
+    {
+      "id": "glm-5.1",
+      "modelCode": "zai-org/GLM-5.1",
+      "name": "GLM-5.1",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "cost": {
+        "input": 1,
+        "output": 3.2,
+        "cache_read": 0.2
+      }
+    },
+    {
+      "id": "qwen3.5:397b",
+      "modelCode": "qwen/Qwen3.5-397B-A17B",
+      "name": "Qwen3.5 397B",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.6,
+        "output": 3.6
       }
     }
   ]

@@ -6,7 +6,7 @@
   "type": "openai-compat",
   "dialect": "xai",
   "doc": "https://docs.x.ai/docs/models",
-  "default_large_model_id": "grok-4.5",
+  "default_large_model_id": "grok-4.6",
   "default_small_model_id": "grok-4.5",
   "models": [
     {
@@ -158,18 +158,6 @@
       "cost": {}
     },
     {
-      "id": "grok-imagine-image-2.0",
-      "modelCode": "xai-org/grok-imagine-image-2.0",
-      "name": "Grok Imagine Image 2.0",
-      "reasoning": false,
-      "attachment": true,
-      "limit": {
-        "context": 64000,
-        "output": 0
-      },
-      "cost": {}
-    },
-    {
       "id": "grok-4.6",
       "modelCode": "xai-org/grok-4.6",
       "name": "Grok 4.6",
@@ -222,6 +210,33 @@
         "input": 1.25,
         "output": 2.5,
         "cache_read": 0.2
+      }
+    },
+    {
+      "id": "grok-4.7",
+      "modelCode": "xai-org/grok-4.7",
+      "name": "Grok 4.7",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 500000,
+        "output": 500000
+      },
+      "cost": {
+        "input": 2,
+        "output": 6,
+        "cache_read": 0.5
       }
     }
   ]

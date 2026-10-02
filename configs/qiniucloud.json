@@ -12,7 +12,7 @@
       "id": "minimax/minimax-m2.5",
       "modelCode": "minimaxai/MiniMax-M2.5",
       "name": "Minimax/Minimax-M2.5",
-      "reasoning": false,
+      "reasoning": true,
       "attachment": false,
       "limit": {
         "context": 204800,
@@ -23,13 +23,18 @@
         "output": 1.17,
         "cache_read": 0.29,
         "cache_write": 1.17
-      }
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ]
     },
     {
       "id": "z-ai/glm-5",
       "modelCode": "zai-org/GLM-5",
       "name": "Z-Ai/GLM 5",
-      "reasoning": false,
+      "reasoning": true,
       "attachment": false,
       "limit": {
         "context": 200000,
@@ -40,7 +45,12 @@
         "output": 2.5,
         "cache_read": 0.56,
         "cache_write": 2.5
-      }
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ]
     },
     {
       "id": "minimax/minimax-m2.1",
@@ -50,20 +60,25 @@
       "attachment": false,
       "limit": {
         "context": 204800,
-        "output": 4096
+        "output": 128000
       },
       "cost": {
         "input": 0.29,
         "output": 1.17,
         "cache_read": 0.29,
         "cache_write": 1.17
-      }
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ]
     },
     {
       "id": "moonshotai/kimi-k2-thinking",
       "modelCode": "moonshotai/Kimi-K2-Thinking",
       "name": "Kimi K2 Thinking",
-      "reasoning": true,
+      "reasoning": false,
       "attachment": false,
       "limit": {
         "context": 256000,
@@ -84,14 +99,19 @@
       "attachment": false,
       "limit": {
         "context": 200000,
-        "output": 4096
+        "output": 200000
       },
       "cost": {
         "input": 0.44,
         "output": 1.74,
         "cache_read": 0.44,
         "cache_write": 1.74
-      }
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ]
     },
     {
       "id": "minimax/minimax-m2",
@@ -101,24 +121,29 @@
       "attachment": false,
       "limit": {
         "context": 200000,
-        "output": 4096
+        "output": 128000
       },
       "cost": {
         "input": 0.29,
         "output": 1.17,
         "cache_read": 0.29,
         "cache_write": 1.17
-      }
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ]
     },
     {
       "id": "z-ai/glm-4.6",
       "modelCode": "zai-org/GLM-4.6",
       "name": "Z-AI/GLM 4.6",
-      "reasoning": true,
+      "reasoning": false,
       "attachment": false,
       "limit": {
         "context": 200000,
-        "output": 4096
+        "output": 200000
       },
       "cost": {
         "input": 1,
@@ -148,7 +173,7 @@
       "id": "deepseek-v3.1",
       "modelCode": "deepseek-ai/DeepSeek-V3.1",
       "name": "DeepSeek-V3.1",
-      "reasoning": false,
+      "reasoning": true,
       "attachment": false,
       "limit": {
         "context": 128000,
@@ -163,9 +188,9 @@
     },
     {
       "id": "doubao-seed-2.0-pro",
-      "modelCode": "bytedance-seed/doubao-seed-2-0-pro",
+      "modelCode": "bytedance-seed/doubao-seed-2.0-pro",
       "name": "Doubao Seed 2.0 Pro",
-      "reasoning": false,
+      "reasoning": true,
       "attachment": true,
       "limit": {
         "context": 256000,
@@ -176,13 +201,18 @@
         "output": 2.22,
         "cache_read": 0.44,
         "cache_write": 2.22
-      }
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ]
     },
     {
       "id": "doubao-seed-2.0-code",
       "modelCode": "bytedance-seed/doubao-seed-2.0-code",
       "name": "Doubao Seed 2.0 Code",
-      "reasoning": false,
+      "reasoning": true,
       "attachment": true,
       "limit": {
         "context": 256000,
@@ -193,7 +223,12 @@
         "output": 2.22,
         "cache_read": 0.44,
         "cache_write": 2.22
-      }
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ]
     },
     {
       "id": "qwen3-coder-480b-a35b-instruct",
@@ -216,7 +251,7 @@
       "id": "glm-4.5",
       "modelCode": "zai-org/GLM-4.5",
       "name": "GLM 4.5",
-      "reasoning": false,
+      "reasoning": true,
       "attachment": false,
       "limit": {
         "context": 131072,
@@ -227,13 +262,18 @@
         "output": 2.22,
         "cache_read": 0.56,
         "cache_write": 2.22
-      }
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ]
     },
     {
       "id": "moonshotai/kimi-k2-0905",
       "modelCode": "moonshotai/Kimi-K2-Instruct-0905",
       "name": "Kimi K2 0905",
-      "reasoning": true,
+      "reasoning": false,
       "attachment": false,
       "limit": {
         "context": 256000,
@@ -244,6 +284,1251 @@
         "output": 2.22,
         "cache_read": 0.56,
         "cache_write": 2.22
+      }
+    },
+    {
+      "id": "claude-3.5-haiku",
+      "modelCode": "anthropic/claude-3.5-haiku",
+      "name": "Claude 3.5 Haiku",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 200000,
+        "output": 8192
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "claude-3.5-sonnet",
+      "modelCode": "anthropic/claude-3.5-sonnet",
+      "name": "Claude 3.5 Sonnet",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 200000,
+        "output": 8200
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "claude-3.7-sonnet",
+      "modelCode": "anthropic/claude-3.7-sonnet",
+      "name": "Claude 3.7 Sonnet",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "claude-4.0-opus",
+      "modelCode": "anthropic/claude-4.0-opus",
+      "name": "Claude 4.0 Opus",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 200000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "claude-4.0-sonnet",
+      "modelCode": "anthropic/claude-4.0-sonnet",
+      "name": "Claude 4.0 Sonnet",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "claude-4.1-opus",
+      "modelCode": "anthropic/claude-4.1-opus",
+      "name": "Claude 4.1 Opus",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 200000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "claude-4.5-haiku",
+      "modelCode": "anthropic/claude-4.5-haiku",
+      "name": "Claude 4.5 Haiku",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "claude-4.5-opus",
+      "modelCode": "anthropic/claude-4.5-opus",
+      "name": "Claude 4.5 Opus",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 200000,
+        "output": 200000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "claude-4.5-sonnet",
+      "modelCode": "anthropic/claude-sonnet-4-5",
+      "name": "Claude 4.5 Sonnet",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "cost": {
+        "input": 2.989,
+        "output": 14.945,
+        "cache_read": 0.326,
+        "cache_write": 4.078
+      }
+    },
+    {
+      "id": "deepseek/deepseek-math-v2",
+      "modelCode": "deepseek-ai/deepseek-math-v2",
+      "name": "Deepseek/Deepseek-Math-V2",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 160000,
+        "output": 160000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "deepseek-r1",
+      "modelCode": "deepseek-ai/DeepSeek-R1",
+      "name": "DeepSeek-R1",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0.574,
+        "output": 2.294
+      }
+    },
+    {
+      "id": "deepseek-r1-0528",
+      "modelCode": "deepseek-ai/DeepSeek-R1-0528",
+      "name": "DeepSeek-R1-0528",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0.574,
+        "output": 2.294
+      }
+    },
+    {
+      "id": "deepseek-v3",
+      "modelCode": "deepseek-ai/DeepSeek-V3",
+      "name": "DeepSeek-V3",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 16000
+      },
+      "cost": {
+        "input": 0.287,
+        "output": 1.147
+      }
+    },
+    {
+      "id": "deepseek-v3-0324",
+      "modelCode": "deepseek-ai/DeepSeek-V3-0324",
+      "name": "DeepSeek-V3-0324",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 16000
+      },
+      "cost": {
+        "input": 0.25,
+        "output": 1
+      }
+    },
+    {
+      "id": "deepseek/deepseek-v3.1-terminus-thinking",
+      "modelCode": "deepseek-ai/deepseek-v3.1-terminus-thinking",
+      "name": "DeepSeek/DeepSeek-V3.1-Terminus-Thinking",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "deepseek/deepseek-v3.2-251201",
+      "modelCode": "deepseek-ai/DeepSeek-V3.2",
+      "name": "Deepseek/DeepSeek-V3.2",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "deepseek/deepseek-v3.2-exp",
+      "modelCode": "deepseek-ai/DeepSeek-V3.2-Exp",
+      "name": "DeepSeek/DeepSeek-V3.2-Exp",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0.287,
+        "output": 0.431
+      }
+    },
+    {
+      "id": "deepseek/deepseek-v3.2-exp-thinking",
+      "modelCode": "deepseek-ai/deepseek-v3.2-exp-thinking",
+      "name": "DeepSeek/DeepSeek-V3.2-Exp-Thinking",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "doubao-1.5-pro-32k",
+      "modelCode": "bytedance-seed/doubao-1.5-pro-32k",
+      "name": "Doubao 1.5 Pro 32k",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 12000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "doubao-1.5-thinking-pro",
+      "modelCode": "bytedance-seed/doubao-1.5-thinking-pro",
+      "name": "Doubao 1.5 Thinking Pro",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 16000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "doubao-1.5-vision-pro",
+      "modelCode": "bytedance-seed/doubao-1.5-vision-pro",
+      "name": "Doubao 1.5 Vision Pro",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 128000,
+        "output": 16000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "doubao-seed-1.6",
+      "modelCode": "bytedance-seed/doubao-seed-1.6",
+      "name": "Doubao-Seed 1.6",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0.25,
+        "output": 2,
+        "cache_read": 0.05
+      }
+    },
+    {
+      "id": "doubao-seed-1.6-flash",
+      "modelCode": "bytedance-seed/doubao-seed-1.6-flash",
+      "name": "Doubao-Seed 1.6 Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0.075,
+        "output": 0.3
+      }
+    },
+    {
+      "id": "doubao-seed-1.6-thinking",
+      "modelCode": "bytedance-seed/doubao-seed-1-6-thinking",
+      "name": "Doubao-Seed 1.6 Thinking",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "doubao-seed-2.0-lite",
+      "modelCode": "bytedance-seed/doubao-seed-2.0-lite",
+      "name": "Doubao Seed 2.0 Lite",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0.25,
+        "output": 2
+      }
+    },
+    {
+      "id": "doubao-seed-2.0-mini",
+      "modelCode": "bytedance-seed/doubao-seed-2.0-mini",
+      "name": "Doubao Seed 2.0 Mini",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.4
+      }
+    },
+    {
+      "id": "stepfun-ai/gelab-zero-4b-preview",
+      "modelCode": "stepfun-ai/gelab-zero-4b-preview",
+      "name": "Stepfun-Ai/Gelab Zero 4b Preview",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 8192,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "gemini-2.0-flash",
+      "modelCode": "google/gemini-2.0-flash",
+      "name": "Gemini 2.0 Flash",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 8192
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "gemini-2.0-flash-lite",
+      "modelCode": "google/gemini-2.0-flash-lite",
+      "name": "Gemini 2.0 Flash Lite",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 8192
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "gemini-2.5-flash",
+      "modelCode": "google/gemini-2.5-flash",
+      "name": "Gemini 2.5 Flash",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 64000
+      },
+      "cost": {
+        "input": 0.3,
+        "output": 2.5,
+        "cache_read": 0.03
+      }
+    },
+    {
+      "id": "gemini-2.5-flash-lite",
+      "modelCode": "google/gemini-2.5-flash-lite",
+      "name": "Gemini 2.5 Flash Lite",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 64000
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.4,
+        "cache_read": 0.01
+      }
+    },
+    {
+      "id": "gemini-2.5-pro",
+      "modelCode": "google/gemini-2.5-pro",
+      "name": "Gemini 2.5 Pro",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 1.25,
+        "output": 10,
+        "cache_read": 0.125
+      }
+    },
+    {
+      "id": "gemini-3.0-flash-preview",
+      "modelCode": "google/gemini-3.0-flash-preview",
+      "name": "Gemini 3.0 Flash Preview",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "gemini-3.0-pro-preview",
+      "modelCode": "google/gemini-3.0-pro-preview",
+      "name": "Gemini 3.0 Pro Preview",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "glm-4.5-air",
+      "modelCode": "zai-org/GLM-4.5-Air",
+      "name": "GLM 4.5 Air",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 131000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.2,
+        "output": 1.1,
+        "cache_read": 0.03,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "openai/gpt-5",
+      "modelCode": "openai/gpt-5",
+      "name": "OpenAI/GPT-5",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 1.25,
+        "output": 10,
+        "cache_read": 0.125
+      }
+    },
+    {
+      "id": "openai/gpt-5.2",
+      "modelCode": "openai/gpt-5.2",
+      "name": "OpenAI/GPT-5.2",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 1.75,
+        "output": 14,
+        "cache_read": 0.175
+      }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "modelCode": "openai/gpt-oss-120b",
+      "name": "gpt-oss-120b",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.18,
+        "output": 0.9,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "gpt-oss-20b",
+      "modelCode": "openai/gpt-oss-20b",
+      "name": "gpt-oss-20b",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.11,
+        "output": 0.55,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "x-ai/grok-4.1-fast",
+      "modelCode": "xai-org/grok-4.1-fast",
+      "name": "x-AI/Grok-4.1-Fast",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "x-ai/grok-4.1-fast-non-reasoning",
+      "modelCode": "xai-org/grok-4.1-fast-non-reasoning",
+      "name": "X-Ai/Grok 4.1 Fast Non Reasoning",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "cost": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache_read": 0.05
+      }
+    },
+    {
+      "id": "x-ai/grok-4.1-fast-reasoning",
+      "modelCode": "xai-org/grok-4.1-fast-reasoning",
+      "name": "X-Ai/Grok 4.1 Fast Reasoning",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 20000000,
+        "output": 2000000
+      },
+      "cost": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache_read": 0.05
+      }
+    },
+    {
+      "id": "x-ai/grok-4-fast",
+      "modelCode": "xai-org/grok-4:fast",
+      "name": "x-AI/Grok-4-Fast",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "x-ai/grok-4-fast-non-reasoning",
+      "modelCode": "xai-org/grok-4-fast-non-reasoning",
+      "name": "X-Ai/Grok-4-Fast-Non-Reasoning",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "cost": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache_read": 0,
+        "cache_write": 0.05
+      }
+    },
+    {
+      "id": "x-ai/grok-4-fast-reasoning",
+      "modelCode": "xai-org/grok-4-fast-reasoning",
+      "name": "X-Ai/Grok-4-Fast-Reasoning",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "cost": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache_read": 0,
+        "cache_write": 0.05
+      }
+    },
+    {
+      "id": "x-ai/grok-code-fast-1",
+      "modelCode": "xai-org/grok-code-fast-1",
+      "name": "x-AI/Grok-Code-Fast 1",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 256000,
+        "output": 10000
+      },
+      "cost": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache_read": 0,
+        "cache_write": 0.05
+      }
+    },
+    {
+      "id": "kimi-k2",
+      "modelCode": "moonshotai/Kimi-K2-Instruct",
+      "name": "Kimi K2",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0.57,
+        "output": 2.3,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "moonshotai/kimi-k2.5",
+      "modelCode": "moonshotai/Kimi-K2.5",
+      "name": "Moonshotai/Kimi-K2.5",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "cost": {
+        "input": 0.6,
+        "output": 3
+      }
+    },
+    {
+      "id": "meituan/longcat-flash-chat",
+      "modelCode": "meituan-longcat/longcat-flash-chat",
+      "name": "Meituan/Longcat-Flash-Chat",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "meituan/longcat-flash-lite",
+      "modelCode": "meituan-longcat/longcat-flash-lite",
+      "name": "Meituan/Longcat-Flash-Lite",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 256000,
+        "output": 320000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "mimo-v2-flash",
+      "modelCode": "xiaomimimo/MiMo-V2-Flash",
+      "name": "Mimo-V2-Flash",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.3,
+        "cache_read": 0.01
+      }
+    },
+    {
+      "id": "MiniMax-M1",
+      "modelCode": "minimaxai/minimax-m1",
+      "name": "MiniMax M1",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 80000
+      },
+      "cost": {
+        "input": 0.55,
+        "output": 2.2
+      }
+    },
+    {
+      "id": "minimax/minimax-m2.5-highspeed",
+      "modelCode": "minimaxai/MiniMax-M2.5:highspeed",
+      "name": "Minimax/Minimax-M2.5 Highspeed",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 204800,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0.6,
+        "output": 2.4,
+        "cache_read": 0.06,
+        "cache_write": 0.375
+      }
+    },
+    {
+      "id": "qwen-max-2025-01-25",
+      "modelCode": "qwen/qwen-max-2025-01-25",
+      "name": "Qwen2.5-Max-2025-01-25",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "qwen-turbo",
+      "modelCode": "qwen/qwen-turbo",
+      "name": "Qwen-Turbo",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.05,
+        "output": 0.2
+      }
+    },
+    {
+      "id": "qwen-vl-max-2025-01-25",
+      "modelCode": "qwen/qwen-vl-max-2025-01-25",
+      "name": "Qwen VL-MAX-2025-01-25",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "qwen2.5-vl-72b-instruct",
+      "modelCode": "qwen/qwen2.5-vl-72b-instruct",
+      "name": "Qwen 2.5 VL 72B Instruct",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "cost": {
+        "input": 2.8,
+        "output": 8.4
+      }
+    },
+    {
+      "id": "qwen2.5-vl-7b-instruct",
+      "modelCode": "qwen/qwen2.5-vl-7b-instruct",
+      "name": "Qwen 2.5 VL 7B Instruct",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "cost": {
+        "input": 0.35,
+        "output": 1.05
+      }
+    },
+    {
+      "id": "qwen3-235b-a22b",
+      "modelCode": "qwen/Qwen3-235B-A22B",
+      "name": "Qwen 3 235B A22B",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0.7,
+        "output": 2.8
+      }
+    },
+    {
+      "id": "qwen3-235b-a22b-instruct-2507",
+      "modelCode": "qwen/Qwen3-235B-A22B-Instruct-2507",
+      "name": "Qwen3 235b A22B Instruct 2507",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 64000
+      },
+      "cost": {
+        "input": 0.28,
+        "output": 1.12,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "qwen3-235b-a22b-thinking-2507",
+      "modelCode": "qwen/Qwen3-235B-A22B-Thinking-2507",
+      "name": "Qwen3 235B A22B Thinking 2507",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.28,
+        "output": 2.8,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "qwen3-30b-a3b",
+      "modelCode": "qwen/Qwen3-30B-A3B",
+      "name": "Qwen3 30B A3B",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 40000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.12,
+        "output": 0.5
+      }
+    },
+    {
+      "id": "qwen3-30b-a3b-instruct-2507",
+      "modelCode": "qwen/Qwen3-30B-A3B-Instruct-2507",
+      "name": "Qwen3 30b A3b Instruct 2507",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0.099,
+        "output": 0.299,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "qwen3-30b-a3b-thinking-2507",
+      "modelCode": "qwen/qwen3-30b-a3b-thinking-2507",
+      "name": "Qwen3 30b A3b Thinking 2507",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 126000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0.2,
+        "output": 2.4,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "qwen3-32b",
+      "modelCode": "qwen/Qwen3-32B",
+      "name": "Qwen3 32B",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 40000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.7,
+        "output": 2.8
+      }
+    },
+    {
+      "id": "qwen3.5-397b-a17b",
+      "modelCode": "qwen/Qwen3.5-397B-A17B",
+      "name": "Qwen3.5 397B A17B",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "cost": {
+        "input": 0.6,
+        "output": 3.6
+      }
+    },
+    {
+      "id": "qwen3-max",
+      "modelCode": "qwen/qwen3-max",
+      "name": "Qwen3 Max",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "cost": {
+        "input": 1.2,
+        "output": 6
+      }
+    },
+    {
+      "id": "qwen3-max-preview",
+      "modelCode": "qwen/qwen3-max-preview",
+      "name": "Qwen3 Max Preview",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "qwen3-next-80b-a3b-instruct",
+      "modelCode": "qwen/Qwen3-Next-80B-A3B-Instruct",
+      "name": "Qwen3 Next 80B A3B Instruct",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.5,
+        "output": 2
+      }
+    },
+    {
+      "id": "qwen3-next-80b-a3b-thinking",
+      "modelCode": "qwen/Qwen3-Next-80B-A3B-Thinking",
+      "name": "Qwen3 Next 80B A3B Thinking",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.5,
+        "output": 6
+      }
+    },
+    {
+      "id": "qwen3-vl-30b-a3b-thinking",
+      "modelCode": "qwen/qwen3-vl-30b-a3b-thinking",
+      "name": "Qwen3-Vl 30b A3b Thinking",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0.1028,
+        "output": 1.028,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "stepfun/step-3.5-flash",
+      "modelCode": "stepfun-ai/Step-3.5-Flash",
+      "name": "Stepfun/Step-3.5 Flash",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 64000,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.11,
+        "output": 0.33,
+        "cache_read": 0,
+        "cache_write": 0
       }
     }
   ]

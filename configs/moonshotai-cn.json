@@ -70,9 +70,6 @@
       "attachment": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "low",
@@ -83,7 +80,7 @@
       ],
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 1048576
       },
       "cost": {
         "input": 3,

@@ -23,33 +23,56 @@
         "output": 0,
         "cache_read": 0,
         "cache_write": 0
-      }
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ]
     },
     {
       "id": "k3-256k",
       "modelCode": "moonshotai/Kimi-K3:256k",
-      "name": "Kimi K3 256K",
+      "name": "Kimi K3-256K",
       "reasoning": true,
       "attachment": true,
       "limit": {
         "context": 262144,
-        "output": 32768
+        "output": 131072
       },
       "cost": {
         "input": 0,
         "output": 0,
         "cache_read": 0,
         "cache_write": 0
-      }
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ]
     },
     {
       "id": "kimi-for-coding",
       "modelCode": "moonshotai/kimi-for-coding",
-      "name": "Kimi for Coding",
+      "name": "kimi-for-coding",
       "reasoning": true,
       "attachment": true,
       "limit": {
-        "context": 262144,
+        "context": 1048576,
         "output": 32768
       },
       "cost": {
@@ -57,12 +80,25 @@
         "output": 0,
         "cache_read": 0,
         "cache_write": 0
-      }
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ]
     },
     {
       "id": "kimi-for-coding-highspeed",
       "modelCode": "moonshotai/kimi-for-coding:highspeed",
-      "name": "Kimi for Coding Highspeed",
+      "name": "Kimi For Coding HighSpeed",
       "reasoning": true,
       "attachment": true,
       "limit": {

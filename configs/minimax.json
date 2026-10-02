@@ -12,28 +12,32 @@
       "id": "MiniMax-M3",
       "modelCode": "minimaxai/MiniMax-M3",
       "name": "MiniMax-M3",
-      "reasoning": false,
-      "attachment": false,
+      "reasoning": true,
+      "attachment": true,
       "limit": {
         "context": 1000000,
         "output": 512000
       },
       "cost": {
-        "input": 0.6,
-        "output": 2.4,
-        "cache_read": 0.12,
-        "cache_write": 0.375
-      }
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.06
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ]
     },
     {
       "id": "MiniMax-M2.7-highspeed",
       "modelCode": "minimaxai/MiniMax-M2.7:highspeed",
       "name": "MiniMax-M2.7-highspeed",
-      "reasoning": false,
+      "reasoning": true,
       "attachment": false,
       "limit": {
-        "context": 200000,
-        "output": 128000
+        "context": 204800,
+        "output": 131072
       },
       "cost": {
         "input": 0.6,
@@ -46,11 +50,11 @@
       "id": "MiniMax-M2.7",
       "modelCode": "minimaxai/MiniMax-M2.7",
       "name": "MiniMax-M2.7",
-      "reasoning": false,
+      "reasoning": true,
       "attachment": false,
       "limit": {
-        "context": 200000,
-        "output": 128000
+        "context": 204800,
+        "output": 131072
       },
       "cost": {
         "input": 0.3,
@@ -63,16 +67,16 @@
       "id": "MiniMax-M2.5-highspeed",
       "modelCode": "minimaxai/MiniMax-M2.5:highspeed",
       "name": "MiniMax-M2.5-highspeed",
-      "reasoning": false,
+      "reasoning": true,
       "attachment": false,
       "limit": {
-        "context": 200000,
-        "output": 128000
+        "context": 204800,
+        "output": 131072
       },
       "cost": {
         "input": 0.6,
         "output": 2.4,
-        "cache_read": 0.03,
+        "cache_read": 0.06,
         "cache_write": 0.375
       }
     },
@@ -80,11 +84,11 @@
       "id": "MiniMax-M2.5",
       "modelCode": "minimaxai/MiniMax-M2.5",
       "name": "MiniMax-M2.5",
-      "reasoning": false,
+      "reasoning": true,
       "attachment": false,
       "limit": {
-        "context": 200000,
-        "output": 128000
+        "context": 204800,
+        "output": 131072
       },
       "cost": {
         "input": 0.3,
@@ -94,31 +98,14 @@
       }
     },
     {
-      "id": "MiniMax-M2.1-highspeed",
-      "modelCode": "minimaxai/MiniMax-M2.1:highspeed",
-      "name": "MiniMax-M2.1-highspeed",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 200000,
-        "output": 128000
-      },
-      "cost": {
-        "input": 0.6,
-        "output": 2.4,
-        "cache_read": 0.03,
-        "cache_write": 0.375
-      }
-    },
-    {
       "id": "MiniMax-M2.1",
       "modelCode": "minimaxai/MiniMax-M2.1",
       "name": "MiniMax-M2.1",
-      "reasoning": false,
+      "reasoning": true,
       "attachment": false,
       "limit": {
-        "context": 200000,
-        "output": 128000
+        "context": 204800,
+        "output": 131072
       },
       "cost": {
         "input": 0.3,
@@ -131,17 +118,15 @@
       "id": "MiniMax-M2",
       "modelCode": "minimaxai/MiniMax-M2",
       "name": "MiniMax-M2",
-      "reasoning": false,
+      "reasoning": true,
       "attachment": false,
       "limit": {
-        "context": 200000,
-        "output": 20000
+        "context": 204800,
+        "output": 131072
       },
       "cost": {
         "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0.03,
-        "cache_write": 0.375
+        "output": 1.2
       }
     }
   ]

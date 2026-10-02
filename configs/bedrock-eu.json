@@ -9,15 +9,19 @@
     {
       "id": "eu.anthropic.claude-sonnet-5",
       "modelCode": "anthropic/claude-sonnet-5",
-      "name": "Claude Sonnet 5",
+      "name": "Claude Sonnet 5 (EU)",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
             "low",
             "medium",
             "high",
+            "xhigh",
             "max"
           ]
         }
@@ -25,21 +29,24 @@
       "attachment": true,
       "limit": {
         "context": 1000000,
-        "output": 64000
+        "output": 128000
       },
       "cost": {
-        "input": 3.3,
-        "output": 16.5,
-        "cache_read": 4.125,
-        "cache_write": 0.33
+        "input": 2.2,
+        "output": 11,
+        "cache_read": 0.22,
+        "cache_write": 2.75
       }
     },
     {
       "id": "eu.anthropic.claude-sonnet-4-6",
       "modelCode": "anthropic/claude-sonnet-4-6",
-      "name": "Claude Sonnet 4.6",
+      "name": "Claude Sonnet 4.6 (EU)",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -48,24 +55,28 @@
             "high",
             "max"
           ]
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
         }
       ],
       "attachment": true,
       "limit": {
         "context": 1000000,
-        "output": 64000
+        "output": 128000
       },
       "cost": {
         "input": 3.3,
         "output": 16.5,
-        "cache_read": 4.125,
-        "cache_write": 0.33
+        "cache_read": 0.33,
+        "cache_write": 4.125
       }
     },
     {
       "id": "eu.anthropic.claude-sonnet-4-5-20250929-v1:0",
       "modelCode": "anthropic/claude-sonnet-4-5",
-      "name": "Claude Sonnet 4.5",
+      "name": "Claude Sonnet 4.5 (EU)",
       "reasoning": true,
       "attachment": true,
       "limit": {
@@ -75,14 +86,23 @@
       "cost": {
         "input": 3.3,
         "output": 16.5,
-        "cache_read": 4.125,
-        "cache_write": 0.33
-      }
+        "cache_read": 0.33,
+        "cache_write": 4.125
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ]
     },
     {
       "id": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
       "modelCode": "anthropic/claude-haiku-4-5",
-      "name": "Claude Haiku 4.5",
+      "name": "Claude Haiku 4.5 (EU)",
       "reasoning": true,
       "attachment": true,
       "limit": {
@@ -92,16 +112,28 @@
       "cost": {
         "input": 1.1,
         "output": 5.5,
-        "cache_read": 1.375,
-        "cache_write": 0.11
-      }
+        "cache_read": 0.11,
+        "cache_write": 1.375
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ]
     },
     {
       "id": "eu.anthropic.claude-opus-5",
       "modelCode": "anthropic/claude-opus-5",
-      "name": "Claude Opus 5",
+      "name": "Claude Opus 5 (EU)",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -121,16 +153,19 @@
       "cost": {
         "input": 5.5,
         "output": 27.5,
-        "cache_read": 6.875,
-        "cache_write": 0.55
+        "cache_read": 0.55,
+        "cache_write": 6.875
       }
     },
     {
       "id": "eu.anthropic.claude-opus-4-8",
-      "modelCode": "anthropic/claude-opus-4-8",
-      "name": "Claude Opus 4.8",
+      "modelCode": "anthropic/claude-opus-4.8",
+      "name": "Claude Opus 4.8 (EU)",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -150,16 +185,19 @@
       "cost": {
         "input": 5.5,
         "output": 27.5,
-        "cache_read": 6.875,
-        "cache_write": 0.55
+        "cache_read": 0.55,
+        "cache_write": 6.875
       }
     },
     {
       "id": "eu.anthropic.claude-opus-4-7",
-      "modelCode": "anthropic/claude-opus-4-7",
-      "name": "Claude Opus 4.7",
+      "modelCode": "anthropic/claude-opus-4.7",
+      "name": "Claude Opus 4.7 (EU)",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -179,16 +217,19 @@
       "cost": {
         "input": 5.5,
         "output": 27.5,
-        "cache_read": 6.875,
-        "cache_write": 0.55
+        "cache_read": 0.55,
+        "cache_write": 6.875
       }
     },
     {
       "id": "eu.anthropic.claude-opus-4-6-v1",
       "modelCode": "anthropic/claude-opus-4-6",
-      "name": "Claude Opus 4.6",
+      "name": "Claude Opus 4.6 (EU)",
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -197,6 +238,10 @@
             "high",
             "max"
           ]
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
         }
       ],
       "attachment": true,
@@ -207,14 +252,14 @@
       "cost": {
         "input": 5.5,
         "output": 27.5,
-        "cache_read": 6.875,
-        "cache_write": 0.55
+        "cache_read": 0.55,
+        "cache_write": 6.875
       }
     },
     {
       "id": "eu.anthropic.claude-opus-4-5-20251101-v1:0",
       "modelCode": "anthropic/claude-opus-4-5",
-      "name": "Claude Opus 4.5",
+      "name": "Claude Opus 4.5 (EU)",
       "reasoning": true,
       "attachment": true,
       "limit": {
@@ -224,25 +269,205 @@
       "cost": {
         "input": 5.5,
         "output": 27.5,
-        "cache_read": 6.875,
-        "cache_write": 0.55
+        "cache_read": 0.55,
+        "cache_write": 6.875
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ]
+    },
+    {
+      "id": "eu.amazon.nova-2-lite-v1:0",
+      "modelCode": "amazon/nova-2-lite",
+      "name": "Nova 2 Lite (EU)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 65535
+      },
+      "cost": {
+        "input": 0.374,
+        "output": 3.157,
+        "cache_read": 0.0935,
+        "cache_write": 0.374
       }
     },
     {
-      "id": "eu.anthropic.claude-opus-4-1-20250805-v1:0",
-      "modelCode": "anthropic/claude-opus-4-1",
-      "name": "Claude Opus 4.1",
+      "id": "eu.amazon.nova-lite-v1:0",
+      "modelCode": "amazon/nova-lite",
+      "name": "Nova Lite (EU)",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 300000,
+        "output": 10000
+      },
+      "cost": {
+        "input": 0.069,
+        "output": 0.276,
+        "cache_read": 0.01725,
+        "cache_write": 0.069
+      }
+    },
+    {
+      "id": "eu.amazon.nova-micro-v1:0",
+      "modelCode": "amazon/nova-micro",
+      "name": "Nova Micro (EU)",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 10000
+      },
+      "cost": {
+        "input": 0.04,
+        "output": 0.16,
+        "cache_read": 0.01,
+        "cache_write": 0.04
+      }
+    },
+    {
+      "id": "eu.amazon.nova-pro-v1:0",
+      "modelCode": "amazon/nova-pro",
+      "name": "Nova Pro (EU)",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 300000,
+        "output": 10000
+      },
+      "cost": {
+        "input": 0.92,
+        "output": 3.68,
+        "cache_read": 0.23,
+        "cache_write": 0.92
+      }
+    },
+    {
+      "id": "eu.anthropic.claude-fable-5",
+      "modelCode": "anthropic/claude-fable-5",
+      "name": "Claude Fable 5 (EU)",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 11,
+        "output": 55,
+        "cache_read": 1.1,
+        "cache_write": 13.75
+      }
+    },
+    {
+      "id": "eu.anthropic.claude-opus-5-5",
+      "modelCode": "anthropic/claude-opus-5-5",
+      "name": "Claude Opus 5.5 (EU)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 4.4,
+        "output": 22,
+        "cache_read": 0.22,
+        "cache_write": 5.5
+      }
+    },
+    {
+      "id": "eu.anthropic.claude-sonnet-4-20250514-v1:0",
+      "modelCode": "anthropic/claude-sonnet-4",
+      "name": "Claude Sonnet 4 (EU)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ],
       "attachment": true,
       "limit": {
         "context": 200000,
-        "output": 32000
+        "output": 64000
       },
       "cost": {
-        "input": 16.5,
-        "output": 82.5,
-        "cache_read": 20.625,
-        "cache_write": 1.65
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3,
+        "cache_write": 3.75
+      }
+    },
+    {
+      "id": "eu.mistral.pixtral-large-2502-v1:0",
+      "modelCode": "mistralai/pixtral-large-2502",
+      "name": "Pixtral Large (25.02) (EU)",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "cost": {
+        "input": 2,
+        "output": 6
       }
     }
   ]

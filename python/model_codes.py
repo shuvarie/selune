@@ -184,6 +184,15 @@ FAMILY = [
     ("laguna", "poolside", False),
     ("unslopnemo", "thedrummer", False),
     ("orpheus", "canopylabs", False),
+    ("mai-code", "microsoft", False),
+    ("mai-voice", "microsoft", False),
+    ("mai-transcribe", "microsoft", False),
+    ("minicpm", "openbmb", False),
+    ("hy4", "tencent", False),
+    ("space-bunny", "stealth", False),
+    ("fledge", "opencode", False),
+    ("ring-", "opencode", False),
+    ("x-preview", "opencode", False),
     ("rnj", "essentialai", False),
     ("aion", "aion-labs", False),
     ("prompt-guard", "meta-llama", False),
@@ -296,6 +305,13 @@ KEY_ALIASES = {
     "qwen-3-8-27b": "qwen3-8-27b",
     "qwen-3-8-2-4t-a95b": "qwen3-8-2-4t-a95b",
     "qwen-3-32b": "qwen3-32b",
+    "gpt-61-sol": "gpt-6-1-sol",
+    "llama3-1-70b-instruct": "llama-3-1-70b-instruct",
+    "llama3-1-8b-instruct": "llama-3-1-8b-instruct",
+    "llama3-3-70b-instruct": "llama-3-3-70b-instruct",
+    "llama4-maverick-17b-instruct": "llama-4-maverick-17b-128e-instruct",
+    "r1": "deepseek-r1",
+    "nemotron-120b-a12b": "nemotron-3-super-120b-a12b",
 }
 
 # Explicit (provider, id) -> (org, model, variant) for ids the generic rules
@@ -305,6 +321,33 @@ OVERRIDES = {
     ("kimi-code", "k3-256k"): ("moonshotai", "Kimi-K3", "256k"),
     ("kimi-code", "kimi-for-coding"): ("moonshotai", "kimi-for-coding", None),
     ("kimi-code", "kimi-for-coding-highspeed"): ("moonshotai", "kimi-for-coding", "highspeed"),
+    ("venice", "e2ee-deepseek-v4-flash"): ("deepseek-ai", "DeepSeek-V4-Flash", "e2ee"),
+    ("venice", "e2ee-glm-5-2-p"): ("zai-org", "GLM-5.2", "e2ee"),
+    ("venice", "e2ee-glm-5-3-flash"): ("zai-org", "GLM-5.3-Flash", "e2ee"),
+    ("venice", "e2ee-glm-5-3-p"): ("zai-org", "GLM-5.3", "e2ee"),
+    ("venice", "e2ee-gpt-oss-120b-p"): ("openai", "gpt-oss-120b", "e2ee"),
+    ("venice", "e2ee-kimi-k2-6"): ("moonshotai", "Kimi-K2.6", "e2ee"),
+    ("venice", "e2ee-kimi-k3-p"): ("moonshotai", "Kimi-K3", "e2ee"),
+    ("venice", "e2ee-qwen-2-5-7b-p"): ("qwen", "Qwen2.5-7B-Instruct", "e2ee"),
+    ("venice", "e2ee-qwen3-6-35b-a3b"): ("qwen", "Qwen3.6-35B-A3B", "e2ee"),
+    ("venice", "e2ee-qwen3-8-27b"): ("qwen", "Qwen3.8-27B", "e2ee"),
+    ("venice", "e2ee-qwen3-vl-30b-a3b-p"): ("qwen", "Qwen3-VL-30B-A3B-Instruct", "e2ee"),
+    ("venice", "e2ee-gemma-4-26b-a4b-uncensored-p"): ("venice", "gemma-4-26b-a4b-uncensored", "e2ee"),
+    ("aihubmix", "cc-glm-5"): ("zai-org", "glm-5", None),
+    ("aihubmix", "cc-glm-5.1"): ("zai-org", "glm-5.1", None),
+    ("aihubmix", "cc-glm-5-turbo"): ("zai-org", "glm-5-turbo", None),
+    ("aihubmix", "cc-minimax-m3"): ("minimaxai", "MiniMax-M3", None),
+    ("aihubmix", "cc-minimax-m2.7"): ("minimaxai", "MiniMax-M2.7", None),
+    ("aihubmix", "cc-minimax-m2.7-highspeed"): ("minimaxai", "MiniMax-M2.7", "highspeed"),
+    ("aihubmix", "cc-minimax-m2.5"): ("minimaxai", "MiniMax-M2.5", None),
+    ("aihubmix", "cc-minimax-m2.5-highspeed"): ("minimaxai", "MiniMax-M2.5", "highspeed"),
+    ("aihubmix", "cc-minimax-m2.1"): ("minimaxai", "MiniMax-M2.1", None),
+    ("aihubmix", "cc-minimax-m2"): ("minimaxai", "MiniMax-M2", None),
+    ("aihubmix", "cc-deepseek-v3.1"): ("deepseek-ai", "DeepSeek-V3.1", None),
+    ("aihubmix", "cc-ernie-4.5-300b-a47b"): ("baidu", "ernie-4.5-300b-a47b", None),
+    ("aihubmix", "cc-kimi-k2-instruct"): ("moonshotai", "kimi-k2-instruct", None),
+    ("aihubmix", "cc-kimi-k2-instruct-0905"): ("moonshotai", "kimi-k2-instruct-0905", None),
+    ("aihubmix", "agents-a1-free"): ("aihubmix", "agents-a1", "free"),
     ("llamafile", "LLaMA_CPP"): ("mozilla-ai", "llamafile", None),
     ("synthetic", "syn:large:text"): ("synthetic", "syn-large-text", None),
     ("synthetic", "syn:large:vision"): ("synthetic", "syn-large-vision", None),
@@ -348,6 +391,12 @@ OVERRIDES = {
     ("cortecs", "cosmos3-super-reasoner"): ("nvidia", "cosmos3-super-reasoner", None),
     ("chutes", "google/gemma-4-31B-turbo-TEE"): ("google", "gemma-4-31B-turbo", "tee"),
     ("ollama-cloud", "mistral-large-3:675b"): ("mistralai", "mistral-large-3", "675b"),
+    ("ollama-cloud", "qwen3.5:397b"): ("qwen", "Qwen3.5-397B-A17B", None),
+    ("bedrock", "us.meta.llama4-scout-17b-instruct-v1:0"): (
+        "meta-llama",
+        "Llama-4-Scout-17B-128E-Instruct",
+        None,
+    ),
 }
 
 VENICE_ORG_PREFIXES = [
@@ -357,6 +406,8 @@ VENICE_ORG_PREFIXES = [
     "openai-",
     "google-",
     "z-ai-",
+    "xiaomi-",
+    "abliteration-",
 ]
 
 
@@ -375,9 +426,16 @@ def split_org_model(raw: str) -> tuple[str | None, str]:
 def decode(provider: str, mid: str) -> tuple[str | None, str, list[str]]:
     """Decode a provider model id into a raw (org, model, forced variants)."""
     if provider in ("bedrock", "bedrock-eu"):
-        body = re.sub(r"^(?:us|eu)\.anthropic\.", "", mid)
+        body = re.sub(r"^(?:us|eu|global|au|jp|apac)\.", "", mid)
+        vendor = None
+        m = re.match(r"^([a-z0-9]+)\.(.+)$", body)
+        if m:
+            vendor, body = m.groups()
+            org = "anthropic" if vendor == "anthropic" else ORG_ALIASES.get(vendor, vendor)
+        else:
+            org = None
         body = re.sub(r"-v1(?::0)?$", "", body)
-        return "anthropic", body, []
+        return org, body, []
     if provider == "fireworks":
         body = re.sub(r"^accounts/fireworks/models/", "", mid)
         body = re.sub(r"(\d)p(\d)", r"\1.\2", body)
@@ -653,6 +711,8 @@ def main() -> int:
         for model in data.get("models", []):
             item = {}
             for k, v in model.items():
+                if k == "modelCode":
+                    continue
                 item[k] = v
                 if k == "id":
                     item["modelCode"] = by_mid[model["id"]]
