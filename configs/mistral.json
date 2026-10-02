@@ -1,7 +1,8 @@
 {
   "name": "Mistral AI",
   "id": "mistral",
-  "type": "mistral",
+  "type": "openai-compat",
+  "dialect": "mistral",
   "models": [
     {
       "id": "pixtral-12b",

@@ -1,7 +1,8 @@
 {
   "name": "Perplexity",
   "id": "perplexity",
-  "type": "perplexity",
+  "type": "openai-compat",
+  "dialect": "perplexity",
   "models": [
     {
       "id": "sonar",

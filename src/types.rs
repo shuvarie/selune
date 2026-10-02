@@ -2,7 +2,9 @@ use serde::{Deserialize, Serialize};
 use std::fmt;
 use std::str::FromStr;
 
-/// The type of AI provider, mirroring Catwalk's `Type`.
+/// The protocol `kind` of an AI provider, mirroring Catwalk's `Type`.
+/// Vendor flavors that are dialects of `openai-compat` are not separate
+/// kinds here; they are carried on `Provider::dialect` instead.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 #[serde(rename_all = "kebab-case")]
 pub enum ProviderType {
@@ -19,12 +21,22 @@ pub enum ProviderType {
     Chatgpt,
     Copilot,
     Cohere,
+    Llamafile,
+    Voyageai,
+}
+
+/// The vendor dialect of a provider's wire protocol. These kinds are all
+/// variants of the OpenAI-compatible API, so the provider's `type` stays
+/// `openai-compat` and `dialect` selects the vendor flavor; a missing
+/// dialect is the base OpenAI dialect. (Selune extension, not Catwalk.)
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[serde(rename_all = "kebab-case")]
+pub enum Dialect {
     Deepseek,
     Doubleword,
     Groq,
     Huggingface,
     Hyperbolic,
-    Llamafile,
     Minimax,
     Mira,
     Mistral,
@@ -32,7 +44,6 @@ pub enum ProviderType {
     Perplexity,
     Together,
     Venice,
-    Voyageai,
     Xai,
     Xiaomimimo,
     Zai,
@@ -64,6 +75,8 @@ pub struct Provider {
     pub api_endpoint: Option<String>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub r#type: Option<ProviderType>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub dialect: Option<Dialect>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub doc: Option<String>,
     #[serde(default, skip_serializing_if = "Option::is_none")]

@@ -1,7 +1,8 @@
 {
   "name": "Xiaomi MiMo",
   "id": "xiaomimimo",
-  "type": "xiaomimimo",
+  "type": "openai-compat",
+  "dialect": "xiaomimimo",
   "models": [
     {
       "id": "mimo-v2.5-pro-ultraspeed",

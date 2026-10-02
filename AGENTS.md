@@ -11,8 +11,8 @@ JSON. This file orients AI agents (and humans) to the layout and conventions.
 - **Types** (`src/types.rs`) — the wire contract, mirroring OpenCode's model
   schema (see https://models.opencode.ai/api.json) plus Catwalk's `Provider`
   wrapper: `Provider`, `Model`, `ModelLimit`, `ModelCost`, `ReasoningOption`,
-  `ModelOptions`, `ProviderType`, the `InferenceProvider` id wrapper, and
-  `ModelCode`/`ModelCodeError`. Field names are snake_case and match the JSON
+  `ModelOptions`, `ProviderType`, `Dialect`, the `InferenceProvider` id wrapper,
+  and `ModelCode`/`ModelCodeError`. Field names are snake_case and match the JSON
   exactly, so serde needs no per-field renames — except `modelCode` (see
   Model codes below).
 - **Client** (`src/client.rs`) — a blocking HTTP client that fetches
@@ -34,7 +34,7 @@ JSON. This file orients AI agents (and humans) to the layout and conventions.
 
 | Path | Role |
 |---|---|
-| `src/types.rs` | `Provider`/`Model`/`ModelCode`/`ModelCodeError`/`ModelLimit`/`ModelCost`/`ReasoningOption`/`ModelOptions`/`ProviderType`/`InferenceProvider` + lookup helpers |
+| `src/types.rs` | `Provider`/`Model`/`ModelCode`/`ModelCodeError`/`ModelLimit`/`ModelCost`/`ReasoningOption`/`ModelOptions`/`ProviderType`/`Dialect`/`InferenceProvider` + lookup helpers |
 | `src/client.rs` | `Client` (fetch providers), `ClientError`, `DEFAULT_URL` |
 | `src/embedded.rs` | `embedded::all()` — parses the embedded `configs/*.json` |
 | `src/lib.rs` | Barrel re-exports |
@@ -53,10 +53,17 @@ JSON. This file orients AI agents (and humans) to the layout and conventions.
   OpenCode's model schema so configs are interchangeable. `Provider`-level
   fields follow Catwalk. When OpenCode adds a model field, mirror it here.
 - **Serde cases.** Struct fields are snake_case and match JSON directly. The
-  `ProviderType` enum uses `#[serde(rename_all = "kebab-case")]` with variants
-  named so kebab-case yields the exact Catwalk strings (`Openai` → `openai`,
-  `OpenaiCompat` → `openai-compat`, `Openrouter` → `openrouter`). Prefer
-  `rename_all` over per-field `#[serde(rename = ...)]`.
+  `ProviderType` and `Dialect` enums use `#[serde(rename_all = "kebab-case")]`
+  with variants named so kebab-case yields the exact wire strings (`Openai` →
+  `openai`, `OpenaiCompat` → `openai-compat`, `Openrouter` → `openrouter`,
+  `Zai` → `zai`). Prefer `rename_all` over per-field `#[serde(rename = ...)]`.
+- **Dialects.** A provider's `type` is the wire protocol kind. Vendor flavors
+  that are really dialects of the OpenAI-compatible API (DeepSeek, Groq, Z.ai,
+  ...) are not `ProviderType` variants: those providers keep
+  `"type": "openai-compat"` and carry the vendor on `dialect` (the `Dialect`
+  enum, Selune extension — Catwalk models them as separate kinds). Absent
+  `dialect` means the base OpenAI dialect; `dialect` must only appear on
+  `openai-compat` providers.
 - **Model codes.** Every model carries a required `modelCode` string
   (`org/model` or `org/model:variant`) identifying the same model across
   providers. The org is the training organization's id (Hugging Face or GitHub

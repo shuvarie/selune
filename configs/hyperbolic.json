@@ -1,7 +1,8 @@
 {
   "name": "Hyperbolic",
   "id": "hyperbolic",
-  "type": "hyperbolic",
+  "type": "openai-compat",
+  "dialect": "hyperbolic",
   "api_key": "$HYPERBOLIC_API_KEY",
   "api_endpoint": "https://api.hyperbolic.xyz/v1",
   "models": [

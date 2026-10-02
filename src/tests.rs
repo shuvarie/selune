@@ -1,7 +1,7 @@
 use crate::client::Client;
 use crate::embedded;
 use crate::types::{
-    AuthMethod, InferenceProvider, ModelCode, ModelCodeError, Provider, ProviderType,
+    AuthMethod, Dialect, InferenceProvider, ModelCode, ModelCodeError, Provider, ProviderType,
 };
 
 #[test]
@@ -103,23 +103,8 @@ fn auth_field_is_optional_and_skipped_when_absent() {
 fn rig_transport_provider_types_round_trip() {
     for (kind, expected) in [
         ("cohere", ProviderType::Cohere),
-        ("deepseek", ProviderType::Deepseek),
-        ("doubleword", ProviderType::Doubleword),
-        ("groq", ProviderType::Groq),
-        ("huggingface", ProviderType::Huggingface),
-        ("hyperbolic", ProviderType::Hyperbolic),
         ("llamafile", ProviderType::Llamafile),
-        ("minimax", ProviderType::Minimax),
-        ("mira", ProviderType::Mira),
-        ("mistral", ProviderType::Mistral),
-        ("moonshot", ProviderType::Moonshot),
-        ("perplexity", ProviderType::Perplexity),
-        ("together", ProviderType::Together),
-        ("venice", ProviderType::Venice),
         ("voyageai", ProviderType::Voyageai),
-        ("xai", ProviderType::Xai),
-        ("xiaomimimo", ProviderType::Xiaomimimo),
-        ("zai", ProviderType::Zai),
     ] {
         let t: ProviderType = serde_json::from_str(&format!("\"{kind}\"")).unwrap();
         assert_eq!(t, expected);
@@ -128,36 +113,132 @@ fn rig_transport_provider_types_round_trip() {
 }
 
 #[test]
-fn new_transport_catalog_configs_retyped() {
+fn dialect_serde_round_trip() {
+    for (value, expected) in [
+        ("deepseek", Dialect::Deepseek),
+        ("doubleword", Dialect::Doubleword),
+        ("groq", Dialect::Groq),
+        ("huggingface", Dialect::Huggingface),
+        ("hyperbolic", Dialect::Hyperbolic),
+        ("minimax", Dialect::Minimax),
+        ("mira", Dialect::Mira),
+        ("mistral", Dialect::Mistral),
+        ("moonshot", Dialect::Moonshot),
+        ("perplexity", Dialect::Perplexity),
+        ("together", Dialect::Together),
+        ("venice", Dialect::Venice),
+        ("xai", Dialect::Xai),
+        ("xiaomimimo", Dialect::Xiaomimimo),
+        ("zai", Dialect::Zai),
+    ] {
+        let d: Dialect = serde_json::from_str(&format!("\"{value}\"")).unwrap();
+        assert_eq!(d, expected);
+        assert_eq!(serde_json::to_string(&d).unwrap(), format!("\"{value}\""));
+    }
+}
+
+#[test]
+fn catalog_configs_use_kinds_and_dialects() {
     let providers = embedded::all();
-    for (id, expected) in [
-        ("deepseek", ProviderType::Deepseek),
-        ("groq", ProviderType::Groq),
-        ("togetherai", ProviderType::Together),
-        ("venice", ProviderType::Venice),
-        ("xai", ProviderType::Xai),
-        ("zai", ProviderType::Zai),
-        ("zai-coding", ProviderType::Zai),
-        ("moonshotai", ProviderType::Moonshot),
-        ("moonshotai-cn", ProviderType::Moonshot),
-        ("huggingface", ProviderType::Huggingface),
-        ("azure", ProviderType::Azure),
-        ("cohere", ProviderType::Cohere),
-        ("mistral", ProviderType::Mistral),
-        ("perplexity", ProviderType::Perplexity),
-        ("xiaomimimo", ProviderType::Xiaomimimo),
-        ("hyperbolic", ProviderType::Hyperbolic),
-        ("llamafile", ProviderType::Llamafile),
-        ("mira", ProviderType::Mira),
-        ("doubleword", ProviderType::Doubleword),
-        ("voyageai", ProviderType::Voyageai),
-        ("chatgpt", ProviderType::Chatgpt),
+    for (id, kind, dialect) in [
+        (
+            "deepseek",
+            Some(ProviderType::OpenaiCompat),
+            Some(Dialect::Deepseek),
+        ),
+        (
+            "doubleword",
+            Some(ProviderType::OpenaiCompat),
+            Some(Dialect::Doubleword),
+        ),
+        (
+            "groq",
+            Some(ProviderType::OpenaiCompat),
+            Some(Dialect::Groq),
+        ),
+        (
+            "huggingface",
+            Some(ProviderType::OpenaiCompat),
+            Some(Dialect::Huggingface),
+        ),
+        (
+            "hyperbolic",
+            Some(ProviderType::OpenaiCompat),
+            Some(Dialect::Hyperbolic),
+        ),
+        (
+            "mira",
+            Some(ProviderType::OpenaiCompat),
+            Some(Dialect::Mira),
+        ),
+        (
+            "mistral",
+            Some(ProviderType::OpenaiCompat),
+            Some(Dialect::Mistral),
+        ),
+        (
+            "moonshotai",
+            Some(ProviderType::OpenaiCompat),
+            Some(Dialect::Moonshot),
+        ),
+        (
+            "moonshotai-cn",
+            Some(ProviderType::OpenaiCompat),
+            Some(Dialect::Moonshot),
+        ),
+        (
+            "perplexity",
+            Some(ProviderType::OpenaiCompat),
+            Some(Dialect::Perplexity),
+        ),
+        (
+            "togetherai",
+            Some(ProviderType::OpenaiCompat),
+            Some(Dialect::Together),
+        ),
+        (
+            "venice",
+            Some(ProviderType::OpenaiCompat),
+            Some(Dialect::Venice),
+        ),
+        ("xai", Some(ProviderType::OpenaiCompat), Some(Dialect::Xai)),
+        (
+            "xiaomimimo",
+            Some(ProviderType::OpenaiCompat),
+            Some(Dialect::Xiaomimimo),
+        ),
+        ("zai", Some(ProviderType::OpenaiCompat), Some(Dialect::Zai)),
+        (
+            "zai-coding",
+            Some(ProviderType::OpenaiCompat),
+            Some(Dialect::Zai),
+        ),
+        ("azure", Some(ProviderType::Azure), None),
+        ("cohere", Some(ProviderType::Cohere), None),
+        ("llamafile", Some(ProviderType::Llamafile), None),
+        ("voyageai", Some(ProviderType::Voyageai), None),
+        ("chatgpt", Some(ProviderType::Chatgpt), None),
     ] {
         let p = providers
             .iter()
             .find(|p| p.id == InferenceProvider(id.into()))
             .unwrap_or_else(|| panic!("missing catalog entry {id}"));
-        assert_eq!(p.r#type, Some(expected), "type mismatch for {id}");
+        assert_eq!(p.r#type, kind, "type mismatch for {id}");
+        assert_eq!(p.dialect, dialect, "dialect mismatch for {id}");
+    }
+}
+
+#[test]
+fn dialects_only_apply_to_openai_compat() {
+    for provider in embedded::all() {
+        if provider.dialect.is_some() {
+            assert_eq!(
+                provider.r#type,
+                Some(ProviderType::OpenaiCompat),
+                "dialect on non-openai-compat provider {}",
+                provider.name
+            );
+        }
     }
 }
 

@@ -1,7 +1,8 @@
 {
   "name": "Doubleword",
   "id": "doubleword",
-  "type": "doubleword",
+  "type": "openai-compat",
+  "dialect": "doubleword",
   "api_key": "$DOUBLEWORD_API_KEY",
   "api_endpoint": "https://api.doubleword.ai/v1",
   "models": [
