@@ -30,20 +30,6 @@ JSON. This file orients AI agents (and humans) to the layout and conventions.
   only), `--dump <provider>` (preview), and org/alias/override tables for
   ambiguous ids.
 
-## Layout
-
-| Path | Role |
-|---|---|
-| `src/types.rs` | `Provider`/`Model`/`ModelCode`/`ModelCodeError`/`ModelLimit`/`ModelCost`/`ReasoningOption`/`ModelOptions`/`ProviderType`/`Dialect`/`InferenceProvider` + lookup helpers |
-| `src/client.rs` | `Client` (fetch providers), `ClientError`, `DEFAULT_URL` |
-| `src/embedded.rs` | `embedded::all()` — parses the embedded `configs/*.json` |
-| `src/lib.rs` | Barrel re-exports |
-| `src/tests.rs` | Unit tests (embedded parse, default-model validity, serde round-trip, lookup) |
-| `configs/*.json` | One provider config per file, in OpenCode model format (Catwalk provider wrapper) |
-| `python/generate.py` | Static JSON generator → `catalog.json` |
-| `python/model_codes.py` | Populates/validates `modelCode` on every model in `configs/*.json` |
-| `Cargo.toml` | Standalone crate (has its own `[workspace]`; not a member of the parent workspace) |
-
 ## Conventions
 
 - **Standalone crate.** `Cargo.toml` declares an empty `[workspace]` table and
@@ -79,6 +65,7 @@ JSON. This file orients AI agents (and humans) to the layout and conventions.
   `reqwest::Error`) to keep the error type small.
 - **Comments**: do not add comments unless requested.
 - **Formatting/lint**: `cargo fmt` and `cargo clippy --all-targets` must pass.
+- **Testing**: When creating test cases, make sure they're reliably reproducible and able to represent typical use cases or edge cases. Update or delete stale test cases after updating the logic if necessary. Do not test configs using hard-coded data.
 
 ## Build & test
 
