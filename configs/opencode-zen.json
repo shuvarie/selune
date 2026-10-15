@@ -2243,9 +2243,9 @@
       }
     },
     {
-      "id": "deepseek-v4-flash-free",
-      "modelCode": "deepseek-ai/DeepSeek-V4-Flash:free",
-      "name": "DeepSeek V4 Flash Free",
+      "id": "deepseek-v4.1-flash-free",
+      "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash:free",
+      "name": "DeepSeek V4.1 Flash Free",
       "reasoning": true,
       "reasoning_options": [
         {
@@ -2257,10 +2257,10 @@
           ]
         }
       ],
-      "attachment": false,
+      "attachment": true,
       "limit": {
         "context": 200000,
-        "output": 128000
+        "output": 32000
       },
       "cost": {
         "input": 0,
