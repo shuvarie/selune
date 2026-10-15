@@ -7,6 +7,32 @@
   "doc": "https://hyper.charm.land",
   "models": [
     {
+      "id": "inkling",
+      "modelCode": "thinkingmachines/Inkling",
+      "name": "Inkling",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 1.0888,
+        "output": 4.40964,
+        "cache_read": 0.185096
+      }
+    },
+    {
       "id": "kimi-k2.7-code",
       "modelCode": "moonshotai/Kimi-K2.7-Code",
       "name": "Kimi K2.7 Code",
@@ -113,31 +139,6 @@
       }
     },
     {
-      "id": "deepseek-v4-flash",
-      "modelCode": "deepseek-ai/DeepSeek-V4-Flash",
-      "name": "DeepSeek V4 Flash",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "high",
-            "xhigh"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 1000000,
-        "output": 384000
-      },
-      "cost": {
-        "input": 0.2,
-        "output": 0.4,
-        "cache_read": 0.04
-      }
-    },
-    {
       "id": "deepseek-v4-pro-0813",
       "modelCode": "deepseek-ai/DeepSeek-V4-Pro-0813",
       "name": "DeepSeek V4 Pro 0813",
@@ -161,31 +162,6 @@
         "input": 1.437216,
         "output": 4.311648,
         "cache_read": 0.047907
-      }
-    },
-    {
-      "id": "deepseek-v4-pro",
-      "modelCode": "deepseek-ai/DeepSeek-V4-Pro",
-      "name": "DeepSeek V4 Pro",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "high",
-            "xhigh"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 1000000,
-        "output": 384000
-      },
-      "cost": {
-        "input": 2.4,
-        "output": 4.8,
-        "cache_read": 0.2
       }
     },
     {

@@ -5,9 +5,150 @@
   "api_endpoint": "https://api.fireworks.ai/inference/v1",
   "type": "openai-compat",
   "doc": "https://fireworks.ai/docs/",
-  "default_large_model_id": "accounts/fireworks/models/deepseek-v4-pro-0813",
-  "default_small_model_id": "accounts/fireworks/models/deepseek-v4-flash-0731",
+  "default_large_model_id": "accounts/fireworks/models/qwen3p8-max",
+  "default_small_model_id": "accounts/fireworks/models/glm-5p3-flash",
   "models": [
+    {
+      "id": "accounts/fireworks/models/deepseek-v4p1-flash",
+      "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "name": "DeepSeek V4.1 Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "cost": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.006
+      }
+    },
+    {
+      "id": "accounts/fireworks/models/ember-1",
+      "modelCode": "fireworks/ember-1",
+      "name": "Ember-1",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3
+      }
+    },
+    {
+      "id": "accounts/fireworks/models/glm-5p3",
+      "modelCode": "zai-org/GLM-5.3",
+      "name": "GLM 5.3",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1048573,
+        "output": 262144
+      },
+      "cost": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26
+      }
+    },
+    {
+      "id": "accounts/fireworks/models/glm-5p3-flash",
+      "modelCode": "zai-org/GLM-5.3-Flash",
+      "name": "GLM 5.3 Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048573,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03
+      }
+    },
+    {
+      "id": "accounts/fireworks/models/qwen3p8-2p4t-a95b",
+      "modelCode": "qwen/Qwen3.8-2.4T-A95B",
+      "name": "Qwen3.8 2.4T A95B",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "cost": {
+        "input": 2,
+        "output": 6,
+        "cache_read": 0.25
+      }
+    },
     {
       "id": "accounts/fireworks/models/qwen3p8-max",
       "modelCode": "qwen/qwen3.8-max",
@@ -23,49 +164,6 @@
         "output": 6,
         "cache_read": 0,
         "cache_write": 0.25
-      }
-    },
-    {
-      "id": "accounts/fireworks/models/qwen3p7-plus",
-      "modelCode": "qwen/qwen3.7-plus",
-      "name": "Qwen3.7-Plus",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 262144,
-        "output": 65536
-      },
-      "cost": {
-        "input": 0.4,
-        "output": 1.6,
-        "cache_read": 0,
-        "cache_write": 0.08
-      }
-    },
-    {
-      "id": "accounts/fireworks/models/glm-5p2",
-      "modelCode": "zai-org/GLM-5.2",
-      "name": "GLM-5.2",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 1048576,
-        "output": 131072
-      },
-      "cost": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_read": 0,
-        "cache_write": 0.14
       }
     },
     {
@@ -96,40 +194,6 @@
       }
     },
     {
-      "id": "accounts/fireworks/models/kimi-k2p7-code",
-      "modelCode": "moonshotai/Kimi-K2.7-Code",
-      "name": "Kimi K2.7 Code",
-      "reasoning": false,
-      "attachment": true,
-      "limit": {
-        "context": 262000,
-        "output": 262000
-      },
-      "cost": {
-        "input": 0.95,
-        "output": 4,
-        "cache_read": 0,
-        "cache_write": 0.19
-      }
-    },
-    {
-      "id": "accounts/fireworks/models/kimi-k2p6",
-      "modelCode": "moonshotai/Kimi-K2.6",
-      "name": "Kimi K2.6",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 262000,
-        "output": 262000
-      },
-      "cost": {
-        "input": 0.95,
-        "output": 4,
-        "cache_read": 0,
-        "cache_write": 0.16
-      }
-    },
-    {
       "id": "accounts/fireworks/models/minimax-m3",
       "modelCode": "minimaxai/MiniMax-M3",
       "name": "Minimax M3",
@@ -157,143 +221,6 @@
       }
     },
     {
-      "id": "accounts/fireworks/models/minimax-m2p7",
-      "modelCode": "minimaxai/MiniMax-M2.7",
-      "name": "MiniMax M2.7",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 196608,
-        "output": 196608
-      },
-      "cost": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0,
-        "cache_write": 0.059
-      }
-    },
-    {
-      "id": "accounts/fireworks/models/deepseek-v4-pro",
-      "modelCode": "deepseek-ai/DeepSeek-V4-Pro",
-      "name": "DeepSeek V4 Pro",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high",
-            "xhigh"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 1048576,
-        "output": 384000
-      },
-      "cost": {
-        "input": 1.74,
-        "output": 3.48,
-        "cache_read": 0,
-        "cache_write": 0.145
-      }
-    },
-    {
-      "id": "accounts/fireworks/models/deepseek-v4-pro-0813",
-      "modelCode": "deepseek-ai/DeepSeek-V4-Pro-0813",
-      "name": "DeepSeek V4 Pro 0813",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 1048576,
-        "output": 384000
-      },
-      "cost": {
-        "input": 1.32,
-        "output": 3.96,
-        "cache_read": 0,
-        "cache_write": 0.044
-      }
-    },
-    {
-      "id": "accounts/fireworks/models/deepseek-v4-flash",
-      "modelCode": "deepseek-ai/DeepSeek-V4-Flash",
-      "name": "DeepSeek V4 Flash",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high",
-            "xhigh"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 1048576,
-        "output": 384000
-      },
-      "cost": {
-        "input": 0.14,
-        "output": 0.28,
-        "cache_read": 0,
-        "cache_write": 0.03
-      }
-    },
-    {
-      "id": "accounts/fireworks/models/deepseek-v4-flash-0731",
-      "modelCode": "deepseek-ai/DeepSeek-V4-Flash-0731",
-      "name": "DeepSeek V4 Flash 0731",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 1048576,
-        "output": 384000
-      },
-      "cost": {
-        "input": 0.22,
-        "output": 0.66,
-        "cache_read": 0,
-        "cache_write": 0.007
-      }
-    },
-    {
       "id": "accounts/fireworks/models/gpt-oss-120b",
       "modelCode": "openai/gpt-oss-120b",
       "name": "gpt-oss-120b",
@@ -318,33 +245,6 @@
         "output": 0.6,
         "cache_read": 0,
         "cache_write": 0.014
-      }
-    },
-    {
-      "id": "accounts/fireworks/models/gpt-oss-20b",
-      "modelCode": "openai/gpt-oss-20b",
-      "name": "gpt-oss-20b",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 131072,
-        "output": 32768
-      },
-      "cost": {
-        "input": 0.07,
-        "output": 0.3,
-        "cache_read": 0,
-        "cache_write": 0.035
       }
     },
     {

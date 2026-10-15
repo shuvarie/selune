@@ -9,21 +9,10 @@
   "default_small_model_id": "claude-haiku-4.5",
   "models": [
     {
-      "id": "claude-fable-5",
-      "modelCode": "anthropic/claude-fable-5",
-      "name": "Claude Fable 5",
+      "id": "claude-haiku-5.5",
+      "modelCode": "anthropic/claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
       "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 1000000,
-        "output": 128000
-      },
-      "cost": {
-        "input": 10,
-        "output": 50,
-        "cache_read": 1,
-        "cache_write": 12.5
-      },
       "reasoning_options": [
         {
           "type": "effort",
@@ -35,13 +24,86 @@
             "max"
           ]
         }
-      ]
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.01,
+        "cache_write": 0.125
+      }
+    },
+    {
+      "id": "gemini-4-argon",
+      "modelCode": "google/gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1
+      }
+    },
+    {
+      "id": "claude-fable-5",
+      "modelCode": "anthropic/claude-fable-5",
+      "name": "Claude Fable 5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 10,
+        "output": 50,
+        "cache_read": 1,
+        "cache_write": 12.5
+      }
     },
     {
       "id": "claude-haiku-4.5",
       "modelCode": "anthropic/claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "budget_tokens",
+          "min": 1024,
+          "max": 32000
+        }
+      ],
       "attachment": true,
       "limit": {
         "context": 200000,
@@ -53,20 +115,25 @@
         "output": 5,
         "cache_read": 0.1,
         "cache_write": 1.25
-      },
-      "reasoning_options": [
-        {
-          "type": "budget_tokens",
-          "min": 1024,
-          "max": 32000
-        }
-      ]
+      }
     },
     {
       "id": "claude-opus-4.7",
       "modelCode": "anthropic/claude-opus-4.7",
       "name": "Claude Opus 4.7",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "attachment": true,
       "limit": {
         "context": 200000,
@@ -78,37 +145,13 @@
         "output": 25,
         "cache_read": 0.5,
         "cache_write": 6.25
-      },
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ]
+      }
     },
     {
       "id": "claude-opus-4.8",
       "modelCode": "anthropic/claude-opus-4.8",
       "name": "Claude Opus 4.8",
       "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 200000,
-        "output": 64000,
-        "input": 168000
-      },
-      "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 0.5,
-        "cache_write": 6.25
-      },
       "reasoning_options": [
         {
           "type": "effort",
@@ -120,13 +163,7 @@
             "max"
           ]
         }
-      ]
-    },
-    {
-      "id": "claude-opus-4.8-fast",
-      "modelCode": "anthropic/claude-opus-4.8:fast",
-      "name": "Claude Opus 4.8",
-      "reasoning": true,
+      ],
       "attachment": true,
       "limit": {
         "context": 200000,
@@ -138,25 +175,25 @@
         "output": 25,
         "cache_read": 0.5,
         "cache_write": 6.25
-      },
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ]
+      }
     },
     {
       "id": "claude-opus-5",
       "modelCode": "anthropic/claude-opus-5",
       "name": "Claude Opus 5",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "attachment": true,
       "limit": {
         "context": 1000000,
@@ -168,37 +205,13 @@
         "output": 25,
         "cache_read": 0.5,
         "cache_write": 6.25
-      },
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ]
+      }
     },
     {
       "id": "claude-sonnet-4.6",
       "modelCode": "anthropic/claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
       "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 200000,
-        "output": 32000,
-        "input": 168000
-      },
-      "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 3.75
-      },
       "reasoning_options": [
         {
           "type": "effort",
@@ -214,24 +227,25 @@
           "min": 1024,
           "max": 32000
         }
-      ]
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 200000,
+        "output": 32000,
+        "input": 168000
+      },
+      "cost": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3,
+        "cache_write": 3.75
+      }
     },
     {
       "id": "claude-sonnet-5",
       "modelCode": "anthropic/claude-sonnet-5",
       "name": "Claude Sonnet 5",
       "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 1000000,
-        "output": 128000
-      },
-      "cost": {
-        "input": 2,
-        "output": 10,
-        "cache_read": 0.2,
-        "cache_write": 2.5
-      },
       "reasoning_options": [
         {
           "type": "effort",
@@ -243,25 +257,24 @@
             "max"
           ]
         }
-      ]
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2.5
+      }
     },
     {
       "id": "gemini-3.5-flash",
       "modelCode": "google/gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
       "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 200000,
-        "output": 64000,
-        "input": 128000
-      },
-      "cost": {
-        "input": 1.5,
-        "output": 9,
-        "cache_read": 0.15,
-        "input_audio": 1.5
-      },
       "reasoning_options": [
         {
           "type": "effort",
@@ -277,24 +290,25 @@
           "min": 256,
           "max": 24000
         }
-      ]
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 200000,
+        "output": 64000,
+        "input": 128000
+      },
+      "cost": {
+        "input": 1.5,
+        "output": 9,
+        "cache_read": 0.15,
+        "input_audio": 1.5
+      }
     },
     {
       "id": "gemini-3.6-flash",
       "modelCode": "google/gemini-3.6-flash",
       "name": "Gemini 3.6 Flash",
       "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 1000000,
-        "output": 64000,
-        "input": 936000
-      },
-      "cost": {
-        "input": 0.75,
-        "output": 3.75,
-        "cache_read": 0.075
-      },
       "reasoning_options": [
         {
           "type": "effort",
@@ -310,13 +324,7 @@
           "min": 256,
           "max": 32000
         }
-      ]
-    },
-    {
-      "id": "gemini-3.7-flash",
-      "modelCode": "google/gemini-3.7-flash",
-      "name": "Gemini 3.7 Flash",
-      "reasoning": true,
+      ],
       "attachment": true,
       "limit": {
         "context": 1000000,
@@ -327,7 +335,13 @@
         "input": 0.75,
         "output": 3.75,
         "cache_read": 0.075
-      },
+      }
+    },
+    {
+      "id": "gemini-3.7-flash",
+      "modelCode": "google/gemini-3.7-flash",
+      "name": "Gemini 3.7 Flash",
+      "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -337,13 +351,34 @@
             "high"
           ]
         }
-      ]
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 64000,
+        "input": 936000
+      },
+      "cost": {
+        "input": 0.75,
+        "output": 3.75,
+        "cache_read": 0.075
+      }
     },
     {
       "id": "gpt-5-mini",
       "modelCode": "openai/gpt-5-mini",
       "name": "GPT-5 Mini",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "attachment": true,
       "limit": {
         "context": 264000,
@@ -354,23 +389,24 @@
         "input": 0.25,
         "output": 2,
         "cache_read": 0.025
-      },
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ]
+      }
     },
     {
       "id": "gpt-5.3-codex",
       "modelCode": "openai/gpt-5.3-codex",
       "name": "GPT-5.3 Codex",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "attachment": true,
       "limit": {
         "context": 400000,
@@ -381,24 +417,25 @@
         "input": 1.75,
         "output": 14,
         "cache_read": 0.175
-      },
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh"
-          ]
-        }
-      ]
+      }
     },
     {
       "id": "gpt-5.4",
       "modelCode": "openai/gpt-5.4",
       "name": "GPT-5.4",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "attachment": true,
       "limit": {
         "context": 1050000,
@@ -409,7 +446,13 @@
         "input": 2.5,
         "output": 15,
         "cache_read": 0.25
-      },
+      }
+    },
+    {
+      "id": "gpt-5.4-mini",
+      "modelCode": "openai/gpt-5.4-mini",
+      "name": "GPT-5.4 mini",
+      "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -421,13 +464,7 @@
             "xhigh"
           ]
         }
-      ]
-    },
-    {
-      "id": "gpt-5.4-mini",
-      "modelCode": "openai/gpt-5.4-mini",
-      "name": "GPT-5.4 mini",
-      "reasoning": true,
+      ],
       "attachment": true,
       "limit": {
         "context": 400000,
@@ -438,7 +475,13 @@
         "input": 0.75,
         "output": 4.5,
         "cache_read": 0.075
-      },
+      }
+    },
+    {
+      "id": "gpt-5.5",
+      "modelCode": "openai/gpt-5.5",
+      "name": "GPT-5.5",
+      "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -450,13 +493,7 @@
             "xhigh"
           ]
         }
-      ]
-    },
-    {
-      "id": "gpt-5.5",
-      "modelCode": "openai/gpt-5.5",
-      "name": "GPT-5.5",
-      "reasoning": true,
+      ],
       "attachment": true,
       "limit": {
         "context": 1050000,
@@ -467,7 +504,13 @@
         "input": 5,
         "output": 30,
         "cache_read": 0.5
-      },
+      }
+    },
+    {
+      "id": "gpt-5.6-luna",
+      "modelCode": "openai/gpt-5.6-luna",
+      "name": "GPT-5.6 Luna",
+      "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -476,16 +519,11 @@
             "low",
             "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
-      ]
-    },
-    {
-      "id": "gpt-5.6-luna",
-      "modelCode": "openai/gpt-5.6-luna",
-      "name": "GPT-5.6 Luna",
-      "reasoning": true,
+      ],
       "attachment": true,
       "limit": {
         "context": 1050000,
@@ -497,7 +535,13 @@
         "output": 1.2,
         "cache_read": 0.02,
         "cache_write": 0.25
-      },
+      }
+    },
+    {
+      "id": "gpt-5.6-sol",
+      "modelCode": "openai/gpt-5.6-sol",
+      "name": "GPT-5.6 Sol",
+      "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -510,13 +554,7 @@
             "max"
           ]
         }
-      ]
-    },
-    {
-      "id": "gpt-5.6-sol",
-      "modelCode": "openai/gpt-5.6-sol",
-      "name": "GPT-5.6 Sol",
-      "reasoning": true,
+      ],
       "attachment": true,
       "limit": {
         "context": 1050000,
@@ -528,7 +566,13 @@
         "output": 20,
         "cache_read": 0.4,
         "cache_write": 5
-      },
+      }
+    },
+    {
+      "id": "gpt-5.6-terra",
+      "modelCode": "openai/gpt-5.6-terra",
+      "name": "GPT-5.6 Terra",
+      "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -541,13 +585,7 @@
             "max"
           ]
         }
-      ]
-    },
-    {
-      "id": "gpt-5.6-terra",
-      "modelCode": "openai/gpt-5.6-terra",
-      "name": "GPT-5.6 Terra",
-      "reasoning": true,
+      ],
       "attachment": true,
       "limit": {
         "context": 1050000,
@@ -559,37 +597,13 @@
         "output": 12,
         "cache_read": 0.2,
         "cache_write": 2.5
-      },
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ]
+      }
     },
     {
       "id": "grok-4.5",
       "modelCode": "xai-org/grok-4.5",
       "name": "Grok 4.5",
       "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 500000,
-        "output": 128000,
-        "input": 372000
-      },
-      "cost": {
-        "input": 2,
-        "output": 6,
-        "cache_read": 0.5
-      },
       "reasoning_options": [
         {
           "type": "effort",
@@ -599,13 +613,7 @@
             "high"
           ]
         }
-      ]
-    },
-    {
-      "id": "grok-4.6",
-      "modelCode": "xai-org/grok-4.6",
-      "name": "Grok 4.6",
-      "reasoning": true,
+      ],
       "attachment": true,
       "limit": {
         "context": 500000,
@@ -616,7 +624,13 @@
         "input": 2,
         "output": 6,
         "cache_read": 0.5
-      },
+      }
+    },
+    {
+      "id": "grok-4.6",
+      "modelCode": "xai-org/grok-4.6",
+      "name": "Grok 4.6",
+      "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -627,7 +641,18 @@
             "xhigh"
           ]
         }
-      ]
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 500000,
+        "output": 128000,
+        "input": 372000
+      },
+      "cost": {
+        "input": 2,
+        "output": 6,
+        "cache_read": 0.5
+      }
     },
     {
       "id": "kimi-k2.7-code",
@@ -651,16 +676,6 @@
       "modelCode": "moonshotai/Kimi-K3",
       "name": "Kimi K3",
       "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 1048576,
-        "output": 131072
-      },
-      "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3
-      },
       "reasoning_options": [
         {
           "type": "effort",
@@ -670,7 +685,17 @@
             "max"
           ]
         }
-      ]
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3
+      }
     },
     {
       "id": "claude-fable-5.1",

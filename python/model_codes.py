@@ -374,6 +374,7 @@ OVERRIDES = {
     ("venice", "gemma-4-uncensored"): ("venice", "gemma-4-uncensored", None),
     ("venice", "olafangensan-glm-4.7-flash-heretic"): ("olafangensan", "glm-4.7-flash-heretic", None),
     ("venice", "kimi-k3-fast-api"): ("moonshotai", "Kimi-K3", "fast"),
+    ("venice", "openai-gpt-61-sol-ultrafast"): ("openai", "gpt-6.1-sol", "ultrafast"),
     ("venice", "mercury-2-5"): ("inception", "mercury-2.5", None),
     ("venice", "qwen3-next-80b"): ("qwen", "qwen3-next-80b-a3b-instruct", None),
     ("venice", "qwen3-vl-235b-a22b"): ("qwen", "qwen3-vl-235b-a22b-instruct", None),
@@ -388,8 +389,7 @@ OVERRIDES = {
         "Llama-4-Maverick-17B-128E-Instruct",
         "fp8",
     ),
-    ("cortecs", "cosmos3-super-reasoner"): ("nvidia", "cosmos3-super-reasoner", None),
-    ("chutes", "google/gemma-4-31B-turbo-TEE"): ("google", "gemma-4-31B-turbo", "tee"),
+    ("cortecs", "cosmos3-super-reasoner"): ("nvidia", "cosmos3-super-reasoner", None),    ("chutes", "google/gemma-4-31B-turbo-TEE"): ("google", "gemma-4-31B-turbo", "tee"),
     ("ollama-cloud", "mistral-large-3:675b"): ("mistralai", "mistral-large-3", "675b"),
     ("ollama-cloud", "qwen3.5:397b"): ("qwen", "Qwen3.5-397B-A17B", None),
     ("bedrock", "us.meta.llama4-scout-17b-instruct-v1:0"): (
@@ -397,6 +397,15 @@ OVERRIDES = {
         "Llama-4-Scout-17B-128E-Instruct",
         None,
     ),
+    ("fireworks", "accounts/fireworks/models/ember-1"): ("fireworks", "Ember-1", None),
+    ("neuralwatt", "nw-flash"): ("neuralwatt", "nw-flash", None),
+    ("neuralwatt", "nw-flash-flex"): ("neuralwatt", "nw-flash", "flex"),
+    ("neuralwatt", "nw-large"): ("neuralwatt", "nw-large", None),
+    ("neuralwatt", "nw-large-flex"): ("neuralwatt", "nw-large", "flex"),
+    ("neuralwatt", "nw-small"): ("neuralwatt", "nw-small", None),
+    ("neuralwatt", "nw-small-flex"): ("neuralwatt", "nw-small", "flex"),
+    ("opencode-zen", "cat-jam-free"): ("opencode", "cat-jam", "free"),
+    ("opencode-go", "cat-jam-free"): ("opencode", "cat-jam", "free"),
 }
 
 VENICE_ORG_PREFIXES = [

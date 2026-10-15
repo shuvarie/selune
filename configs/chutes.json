@@ -9,6 +9,22 @@
   "default_small_model_id": "google/gemma-4-31B-turbo-TEE",
   "models": [
     {
+      "id": "Nemotron-3-Nano-Omni-30B-TEE",
+      "modelCode": "nvidia/Nemotron-3-Nano-Omni-30B:tee",
+      "name": "Nemotron 3 Nano Omni 30B TEE",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 131072,
+        "output": 0
+      },
+      "cost": {
+        "input": 0.0245,
+        "output": 0.0978,
+        "cache_read": 0.0024499999999999995
+      }
+    },
+    {
       "id": "deepseek-ai/DeepSeek-V3.2-TEE",
       "modelCode": "deepseek-ai/DeepSeek-V3.2:tee",
       "name": "DeepSeek V3.2 TEE",

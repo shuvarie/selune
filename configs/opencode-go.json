@@ -9,6 +9,148 @@
   "default_small_model_id": "minimax-m2.7",
   "models": [
     {
+      "id": "claude-haiku-5-5",
+      "modelCode": "anthropic/claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.01,
+        "cache_write": 0.125
+      }
+    },
+    {
+      "id": "gemini-4-argon-contributor",
+      "modelCode": "google/gemini-4-argon-contributor",
+      "name": "Gemini 4 Argon Contributor",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2,
+        "input_audio": 4
+      }
+    },
+    {
+      "id": "space-bunny",
+      "modelCode": "stealth/space-bunny",
+      "name": "Space Bunny",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 524288
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.03,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "cat-jam-free",
+      "modelCode": "opencode/cat-jam:free",
+      "name": "Cat Jam Free",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    },
+    {
+      "id": "step-5-preview-free",
+      "modelCode": "stepfun-ai/step-5-preview:free",
+      "name": "Step 5 Preview Free",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    },
+    {
       "id": "deepseek-v4-flash",
       "modelCode": "deepseek-ai/DeepSeek-V4-Flash",
       "name": "DeepSeek V4 Flash",

@@ -9,35 +9,83 @@
   "default_small_model_id": "deepseek-ai/deepseek-v4-flash",
   "models": [
     {
-      "id": "deepseek-ai/DeepSeek-V3.1",
-      "modelCode": "deepseek-ai/DeepSeek-V3.1",
-      "name": "DeepSeek V3.1",
-      "reasoning": true,
-      "attachment": false,
+      "id": "xai/grok-4.7",
+      "modelCode": "xai/grok-4.7",
+      "name": "Grok 4.7",
+      "reasoning": false,
+      "attachment": true,
       "limit": {
-        "context": 131072,
-        "output": 65536
+        "context": 500000,
+        "output": 500000
       },
       "cost": {
-        "input": 0.3,
-        "output": 0.95,
-        "cache_read": 0.13
+        "input": 2.0,
+        "output": 6.0,
+        "cache_read": 0.5
       }
     },
     {
-      "id": "deepseek-ai/DeepSeek-V3.1-Terminus",
-      "modelCode": "deepseek-ai/DeepSeek-V3.1-Terminus",
-      "name": "DeepSeek V3.1 Terminus",
-      "reasoning": true,
+      "id": "google/gemini-3-pro-image",
+      "modelCode": "google/gemini-3-pro-image",
+      "name": "Gemini 3 Pro Image",
+      "reasoning": false,
       "attachment": false,
       "limit": {
         "context": 131072,
-        "output": 65536
+        "output": 131072
+      },
+      "cost": {
+        "input": 2.0,
+        "output": 12.0,
+        "cache_read": 2.0
+      }
+    },
+    {
+      "id": "openai/gpt-image-2",
+      "modelCode": "openai/gpt-image-2",
+      "name": "GPT Image 2",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "cost": {
+        "input": 5.0,
+        "output": 0.0,
+        "cache_read": 1.25
+      }
+    },
+    {
+      "id": "google/gemini-2.5-flash-image",
+      "modelCode": "google/gemini-2.5-flash-image",
+      "name": "Gemini 2.5 Flash Image",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 131072,
+        "output": 131072
       },
       "cost": {
         "input": 0.3,
-        "output": 0.95,
-        "cache_read": 0.13
+        "output": 2.5,
+        "cache_read": 0.3
+      }
+    },
+    {
+      "id": "deepseek-ai/deepseek-ocr",
+      "modelCode": "deepseek-ai/deepseek-ocr",
+      "name": "DeepSeek OCR",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 8192,
+        "output": 8192
+      },
+      "cost": {
+        "input": 0.04,
+        "output": 0.08,
+        "cache_read": 0.04
       }
     },
     {
@@ -137,38 +185,6 @@
       }
     },
     {
-      "id": "zai-org/GLM-4.6",
-      "modelCode": "zai-org/GLM-4.6",
-      "name": "GLM 4.6",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 202752,
-        "output": 202752
-      },
-      "cost": {
-        "input": 0.6,
-        "output": 2.2,
-        "cache_read": 0.11
-      }
-    },
-    {
-      "id": "zai-org/glm-4.7",
-      "modelCode": "zai-org/GLM-4.7",
-      "name": "GLM 4.7",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 202752,
-        "output": 202752
-      },
-      "cost": {
-        "input": 0.52,
-        "output": 1.85,
-        "cache_read": 0.12
-      }
-    },
-    {
       "id": "zai-org/glm-5",
       "modelCode": "zai-org/GLM-5",
       "name": "GLM 5",
@@ -265,22 +281,6 @@
       }
     },
     {
-      "id": "kwaipilot/kat-coder-pro-v2.5",
-      "modelCode": "kwaipilot/kat-coder-pro-v2.5",
-      "name": "KAT Coder Pro V2.5",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "cost": {
-        "input": 0.74,
-        "output": 2.96,
-        "cache_read": 0.15
-      }
-    },
-    {
       "id": "moonshotai/kimi-k2.5",
       "modelCode": "moonshotai/Kimi-K2.5",
       "name": "Kimi K2.5",
@@ -358,38 +358,6 @@
         "input": 0.3,
         "output": 1.2,
         "cache_read": 0.06
-      }
-    },
-    {
-      "id": "qwen/qwen3-vl-235b-a22b-thinking",
-      "modelCode": "qwen/Qwen3-VL-235B-A22B-Thinking",
-      "name": "Qwen3 VL 235B A22B Thinking",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 131072,
-        "output": 65536
-      },
-      "cost": {
-        "input": 0.5,
-        "output": 2.5,
-        "cache_read": 0.5
-      }
-    },
-    {
-      "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
-      "modelCode": "qwen/Qwen3-235B-A22B-Instruct-2507",
-      "name": "Qwen3-235B-A22B-Instruct-2507",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "cost": {
-        "input": 0.2,
-        "output": 0.88,
-        "cache_read": 0.2
       }
     },
     {

@@ -9,6 +9,32 @@
   "default_small_model_id": "hf:zai-org/GLM-4.7-Flash",
   "models": [
     {
+      "id": "hf:zai-org/GLM-5.3",
+      "modelCode": "zai-org/GLM-5.3",
+      "name": "GLM-5.3",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 524288,
+        "output": 65536
+      },
+      "cost": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26
+      }
+    },
+    {
       "id": "hf:zai-org/GLM-4.7-Flash",
       "modelCode": "zai-org/GLM-4.7-Flash",
       "name": "GLM-4.7-Flash",
@@ -112,16 +138,6 @@
       "modelCode": "qwen/Qwen3.6-27B",
       "name": "Qwen3.6 27B",
       "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 262144,
-        "output": 65536
-      },
-      "cost": {
-        "input": 0.45,
-        "output": 3.6,
-        "cache_read": 0.45
-      },
       "reasoning_options": [
         {
           "type": "effort",
@@ -132,7 +148,17 @@
             "high"
           ]
         }
-      ]
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.45,
+        "output": 3.6,
+        "cache_read": 0.45
+      }
     },
     {
       "id": "hf:openai/gpt-oss-120b",

@@ -6,6 +6,66 @@
   "api_endpoint": "https://api.voyageai.com/v1",
   "models": [
     {
+      "id": "voyage-4-large",
+      "modelCode": "voyageai/voyage-4-large",
+      "name": "Voyage 4 Large",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 32000,
+        "output": 0
+      },
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "voyage-4",
+      "modelCode": "voyageai/voyage-4",
+      "name": "Voyage 4",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 32000,
+        "output": 0
+      },
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "voyage-4-lite",
+      "modelCode": "voyageai/voyage-4-lite",
+      "name": "Voyage 4 Lite",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 32000,
+        "output": 0
+      },
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "voyage-code-4",
+      "modelCode": "voyageai/voyage-code-4",
+      "name": "Voyage Code 4",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 32000,
+        "output": 0
+      },
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
       "id": "voyage-3.5",
       "modelCode": "voyageai/voyage-3.5",
       "name": "Voyage 3.5",

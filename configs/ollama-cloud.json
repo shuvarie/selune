@@ -9,6 +9,59 @@
   "default_small_model_id": "glm-5.3-flash",
   "models": [
     {
+      "id": "deepseek-v4-pro:0813",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "name": "DeepSeek V4 Pro 0813",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 0.66,
+        "output": 1.98,
+        "cache_read": 0.022
+      }
+    },
+    {
+      "id": "mistral-large-4",
+      "modelCode": "mistralai/mistral-large-4",
+      "name": "Mistral Large 4",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "cost": {
+        "input": 1.36,
+        "output": 4.18,
+        "cache_read": 0.14
+      }
+    },
+    {
       "id": "deepseek-v4.1-flash",
       "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash",
       "name": "DeepSeek V4.1 Flash",

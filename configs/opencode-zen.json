@@ -5,9 +5,147 @@
   "api_endpoint": "https://opencode.ai/zen/v1",
   "type": "openai-compat",
   "doc": "https://opencode.ai/docs/zen",
-  "default_large_model_id": "deepseek-v4-flash-free",
-  "default_small_model_id": "deepseek-v4-flash-free",
+  "default_large_model_id": "claude-sonnet-5-5",
+  "default_small_model_id": "deepseek-v4-flash",
   "models": [
+    {
+      "id": "claude-haiku-5-5",
+      "modelCode": "anthropic/claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.01,
+        "cache_write": 0.125
+      }
+    },
+    {
+      "id": "gemini-4-argon",
+      "modelCode": "google/gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1,
+        "input_audio": 2
+      }
+    },
+    {
+      "id": "mistral-large-4",
+      "modelCode": "mistralai/mistral-large-4",
+      "name": "Mistral Large 4",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 524288,
+        "output": 262144
+      },
+      "cost": {
+        "input": 0.68,
+        "output": 2.09,
+        "cache_read": 0.07
+      }
+    },
+    {
+      "id": "cat-jam-free",
+      "modelCode": "opencode/cat-jam:free",
+      "name": "Cat Jam Free",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    },
+    {
+      "id": "step-5-preview-free",
+      "modelCode": "stepfun-ai/step-5-preview:free",
+      "name": "Step 5 Preview Free",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    },
     {
       "id": "big-pickle",
       "modelCode": "opencode/big-pickle",
@@ -239,29 +377,6 @@
       }
     },
     {
-      "id": "claude-sonnet-4",
-      "modelCode": "anthropic/claude-sonnet-4",
-      "name": "Claude Sonnet 4",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "budget_tokens",
-          "min": 1024
-        }
-      ],
-      "attachment": true,
-      "limit": {
-        "context": 1000000,
-        "output": 64000
-      },
-      "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 3.75
-      }
-    },
-    {
       "id": "claude-sonnet-4-5",
       "modelCode": "anthropic/claude-sonnet-4-5",
       "name": "Claude Sonnet 4.5",
@@ -372,32 +487,6 @@
         "input": 0.14,
         "output": 0.28,
         "cache_read": 0.028
-      }
-    },
-    {
-      "id": "deepseek-v4-flash-free",
-      "modelCode": "deepseek-ai/DeepSeek-V4-Flash:free",
-      "name": "DeepSeek V4 Flash Free",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 200000,
-        "output": 128000
-      },
-      "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0
       }
     },
     {
@@ -1308,36 +1397,6 @@
       }
     },
     {
-      "id": "hy3-free",
-      "modelCode": "tencent/Hy3:free",
-      "name": "Hy3 Free",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 190000,
-        "output": 64000,
-        "input": 192000
-      },
-      "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0
-      }
-    },
-    {
       "id": "kimi-k2.5",
       "modelCode": "moonshotai/Kimi-K2.5",
       "name": "Kimi K2.5",
@@ -1427,58 +1486,6 @@
         "input": 3,
         "output": 15,
         "cache_read": 0.3
-      }
-    },
-    {
-      "id": "laguna-s-2.1-free",
-      "modelCode": "poolside/laguna-s-2.1:free",
-      "name": "Laguna S 2.1 Free",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 256000,
-        "output": 32000
-      },
-      "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0
-      }
-    },
-    {
-      "id": "mimo-v2.5-free",
-      "modelCode": "xiaomimimo/MiMo-V2.5:free",
-      "name": "MiMo V2.5 Free",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": true,
-      "limit": {
-        "context": 200000,
-        "output": 32000
-      },
-      "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0
       }
     },
     {
@@ -1608,32 +1615,6 @@
       "limit": {
         "context": 1048576,
         "output": 131072
-      },
-      "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0
-      }
-    },
-    {
-      "id": "nemotron-3-ultra-free",
-      "modelCode": "nvidia/nemotron-3-ultra-550b-a55b:free",
-      "name": "Nemotron 3 Ultra Free",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 1000000,
-        "output": 128000
       },
       "cost": {
         "input": 0,
@@ -1830,60 +1811,6 @@
         "input": 0.3,
         "output": 1.2,
         "cache_read": 0.006
-      }
-    },
-    {
-      "id": "deepseek-v4-flash-vision-exp",
-      "modelCode": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-      "name": "DeepSeek V4 Flash Vision Exp",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "attachment": true,
-      "limit": {
-        "context": 1000000,
-        "output": 384000
-      },
-      "cost": {
-        "input": 0.14,
-        "output": 0.28,
-        "cache_read": 0.028
-      }
-    },
-    {
-      "id": "fledge-alpha-free",
-      "modelCode": "opencode/fledge-alpha-free",
-      "name": "Fledge Alpha Free",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "attachment": true,
-      "limit": {
-        "context": 1048576,
-        "output": 131072
-      },
-      "cost": {
-        "input": 0,
-        "output": 0
       }
     },
     {
@@ -2115,27 +2042,6 @@
       }
     },
     {
-      "id": "ling-3.0-flash-fin-free",
-      "modelCode": "inclusionai/ling-3.0-flash-fin:free",
-      "name": "Ling 3.0 Flash Fin Free",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0
-      }
-    },
-    {
       "id": "longcat-2.5-preview-free",
       "modelCode": "meituan-longcat/longcat-2.5-preview:free",
       "name": "LongCat 2.5 Preview Free",
@@ -2311,6 +2217,238 @@
         "output": 0,
         "cache_read": 0,
         "cache_write": 0
+      }
+    },
+    {
+      "id": "claude-sonnet-4",
+      "modelCode": "anthropic/claude-sonnet-4",
+      "name": "Claude Sonnet 4",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "cost": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3,
+        "cache_write": 3.75
+      }
+    },
+    {
+      "id": "deepseek-v4-flash-free",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash:free",
+      "name": "DeepSeek V4 Flash Free",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    },
+    {
+      "id": "deepseek-v4-flash-vision-exp",
+      "modelCode": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "name": "DeepSeek V4 Flash Vision Exp",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "cost": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.028
+      }
+    },
+    {
+      "id": "fledge-alpha-free",
+      "modelCode": "opencode/fledge-alpha-free",
+      "name": "Fledge Alpha Free",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "hy3-free",
+      "modelCode": "tencent/Hy3:free",
+      "name": "Hy3 Free",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 190000,
+        "output": 64000,
+        "input": 192000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    },
+    {
+      "id": "laguna-s-2.1-free",
+      "modelCode": "poolside/laguna-s-2.1:free",
+      "name": "Laguna S 2.1 Free",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    },
+    {
+      "id": "ling-3.0-flash-fin-free",
+      "modelCode": "inclusionai/ling-3.0-flash-fin:free",
+      "name": "Ling 3.0 Flash Fin Free",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    },
+    {
+      "id": "mimo-v2.5-free",
+      "modelCode": "xiaomimimo/MiMo-V2.5:free",
+      "name": "MiMo V2.5 Free",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 200000,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    },
+    {
+      "id": "nemotron-3-ultra-free",
+      "modelCode": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "name": "Nemotron 3 Ultra Free",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
       }
     }
   ]

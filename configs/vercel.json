@@ -9,6 +9,468 @@
   "default_small_model_id": "anthropic/claude-haiku-4.5",
   "models": [
     {
+      "id": "google/gemini-4-argon",
+      "modelCode": "google/gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1
+      }
+    },
+    {
+      "id": "anthropic/claude-haiku-5.5",
+      "modelCode": "anthropic/claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.01,
+        "cache_write": 0.125
+      }
+    },
+    {
+      "id": "anthropic/claude-opus-5.5",
+      "modelCode": "anthropic/claude-opus-5.5",
+      "name": "Claude Opus 5.5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2,
+        "cache_write": 5
+      }
+    },
+    {
+      "id": "openai/gpt-6.1-sol",
+      "modelCode": "openai/gpt-6.1-sol",
+      "name": "GPT-6.1 Sol",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1,
+        "cache_write": 2.5
+      }
+    },
+    {
+      "id": "openai/gpt-6-sol",
+      "modelCode": "openai/gpt-6-sol",
+      "name": "GPT-6 Sol",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2.5
+      }
+    },
+    {
+      "id": "openai/gpt-6-luna",
+      "modelCode": "openai/gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.01,
+        "cache_write": 0.125
+      }
+    },
+    {
+      "id": "meta/muse-wonder-1.0",
+      "modelCode": "meta-llama/muse-wonder-1.0",
+      "name": "Muse Wonder",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2
+      }
+    },
+    {
+      "id": "mistral/mistral-large-4",
+      "modelCode": "mistralai/mistral-large-4",
+      "name": "Mistral Large 4",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 524288,
+        "output": 262144
+      },
+      "cost": {
+        "input": 0.68,
+        "output": 2.09,
+        "cache_read": 0.07
+      }
+    },
+    {
+      "id": "inclusionai/ling-3.1-flash",
+      "modelCode": "inclusionai/ling-3.1-flash",
+      "name": "Ling 3.1 Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.3,
+        "output": 0.9,
+        "cache_read": 0.06
+      }
+    },
+    {
+      "id": "alibaba/qwen3.8-omni-flash",
+      "modelCode": "qwen/qwen3.8-omni-flash",
+      "name": "Qwen 3.8 Omni Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.47,
+        "cache_read": 0.016
+      }
+    },
+    {
+      "id": "liquid/lfm2.5-24b-a2b",
+      "modelCode": "liquid/lfm2.5-24b-a2b",
+      "name": "LFM2.5-24B-A2B",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 8200
+      },
+      "cost": {
+        "input": 0.05,
+        "output": 0.7,
+        "cache_read": 0.025
+      }
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-fast",
+      "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash:fast",
+      "name": "DeepSeek V4.1 Flash Fast",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.6,
+        "output": 2.4,
+        "cache_read": 0.014
+      }
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning-free",
+      "modelCode": "nvidia/nemotron-lightning-3.5-30b-a3b:free",
+      "name": "Nemotron 3.5 Lightning Free",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 65000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "google/gemini-omni-flash-preview",
+      "modelCode": "google/gemini-omni-flash-preview",
+      "name": "Gemini Omni Flash Preview",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 57920
+      },
+      "cost": {
+        "input": 1.5,
+        "output": 9
+      }
+    },
+    {
+      "id": "callstack/apex",
+      "modelCode": "callstack/apex",
+      "name": "Apex",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.5,
+        "output": 3,
+        "cache_read": 0.2
+      }
+    },
+    {
+      "id": "stealth/glyph-cluster",
+      "modelCode": "stealth/glyph-cluster",
+      "name": "Glyph Cluster",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "mixedbread/toast-1",
+      "modelCode": "mixedbread/toast-1",
+      "name": "Toast 1",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 131000,
+        "output": 4000
+      },
+      "cost": {
+        "input": 0.3,
+        "output": 0.72,
+        "cache_read": 0.036
+      }
+    },
+    {
       "id": "bytedance/seed-1.8",
       "modelCode": "bytedance-seed/doubao-seed-1.8",
       "name": "Seed 1.8",
@@ -571,15 +1033,6 @@
       "modelCode": "deepseek-ai/deepseek-v3.2-thinking",
       "name": "DeepSeek V3.2 Thinking",
       "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 128000,
-        "output": 8000
-      },
-      "cost": {
-        "input": 0.62,
-        "output": 1.85
-      },
       "reasoning_options": [
         {
           "type": "effort",
@@ -590,7 +1043,16 @@
             "high"
           ]
         }
-      ]
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 128000,
+        "output": 8000
+      },
+      "cost": {
+        "input": 0.62,
+        "output": 1.85
+      }
     },
     {
       "id": "deepseek/deepseek-v4-flash",

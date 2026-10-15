@@ -5,9 +5,169 @@
   "api_endpoint": "https://api.neuralwatt.com/v1",
   "type": "openai-compat",
   "doc": "https://portal.neuralwatt.com/docs",
-  "default_large_model_id": "glm-5.2",
-  "default_small_model_id": "glm-5.2-fast",
+  "default_large_model_id": "glm-5.3",
+  "default_small_model_id": "nw-small",
   "models": [
+    {
+      "id": "deepseek-v4.1-flash-speed",
+      "modelCode": "deepseek-ai/deepseek-v4.1-flash-speed",
+      "name": "DeepSeek V4.1 Flash (Speed)",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048560,
+        "output": 1048560
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.015
+      }
+    },
+    {
+      "id": "glm-5.3",
+      "modelCode": "zai-org/GLM-5.3",
+      "name": "GLM 5.3",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048560,
+        "output": 1048560
+      },
+      "cost": {
+        "input": 1.45,
+        "output": 4.5,
+        "cache_read": 0.145
+      }
+    },
+    {
+      "id": "mimo-v2.6-pro",
+      "modelCode": "xiaomimimo/mimo-v2.6-pro",
+      "name": "MiMo-V2.6-Pro",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048560,
+        "output": 1048560
+      },
+      "cost": {
+        "input": 0.87,
+        "output": 1.74,
+        "cache_read": 0.036
+      }
+    },
+    {
+      "id": "mimo-v2.6-pro-flex",
+      "modelCode": "xiaomimimo/mimo-v2.6-pro:flex",
+      "name": "MiMo-V2.6-Pro (flex)",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048560,
+        "output": 1048560
+      },
+      "cost": {
+        "input": 0.5655,
+        "output": 1.131,
+        "cache_read": 0.0234
+      }
+    },
+    {
+      "id": "nw-flash",
+      "modelCode": "neuralwatt/nw-flash",
+      "name": "Neuralwatt Flash",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048560,
+        "output": 1048560
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.015
+      }
+    },
+    {
+      "id": "nw-flash-flex",
+      "modelCode": "neuralwatt/nw-flash:flex",
+      "name": "Neuralwatt Flash (flex)",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048560,
+        "output": 1048560
+      },
+      "cost": {
+        "input": 0.0975,
+        "output": 0.39,
+        "cache_read": 0.00975
+      }
+    },
+    {
+      "id": "nw-large",
+      "modelCode": "neuralwatt/nw-large",
+      "name": "Neuralwatt Large",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048560,
+        "output": 1048560
+      },
+      "cost": {
+        "input": 3.0,
+        "output": 15.0,
+        "cache_read": 0.3
+      }
+    },
+    {
+      "id": "nw-large-flex",
+      "modelCode": "neuralwatt/nw-large:flex",
+      "name": "Neuralwatt Large (flex)",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1048560,
+        "output": 1048560
+      },
+      "cost": {
+        "input": 1.95,
+        "output": 9.75,
+        "cache_read": 0.195
+      }
+    },
+    {
+      "id": "nw-small",
+      "modelCode": "neuralwatt/nw-small",
+      "name": "Neuralwatt Small",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 262128,
+        "output": 262128
+      },
+      "cost": {
+        "input": 0.45,
+        "output": 3.2,
+        "cache_read": 0.25
+      }
+    },
+    {
+      "id": "nw-small-flex",
+      "modelCode": "neuralwatt/nw-small:flex",
+      "name": "Neuralwatt Small (flex)",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 262128,
+        "output": 262128
+      },
+      "cost": {
+        "input": 0.2925,
+        "output": 2.08,
+        "cache_read": 0.1625
+      }
+    },
     {
       "id": "deepseek-v4-flash",
       "modelCode": "deepseek-ai/DeepSeek-V4-Flash",
@@ -61,209 +221,6 @@
       }
     },
     {
-      "id": "glm-5.2",
-      "modelCode": "zai-org/GLM-5.2",
-      "name": "GLM 5.2 Short Fast",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 199984,
-        "output": 32000
-      },
-      "cost": {
-        "input": 1.45,
-        "output": 4.5,
-        "cache_read": 0.145
-      }
-    },
-    {
-      "id": "glm-5.2-fast",
-      "modelCode": "zai-org/GLM-5.2:fast",
-      "name": "GLM 5.2 Fast",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 1048560,
-        "output": 1048560
-      },
-      "cost": {
-        "input": 1.45,
-        "output": 4.5,
-        "cache_read": 0.145
-      }
-    },
-    {
-      "id": "glm-5.2-flex",
-      "modelCode": "zai-org/GLM-5.2:flex",
-      "name": "GLM 5.2 Flex",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 1048560,
-        "output": 1048560
-      },
-      "cost": {
-        "input": 0.9425,
-        "output": 2.925,
-        "cache_read": 0.09425
-      }
-    },
-    {
-      "id": "glm-5.2-short",
-      "modelCode": "zai-org/GLM-5.2:short",
-      "name": "GLM 5.2 Short",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 199984,
-        "output": 32000
-      },
-      "cost": {
-        "input": 1.45,
-        "output": 4.5,
-        "cache_read": 0.145
-      }
-    },
-    {
-      "id": "glm-5.2-short-fast",
-      "modelCode": "zai-org/GLM-5.2:short-fast",
-      "name": "GLM 5.2 Short Fast",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 199984,
-        "output": 32000
-      },
-      "cost": {
-        "input": 1.45,
-        "output": 4.5,
-        "cache_read": 0.145
-      }
-    },
-    {
-      "id": "glm-5.2-short-fast-flex",
-      "modelCode": "zai-org/GLM-5.2:short-fast-flex",
-      "name": "GLM 5.2 Short Fast Flex",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 199984,
-        "output": 32000
-      },
-      "cost": {
-        "input": 0.9425,
-        "output": 2.925,
-        "cache_read": 0.09425
-      }
-    },
-    {
-      "id": "glm-5.2-short-flex",
-      "modelCode": "zai-org/GLM-5.2:short-flex",
-      "name": "GLM 5.2 Short Flex",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high",
-            "max"
-          ]
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 199984,
-        "output": 32000
-      },
-      "cost": {
-        "input": 0.9425,
-        "output": 2.925,
-        "cache_read": 0.09425
-      }
-    },
-    {
       "id": "gemma-4-31b",
       "modelCode": "google/gemma-4-31b",
       "name": "Gemma 4 31B",
@@ -287,69 +244,6 @@
         "output": 0.42,
         "cache_read": 0.0144
       }
-    },
-    {
-      "id": "kimi-k2.7-code",
-      "modelCode": "moonshotai/Kimi-K2.7-Code",
-      "name": "Kimi K2.7 Code Fast",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 262128,
-        "output": 262128
-      },
-      "cost": {
-        "input": 0.95,
-        "output": 4,
-        "cache_read": 0.095
-      },
-      "reasoning_options": [
-        {
-          "type": "budget_tokens"
-        }
-      ]
-    },
-    {
-      "id": "kimi-k2.7-code-flex",
-      "modelCode": "moonshotai/Kimi-K2.7-Code:flex",
-      "name": "Kimi K2.7 Code Flex",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 262128,
-        "output": 262128
-      },
-      "cost": {
-        "input": 0.6175,
-        "output": 2.6,
-        "cache_read": 0.06175
-      },
-      "reasoning_options": [
-        {
-          "type": "budget_tokens"
-        }
-      ]
-    },
-    {
-      "id": "kimi-k2.7-code-fast",
-      "modelCode": "moonshotai/Kimi-K2.7-Code:fast",
-      "name": "Kimi K2.7 Code Fast",
-      "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 262128,
-        "output": 262128
-      },
-      "cost": {
-        "input": 0.95,
-        "output": 4,
-        "cache_read": 0.095
-      },
-      "reasoning_options": [
-        {
-          "type": "budget_tokens"
-        }
-      ]
     },
     {
       "id": "kimi-k3",

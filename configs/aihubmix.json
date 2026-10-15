@@ -9,6 +9,193 @@
   "default_small_model_id": "gpt-5-nano",
   "models": [
     {
+      "id": "claude-haiku-5-5",
+      "modelCode": "anthropic/claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.01,
+        "cache_write": 0.125
+      }
+    },
+    {
+      "id": "gemini-4-argon",
+      "modelCode": "google/gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1,
+        "input_audio": 2
+      }
+    },
+    {
+      "id": "coding-glm-5.3-flash-free",
+      "modelCode": "zai-org/GLM-5.3-Flash:coding-free",
+      "name": "GLM-5.3-Flash (Coding, free)",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "qwen3.8-omni-flash",
+      "modelCode": "qwen/qwen3.8-omni-flash",
+      "name": "Qwen3.8 Omni Flash",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.1126,
+        "output": 0.380025,
+        "cache_read": 0.014075,
+        "cache_write": 0.175937
+      }
+    },
+    {
+      "id": "gemini-3-pro-image",
+      "modelCode": "google/gemini-3-pro-image",
+      "name": "Nano Banana Pro",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 65536,
+        "output": 32768
+      },
+      "cost": {
+        "input": 2,
+        "output": 120
+      }
+    },
+    {
+      "id": "gemini-3.1-flash-image",
+      "modelCode": "google/gemini-3.1-flash-image",
+      "name": "Nano Banana 2",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "cost": {
+        "input": 0.5,
+        "output": 3
+      }
+    },
+    {
+      "id": "gemini-3.1-flash-lite-image",
+      "modelCode": "google/gemini-3.1-flash-lite-image",
+      "name": "Nano Banana 2 Lite",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 65536,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.25,
+        "output": 1.5,
+        "cache_read": 0.025
+      }
+    },
+    {
       "id": "AiHubmix-Phi-4-mini-reasoning",
       "modelCode": "microsoft/Phi-4-mini-reasoning",
       "name": "Aihubmix Phi 4 Mini (reasoning)",
@@ -38,23 +225,6 @@
       "cost": {
         "input": 0.2,
         "output": 0.534,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "DeepSeek-V3",
-      "modelCode": "deepseek-ai/DeepSeek-V3",
-      "name": "DeepSeek V3",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 1638000,
-        "output": 163800
-      },
-      "cost": {
-        "input": 0.272,
-        "output": 1.088,
         "cache_read": 0,
         "cache_write": 0
       }
@@ -1635,33 +1805,6 @@
       }
     },
     {
-      "id": "doubao-seed-2-0-mini",
-      "modelCode": "bytedance-seed/doubao-seed-2.0-mini",
-      "name": "Doubao Seed 2.0 Mini",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": true,
-      "limit": {
-        "context": 256000,
-        "output": 32000
-      },
-      "cost": {
-        "input": 0.03014,
-        "output": 0.30136,
-        "cache_read": 0,
-        "cache_write": 0.00603
-      }
-    },
-    {
       "id": "doubao-seed-2-0-mini-260428",
       "modelCode": "bytedance-seed/doubao-seed-2.0-mini",
       "name": "Doubao Seed 2.0 Mini 260428",
@@ -1967,17 +2110,6 @@
       "modelCode": "google/gemini-2.5-flash",
       "name": "Gemini 2.5 Flash",
       "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 1048576,
-        "output": 65536
-      },
-      "cost": {
-        "input": 0.3,
-        "output": 2.5,
-        "cache_read": 0.03,
-        "input_audio": 1
-      },
       "reasoning_options": [
         {
           "type": "toggle"
@@ -1995,7 +2127,18 @@
           "min": 0,
           "max": 24576
         }
-      ]
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.3,
+        "output": 2.5,
+        "cache_read": 0.03,
+        "input_audio": 1
+      }
     },
     {
       "id": "gemini-2.5-flash-image",
@@ -2018,6 +2161,16 @@
       "modelCode": "google/gemini-2.5-flash-lite",
       "name": "Gemini 2.5 Flash-Lite",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 512,
+          "max": 24576
+        }
+      ],
       "attachment": true,
       "limit": {
         "context": 1048576,
@@ -2028,17 +2181,7 @@
         "output": 0.4,
         "cache_read": 0.01,
         "input_audio": 0.3
-      },
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "budget_tokens",
-          "min": 512,
-          "max": 24576
-        }
-      ]
+      }
     },
     {
       "id": "gemini-2.5-flash-lite-nothink",
@@ -2556,6 +2699,11 @@
       "modelCode": "zai-org/GLM-4.5V",
       "name": "GLM-4.5V",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "attachment": true,
       "limit": {
         "context": 64000,
@@ -2564,12 +2712,7 @@
       "cost": {
         "input": 0.274,
         "output": 1.096
-      },
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ]
+      }
     },
     {
       "id": "glm-4.6",
@@ -2597,6 +2740,11 @@
       "modelCode": "zai-org/glm-4.6v",
       "name": "GLM-4.6V",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "attachment": true,
       "limit": {
         "context": 128000,
@@ -2606,12 +2754,7 @@
         "input": 0.137,
         "output": 0.411,
         "cache_read": 0.0274
-      },
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ]
+      }
     },
     {
       "id": "glm-4.7",
@@ -2799,6 +2942,11 @@
       "modelCode": "zai-org/glm-5v-turbo",
       "name": "GLM 5 Vision Turbo",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "attachment": true,
       "limit": {
         "context": 200000,
@@ -2808,12 +2956,7 @@
         "input": 0.7042,
         "output": 3.09848,
         "cache_read": 0.169008
-      },
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ]
+      }
     },
     {
       "id": "gpt-4.1",
@@ -2898,23 +3041,6 @@
         "output": 10,
         "cache_read": 0,
         "cache_write": 1.25
-      }
-    },
-    {
-      "id": "gpt-4o-audio-preview",
-      "modelCode": "openai/gpt-4o-audio-preview",
-      "name": "GPT 4o Audio Preview",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "cost": {
-        "input": 2.5,
-        "output": 10,
-        "cache_read": 0,
-        "cache_write": 0
       }
     },
     {
@@ -3535,17 +3661,6 @@
       "modelCode": "openai/gpt-5.4-mini",
       "name": "GPT-5.4 mini",
       "reasoning": true,
-      "attachment": true,
-      "limit": {
-        "context": 400000,
-        "output": 128000,
-        "input": 272000
-      },
-      "cost": {
-        "input": 0.75,
-        "output": 4.5,
-        "cache_read": 0.075
-      },
       "reasoning_options": [
         {
           "type": "effort",
@@ -3557,7 +3672,18 @@
             "xhigh"
           ]
         }
-      ]
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 400000,
+        "output": 128000,
+        "input": 272000
+      },
+      "cost": {
+        "input": 0.75,
+        "output": 4.5,
+        "cache_read": 0.075
+      }
     },
     {
       "id": "gpt-5.4-nano",
@@ -4334,32 +4460,6 @@
         "output": 0,
         "cache_read": 0,
         "cache_write": 0
-      }
-    },
-    {
-      "id": "hy3-preview",
-      "modelCode": "tencent/hy3-preview",
-      "name": "Hy3 Preview",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 256000,
-        "output": 128000
-      },
-      "cost": {
-        "input": 0.17,
-        "output": 0.566661,
-        "cache_read": 0.051
       }
     },
     {
@@ -5334,23 +5434,6 @@
       }
     },
     {
-      "id": "qwen3-235b-a22b",
-      "modelCode": "qwen/Qwen3-235B-A22B",
-      "name": "Qwen3 235B A22B",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 131100,
-        "output": 13110
-      },
-      "cost": {
-        "input": 0.28,
-        "output": 1.12,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
       "id": "qwen3-235b-a22b-instruct-2507",
       "modelCode": "qwen/Qwen3-235B-A22B-Instruct-2507",
       "name": "Qwen3 235B A22B Instruct 2507",
@@ -5711,6 +5794,14 @@
       "modelCode": "qwen/qwen3-vl-plus",
       "name": "Qwen3-VL Plus",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "attachment": false,
       "limit": {
         "context": 262144,
@@ -5720,15 +5811,7 @@
         "input": 0.137,
         "output": 1.37,
         "cache_read": 0
-      },
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "budget_tokens"
-        }
-      ]
+      }
     },
     {
       "id": "qwen3.5-122b-a10b",
@@ -6205,6 +6288,16 @@
       "modelCode": "stepfun-ai/Step-3.7-Flash",
       "name": "Step 3.7 Flash",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "attachment": true,
       "limit": {
         "context": 256000,
@@ -6215,17 +6308,7 @@
         "input": 0.22,
         "output": 1.32,
         "cache_read": 0.044
-      },
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ]
+      }
     },
     {
       "id": "xiaomi-mimo-v2-omni-free",
@@ -6266,6 +6349,11 @@
       "modelCode": "xiaomimimo/MiMo-V2.5:free",
       "name": "Xiaomi MiMo-V2.5 (free)",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "attachment": true,
       "limit": {
         "context": 1048576,
@@ -6275,18 +6363,18 @@
         "input": 0,
         "output": 0,
         "cache_read": 0
-      },
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ]
+      }
     },
     {
       "id": "xiaomi-mimo-v2.5-pro-free",
       "modelCode": "xiaomimimo/MiMo-V2.5-Pro:free",
       "name": "Xiaomi MiMo-V2.5-Pro (free)",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "attachment": false,
       "limit": {
         "context": 1048576,
@@ -6296,12 +6384,7 @@
         "input": 0,
         "output": 0,
         "cache_read": 0
-      },
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ]
+      }
     },
     {
       "id": "gpt-6.1-sol",
@@ -6721,17 +6804,17 @@
       "id": "xiaomi-mimo-v2.6-pro-free",
       "modelCode": "xiaomimimo/mimo-v2.6-pro:free",
       "name": "Xiaomi mimo v2 6 pro free (free)",
-      "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
-      },
       "reasoning": true,
       "attachment": true,
       "limit": {
         "context": 1048576,
         "output": 131072
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
       }
     },
     {
@@ -7012,34 +7095,34 @@
       "id": "intern-s2-free",
       "modelCode": "aihubmix/intern-s2-free",
       "name": "Intern s2 free (free)",
-      "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
-      },
       "reasoning": false,
       "attachment": false,
       "limit": {
         "context": 131072,
         "output": 16384
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
       }
     },
     {
       "id": "union-alpha-free",
       "modelCode": "aihubmix/union-alpha-free",
       "name": "Union alpha free (free)",
-      "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
-      },
       "reasoning": false,
       "attachment": false,
       "limit": {
         "context": 131072,
         "output": 16384
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
       }
     },
     {
@@ -8886,21 +8969,6 @@
         "output": 0,
         "cache_read": 0,
         "cache_write": 0
-      }
-    },
-    {
-      "id": "l3.1-euryale-70b",
-      "modelCode": "aihubmix/l3.1-euryale-70b",
-      "name": "Llama 3.1 Euryale 70B v2.2",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 131072,
-        "output": 16384
-      },
-      "cost": {
-        "input": 0.85,
-        "output": 0.85
       }
     },
     {

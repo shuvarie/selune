@@ -5,16 +5,79 @@
   "dialect": "xiaomimimo",
   "models": [
     {
-      "id": "mimo-v2.5-pro-ultraspeed",
-      "modelCode": "xiaomimimo/MiMo-V2.5-Pro:ultraspeed",
-      "name": "MiMo-V2.5-Pro-UltraSpeed",
+      "id": "mimo-v2.6-flash",
+      "modelCode": "xiaomimimo/mimo-v2.6-flash",
+      "name": "MiMo-V2.6-Flash",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "toggle"
         }
       ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.0028
+      }
+    },
+    {
+      "id": "mimo-v2.6-pro",
+      "modelCode": "xiaomimimo/mimo-v2.6-pro",
+      "name": "MiMo-V2.6-Pro",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.435,
+        "output": 0.87,
+        "cache_read": 0.0036
+      }
+    },
+    {
+      "id": "mimo-v2.6-pro-ultraspeed",
+      "modelCode": "xiaomimimo/mimo-v2.6-pro:ultraspeed",
+      "name": "MiMo-V2.6-Pro-UltraSpeed",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 4.35,
+        "output": 8.7,
+        "cache_read": 0.036
+      }
+    },
+    {
+      "id": "mimo-v2.5-pro-ultraspeed",
+      "modelCode": "xiaomimimo/MiMo-V2.5-Pro:ultraspeed",
+      "name": "MiMo-V2.5-Pro-UltraSpeed",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "attachment": false,
       "limit": {
         "context": 1048576,
         "output": 131072
@@ -30,12 +93,12 @@
       "modelCode": "xiaomimimo/MiMo-V2-Flash",
       "name": "MiMo-V2-Flash",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "toggle"
         }
       ],
+      "attachment": false,
       "limit": {
         "context": 262144,
         "output": 65536
@@ -51,12 +114,12 @@
       "modelCode": "xiaomimimo/mimo-v2-pro",
       "name": "MiMo-V2-Pro",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "toggle"
         }
       ],
+      "attachment": false,
       "limit": {
         "context": 1048576,
         "output": 131072
@@ -72,12 +135,12 @@
       "modelCode": "xiaomimimo/mimo-v2-omni",
       "name": "MiMo-V2-Omni",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "toggle"
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 262144,
         "output": 131072
@@ -93,12 +156,12 @@
       "modelCode": "xiaomimimo/MiMo-V2.5",
       "name": "MiMo-V2.5",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "toggle"
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 1048576,
         "output": 131072
@@ -114,12 +177,12 @@
       "modelCode": "xiaomimimo/MiMo-V2.5-Pro",
       "name": "MiMo-V2.5-Pro",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "toggle"
         }
       ],
+      "attachment": false,
       "limit": {
         "context": 1048576,
         "output": 131072

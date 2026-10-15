@@ -7,14 +7,282 @@
   "dialect": "huggingface",
   "doc": "https://huggingface.co/docs/inference-providers",
   "default_large_model_id": "stepfun-ai/Step-3.7-Flash",
-  "default_small_model_id": "XiaomiMiMo/MiMo-V2-Flash",
+  "default_small_model_id": "ibm-granite/granite-4.2-8b",
   "models": [
+    {
+      "id": "zai-org/GLM-5.3-BF16",
+      "modelCode": "zai-org/GLM-5.3-BF16",
+      "name": "GLM-5.3 BF16",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "zai-org/GLM-5.3-Flash-BF16",
+      "modelCode": "zai-org/GLM-5.3-Flash-BF16",
+      "name": "GLM-5.3 Flash BF16",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03,
+        "cache_write": 0
+      }
+    },
+    {
+      "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "modelCode": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "name": "Nemotron 3 Ultra 550B A55B BF16",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 262144
+      },
+      "cost": {
+        "input": 1,
+        "output": 5
+      }
+    },
+    {
+      "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+      "modelCode": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B:nvfp4",
+      "name": "Nemotron 3 Ultra 550B A55B NVFP4",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 262144
+      },
+      "cost": {
+        "input": 0.6,
+        "output": 2.4
+      }
+    },
+    {
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "modelCode": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "name": "Nemotron 3.5 Lightning 30B A3B BF16",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 8192,
+        "output": 4096
+      },
+      "cost": {
+        "input": 0.5,
+        "output": 0.5,
+        "cache_read": 0.5,
+        "cache_write": 0.5
+      }
+    },
+    {
+      "id": "zai-org/GLM-5.2-FP8",
+      "modelCode": "zai-org/GLM-5.2:fp8",
+      "name": "GLM-5.2 FP8",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": false,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0.979,
+        "output": 3.08,
+        "cache_read": 0.182
+      }
+    },
+    {
+      "id": "inclusionAI/Ling-3.0-flash",
+      "modelCode": "inclusionai/Ling-3.0-flash",
+      "name": "Ling 3.0 Flash",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 262144
+      },
+      "cost": {
+        "input": 0.06,
+        "output": 0.18
+      }
+    },
+    {
+      "id": "inclusionAI/Ling-3.0-flash-Fin",
+      "modelCode": "inclusionai/Ling-3.0-flash-Fin",
+      "name": "Ling 3.0 Flash Fin",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 262144
+      },
+      "cost": {
+        "input": 0.075,
+        "output": 0.22
+      }
+    },
+    {
+      "id": "inclusionAI/Ling-3.0-flash-VL",
+      "modelCode": "inclusionai/Ling-3.0-flash-VL",
+      "name": "Ling 3.0 Flash VL",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 262144
+      },
+      "cost": {
+        "input": 0.075,
+        "output": 0.22
+      }
+    },
+    {
+      "id": "ibm-granite/granite-4.2-30b",
+      "modelCode": "ibm-granite/granite-4.2-30b",
+      "name": "Granite 4.2 30B",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 131072
+      },
+      "cost": {
+        "input": 0.16,
+        "output": 0.6499999999999999
+      }
+    },
+    {
+      "id": "ibm-granite/granite-4.2-8b",
+      "modelCode": "ibm-granite/granite-4.2-8b",
+      "name": "Granite 4.2 8B",
+      "reasoning": true,
+      "attachment": false,
+      "limit": {
+        "context": 131072
+      },
+      "cost": {
+        "input": 0.060000000000000005,
+        "output": 0.25
+      }
+    },
+    {
+      "id": "ibm-granite/granite-4.2-3b",
+      "modelCode": "ibm-granite/granite-4.2-3b",
+      "name": "Granite 4.2 3B",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 131072
+      },
+      "cost": {
+        "input": 0.030000000000000002,
+        "output": 0.12000000000000001
+      }
+    },
+    {
+      "id": "meta-models/Muse-Glimmer-30B",
+      "modelCode": "meta-models/Muse-Glimmer-30B",
+      "name": "Muse Glimmer 30B",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 131072
+      },
+      "cost": {
+        "input": 0.35,
+        "output": 1.5
+      }
+    },
+    {
+      "id": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "modelCode": "xiaomimimo/MiMo-V2.6-Flash-RL",
+      "name": "MiMo-V2.6-Flash RL",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 1048576
+      },
+      "cost": {
+        "input": 0.14,
+        "output": 0.28
+      }
+    },
+    {
+      "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "modelCode": "xiaomimimo/MiMo-V2.6-Pro-RL",
+      "name": "MiMo-V2.6-Pro RL",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 1048576
+      },
+      "cost": {
+        "input": 0.435,
+        "output": 0.87
+      }
+    },
+    {
+      "id": "prism-ml/Ternary-Bonsai-27B-gguf",
+      "modelCode": "prism-ml/Ternary-Bonsai-27B-gguf",
+      "name": "Ternary Bonsai 27B GGUF",
+      "reasoning": false,
+      "attachment": false,
+      "limit": {
+        "context": 262144
+      },
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    {
+      "id": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
+      "modelCode": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
+      "name": "Ternary Bonsai 27B AWQ 4bit",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 262144
+      },
+      "cost": {
+        "input": 0,
+        "output": 0
+      }
+    },
     {
       "id": "stepfun-ai/Step-3.7-Flash",
       "modelCode": "stepfun-ai/Step-3.7-Flash",
       "name": "Step 3.7 Flash",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -25,6 +293,7 @@
           ]
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 262144,
         "output": 256000
@@ -99,7 +368,6 @@
       "modelCode": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
       "name": "DeepSeek V4 Flash Vision Exp",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -110,6 +378,7 @@
           ]
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 1048576,
         "output": 384000
@@ -124,7 +393,6 @@
       "modelCode": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "effort",
@@ -134,6 +402,7 @@
           ]
         }
       ],
+      "attachment": false,
       "limit": {
         "context": 1048576,
         "output": 384000
@@ -178,7 +447,6 @@
       "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash",
       "name": "DeepSeek V4.1 Flash",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -191,6 +459,7 @@
           ]
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 1048576,
         "output": 384000
@@ -205,7 +474,6 @@
       "modelCode": "deepseek-ai/DeepSeek-V4-Pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "effort",
@@ -216,6 +484,7 @@
           ]
         }
       ],
+      "attachment": false,
       "limit": {
         "context": 1000000,
         "output": 384000
@@ -260,7 +529,6 @@
       "modelCode": "deepseek-ai/DeepSeek-V4-Pro",
       "name": "DeepSeek V4 Pro",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "effort",
@@ -269,6 +537,7 @@
           ]
         }
       ],
+      "attachment": false,
       "limit": {
         "context": 1048576,
         "output": 393216
@@ -359,12 +628,12 @@
       "modelCode": "zai-org/GLM-4.6V-Flash",
       "name": "GLM-4.6V-Flash",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "toggle"
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 131072,
         "output": 32768
@@ -425,7 +694,6 @@
       "modelCode": "zai-org/GLM-5.3",
       "name": "GLM-5.3",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "effort",
@@ -436,6 +704,7 @@
           ]
         }
       ],
+      "attachment": false,
       "limit": {
         "context": 1048576,
         "output": 131072
@@ -542,7 +811,6 @@
       "modelCode": "zai-org/GLM-5.3-Flash",
       "name": "GLM-5.3-Flash",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -553,6 +821,7 @@
           ]
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 1048576,
         "output": 131072
@@ -582,7 +851,6 @@
       "modelCode": "thinkingmachines/Inkling",
       "name": "Inkling",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -593,6 +861,7 @@
           ]
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 1048576,
         "output": 1048576
@@ -607,7 +876,6 @@
       "modelCode": "qwen/Qwen3.8-27B",
       "name": "Qwen3.8 27B",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -618,6 +886,7 @@
           ]
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 262144,
         "output": 32768
@@ -673,21 +942,6 @@
       }
     },
     {
-      "id": "Qwen/Qwen3-Coder-Next",
-      "modelCode": "qwen/Qwen3-Coder-Next",
-      "name": "Qwen3-Coder-Next",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 262144,
-        "output": 65536
-      },
-      "cost": {
-        "input": 0.2,
-        "output": 1.5
-      }
-    },
-    {
       "id": "Qwen/Qwen3-30B-A3B",
       "modelCode": "qwen/Qwen3-30B-A3B",
       "name": "Qwen3 30B A3B",
@@ -700,21 +954,6 @@
       "cost": {
         "input": 0.12,
         "output": 0.5
-      }
-    },
-    {
-      "id": "Qwen/Qwen3-235B-A22B",
-      "modelCode": "qwen/Qwen3-235B-A22B",
-      "name": "Qwen3 235B-A22B",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 40960,
-        "output": 16384
-      },
-      "cost": {
-        "input": 0.2,
-        "output": 0.8
       }
     },
     {
@@ -737,7 +976,6 @@
       "modelCode": "qwen/Qwen3.8-2.4T-A95B",
       "name": "Qwen3.8 2.4T A95B",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "effort",
@@ -748,6 +986,7 @@
           ]
         }
       ],
+      "attachment": false,
       "limit": {
         "context": 262144,
         "output": 131072
@@ -788,21 +1027,6 @@
       }
     },
     {
-      "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
-      "modelCode": "qwen/Qwen3-Coder-480B-A35B-Instruct",
-      "name": "Qwen3-Coder-480B-A35B-Instruct",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 262144,
-        "output": 66536
-      },
-      "cost": {
-        "input": 2,
-        "output": 2
-      }
-    },
-    {
       "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
       "modelCode": "qwen/Qwen3-Next-80B-A3B-Instruct",
       "name": "Qwen3-Next-80B-A3B-Instruct",
@@ -822,7 +1046,6 @@
       "modelCode": "qwen/Qwen3.5-397B-A17B",
       "name": "Qwen3.5-397B-A17B",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -834,6 +1057,7 @@
           ]
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 262144,
         "output": 32768
@@ -919,121 +1143,6 @@
       }
     },
     {
-      "id": "Qwen/Qwen3-VL-235B-A22B-Thinking",
-      "modelCode": "qwen/Qwen3-VL-235B-A22B-Thinking",
-      "name": "Qwen3 VL 235B A22B Thinking",
-      "reasoning": true,
-      "attachment": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "limit": {
-        "context": 131072,
-        "output": 32768
-      },
-      "cost": {
-        "input": 0.98,
-        "output": 3.95
-      }
-    },
-    {
-      "id": "Qwen/Qwen3-Embedding-8B",
-      "modelCode": "qwen/Qwen3-Embedding-8B",
-      "name": "Qwen 3 Embedding 8B",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 32000,
-        "output": 4096
-      },
-      "cost": {
-        "input": 0.01,
-        "output": 0
-      }
-    },
-    {
-      "id": "Qwen/Qwen3-Next-80B-A3B-Thinking",
-      "modelCode": "qwen/Qwen3-Next-80B-A3B-Thinking",
-      "name": "Qwen3-Next-80B-A3B-Thinking",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 262144,
-        "output": 131072
-      },
-      "cost": {
-        "input": 0.3,
-        "output": 2
-      }
-    },
-    {
-      "id": "Qwen/Qwen3-Embedding-4B",
-      "modelCode": "qwen/Qwen3-Embedding-4B",
-      "name": "Qwen 3 Embedding 4B",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 32000,
-        "output": 2048
-      },
-      "cost": {
-        "input": 0.01,
-        "output": 0
-      }
-    },
-    {
-      "id": "Qwen/Qwen2.5-Coder-32B-Instruct",
-      "modelCode": "qwen/Qwen2.5-Coder-32B-Instruct",
-      "name": "Qwen2.5-Coder-32B-Instruct",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "cost": {
-        "input": 0.06,
-        "output": 0.2
-      }
-    },
-    {
-      "id": "MiniMaxAI/MiniMax-M2",
-      "modelCode": "minimaxai/MiniMax-M2",
-      "name": "MiniMax-M2",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 204800,
-        "output": 131072
-      },
-      "cost": {
-        "input": 0.3,
-        "output": 1.2
-      }
-    },
-    {
-      "id": "MiniMaxAI/MiniMax-M2.1",
-      "modelCode": "minimaxai/MiniMax-M2.1",
-      "name": "MiniMax-M2.1",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 204800,
-        "output": 131072
-      },
-      "cost": {
-        "input": 0.3,
-        "output": 1.2
-      }
-    },
-    {
       "id": "MiniMaxAI/MiniMax-M2.5",
       "modelCode": "minimaxai/MiniMax-M2.5",
       "name": "MiniMax-M2.5",
@@ -1115,7 +1224,6 @@
       "modelCode": "openai/gpt-oss-20b",
       "name": "GPT OSS 20B",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "effort",
@@ -1126,6 +1234,7 @@
           ]
         }
       ],
+      "attachment": false,
       "limit": {
         "context": 131072,
         "output": 32768
@@ -1140,7 +1249,6 @@
       "modelCode": "openai/gpt-oss-120b",
       "name": "GPT OSS 120B",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "effort",
@@ -1151,6 +1259,7 @@
           ]
         }
       ],
+      "attachment": false,
       "limit": {
         "context": 131072,
         "output": 32768
@@ -1158,22 +1267,6 @@
       "cost": {
         "input": 0.25,
         "output": 0.69
-      }
-    },
-    {
-      "id": "moonshotai/Kimi-K2-Thinking",
-      "modelCode": "moonshotai/Kimi-K2-Thinking",
-      "name": "Kimi-K2-Thinking",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "cost": {
-        "input": 0.6,
-        "output": 2.5,
-        "cache_read": 0.15
       }
     },
     {
@@ -1258,7 +1351,6 @@
       "modelCode": "moonshotai/Kimi-K3",
       "name": "Kimi K3",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -1269,6 +1361,7 @@
           ]
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 1000000,
         "output": 131072
@@ -1283,7 +1376,6 @@
       "modelCode": "tencent/Hy3",
       "name": "Hy3",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "effort",
@@ -1294,6 +1386,7 @@
           ]
         }
       ],
+      "attachment": false,
       "limit": {
         "context": 262144,
         "output": 128000,
@@ -1309,7 +1402,6 @@
       "modelCode": "xiaomimimo/MiMo-V2.5-Pro",
       "name": "MiMo-V2.5-Pro",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "toggle"
@@ -1325,6 +1417,7 @@
           ]
         }
       ],
+      "attachment": false,
       "limit": {
         "context": 1048576,
         "output": 131072
@@ -1339,7 +1432,6 @@
       "modelCode": "xiaomimimo/MiMo-V2.5",
       "name": "MiMo-V2.5",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "toggle"
@@ -1355,6 +1447,7 @@
           ]
         }
       ],
+      "attachment": false,
       "limit": {
         "context": 262144,
         "output": 131072
@@ -1362,21 +1455,6 @@
       "cost": {
         "input": 0.4,
         "output": 2
-      }
-    },
-    {
-      "id": "XiaomiMiMo/MiMo-V2-Flash",
-      "modelCode": "xiaomimimo/MiMo-V2-Flash",
-      "name": "MiMo-V2-Flash",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 262144,
-        "output": 4096
-      },
-      "cost": {
-        "input": 0.1,
-        "output": 0.3
       }
     },
     {

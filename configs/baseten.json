@@ -9,6 +9,32 @@
   "default_small_model_id": "openai/gpt-oss-120b",
   "models": [
     {
+      "id": "zai-org/GLM-5.3",
+      "modelCode": "zai-org/GLM-5.3",
+      "name": "GLM 5.3",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "cost": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.14
+      }
+    },
+    {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "modelCode": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "name": "DeepSeek V4 Flash 0731",
@@ -99,6 +125,11 @@
       "modelCode": "zai-org/GLM-4.7",
       "name": "GLM 4.7",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "attachment": false,
       "limit": {
         "context": 200000,
@@ -108,12 +139,7 @@
         "input": 0.6,
         "output": 2.2,
         "cache_read": 0.12
-      },
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ]
+      }
     },
     {
       "id": "zai-org/GLM-5.2",
@@ -277,6 +303,11 @@
       "modelCode": "moonshotai/Kimi-K2.7-Code",
       "name": "Kimi K2.7 Code",
       "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "attachment": true,
       "limit": {
         "context": 262000,
@@ -286,12 +317,7 @@
         "input": 0.95,
         "output": 4,
         "cache_read": 0.16
-      },
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ]
+      }
     },
     {
       "id": "moonshotai/Kimi-K3",

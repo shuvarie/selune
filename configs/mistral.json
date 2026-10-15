@@ -5,63 +5,107 @@
   "dialect": "mistral",
   "models": [
     {
-      "id": "pixtral-12b",
-      "modelCode": "mistralai/pixtral-12b",
-      "name": "Pixtral 12B",
-      "reasoning": false,
+      "id": "mistral-large-4",
+      "modelCode": "mistralai/mistral-large-4",
+      "name": "Mistral Large 4",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
       "attachment": true,
       "limit": {
-        "context": 128000,
-        "output": 128000
+        "context": 1048576,
+        "output": 262144
       },
       "cost": {
-        "input": 0.15,
-        "output": 0.15
+        "input": 0.68,
+        "output": 2.09,
+        "cache_read": 0.07
       }
     },
     {
-      "id": "devstral-small-2507",
-      "modelCode": "mistralai/devstral-small-2507",
-      "name": "Devstral Small",
+      "id": "codestral-2508",
+      "modelCode": "mistralai/codestral-2508",
+      "name": "Codestral 25.08",
       "reasoning": false,
       "attachment": false,
       "limit": {
-        "context": 128000,
-        "output": 128000
+        "context": 256000,
+        "output": 8192
       },
       "cost": {
-        "input": 0.1,
-        "output": 0.3
+        "input": 0.3,
+        "output": 0.9,
+        "cache_read": 0.03
       }
     },
     {
-      "id": "mistral-small-2506",
-      "modelCode": "mistralai/mistral-small-2506",
-      "name": "Mistral Small 3.2",
+      "id": "ministral-14b-2512",
+      "modelCode": "mistralai/ministral-14b-2512",
+      "name": "Ministral 3 14B",
       "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "cost": {
-        "input": 0.1,
-        "output": 0.3
-      }
-    },
-    {
-      "id": "devstral-2512",
-      "modelCode": "mistralai/devstral-2512",
-      "name": "Devstral 2",
-      "reasoning": false,
-      "attachment": false,
+      "attachment": true,
       "limit": {
         "context": 262144,
         "output": 262144
       },
       "cost": {
-        "input": 0.4,
-        "output": 2
+        "input": 0.2,
+        "output": 0.2,
+        "cache_read": 0.02
+      }
+    },
+    {
+      "id": "ministral-8b-2512",
+      "modelCode": "mistralai/ministral-8b-2512",
+      "name": "Ministral 3 8B",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.15,
+        "cache_read": 0.015
+      }
+    },
+    {
+      "id": "ministral-3b-2512",
+      "modelCode": "mistralai/ministral-3b-2512",
+      "name": "Ministral 3 3B",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 131072,
+        "output": 262144
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.1,
+        "cache_read": 0.01
+      }
+    },
+    {
+      "id": "voxtral-small-2507",
+      "modelCode": "mistralai/voxtral-small-2507",
+      "name": "Voxtral Small",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 32768,
+        "output": 32000
+      },
+      "cost": {
+        "input": 0.1,
+        "output": 0.4
       }
     },
     {
@@ -80,56 +124,10 @@
       }
     },
     {
-      "id": "devstral-small-2505",
-      "modelCode": "mistralai/Devstral-Small-2505",
-      "name": "Devstral Small 2505",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 128000,
-        "output": 128000
-      },
-      "cost": {
-        "input": 0.1,
-        "output": 0.3
-      }
-    },
-    {
-      "id": "labs-devstral-small-2512",
-      "modelCode": "mistralai/labs-devstral-small-2512",
-      "name": "Devstral Small 2",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 256000,
-        "output": 256000
-      },
-      "cost": {
-        "input": 0,
-        "output": 0
-      }
-    },
-    {
-      "id": "magistral-medium-latest",
-      "modelCode": "mistralai/magistral-medium-latest",
-      "name": "Magistral Medium",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "cost": {
-        "input": 2,
-        "output": 5
-      }
-    },
-    {
       "id": "zai-glm-5-3",
       "modelCode": "zai-org/GLM-5.3",
       "name": "GLM-5.3",
       "reasoning": true,
-      "attachment": false,
       "reasoning_options": [
         {
           "type": "effort",
@@ -140,6 +138,7 @@
           ]
         }
       ],
+      "attachment": false,
       "limit": {
         "context": 1000000,
         "output": 131072
@@ -151,56 +150,10 @@
       }
     },
     {
-      "id": "open-mixtral-8x22b",
-      "modelCode": "mistralai/open-mixtral-8x22b",
-      "name": "Mixtral 8x22B",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 64000,
-        "output": 64000
-      },
-      "cost": {
-        "input": 2,
-        "output": 6
-      }
-    },
-    {
-      "id": "open-mixtral-8x7b",
-      "modelCode": "mistralai/open-mixtral-8x7b",
-      "name": "Mixtral 8x7B",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 32000,
-        "output": 32000
-      },
-      "cost": {
-        "input": 0.7,
-        "output": 0.7
-      }
-    },
-    {
-      "id": "open-mistral-7b",
-      "modelCode": "mistralai/open-mistral-7b",
-      "name": "Mistral 7B",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 8000,
-        "output": 8000
-      },
-      "cost": {
-        "input": 0.25,
-        "output": 0.25
-      }
-    },
-    {
       "id": "mistral-medium-latest",
       "modelCode": "mistralai/mistral-medium-latest",
       "name": "Mistral Medium",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -210,6 +163,7 @@
           ]
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 262144,
         "output": 262144
@@ -221,26 +175,10 @@
       }
     },
     {
-      "id": "devstral-medium-2507",
-      "modelCode": "mistralai/devstral-medium-2507",
-      "name": "Devstral Medium",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 128000,
-        "output": 128000
-      },
-      "cost": {
-        "input": 0.4,
-        "output": 2
-      }
-    },
-    {
       "id": "mistral-medium-2604",
       "modelCode": "mistralai/mistral-medium-2604",
       "name": "Mistral Medium 3.5",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -250,6 +188,7 @@
           ]
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 262144,
         "output": 262144
@@ -274,21 +213,6 @@
         "input": 0.5,
         "output": 1.5,
         "cache_read": 0.05
-      }
-    },
-    {
-      "id": "devstral-medium-latest",
-      "modelCode": "mistralai/devstral-medium-latest",
-      "name": "Devstral 2",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "cost": {
-        "input": 0.4,
-        "output": 2
       }
     },
     {
@@ -322,21 +246,6 @@
       }
     },
     {
-      "id": "mistral-nemo",
-      "modelCode": "mistralai/mistral-nemo",
-      "name": "Mistral Nemo",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 128000,
-        "output": 128000
-      },
-      "cost": {
-        "input": 0.15,
-        "output": 0.15
-      }
-    },
-    {
       "id": "voxtral-mini-tts-latest",
       "modelCode": "mistralai/voxtral-mini-tts-latest",
       "name": "Voxtral Mini TTS",
@@ -353,7 +262,6 @@
       "modelCode": "mistralai/mistral-small-latest",
       "name": "Mistral Small",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -363,6 +271,7 @@
           ]
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 256000,
         "output": 256000
@@ -371,21 +280,6 @@
         "input": 0.15,
         "output": 0.6,
         "cache_read": 0.015
-      }
-    },
-    {
-      "id": "open-mistral-nemo",
-      "modelCode": "mistralai/open-mistral-nemo",
-      "name": "Open Mistral Nemo",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 128000,
-        "output": 128000
-      },
-      "cost": {
-        "input": 0.15,
-        "output": 0.15
       }
     },
     {
@@ -405,79 +299,10 @@
       }
     },
     {
-      "id": "voxtral-mini-latest",
-      "modelCode": "mistralai/voxtral-mini-latest",
-      "name": "Voxtral Mini",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "cost": {}
-    },
-    {
-      "id": "mistral-large-2411",
-      "modelCode": "mistralai/mistral-large-2411",
-      "name": "Mistral Large 2.1",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 131072,
-        "output": 16384
-      },
-      "cost": {
-        "input": 2,
-        "output": 6
-      }
-    },
-    {
-      "id": "devstral-latest",
-      "modelCode": "mistralai/devstral-latest",
-      "name": "Devstral 2",
-      "reasoning": false,
-      "attachment": false,
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "cost": {
-        "input": 0.4,
-        "output": 2
-      }
-    },
-    {
-      "id": "zai-glm-5-2",
-      "modelCode": "zai-org/GLM-5.2",
-      "name": "GLM-5.2",
-      "reasoning": true,
-      "attachment": false,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "limit": {
-        "context": 1000000,
-        "output": 131072
-      },
-      "cost": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_read": 0.14
-      }
-    },
-    {
       "id": "mistral-small-2603",
       "modelCode": "mistralai/mistral-small-2603",
       "name": "Mistral Small 4",
       "reasoning": true,
-      "attachment": true,
       "reasoning_options": [
         {
           "type": "effort",
@@ -487,6 +312,7 @@
           ]
         }
       ],
+      "attachment": true,
       "limit": {
         "context": 256000,
         "output": 256000
@@ -495,21 +321,6 @@
         "input": 0.15,
         "output": 0.6,
         "cache_read": 0.015
-      }
-    },
-    {
-      "id": "mistral-medium-2505",
-      "modelCode": "mistralai/mistral-medium-2505",
-      "name": "Mistral Medium 3",
-      "reasoning": false,
-      "attachment": true,
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "cost": {
-        "input": 0.4,
-        "output": 2
       }
     },
     {
@@ -542,39 +353,9 @@
         "input": 0.04,
         "output": 0.04
       }
-    },
-    {
-      "id": "mistral-medium-2508",
-      "modelCode": "mistralai/mistral-medium-2508",
-      "name": "Mistral Medium 3.1",
-      "reasoning": false,
-      "attachment": true,
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "cost": {
-        "input": 0.4,
-        "output": 2
-      }
-    },
-    {
-      "id": "pixtral-large-latest",
-      "modelCode": "mistralai/pixtral-large-latest",
-      "name": "Pixtral Large",
-      "reasoning": false,
-      "attachment": true,
-      "limit": {
-        "context": 128000,
-        "output": 128000
-      },
-      "cost": {
-        "input": 2,
-        "output": 6
-      }
     }
   ],
-  "default_large_model_id": "mistral-large-2512",
+  "default_large_model_id": "mistral-large-4",
   "default_small_model_id": "mistral-small-latest",
   "api_key": "$MISTRAL_API_KEY",
   "doc": "https://docs.mistral.ai/getting-started/models/"
