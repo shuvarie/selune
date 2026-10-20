@@ -9,7 +9,7 @@
   "default_small_model_id": "glm-5.3-flash",
   "models": [
     {
-      "id": "deepseek-v4-pro:0813",
+      "id": "deepseek-v4-pro:0813-cloud",
       "modelCode": "deepseek-ai/DeepSeek-V4-Pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "reasoning": true,
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "mistral-large-4",
+      "id": "mistral-large-4:cloud",
       "modelCode": "mistralai/mistral-large-4",
       "name": "Mistral Large 4",
       "reasoning": true,
@@ -73,7 +73,7 @@
       }
     },
     {
-      "id": "deepseek-v4.1-flash:1017",
+      "id": "deepseek-v4.1-flash:1017-cloud",
       "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "name": "DeepSeek V4.1 Flash 1017",
       "reasoning": true,
@@ -113,7 +113,7 @@
       }
     },
     {
-      "id": "deepseek-v4.1-flash",
+      "id": "deepseek-v4.1-flash:cloud",
       "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash",
       "name": "DeepSeek V4.1 Flash",
       "reasoning": true,
@@ -153,7 +153,7 @@
       }
     },
     {
-      "id": "glm-5.3",
+      "id": "glm-5.3:cloud",
       "modelCode": "zai-org/GLM-5.3",
       "name": "GLM-5.3",
       "reasoning": true,
@@ -179,7 +179,7 @@
       }
     },
     {
-      "id": "glm-5.3-flash",
+      "id": "glm-5.3-flash:cloud",
       "modelCode": "zai-org/GLM-5.3-Flash",
       "name": "GLM-5.3-Flash",
       "reasoning": true,
@@ -205,7 +205,7 @@
       }
     },
     {
-      "id": "nemotron-3-ultra",
+      "id": "nemotron-3-ultra:cloud",
       "modelCode": "nvidia/nemotron-3-ultra-550b-a55b",
       "name": "Nemotron 3 Ultra",
       "reasoning": true,
@@ -226,7 +226,7 @@
       }
     },
     {
-      "id": "kimi-k2.7-code",
+      "id": "kimi-k2.7-code:cloud",
       "modelCode": "moonshotai/Kimi-K2.7-Code",
       "name": "Kimi K2.7 Code",
       "reasoning": true,
@@ -247,7 +247,7 @@
       }
     },
     {
-      "id": "kimi-k3",
+      "id": "kimi-k3:cloud",
       "modelCode": "moonshotai/Kimi-K3",
       "name": "Kimi K3",
       "reasoning": true,
@@ -276,7 +276,7 @@
       }
     },
     {
-      "id": "deepseek-v4-pro",
+      "id": "deepseek-v4-pro:cloud",
       "modelCode": "deepseek-ai/DeepSeek-V4-Pro",
       "name": "DeepSeek V4 Pro",
       "reasoning": true,
@@ -315,7 +315,7 @@
       }
     },
     {
-      "id": "mistral-large-3:675b",
+      "id": "mistral-large-3:675b-cloud",
       "modelCode": "mistralai/mistral-large-3:675b",
       "name": "Mistral Large 3",
       "reasoning": false,
@@ -330,7 +330,7 @@
       }
     },
     {
-      "id": "minimax-m3.1-flash",
+      "id": "minimax-m3.1-flash:cloud",
       "modelCode": "minimaxai/MiniMax-M3.1-Flash",
       "name": "MiniMax M3.1 Flash",
       "reasoning": true,
@@ -358,7 +358,7 @@
       }
     },
     {
-      "id": "minimax-m3",
+      "id": "minimax-m3:cloud",
       "modelCode": "minimaxai/MiniMax-M3",
       "name": "MiniMax M3",
       "reasoning": true,
@@ -388,7 +388,7 @@
       }
     },
     {
-      "id": "minimax-m2.7",
+      "id": "minimax-m2.7:cloud",
       "modelCode": "minimaxai/MiniMax-M2.7",
       "name": "MiniMax M2.7",
       "reasoning": true,
@@ -409,7 +409,7 @@
       }
     },
     {
-      "id": "gpt-oss:20b",
+      "id": "gpt-oss:20b-cloud",
       "modelCode": "openai/gpt-oss-20b",
       "name": "GPT OSS 20B",
       "reasoning": true,
@@ -435,7 +435,7 @@
       }
     },
     {
-      "id": "nemotron-3-super",
+      "id": "nemotron-3-super:cloud",
       "modelCode": "nvidia/nemotron-3-super-120b-a12b",
       "name": "Nemotron 3 Super",
       "reasoning": true,
@@ -456,29 +456,7 @@
       }
     },
     {
-      "id": "kimi-k2.5",
-      "modelCode": "moonshotai/Kimi-K2.5",
-      "name": "Kimi K2.5",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "attachment": true,
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "glm-5.2",
+      "id": "glm-5.2:cloud",
       "modelCode": "zai-org/GLM-5.2",
       "name": "GLM-5.2",
       "reasoning": true,
@@ -503,50 +481,7 @@
       }
     },
     {
-      "id": "minimax-m2.5",
-      "modelCode": "minimaxai/MiniMax-M2.5",
-      "name": "MiniMax M2.5",
-      "reasoning": true,
-      "attachment": false,
-      "limit": {
-        "context": 204800,
-        "output": 131072
-      },
-      "cost": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
-    {
-      "id": "gpt-oss:120b",
-      "modelCode": "openai/gpt-oss-120b",
-      "name": "GPT OSS 120B",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 131072,
-        "output": 32768
-      },
-      "cost": {
-        "input": 0.15,
-        "output": 0.6,
-        "cache_read": 0.014
-      }
-    },
-    {
-      "id": "nemotron-3-nano:30b",
+      "id": "nemotron-3-nano:30b-cloud",
       "modelCode": "nvidia/nemotron-3-nano-30b-a3b",
       "name": "Nemotron 3 Nano 30B",
       "reasoning": true,
@@ -566,7 +501,7 @@
       }
     },
     {
-      "id": "gemma4:31b",
+      "id": "gemma4:31b-cloud",
       "modelCode": "google/gemma-4-31b",
       "name": "Gemma 4 31B",
       "reasoning": true,
@@ -587,7 +522,7 @@
       }
     },
     {
-      "id": "kimi-k2.6",
+      "id": "kimi-k2.6:cloud",
       "modelCode": "moonshotai/Kimi-K2.6",
       "name": "Kimi K2.6",
       "reasoning": true,
@@ -605,75 +540,6 @@
         "input": 0.95,
         "output": 4,
         "cache_read": 0.16
-      }
-    },
-    {
-      "id": "deepseek-v4-flash:0731",
-      "modelCode": "deepseek-ai/DeepSeek-V4-Flash-0731",
-      "name": "DeepSeek V4 Flash 0731",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 1048576,
-        "output": 1048576
-      },
-      "cost": {
-        "input": 0.22,
-        "output": 0.66,
-        "cache_read": 0.007
-      }
-    },
-    {
-      "id": "glm-5.1",
-      "modelCode": "zai-org/GLM-5.1",
-      "name": "GLM-5.1",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "attachment": false,
-      "limit": {
-        "context": 202752,
-        "output": 131072
-      },
-      "cost": {
-        "input": 1,
-        "output": 3.2,
-        "cache_read": 0.2
-      }
-    },
-    {
-      "id": "qwen3.5:397b",
-      "modelCode": "qwen/Qwen3.5-397B-A17B",
-      "name": "Qwen3.5 397B",
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "attachment": true,
-      "limit": {
-        "context": 262144,
-        "output": 65536
-      },
-      "cost": {
-        "input": 0.6,
-        "output": 3.6
       }
     }
   ]
