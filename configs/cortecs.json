@@ -2261,6 +2261,22 @@
       }
     },
     {
+      "id": "deepseek-v4.1-flash-1017",
+      "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 0.511,
+        "output": 1.534,
+        "cache_read": 0.128
+      }
+    },
+    {
       "id": "deepseek-v4.1-flash",
       "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash",
       "name": "DeepSeek V4.1 Flash",

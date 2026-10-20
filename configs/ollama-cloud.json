@@ -73,6 +73,46 @@
       }
     },
     {
+      "id": "deepseek-v4.1-flash:1017",
+      "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.003
+      },
+      "peaks": {
+        "periods": [
+          {
+            "start": "12:00",
+            "end": "18:00"
+          }
+        ],
+        "exempt": [
+          "weekends"
+        ]
+      }
+    },
+    {
       "id": "deepseek-v4.1-flash",
       "modelCode": "deepseek-ai/DeepSeek-V4.1-Flash",
       "name": "DeepSeek V4.1 Flash",
