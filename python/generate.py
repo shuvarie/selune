@@ -20,6 +20,11 @@ RE_MODEL_CODE = re.compile(
     r"(?::[a-z0-9]+(?:-[a-z0-9]+)*)?$"  # optional variant: lowercase kebab-case
 )
 
+RE_TIME = re.compile(r"^(?:[01][0-9]|2[0-3]):[0-5][0-9]$")
+
+PEAK_EXEMPTIONS = {"weekends", "holidays-cn", "holidays-us"}
+PEAK_KEYS = {"timezone", "periods", "exempt"}
+
 REQUIRED_MODEL_FIELDS = {
     "id",
     "modelCode",
@@ -29,6 +34,70 @@ REQUIRED_MODEL_FIELDS = {
     "limit",
     "cost",
 }
+
+
+def known_timezones() -> set:
+    try:
+        from zoneinfo import available_timezones
+    except ImportError:
+        return set()
+    return available_timezones()
+
+
+ZONEINFO_NAMES = known_timezones()
+
+
+def validate_timezone(value: object, where: str) -> None:
+    if not isinstance(value, str) or not value:
+        raise ValueError(f"{where}: 'peaks.timezone' must be a non-empty IANA name")
+    if ZONEINFO_NAMES and value not in ZONEINFO_NAMES:
+        raise ValueError(f"{where}: unknown peaks.timezone {value!r}")
+
+
+def validate_peaks(peaks: object, where: str) -> None:
+    if not isinstance(peaks, dict):
+        raise ValueError(f"{where}: 'peaks' must be an object")
+    unknown = set(peaks) - PEAK_KEYS
+    if unknown:
+        raise ValueError(f"{where}: unknown 'peaks' keys {sorted(unknown)}")
+
+    if "timezone" in peaks:
+        validate_timezone(peaks["timezone"], where)
+
+    periods = peaks.get("periods", [])
+    if not isinstance(periods, list):
+        raise ValueError(f"{where}: 'peaks.periods' must be a list")
+    for index, period in enumerate(periods):
+        if not isinstance(period, dict):
+            raise ValueError(f"{where}: peaks.periods[{index}] must be an object")
+        unknown = set(period) - {"start", "end"}
+        if unknown:
+            raise ValueError(
+                f"{where}: unknown peaks.periods[{index}] keys {sorted(unknown)}"
+            )
+        times = []
+        for key in ("start", "end"):
+            value = period.get(key)
+            if not isinstance(value, str) or not RE_TIME.match(value):
+                raise ValueError(
+                    f"{where}: peaks.periods[{index}].{key} must be `HH:MM`,"
+                    f" got {value!r}"
+                )
+            times.append(value)
+        if times[0] == times[1]:
+            raise ValueError(
+                f"{where}: peaks.periods[{index}] must span a non-zero amount of time"
+            )
+
+    exempt = peaks.get("exempt", [])
+    if not isinstance(exempt, list):
+        raise ValueError(f"{where}: 'peaks.exempt' must be a list")
+    for value in exempt:
+        if not isinstance(value, str) or value not in PEAK_EXEMPTIONS:
+            raise ValueError(
+                f"{where}: peaks.exempt value {value!r} not in"
+                f" {sorted(PEAK_EXEMPTIONS)}"
+            )
 
 
 def load_provider(path: Path) -> dict:
@@ -41,6 +110,8 @@ def load_provider(path: Path) -> dict:
         raise ValueError(f"{path}: missing 'id' or 'name'")
     if not provider.get("doc"):
         raise ValueError(f"{path}: missing 'doc'")
+    if "peaks" in provider:
+        validate_peaks(provider["peaks"], f"{path}: provider")
 
     models = provider.get("models", [])
     if not isinstance(models, list):
@@ -59,6 +130,8 @@ def load_provider(path: Path) -> dict:
         if model["id"] in ids:
             raise ValueError(f"{path}: duplicate model id {model['id']!r}")
         ids.add(model["id"])
+        if "peaks" in model:
+            validate_peaks(model["peaks"], f"{path}: model {model['id']!r}")
 
     for default in ("default_large_model_id", "default_small_model_id"):
         value = provider.get(default)

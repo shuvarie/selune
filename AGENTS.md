@@ -12,7 +12,8 @@ JSON. This file orients AI agents (and humans) to the layout and conventions.
   schema (see https://models.opencode.ai/api.json) plus Catwalk's `Provider`
   wrapper: `Provider`, `Model`, `ModelLimit`, `ModelCost`, `ReasoningOption`,
   `ModelOptions`, `ProviderType`, `Dialect`, the `InferenceProvider` id wrapper,
-  and `ModelCode`/`ModelCodeError`. Field names are snake_case and match the JSON
+  `Peaks`/`PeakPeriod`/`PeakExemption`/`TimeOfDay`, and
+  `ModelCode`/`ModelCodeError`. Field names are snake_case and match the JSON
   exactly, so serde needs no per-field renames — except `modelCode` (see
   Model codes below).
 - **Client** (`src/client.rs`) — a blocking HTTP client that fetches
@@ -60,6 +61,19 @@ JSON. This file orients AI agents (and humans) to the layout and conventions.
   one deliberate camelCase exception. Derive new codes with
   `python3 python/model_codes.py` (flags unresolvable ids) and regenerate
   `catalog.json` afterwards.
+- **Peaks.** `peaks` on `Provider` applies to every model; `peaks` on a `Model`
+  replaces the provider-wide schedule entirely, timezone included. `timezone`
+  is the IANA zone (`chrono_tz::Tz`, e.g. `Asia/Shanghai`) in which the whole
+  schedule is evaluated; it defaults to `UTC` and is omitted from JSON when
+  UTC. `periods` lists peak windows as `HH:MM` `TimeOfDay`s in that zone:
+  `start` is inclusive, `end` is exclusive, and `end < start` wraps past
+  midnight. Zero-length windows are rejected at parse time. `exempt` lists the
+  days without peak/off-peak pricing: `weekends`, `holidays-cn`, `holidays-us`
+  (`PeakExemption`, kebab-case). Weekdays, holidays and windows all resolve in
+  the schedule's zone, so holiday dates match the provider's civil calendar
+  and DST is honored. Chinese and US holidays come from the `holidays2` crate
+  (2001–2030; other years are non-holidays). An explicit empty `periods` list
+  on a model opts it out of the provider-wide schedule.
 - **Optional fields** use `Option<T>` with `#[serde(default, skip_serializing_if = "Option::is_none")]`; collections use `#[serde(default, skip_serializing_if = "Vec::is_empty")]`.
 - **Errors**: `thiserror` enum (`ClientError`). Box large variants (e.g.
   `reqwest::Error`) to keep the error type small.

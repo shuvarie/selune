@@ -1,8 +1,21 @@
 use crate::client::Client;
 use crate::embedded;
 use crate::types::{
-    AuthMethod, InferenceProvider, ModelCode, ModelCodeError, Provider, ProviderType,
+    AuthMethod, InferenceProvider, Model, ModelCode, ModelCodeError, PeakExemption, PeakPeriod,
+    Peaks, Provider, ProviderType, TimeOfDay,
 };
+use chrono::{DateTime, TimeZone, Utc};
+use chrono_tz::Tz;
+
+fn utc(year: i32, month: u32, day: u32, hour: u32, minute: u32) -> DateTime<Utc> {
+    Utc.with_ymd_and_hms(year, month, day, hour, minute, 0)
+        .single()
+        .expect("valid UTC datetime")
+}
+
+fn time(value: &str) -> TimeOfDay {
+    value.parse().expect("valid time of day")
+}
 
 #[test]
 fn embedded_providers_have_doc() {
@@ -311,4 +324,348 @@ fn save_and_load_from_local_round_trip() {
     assert_eq!(loaded, providers);
 
     std::fs::remove_file(path).unwrap();
+}
+
+#[test]
+fn time_of_day_parses_and_round_trips() {
+    let t = time("01:30");
+    assert_eq!(t.hour(), 1);
+    assert_eq!(t.minute(), 30);
+    assert_eq!(t.minutes_since_midnight(), 90);
+    assert_eq!(t.to_string(), "01:30");
+    assert_eq!(TimeOfDay::new(0, 0).unwrap().to_string(), "00:00");
+    assert_eq!(TimeOfDay::new(23, 59).unwrap().to_string(), "23:59");
+
+    let back: TimeOfDay = serde_json::from_str("\"07:05\"").unwrap();
+    assert_eq!(back, TimeOfDay::new(7, 5).unwrap());
+    assert_eq!(serde_json::to_string(&back).unwrap(), "\"07:05\"");
+}
+
+#[test]
+fn time_of_day_rejects_malformed_input() {
+    for input in [
+        "24:00", "1:00", "01:60", "01:00:00", "0100", "", "aa:bb", "23:5", " 1:00",
+    ] {
+        assert!(
+            input.parse::<TimeOfDay>().is_err(),
+            "{input:?} should not parse"
+        );
+    }
+    assert!(TimeOfDay::new(24, 0).is_err());
+    assert!(TimeOfDay::new(0, 60).is_err());
+}
+
+#[test]
+fn peak_period_window_boundaries() {
+    let period = PeakPeriod::new(time("01:00"), time("04:00")).unwrap();
+    assert!(!period.crosses_midnight());
+    assert!(period.contains(time("01:00")), "start is inclusive");
+    assert!(period.contains(time("03:59")));
+    assert!(!period.contains(time("00:59")));
+    assert!(!period.contains(time("04:00")), "end is exclusive");
+
+    let overnight = PeakPeriod::new(time("23:00"), time("01:00")).unwrap();
+    assert!(overnight.crosses_midnight());
+    assert!(overnight.contains(time("23:00")));
+    assert!(overnight.contains(time("00:59")));
+    assert!(!overnight.contains(time("01:00")));
+    assert!(!overnight.contains(time("12:00")));
+
+    assert!(PeakPeriod::new(time("01:00"), time("01:00")).is_err());
+}
+
+#[test]
+fn peak_period_and_peaks_serde_round_trip() {
+    let period: PeakPeriod = serde_json::from_str(r#"{"start": "23:00", "end": "01:00"}"#).unwrap();
+    assert_eq!(period.start(), time("23:00"));
+    assert_eq!(period.end(), time("01:00"));
+    assert_eq!(
+        serde_json::to_string(&period).unwrap(),
+        r#"{"start":"23:00","end":"01:00"}"#
+    );
+
+    let peaks: Peaks = serde_json::from_str(
+        r#"{"timezone": "Asia/Shanghai", "periods": [{"start": "01:00", "end": "04:00"}], "exempt": ["weekends", "holidays-us"]}"#,
+    )
+    .unwrap();
+    assert_eq!(peaks.timezone, Tz::Asia__Shanghai);
+    assert_eq!(
+        peaks.exempt,
+        [PeakExemption::Weekends, PeakExemption::HolidaysUs]
+    );
+    assert_eq!(
+        serde_json::to_string(&peaks).unwrap(),
+        r#"{"timezone":"Asia/Shanghai","periods":[{"start":"01:00","end":"04:00"}],"exempt":["weekends","holidays-us"]}"#
+    );
+
+    let utc_peaks: Peaks =
+        serde_json::from_str(r#"{"periods": [{"start": "01:00", "end": "04:00"}]}"#).unwrap();
+    assert_eq!(utc_peaks.timezone, Tz::UTC, "UTC is the default timezone");
+    assert!(
+        !serde_json::to_string(&utc_peaks)
+            .unwrap()
+            .contains("timezone"),
+        "the default UTC timezone is omitted"
+    );
+}
+
+#[test]
+fn invalid_peak_periods_are_rejected() {
+    assert!(
+        serde_json::from_str::<PeakPeriod>(r#"{"start": "01:00", "end": "01:00"}"#).is_err(),
+        "zero-length windows are invalid"
+    );
+    assert!(
+        serde_json::from_str::<PeakPeriod>(r#"{"start": "25:00", "end": "01:00"}"#).is_err(),
+        "out-of-range times are invalid"
+    );
+    assert!(
+        serde_json::from_str::<Peaks>(
+            r#"{"periods": [{"start": "01:00", "end": "04:00"}], "exempt": ["weekdays"]}"#
+        )
+        .is_err(),
+        "unknown exemptions are invalid"
+    );
+    assert!(
+        serde_json::from_str::<Peaks>(r#"{"timezone": "Mars/Olympus"}"#).is_err(),
+        "unknown timezones are invalid"
+    );
+}
+
+#[test]
+fn peaks_respect_weekend_and_holiday_exemptions() {
+    let peaks = Peaks {
+        timezone: Tz::UTC,
+        periods: vec![
+            PeakPeriod::new(time("01:00"), time("04:00")).unwrap(),
+            PeakPeriod::new(time("06:00"), time("10:00")).unwrap(),
+        ],
+        exempt: vec![PeakExemption::Weekends, PeakExemption::HolidaysCn],
+    };
+
+    let monday = utc(2025, 6, 9, 2, 0);
+    assert!(!peaks.is_exempt(monday));
+    assert!(peaks.is_peak(monday));
+    assert!(peaks.is_peak(utc(2025, 6, 9, 6, 0)), "start is inclusive");
+    assert!(!peaks.is_peak(utc(2025, 6, 9, 5, 0)), "between windows");
+    assert!(!peaks.is_peak(utc(2025, 6, 9, 10, 0)), "end is exclusive");
+
+    let saturday = utc(2025, 6, 7, 2, 0);
+    assert!(peaks.is_exempt(saturday));
+    assert!(!peaks.is_peak(saturday));
+
+    let national_day = utc(2025, 10, 1, 2, 0);
+    assert!(PeakExemption::HolidaysCn.applies(national_day.date_naive()));
+    assert!(peaks.is_exempt(national_day));
+    assert!(!peaks.is_peak(national_day));
+
+    assert!(PeakExemption::HolidaysUs.applies(utc(2025, 7, 4, 2, 0).date_naive()));
+    assert!(!PeakExemption::HolidaysUs.applies(national_day.date_naive()));
+}
+
+#[test]
+fn overnight_peak_exemption_is_evaluated_per_instant() {
+    let peaks = Peaks {
+        timezone: Tz::UTC,
+        periods: vec![PeakPeriod::new(time("23:00"), time("01:00")).unwrap()],
+        exempt: vec![PeakExemption::Weekends],
+    };
+
+    assert!(peaks.is_peak(utc(2025, 6, 6, 23, 30)), "Friday night");
+    assert!(peaks.is_peak(utc(2025, 6, 10, 0, 30)), "Tuesday night");
+    assert!(!peaks.is_peak(utc(2025, 6, 7, 0, 30)), "Saturday morning");
+    assert!(!peaks.is_peak(utc(2025, 6, 7, 23, 30)), "Saturday night");
+}
+
+#[test]
+fn peaks_evaluate_windows_in_the_schedule_timezone() {
+    let peaks = Peaks {
+        timezone: Tz::Asia__Shanghai,
+        periods: vec![PeakPeriod::new(time("09:00"), time("12:00")).unwrap()],
+        exempt: vec![PeakExemption::Weekends],
+    };
+
+    assert_eq!(
+        peaks.local(utc(2025, 6, 9, 1, 0)).time().to_string(),
+        "09:00:00",
+        "01:00 UTC is 09:00 in Shanghai"
+    );
+    assert!(peaks.is_peak(utc(2025, 6, 9, 1, 0)), "start is inclusive");
+    assert!(!peaks.is_peak(utc(2025, 6, 9, 0, 59)));
+    assert!(peaks.is_peak(utc(2025, 6, 9, 3, 59)));
+    assert!(!peaks.is_peak(utc(2025, 6, 9, 4, 0)), "end is exclusive");
+
+    assert!(
+        peaks.is_exempt(utc(2025, 6, 6, 23, 30)),
+        "Friday 23:30 UTC is Saturday in Shanghai"
+    );
+}
+
+#[test]
+fn timezone_aligns_holiday_exemptions_with_the_local_date() {
+    let shanghai = Peaks {
+        timezone: Tz::Asia__Shanghai,
+        periods: vec![PeakPeriod::new(time("00:00"), time("01:00")).unwrap()],
+        exempt: vec![PeakExemption::HolidaysCn],
+    };
+    let utc_schedule = Peaks {
+        timezone: Tz::UTC,
+        periods: vec![PeakPeriod::new(time("16:00"), time("17:00")).unwrap()],
+        exempt: vec![PeakExemption::HolidaysCn],
+    };
+
+    let holiday_midnight = utc(2025, 9, 30, 16, 30);
+    assert!(
+        shanghai.is_exempt(holiday_midnight),
+        "National Day starts at 00:00 in Shanghai"
+    );
+    assert!(!shanghai.is_peak(holiday_midnight));
+    assert!(
+        utc_schedule.is_peak(holiday_midnight),
+        "the UTC date is still September 30"
+    );
+
+    let holiday_noon = utc(2025, 10, 1, 4, 0);
+    assert!(shanghai.is_exempt(holiday_noon));
+    assert!(utc_schedule.is_exempt(holiday_noon));
+}
+
+#[test]
+fn peaks_follow_daylight_saving_in_the_schedule_timezone() {
+    let peaks = Peaks {
+        timezone: Tz::America__New_York,
+        periods: vec![PeakPeriod::new(time("09:00"), time("10:00")).unwrap()],
+        exempt: vec![],
+    };
+
+    assert!(peaks.is_peak(utc(2025, 1, 15, 14, 0)), "09:00 EST");
+    assert!(!peaks.is_peak(utc(2025, 1, 15, 13, 0)), "08:00 EST");
+    assert!(peaks.is_peak(utc(2025, 7, 15, 13, 0)), "09:00 EDT");
+    assert!(!peaks.is_peak(utc(2025, 7, 15, 14, 0)), "10:00 EDT");
+}
+
+#[test]
+fn model_peaks_override_provider_peaks() {
+    let provider: Provider = serde_json::from_str(
+        r#"{
+            "name": "Acme",
+            "id": "acme",
+            "peaks": {
+                "periods": [{"start": "01:00", "end": "04:00"}],
+                "exempt": ["weekends"]
+            },
+            "models": [
+                {
+                    "id": "inherit",
+                    "modelCode": "acme/inherit-model",
+                    "name": "Inherit",
+                    "reasoning": false,
+                    "attachment": false,
+                    "limit": {},
+                    "cost": {}
+                },
+                {
+                    "id": "custom",
+                    "modelCode": "acme/custom-model",
+                    "name": "Custom",
+                    "reasoning": false,
+                    "attachment": false,
+                    "limit": {},
+                    "cost": {},
+                    "peaks": {
+                        "periods": [{"start": "12:00", "end": "13:00"}]
+                    }
+                }
+            ]
+        }"#,
+    )
+    .unwrap();
+
+    let inherit = provider.model("inherit").unwrap();
+    let custom = provider.model("custom").unwrap();
+    assert_eq!(
+        provider.peaks_for(inherit).unwrap().periods,
+        [PeakPeriod::new(time("01:00"), time("04:00")).unwrap()]
+    );
+    assert_eq!(
+        provider.peaks_for(custom).unwrap().periods,
+        [PeakPeriod::new(time("12:00"), time("13:00")).unwrap()]
+    );
+
+    assert!(provider.is_peak(inherit, utc(2025, 6, 9, 2, 0)));
+    assert!(provider.is_peak(custom, utc(2025, 6, 9, 12, 30)));
+    assert!(!provider.is_peak(custom, utc(2025, 6, 9, 2, 0)));
+
+    assert!(!provider.is_peak(inherit, utc(2025, 6, 7, 2, 0)), "weekend");
+    assert!(
+        provider.is_peak(custom, utc(2025, 6, 7, 12, 30)),
+        "model peaks replace the provider exemptions too"
+    );
+}
+
+#[test]
+fn model_peaks_override_the_provider_timezone() {
+    let provider: Provider = serde_json::from_str(
+        r#"{
+            "name": "Acme",
+            "id": "acme",
+            "peaks": {
+                "timezone": "Asia/Shanghai",
+                "periods": [{"start": "09:00", "end": "10:00"}]
+            },
+            "models": [
+                {
+                    "id": "ny",
+                    "modelCode": "acme/ny-model",
+                    "name": "NY",
+                    "reasoning": false,
+                    "attachment": false,
+                    "limit": {},
+                    "cost": {},
+                    "peaks": {
+                        "timezone": "America/New_York",
+                        "periods": [{"start": "09:00", "end": "10:00"}]
+                    }
+                }
+            ]
+        }"#,
+    )
+    .unwrap();
+
+    let model = provider.model("ny").unwrap();
+    assert_eq!(
+        provider.peaks_for(model).unwrap().timezone,
+        Tz::America__New_York
+    );
+    assert!(
+        provider.is_peak(model, utc(2025, 1, 15, 14, 0)),
+        "09:00 EST"
+    );
+    assert!(
+        !provider.is_peak(model, utc(2025, 1, 15, 1, 0)),
+        "09:00 in Shanghai must not apply to the model"
+    );
+}
+
+#[test]
+fn peaks_are_optional_and_skipped_when_absent() {
+    let provider: Provider = serde_json::from_str(r#"{"name": "Acme", "id": "acme"}"#).unwrap();
+    assert!(provider.peaks.is_none());
+    assert!(!serde_json::to_string(&provider).unwrap().contains("peaks"));
+
+    let model: Model = serde_json::from_str(
+        r#"{
+            "id": "m",
+            "modelCode": "acme/m",
+            "name": "M",
+            "reasoning": false,
+            "attachment": false,
+            "limit": {},
+            "cost": {}
+        }"#,
+    )
+    .unwrap();
+    assert!(model.peaks.is_none());
+    assert!(!serde_json::to_string(&model).unwrap().contains("peaks"));
+    assert_eq!(Peaks::default().timezone, Tz::UTC);
 }
