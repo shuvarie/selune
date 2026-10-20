@@ -9,6 +9,34 @@
   "default_small_model_id": "MiniMax-M2.7",
   "models": [
     {
+      "id": "MiniMax-M3.1-Flash",
+      "modelCode": "minimaxai/MiniMax-M3.1-Flash",
+      "name": "MiniMax-M3.1-Flash",
+      "reasoning": true,
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 512000
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.015
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ]
+    },
+    {
       "id": "MiniMax-M3",
       "modelCode": "minimaxai/MiniMax-M3",
       "name": "MiniMax-M3",

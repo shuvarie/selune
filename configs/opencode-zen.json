@@ -1567,6 +1567,34 @@
       }
     },
     {
+      "id": "minimax-m3.1-flash-free",
+      "modelCode": "minimaxai/MiniMax-M3.1-Flash:free",
+      "name": "MiniMax-M3.1-Flash Free",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 512000
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    },
+    {
       "id": "muse-spark-1.2",
       "modelCode": "meta-llama/muse-spark-1.2",
       "name": "Muse Spark 1.2 Free",
