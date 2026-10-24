@@ -10,6 +10,60 @@
   "default_small_model_id": "z-ai-glm-5-3-flash",
   "models": [
     {
+      "id": "kimi-k3-1-pro-highspeed",
+      "modelCode": "moonshotai/Kimi-K3.1-Pro:highspeed",
+      "name": "Kimi K3.1 Pro Highspeed",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 6,
+        "output": 30,
+        "cache_read": 0.6
+      }
+    },
+    {
+      "id": "kimi-k3-1-pro",
+      "modelCode": "moonshotai/Kimi-K3.1-Pro",
+      "name": "Kimi K3.1 Pro",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3
+      }
+    },
+    {
       "id": "gemini-4-argon",
       "modelCode": "google/gemini-4-argon",
       "name": "Gemini 4 Argon",

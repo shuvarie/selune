@@ -9,6 +9,32 @@
   "default_small_model_id": "minimax-m2.7",
   "models": [
     {
+      "id": "kimi-k3.1-pro",
+      "modelCode": "moonshotai/Kimi-K3.1-Pro",
+      "name": "Kimi K3.1 Pro",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2
+      }
+    },
+    {
       "id": "claude-haiku-5-5",
       "modelCode": "anthropic/claude-haiku-5-5",
       "name": "Claude Haiku 5.5",

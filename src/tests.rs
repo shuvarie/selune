@@ -310,7 +310,7 @@ fn kimi_code_is_renamed() {
         .find(|p| p.id == InferenceProvider("kimi-code".into()))
         .unwrap();
     assert_eq!(kimi.name, "Kimi Code");
-    assert_eq!(kimi.default_large_model(), Some("k3"));
+    assert_eq!(kimi.default_large_model(), Some("k3.1-pro"));
 }
 #[test]
 fn save_and_load_from_local_round_trip() {

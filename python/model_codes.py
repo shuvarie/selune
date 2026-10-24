@@ -317,8 +317,18 @@ KEY_ALIASES = {
 # Explicit (provider, id) -> (org, model, variant) for ids the generic rules
 # cannot resolve unambiguously.
 OVERRIDES = {
+    ("moonshotai", "kimi-k3.1-pro"): ("moonshotai", "Kimi-K3.1-Pro", None),
+    ("moonshotai", "kimi-k3.1-pro-highspeed"): ("moonshotai", "Kimi-K3.1-Pro", "highspeed"),
+    ("moonshotai-cn", "kimi-k3.1-pro"): ("moonshotai", "Kimi-K3.1-Pro", None),
+    ("moonshotai-cn", "kimi-k3.1-pro-highspeed"): (
+        "moonshotai",
+        "Kimi-K3.1-Pro",
+        "highspeed",
+    ),
     ("kimi-code", "k3"): ("moonshotai", "Kimi-K3", None),
     ("kimi-code", "k3-256k"): ("moonshotai", "Kimi-K3", "256k"),
+    ("kimi-code", "k3.1-pro"): ("moonshotai", "Kimi-K3.1-Pro", None),
+    ("kimi-code", "k3.1-pro-highspeed"): ("moonshotai", "Kimi-K3.1-Pro", "highspeed"),
     ("kimi-code", "kimi-for-coding"): ("moonshotai", "kimi-for-coding", None),
     ("kimi-code", "kimi-for-coding-highspeed"): ("moonshotai", "kimi-for-coding", "highspeed"),
     ("venice", "e2ee-deepseek-v4-flash"): ("deepseek-ai", "DeepSeek-V4-Flash", "e2ee"),

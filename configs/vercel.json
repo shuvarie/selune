@@ -9,6 +9,58 @@
   "default_small_model_id": "anthropic/claude-haiku-4.5",
   "models": [
     {
+      "id": "moonshotai/kimi-k3.1-pro-highspeed",
+      "modelCode": "moonshotai/Kimi-K3.1-Pro:highspeed",
+      "name": "Kimi K3.1 Pro Highspeed",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2
+      }
+    },
+    {
+      "id": "moonshotai/kimi-k3.1-pro",
+      "modelCode": "moonshotai/Kimi-K3.1-Pro",
+      "name": "Kimi K3.1 Pro",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2
+      }
+    },
+    {
       "id": "google/gemini-4-argon",
       "modelCode": "google/gemini-4-argon",
       "name": "Gemini 4 Argon",
