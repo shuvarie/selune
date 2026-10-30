@@ -5146,6 +5146,31 @@
       }
     },
     {
+      "id": "mistral-large-4-0",
+      "modelCode": "mistralai/mistral-large-4-0",
+      "name": "Mistral Large 4",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 262144
+      },
+      "cost": {
+        "input": 1.36,
+        "output": 4.18,
+        "cache_read": 0.14
+      }
+    },
+    {
       "id": "muse-spark-1.1",
       "modelCode": "meta-llama/muse-spark-1.1",
       "name": "Muse Spark 1.1",

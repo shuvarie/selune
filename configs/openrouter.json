@@ -102,6 +102,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "none",
@@ -115,8 +118,8 @@
         "output": 262144
       },
       "cost": {
-        "input": 0.68,
-        "output": 2.09,
+        "input": 0.7,
+        "output": 2.1,
         "cache_read": 0.07
       }
     },
