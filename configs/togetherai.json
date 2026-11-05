@@ -593,6 +593,32 @@
         "output": 15,
         "cache_read": 0.3
       }
+    },
+    {
+      "id": "moonshotai/Kimi-K3.1-Pro",
+      "modelCode": "moonshotai/Kimi-K3.1-Pro",
+      "name": "Kimi K3.1 Pro",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2
+      }
     }
   ]
 }

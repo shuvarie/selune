@@ -1397,6 +1397,32 @@
       }
     },
     {
+      "id": "moonshotai/Kimi-K3.1-Pro",
+      "modelCode": "moonshotai/Kimi-K3.1-Pro",
+      "name": "Kimi K3.1 Pro",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2
+      }
+    },
+    {
       "id": "tencent/Hy3",
       "modelCode": "tencent/Hy3",
       "name": "Hy3",

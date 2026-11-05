@@ -31,9 +31,9 @@
         "output": 131072
       },
       "cost": {
-        "input": 6,
-        "output": 30,
-        "cache_read": 0.6
+        "input": 5,
+        "output": 25,
+        "cache_read": 0.375
       }
     },
     {
@@ -58,9 +58,9 @@
         "output": 131072
       },
       "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2
       }
     },
     {

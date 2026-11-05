@@ -283,6 +283,60 @@
       }
     },
     {
+      "id": "moonshotai/kimi-k3.1-pro",
+      "modelCode": "moonshotai/Kimi-K3.1-Pro",
+      "name": "Kimi K3.1 Pro",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2
+      }
+    },
+    {
+      "id": "moonshotai/kimi-k3.1-pro-highspeed",
+      "modelCode": "moonshotai/Kimi-K3.1-Pro:highspeed",
+      "name": "Kimi K3.1 Pro HighSpeed",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2,
+        "cache_write": 4
+      }
+    },
+    {
       "id": "qwen/qwen3.5-plus",
       "modelCode": "qwen/qwen3.5-plus",
       "name": "Qwen3.5 Plus",

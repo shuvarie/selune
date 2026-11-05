@@ -108,6 +108,32 @@
       }
     },
     {
+      "id": "hf:moonshotai/Kimi-K3.1-Pro",
+      "modelCode": "moonshotai/Kimi-K3.1-Pro",
+      "name": "Kimi K3.1 Pro",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 524288,
+        "output": 65536
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2
+      }
+    },
+    {
       "id": "hf:nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",
       "modelCode": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B:nvfp4",
       "name": "Nemotron 3 Super 120B A12B",
