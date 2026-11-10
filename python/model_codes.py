@@ -253,6 +253,7 @@ VARIANT_SUFFIXES = {
     "search",
     "lightning",
     "ultraspeed",
+    "ultrafast",
     "tput",
     "nvfp4",
     "fp8",
