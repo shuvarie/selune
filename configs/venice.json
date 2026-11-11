@@ -1204,9 +1204,9 @@
         "output": 128000
       },
       "cost": {
-        "input": 12,
-        "output": 60,
-        "cache_read": 0.3
+        "input": 10,
+        "output": 50,
+        "cache_read": 0.25
       }
     },
     {
@@ -1832,9 +1832,9 @@
         "output": 128000
       },
       "cost": {
-        "input": 12,
-        "output": 60,
-        "cache_read": 1.2
+        "input": 10,
+        "output": 50,
+        "cache_read": 1
       }
     },
     {
@@ -2889,6 +2889,35 @@
         "input": 0.175,
         "output": 0.35,
         "cache_read": 0.00375
+      }
+    },
+    {
+      "id": "claude-fable-5-2",
+      "modelCode": "anthropic/claude-fable-5-2",
+      "name": "Claude Fable 5.2",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "cost": {
+        "input": 8,
+        "output": 40,
+        "cache_read": 0.2,
+        "cache_write": 10
       }
     }
   ]
