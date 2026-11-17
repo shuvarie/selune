@@ -3578,6 +3578,36 @@
       }
     },
     {
+      "id": "thinkingmachines/inkling-2-small",
+      "modelCode": "thinkingmachines/Inkling-2-Small",
+      "name": "Inkling 2 Small",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "cost": {
+        "input": 0.285,
+        "output": 0.95,
+        "cache_read": 0.0285
+      }
+    },
+    {
       "id": "interfaze/interfaze-beta",
       "modelCode": "interfaze/interfaze-beta",
       "name": "Interfaze Beta",

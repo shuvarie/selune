@@ -447,6 +447,34 @@
       }
     },
     {
+      "id": "thinkingmachines/Inkling-2-Small",
+      "modelCode": "thinkingmachines/Inkling-2-Small",
+      "name": "Inkling 2 Small",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "cost": {
+        "input": 0.3,
+        "output": 1,
+        "cache_read": 0.06
+      }
+    },
+    {
       "id": "MiniMaxAI/MiniMax-M3",
       "modelCode": "minimaxai/MiniMax-M3",
       "name": "MiniMax-M3",

@@ -344,6 +344,35 @@
       }
     },
     {
+      "id": "thinkingmachines/Inkling-2-Small",
+      "modelCode": "thinkingmachines/Inkling-2-Small",
+      "name": "Inkling 2 Small",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "max",
+            "xhigh",
+            "high",
+            "medium",
+            "low",
+            "none"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "cost": {
+        "input": 0.3,
+        "output": 1,
+        "cache_read": 0.03
+      }
+    },
+    {
       "id": "Qwen/Qwen3.7-Max",
       "modelCode": "qwen/qwen3.7-max",
       "name": "Qwen3.7 Max",
