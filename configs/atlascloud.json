@@ -1290,6 +1290,22 @@
       }
     },
     {
+      "id": "google/gemini-4-hydrogen",
+      "modelCode": "google/gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen",
+      "reasoning": false,
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "cost": {
+        "input": 1.5,
+        "output": 7.5,
+        "cache_read": 0.075
+      }
+    },
+    {
       "id": "minimaxai/minimax-m3",
       "modelCode": "minimaxai/MiniMax-M3",
       "name": "MiniMax M3",

@@ -89,6 +89,59 @@
       }
     },
     {
+      "id": "gemini-4-carbon",
+      "modelCode": "google/gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 2.229,
+        "output": 11.146,
+        "cache_read": 0.111
+      }
+    },
+    {
+      "id": "gemini-4-hydrogen",
+      "modelCode": "google/gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 1.688,
+        "output": 8.437,
+        "cache_read": 0.085
+      }
+    },
+    {
       "id": "mistral-large-4-0",
       "modelCode": "mistralai/mistral-large-4-0",
       "name": "Mistral Large 4",

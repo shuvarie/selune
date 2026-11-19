@@ -96,6 +96,92 @@
       }
     },
     {
+      "id": "google/gemini-4-carbon",
+      "modelCode": "google/gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1,
+        "cache_write": 0.1875,
+        "reasoning": 10
+      }
+    },
+    {
+      "id": "google/gemini-4-hydrogen",
+      "modelCode": "google/gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 1.5,
+        "output": 7.5,
+        "cache_read": 0.075,
+        "cache_write": 0.083333,
+        "reasoning": 7.5
+      }
+    },
+    {
+      "id": "google/gemini-4-neon",
+      "modelCode": "google/gemini-4-neon",
+      "name": "Gemini 4 Neon",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "cost": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.15,
+        "cache_write": 0.083333,
+        "reasoning": 15
+      }
+    },
+    {
       "id": "mistralai/mistral-large-4-0",
       "modelCode": "mistralai/mistral-large-4-0",
       "name": "Mistral Large 4",
