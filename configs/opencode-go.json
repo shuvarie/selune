@@ -894,6 +894,32 @@
       }
     },
     {
+      "id": "hy4",
+      "modelCode": "tencent/Hy4",
+      "name": "Hy4",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "attachment": true,
+      "limit": {
+        "context": 1048576,
+        "input": 983010,
+        "output": 65536
+      },
+      "cost": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache_read": 0.042
+      }
+    },
+    {
       "id": "hy4-preview",
       "modelCode": "tencent/Hy4-preview",
       "name": "Hy4 preview",
