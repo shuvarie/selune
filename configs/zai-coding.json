@@ -134,6 +134,33 @@
       }
     },
     {
+      "id": "glm-5.4",
+      "modelCode": "zai-org/GLM-5.4",
+      "name": "GLM-5.4",
+      "reasoning": true,
+      "attachment": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    {
       "id": "glm-5.2-highspeed",
       "modelCode": "zai-org/GLM-5.2:highspeed",
       "name": "GLM-5.2 Highspeed",
