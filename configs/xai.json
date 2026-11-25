@@ -1,5 +1,5 @@
 {
-  "name": "SpaceXSI (xAI)",
+  "name": "SpaceX Super Intelligence (xAI)",
   "id": "xai",
   "api_key": "$XAI_API_KEY",
   "api_endpoint": "https://api.x.ai/v1",
